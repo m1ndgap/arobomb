@@ -1,2 +1,243 @@
+html {
+  font-size: 62.5%; }
+  html * {
+    box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  background-color: #F5F8FF; }
+
+.btn {
+  text-decoration: none;
+  background: none;
+  border: none;
+  display: inline-block;
+  padding: 12px 10px;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #82AD24;
+  cursor: pointer; }
+  .btn--gr {
+    padding: 4px 10px;
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-image: linear-gradient(90deg, #FF8BDE 50%, #669FFF 100%);
+    transition: background-position 300ms; }
+    .btn--gr:hover {
+      background-position: 0 0; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal; }
+
+.test {
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-flow: column wrap; }
+  .test h2 {
+    margin-top: 50px; }
+
+.main-menu {
+  position: fixed;
+  width: 100%; }
+  .main-menu__container {
+    box-sizing: border-box;
+    max-width: 1440px;
+    margin: 0 auto 0;
+    display: flex;
+    align-items: flex-start; }
+    @media (max-width: 1439px) {
+      .main-menu__container {
+        width: 100%; } }
+  .main-menu__logo {
+    margin-left: 25px;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #000000; }
+  .main-menu__wrapper {
+    margin-left: 49px;
+    margin-top: 27px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.5rem; }
+  .main-menu__get-gift-btn {
+    margin-top: 2px;
+    padding: 4px 12px;
+    box-shadow: 0 4px 15px rgba(177, 149, 239, 0.7); }
+  .main-menu__list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    margin: 3px 34px 0; }
+  .main-menu__list-item {
+    position: relative; }
+  .main-menu__list-item + .main-menu__list-item {
+    margin-left: 23px; }
+  .main-menu__list-item--submenu::before {
+    opacity: 0; }
+  .main-menu__list-item--submenu--active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background-color: #FFFFFF;
+    height: calc(100% + 20px);
+    width: calc(100% + 26px);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 300ms; }
+  .main-menu__list-item--submenu--active .main-menu__submenu {
+    opacity: 1;
+    pointer-events: all; }
+  .main-menu__link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    color: #444444; }
+    .main-menu__link--tel {
+      margin-top: -2px;
+      display: flex;
+      flex-flow: column;
+      text-align: center; }
+      .main-menu__link--tel:after {
+        display: none; }
+      .main-menu__link--tel:hover .main-menu__link-text {
+        color: #000000; }
+      .main-menu__link--tel:hover .main-menu__link-text--sm {
+        opacity: 1; }
+  .main-menu__link, .main-menu__submenu-link {
+    white-space: nowrap; }
+    .main-menu__link::after, .main-menu__submenu-link::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      bottom: -2px;
+      width: 100%;
+      transform: scaleX(0);
+      background-color: #919191;
+      transition: transform 300ms;
+      transform-origin: right; }
+    .main-menu__link:hover::after, .main-menu__submenu-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: left; }
+    .main-menu__link--no-decor::after, .main-menu__submenu-link--no-decor::after {
+      display: none; }
+  .main-menu__link-text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    transition: color 300ms; }
+    .main-menu__link-text--sm {
+      font-size: 1.4rem;
+      opacity: 0.5;
+      line-height: 80%;
+      transition: opacity 300ms; }
+  .main-menu__submenu {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: -13px;
+    display: flex;
+    padding: 10px 15px;
+    background-color: #FFFFFF;
+    transition: opacity 300ms;
+    pointer-events: none;
+    opacity: 0; }
+  .main-menu__submenu-item {
+    position: relative; }
+  .main-menu__submenu-item + .main-menu__submenu-item {
+    margin-left: 20px;
+    padding-left: 20px; }
+    .main-menu__submenu-item + .main-menu__submenu-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: block;
+      height: calc(100% - 7px);
+      width: 1px;
+      background-color: #444444;
+      transform: translate(0, -50%); }
+  .main-menu__submenu-link {
+    position: relative;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: #444444; }
+    .main-menu__submenu-link::after {
+      bottom: 0; }
+  .main-menu__order-call-btn {
+    margin-left: 31px;
+    padding: 9px 16px;
+    border: 0 solid #82AD24;
+    transition: background-color 300ms, color 300ms, outline 300ms; }
+    .main-menu__order-call-btn:hover {
+      padding: 7px 14px;
+      color: #82AD24;
+      background-color: transparent;
+      border: 2px solid #82AD24; }
+  .main-menu__basket {
+    position: relative;
+    margin-top: 28px;
+    margin-left: 50px;
+    text-decoration: none; }
+  .main-menu__basket-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: block;
+    width: 23px;
+    height: 23px;
+    padding: 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 100%;
+    text-align: center;
+    color: #444444;
+    background-color: #FFFFFF;
+    border-radius: 50%; }
+
+.single-page {
+  height: 100vh;
+  background-image: url("../img/index-bg-1.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain; }
 
 /*# sourceMappingURL=style.css.map */

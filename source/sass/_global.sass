@@ -1,0 +1,33 @@
+html
+  font-size: 62.5%
+  *
+    box-sizing: border-box
+
+body
+  @include resetmargin()
+  position: relative
+  font-family: "Montserrat", sans-serif
+  background-color: $bg-color
+
+
+.btn
+  @include resetinteractive
+  display: inline-block
+  padding: 12px 10px
+  font-size: 1.2rem
+  font-family: "Montserrat", sans-serif
+  font-weight: 600
+  text-transform: uppercase
+  color: $white
+  background-color: $btn
+  cursor: pointer
+  &--gr
+    padding: 4px 10px
+    background-size: 200% 100%
+    background-repeat: no-repeat
+    background-position: 100% 0
+    background-image: linear-gradient(90deg, #FF8BDE 50%, #669FFF 100%)
+    transition: background-position $transition
+    &:hover
+      background-position: 0 0
+

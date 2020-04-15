@@ -1,0 +1,185 @@
+.main-menu
+  position: fixed
+  width: 100%
+
+  &__container
+    @include container()
+    display: flex
+    align-items: flex-start
+
+  &__logo
+    margin-left: 25px
+    margin-top: 30px
+    text-decoration: none
+    font-weight: 800
+    font-size: 1.8rem
+    color: $black
+
+  &__wrapper
+    margin-left: 49px
+    margin-top: 27px
+    display: flex
+    align-items: flex-start
+    font-size: 1.5rem
+
+  &__get-gift-btn
+    margin-top: 2px
+    padding: 4px 12px
+    box-shadow: 0 4px 15px rgba(177, 149, 239, 0.7)
+
+  &__list
+    @include resetlist
+    display: flex
+    margin: 3px 34px 0
+
+  &__list-item
+    position: relative
+  &__list-item + &__list-item
+    margin-left: 23px
+
+  &__list-item--submenu
+    &::before
+      opacity: 0
+    &--active
+      &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        display: block
+        background-color: $white
+        height: calc(100% + 20px)
+        width: calc(100% + 26px)
+        transform: translate(-50%, -50%)
+        opacity: 1
+        transition: opacity $transition
+      .main-menu__submenu
+        opacity: 1
+        pointer-events: all
+
+  &__link
+    position: relative
+    text-decoration: none
+    font-weight: 500
+    color: $text
+    &--tel
+      margin-top: -2px
+      display: flex
+      flex-flow: column
+      text-align: center
+      &:after
+        display: none
+      &:hover
+        .main-menu__link-text
+          color: $black
+        .main-menu__link-text--sm
+          opacity: 1
+
+  &__link, &__submenu-link
+    white-space: nowrap
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      height: 1px
+      bottom: -2px
+      width: 100%
+      transform: scaleX(0)
+      background-color: lighten($text, 30%)
+      transition: transform $transition
+      transform-origin: right
+    &:hover
+      &::after
+        transform: scaleX(1)
+        transform-origin: left
+    &--no-decor
+      &::after
+        display: none
+
+  &__link-text
+    font-size: 1.8rem
+    font-weight: 400
+    transition: color $transition
+    &--sm
+      font-size: 1.4rem
+      opacity: 0.5
+      line-height: 80%
+      transition: opacity $transition
+
+  &__submenu
+    @include resetlist
+    position: absolute
+    top: calc(100% + 5px)
+    left: -13px
+    display: flex
+    padding: 10px 15px
+    background-color: $white
+    transition: opacity $transition
+    pointer-events: none
+    opacity: 0
+
+
+  &__submenu-item
+    position: relative
+  &__submenu-item + &__submenu-item
+    margin-left: 20px
+    padding-left: 20px
+    &::before
+      content: ""
+      position: absolute
+      left: 0
+      top: 50%
+      display: block
+      height: calc(100% - 7px)
+      width: 1px
+      background-color: $text
+      transform: translate(0, -50%)
+
+  &__submenu-link
+    position: relative
+    display: inline-block
+    font-size: 1.8rem
+    font-weight: 800
+    text-transform: uppercase
+    letter-spacing: 0.2rem
+    text-decoration: none
+    color: $text
+    &::after
+      bottom: 0
+
+
+
+
+
+  &__order-call-btn
+    margin-left: 31px
+    padding: 9px 16px
+    border: 0 solid $btn
+    transition: background-color $transition, color $transition, outline $transition
+    &:hover
+      padding: 7px 14px
+      color: $btn
+      background-color: transparent
+      border: 2px solid $btn
+
+  &__basket
+    position: relative
+    margin-top: 28px
+    margin-left: 50px
+    text-decoration: none
+
+  &__basket-items
+    position: absolute
+    top: -8px
+    right: -8px
+    display: block
+    width: 23px
+    height: 23px
+    padding: 5px
+    font-size: 1.4rem
+    font-weight: 500
+    line-height: 100%
+    text-align: center
+    color: $text
+    background-color: $white
+    border-radius: 50%

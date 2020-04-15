@@ -1,5 +1,5 @@
 {
-  "name": "forrest-mix",
+  "name": "arobomb",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -32,12 +32,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m1ndgap/forrest-mix.git"
+    "url": "git+https://github.com/m1ndgap/arobomb.git"
   },
   "author": "mg",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/m1ndgap/forrest-mix/issues"
-  },
-  "homepage": "https://github.com/m1ndgap/forrest-mix#readme"
+    "url": "https://github.com/m1ndgap/arobomb/issues"
+  }
 }
