@@ -1,6 +1,9 @@
 .single-page
-  height: 100vh
+  height: 110vh
   background-image: url("../img/index-bg-1.jpg")
   background-repeat: no-repeat
   background-position: right
   background-size: contain
+  @include media("<huge")
+    background-position: top
+    background-size: 150%

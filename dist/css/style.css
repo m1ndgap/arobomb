@@ -23,6 +23,9 @@ body {
   color: #FFFFFF;
   background-color: #82AD24;
   cursor: pointer; }
+  .btn:hover {
+    color: #82AD24;
+    background-color: #FFFFFF; }
   .btn--gr {
     padding: 4px 10px;
     background-size: 200% 100%;
@@ -31,7 +34,43 @@ body {
     background-image: linear-gradient(90deg, #FF8BDE 50%, #669FFF 100%);
     transition: background-position 300ms; }
     .btn--gr:hover {
-      background-position: 0 0; }
+      background-position: 0 0;
+      color: #FFFFFF; }
+
+.title-gradient {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  padding: 0 22px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 7.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FFFFFF; }
+  @media (max-width: 1439px) {
+    .title-gradient {
+      font-size: 6.0rem; } }
+  @media (max-width: 1279px) {
+    .title-gradient {
+      font-size: 4.8rem; } }
+  @media (max-width: 1023px) {
+    .title-gradient {
+      font-size: 3.6rem; } }
+  @media (max-width: 767px) {
+    .title-gradient {
+      font-size: 2.8rem; } }
+
+.main--padded {
+  padding-top: 120px; }
+  @media (max-width: 1279px) {
+    .main--padded {
+      padding-top: 100px; } }
+  @media (max-width: 767px) {
+    .main--padded {
+      padding-top: 90px; } }
 
 @font-face {
   font-family: 'Montserrat';
@@ -56,6 +95,18 @@ body {
   font-weight: 800;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
 .test {
   height: 100vh;
   padding: 30px;
@@ -66,16 +117,22 @@ body {
 
 .main-menu {
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  transition: background-color 300ms; }
+  @media (max-width: 1439px) {
+    .main-menu {
+      background-color: #FFFFFF; } }
   .main-menu__container {
     box-sizing: border-box;
     max-width: 1440px;
     margin: 0 auto 0;
     display: flex;
-    align-items: flex-start; }
+    align-items: flex-start;
+    padding-bottom: 27px; }
     @media (max-width: 1439px) {
       .main-menu__container {
-        width: 100%; } }
+        width: 100%;
+        padding: 0 15px; } }
   .main-menu__logo {
     margin-left: 25px;
     margin-top: 30px;
@@ -89,6 +146,13 @@ body {
     display: flex;
     align-items: flex-start;
     font-size: 1.5rem; }
+    @media (max-width: 1439px) {
+      .main-menu__wrapper {
+        display: none; } }
+  @media (max-width: 1439px) {
+    .main-menu__wrapper--mob-active {
+      display: flex;
+      flex-flow: column nowrap; } }
   .main-menu__get-gift-btn {
     margin-top: 2px;
     padding: 4px 12px;
@@ -204,14 +268,9 @@ body {
       bottom: 0; }
   .main-menu__order-call-btn {
     margin-left: 31px;
-    padding: 9px 16px;
-    border: 0 solid #82AD24;
+    padding: 7px 14px;
+    border: 2px solid #82AD24;
     transition: background-color 300ms, color 300ms, outline 300ms; }
-    .main-menu__order-call-btn:hover {
-      padding: 7px 14px;
-      color: #82AD24;
-      background-color: transparent;
-      border: 2px solid #82AD24; }
   .main-menu__basket {
     position: relative;
     margin-top: 28px;
@@ -232,12 +291,124 @@ body {
     color: #444444;
     background-color: #FFFFFF;
     border-radius: 50%; }
+  .main-menu #nav-icon {
+    display: none; }
+    @media (max-width: 1439px) {
+      .main-menu #nav-icon {
+        display: block; } }
+
+.fixed-menu-trailing-gradient {
+  background-color: #FFFFFF; }
+  .fixed-menu-trailing-gradient:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(180deg, #FFFFFF, rgba(255, 255, 255, 0.001)); }
 
 .single-page {
-  height: 100vh;
+  height: 110vh;
   background-image: url("../img/index-bg-1.jpg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain; }
+  @media (max-width: 1439px) {
+    .single-page {
+      background-position: top;
+      background-size: 150%; } }
+
+#nav-icon {
+  width: 21px;
+  height: 12px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  flex-shrink: 0; }
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #000000;
+  border-radius: 5px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  cursor: default; }
+
+#nav-icon span:nth-child(1) {
+  top: 0; }
+
+#nav-icon span:nth-child(2) {
+  background: none;
+  display: flex; }
+  #nav-icon span:nth-child(2) div {
+    background-color: #000000;
+    border-radius: 5px; }
+  #nav-icon span:nth-child(2) div:nth-child(1) {
+    width: 2px;
+    height: 2px; }
+  #nav-icon span:nth-child(2) div:nth-child(2) {
+    flex-grow: 1;
+    height: 2px;
+    margin-left: 3px;
+    transition: margin-left 300ms; }
+
+#nav-icon span:nth-child(2), #nav-icon span:nth-child(3) {
+  top: 6px; }
+
+#nav-icon span:nth-child(3) {
+  background: none; }
+
+#nav-icon span:nth-child(4) {
+  top: 12px; }
+
+#nav-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0;
+  left: 50%; }
+
+#nav-icon.open span:nth-child(2) {
+  transform: rotate(45deg); }
+  #nav-icon.open span:nth-child(2) div:nth-child(1) {
+    display: none; }
+  #nav-icon.open span:nth-child(2) div:nth-child(2) {
+    margin-left: 0; }
+
+#nav-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  background: #000000; }
+
+#nav-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0;
+  left: 50%; }
+
+.documents {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto 0; }
+  @media (max-width: 1439px) {
+    .documents {
+      width: 100%;
+      padding: 0 15px; } }
+  .documents__wrapper {
+    margin-top: 60px; }
+  .documents__item {
+    display: block;
+    width: 275px;
+    height: 126px;
+    background-image: url("../img/doc-border-line.svg");
+    background-size: contain;
+    background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,9 @@
 
 const mainMenu = document.querySelector('.main-menu')
 const submenuCls = 'main-menu__list-item--submenu'
+const mobileBtnCls = 'main-menu__nav-icon'
+const menuWrapCls = 'main-menu__wrapper'
+const giftBtnCls = 'main-menu__get-gift-btn'
 
 let submenus = mainMenu.querySelectorAll('.' + submenuCls)
 submenus.forEach(el => {
@@ -11,4 +14,16 @@ submenus.forEach(el => {
     el.addEventListener('mouseleave', function(){
         this.classList.remove(submenuCls + '--active')
     })
+})
+
+let navIcon = mainMenu.querySelector('.' + mobileBtnCls)
+let menuWrapMob = mainMenu.querySelector('.' + menuWrapCls)
+navIcon.addEventListener('click', function(){
+    this.classList.toggle('open')
+    menuWrapMob.classList.toggle(menuWrapCls + '--mob-active')
+})
+
+let giftbtn = mainMenu.querySelector('.' + giftBtnCls)
+giftbtn.addEventListener('click', function(){
+    mainMenu.classList.toggle('fixed-menu-trailing-gradient')
 })

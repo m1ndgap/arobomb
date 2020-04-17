@@ -1,11 +1,15 @@
 .main-menu
   position: fixed
   width: 100%
+  transition: background-color $transition
+  @include media("<huge")
+    background-color: $white
 
   &__container
     @include container()
     display: flex
     align-items: flex-start
+    padding-bottom: 27px
 
   &__logo
     margin-left: 25px
@@ -21,6 +25,13 @@
     display: flex
     align-items: flex-start
     font-size: 1.5rem
+    @include media("<huge")
+      display: none
+
+  &__wrapper--mob-active
+    @include media("<huge")
+      display: flex
+      flex-flow: column nowrap
 
   &__get-gift-btn
     margin-top: 2px
@@ -31,6 +42,8 @@
     @include resetlist
     display: flex
     margin: 3px 34px 0
+
+
 
   &__list-item
     position: relative
@@ -147,20 +160,11 @@
     &::after
       bottom: 0
 
-
-
-
-
   &__order-call-btn
     margin-left: 31px
-    padding: 9px 16px
-    border: 0 solid $btn
+    padding: 7px 14px
+    border: 2px solid $btn
     transition: background-color $transition, color $transition, outline $transition
-    &:hover
-      padding: 7px 14px
-      color: $btn
-      background-color: transparent
-      border: 2px solid $btn
 
   &__basket
     position: relative
@@ -183,3 +187,19 @@
     color: $text
     background-color: $white
     border-radius: 50%
+
+  #nav-icon
+    display: none
+    @include media("<huge")
+      display: block
+
+.fixed-menu-trailing-gradient
+  background-color: $white
+  &:after
+    content: ""
+    position: absolute
+    top: 100%
+    display: block
+    width: 100%
+    height: 40px
+    background-image: linear-gradient(180deg, $white, rgba($white, 0.001))

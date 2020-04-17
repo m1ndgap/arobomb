@@ -1,0 +1,79 @@
+#nav-icon
+  width: 21px
+  height: 12px
+  position: relative
+  // margin: 50px auto
+  transform: rotate(0deg)
+  transition: .5s ease-in-out
+  cursor: default
+  user-select: none
+  flex-shrink: 0
+
+
+
+#nav-icon span
+  display: block
+  position: absolute
+  height: 2px
+  width: 100%
+  background: $black
+  border-radius: 5px
+  opacity: 1
+  left: 0
+  transform: rotate(0deg)
+  transition: .25s ease-in-out
+  cursor: default
+
+#nav-icon span:nth-child(1)
+  top: 0
+
+#nav-icon span:nth-child(2)
+  background: none
+  display: flex
+  div
+    background-color: $black
+    border-radius: 5px
+  div:nth-child(1)
+    width: 2px
+    height: 2px
+
+  div:nth-child(2)
+    flex-grow: 1
+    height: 2px
+    margin-left: 3px
+    transition: margin-left $transition
+
+
+#nav-icon span:nth-child(2),#nav-icon span:nth-child(3)
+  top: 6px
+
+#nav-icon span:nth-child(3)
+  background: none
+
+#nav-icon span:nth-child(4)
+  top: 12px
+
+
+#nav-icon.open span:nth-child(1)
+  top: 18px
+  width: 0
+  left: 50%
+
+
+#nav-icon.open span:nth-child(2)
+  transform: rotate(45deg)
+  div:nth-child(1)
+    display: none
+  div:nth-child(2)
+    margin-left: 0
+
+
+#nav-icon.open span:nth-child(3)
+  transform: rotate(-45deg)
+  background: $black
+
+
+#nav-icon.open span:nth-child(4)
+  top: 18px
+  width: 0
+  left: 50%
