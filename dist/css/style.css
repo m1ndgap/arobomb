@@ -134,7 +134,8 @@ body {
 .main-menu {
   position: fixed;
   width: 100%;
-  transition: background-color 300ms; }
+  transition: background-color 300ms;
+  z-index: 5; }
   @media (max-width: 767px) {
     .main-menu {
       background-color: #FFFFFF; } }
@@ -610,6 +611,75 @@ body {
     padding: 0; }
   .documents__item-link {
     margin-top: 15px; }
+
+.catalog {
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0; }
+  @media (max-width: 1439px) {
+    .catalog {
+      width: 1280px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .catalog {
+      width: 1024px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .catalog {
+      width: 100%; } }
+  .catalog__wrapper {
+    display: flex;
+    flex-flow: row wrap; }
+    .catalog__wrapper > div:nth-child(odd) {
+      transform: translate(0, -20px); }
+    .catalog__wrapper > div:nth-child(even) {
+      transform: translate(0, 20px); }
+  .catalog__item {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 273px;
+    height: 305px;
+    padding: 20px 30px;
+    margin: 20px 30px; }
+    .catalog__item * {
+      z-index: 2; }
+  .catalog__item-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  .catalog__item-code {
+    position: absolute;
+    top: 23px;
+    left: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    z-index: 3; }
+  .catalog__item-img {
+    z-index: 1; }
+  .catalog__price-block {
+    align-self: stretch;
+    display: flex;
+    flex-flow: row wrap; }
+  .catalog__item-name {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    color: #444444;
+    text-transform: uppercase;
+    flex-basis: 100%;
+    margin-bottom: 10px; }
+  .catalog__item-price {
+    font-size: 1.8rem; }
+    .catalog__item-price:after {
+      content: " p."; }
+  .catalog__item-link {
+    margin-left: auto; }
 
 .document-modal {
   position: fixed;
