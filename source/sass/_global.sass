@@ -34,6 +34,13 @@ body
       background-position: 0 0
       color: $white
 
+.link-btn
+  font-size: 1.6rem
+  display: inline-block
+  text-decoration: underline
+  color: $btn
+  font-weight: 600
+
 .title-gradient
   @include gbackground(100%)
   @include resetmargin
@@ -61,3 +68,12 @@ body
       padding-top: 100px
     @include media("<tablet")
       padding-top: 90px
+
+.icon-close
+  fill: url(#linear-grad)
+  transition: fill $transition
+  &:hover
+    fill: url(#linear-grad-2)
+
+.svg-gradient-line
+  stroke: url(#linear-grad)
