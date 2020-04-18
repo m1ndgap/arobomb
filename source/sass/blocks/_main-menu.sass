@@ -2,14 +2,19 @@
   position: fixed
   width: 100%
   transition: background-color $transition
-  @include media("<huge")
+  @include media("<tablet")
     background-color: $white
 
   &__container
     @include container()
     display: flex
     align-items: flex-start
-    padding-bottom: 27px
+    @include media("<huge")
+      flex-flow: row wrap
+    @include media("<tablet")
+      padding: 15px 30px
+      justify-content: space-between
+      align-items: center
 
   &__logo
     margin-left: 25px
@@ -18,37 +23,83 @@
     font-weight: 800
     font-size: 1.8rem
     color: $black
+    @include media("<huge")
+      order: 1
+      margin-left: 5px
+    @include media("<tablet")
+      margin: 0
 
   &__wrapper
+    position: relative
     margin-left: 49px
     margin-top: 27px
     display: flex
     align-items: flex-start
     font-size: 1.5rem
     @include media("<huge")
-      display: none
+      margin-left: 0
+      order: 3
+      flex-basis: 100%
+    @include media("<tablet")
+      position: absolute
+      top: 100%
+      left: 0
+      max-height: 0
+      width: 100%
+      padding: 0
+      margin: 0
+      overflow: hidden
+      background-color: $white
 
   &__wrapper--mob-active
-    @include media("<huge")
-      display: flex
-      flex-flow: column nowrap
+    display: flex
+    flex-flow: column nowrap
+    max-height: 1000px
+    padding: 0 10px 35px
 
   &__get-gift-btn
     margin-top: 2px
     padding: 4px 12px
     box-shadow: 0 4px 15px rgba(177, 149, 239, 0.7)
+    @include media("<desktop")
+      padding: 4px 6px
+    @include media("<tablet")
+      @include mobilemaw(400px)
+      display: block
+      padding: 10px
+      margin-top: 25px
+      order: 2
+      font-size: 1.8rem
+      text-align: center
+
 
   &__list
     @include resetlist
     display: flex
     margin: 3px 34px 0
-
+    @include media("<huge")
+      flex-grow: 1
+      justify-content: space-between
+      margin: 3px 10px 0 120px
+    @include media("<large")
+      margin-left: 50px
+    @include media("<desktop")
+      margin-left: 25px
+    @include media("<tablet")
+      @include mobilemaw(400px)
+      flex-flow: column nowrap
+      order: 1
+      padding: 10px
 
 
   &__list-item
     position: relative
   &__list-item + &__list-item
     margin-left: 23px
+    @include media("<desktop")
+      margin-left: 15px
+    @include media("<tablet")
+      margin-left: 0
 
   &__list-item--submenu
     &::before
@@ -69,24 +120,43 @@
       .main-menu__submenu
         opacity: 1
         pointer-events: all
+    @include media("<tablet")
+      &::before
+        display: none
 
   &__link
     position: relative
     text-decoration: none
+    font-size: 1.5rem
     font-weight: 500
     color: $text
-    &--tel
-      margin-top: -2px
-      display: flex
-      flex-flow: column
-      text-align: center
-      &:after
-        display: none
-      &:hover
-        .main-menu__link-text
-          color: $black
-        .main-menu__link-text--sm
-          opacity: 1
+    @include media("<tablet")
+      display: inline-block
+      font-size: 1.6rem
+      padding: 7px 0
+
+  &__link--tel
+    margin-top: -2px
+    display: flex
+    flex-flow: column
+    text-align: center
+    &:after
+      display: none
+    &:hover
+      .main-menu__link-text
+        color: $black
+      .main-menu__link-text--sm
+        opacity: 1
+    @include media("<huge")
+      position: absolute
+      top: -60px
+      right: 310px
+    @include media("<tablet")
+      @include mobilemaw(400px)
+      position: static
+      margin: 30px auto 28px
+      order: 3
+
 
   &__link, &__submenu-link
     white-space: nowrap
@@ -108,16 +178,27 @@
     &--no-decor
       &::after
         display: none
+    @include media("<tablet")
+      &:after
+        display: none
 
   &__link-text
     font-size: 1.8rem
     font-weight: 400
     transition: color $transition
+    @include media("<tablet")
+      font-size: 22px
+      text-decoration: underline
+      font-weight: 600
+      margin-bottom: 5px
     &--sm
       font-size: 1.4rem
       opacity: 0.5
       line-height: 80%
       transition: opacity $transition
+      @include media("<tablet")
+        font-size: 1.6rem
+        opacity: 0.7
 
   &__submenu
     @include resetlist
@@ -130,10 +211,18 @@
     transition: opacity $transition
     pointer-events: none
     opacity: 0
+    @include media("<tablet")
+      display: block
+      position: static
+      opacity: 1
+      pointer-events: all
+      padding: 0
 
 
   &__submenu-item
     position: relative
+    @include media("<tablet")
+      padding: 7px 0
   &__submenu-item + &__submenu-item
     margin-left: 20px
     padding-left: 20px
@@ -147,6 +236,11 @@
       width: 1px
       background-color: $text
       transform: translate(0, -50%)
+    @include media("<tablet")
+      margin: 0
+      padding: 7px 0
+      &::before
+        display: none
 
   &__submenu-link
     position: relative
@@ -159,18 +253,42 @@
     color: $text
     &::after
       bottom: 0
+    @include media("<tablet")
+      font-size: 1.6rem
+      font-weight: 500
+      text-transform: capitalize
+      letter-spacing: 0
 
   &__order-call-btn
     margin-left: 31px
     padding: 7px 14px
     border: 2px solid $btn
     transition: background-color $transition, color $transition, outline $transition
+    @include media("<huge")
+      position: absolute
+      top: -60px
+      right: 110px
+    @include media("<tablet")
+      position: absolute
+      top: unset
+      bottom: 0
+      left: 0
+      right: 0
+      margin-left: 0
+      order: 5
+      font-size: 1.8rem
+      text-align: center
 
   &__basket
     position: relative
     margin-top: 28px
     margin-left: 50px
     text-decoration: none
+    @include media("<huge")
+      order: 2
+      margin-left: auto
+    @include media("<tablet")
+      margin: 0
 
   &__basket-items
     position: absolute
@@ -190,11 +308,12 @@
 
   #nav-icon
     display: none
-    @include media("<huge")
+    @include media("<tablet")
       display: block
 
 .fixed-menu-trailing-gradient
   background-color: $white
+  padding-bottom: 27px
   &:after
     content: ""
     position: absolute
