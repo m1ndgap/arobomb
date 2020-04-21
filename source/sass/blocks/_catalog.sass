@@ -1,7 +1,5 @@
 .catalog
-  @include container()
-
-
+  @include container--content()
 
   &__wrapper
     display: flex
@@ -20,7 +18,7 @@
     width: 273px
     height: 305px
     padding: 20px 30px
-    margin: 20px 30px
+    margin: 10px 10px
     *
       z-index: 2
 
@@ -42,13 +40,17 @@
     z-index: 1
 
   &__price-block
+    position: relative
     align-self: stretch
     display: flex
     flex-flow: row wrap
+    padding-top: 35px
 
   &__item-name
     @include resetmargin
     @include subtitle(2.4rem)
+    position: absolute
+    bottom: 22px
     flex-basis: 100%
     margin-bottom: 10px
 

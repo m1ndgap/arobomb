@@ -27,6 +27,23 @@
   @include media("<desktop")
     width: 100%
 
+@mixin container--content
+  box-sizing: border-box
+  width: 1440px
+  margin: 0 auto 0
+  padding: 0 132px 0
+  @include media("<huge")
+    width: 1280px
+    margin: 0 auto 0
+    padding: 0 15px
+  @include media("<large")
+    width: 1024px
+    margin: 0 auto 0
+    padding: 0 15px
+  @include media("<desktop")
+    width: 100%
+
+
 @mixin gbackground($width)
   background-size: $width 100%
   background-repeat: no-repeat

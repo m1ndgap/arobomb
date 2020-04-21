@@ -571,7 +571,8 @@ body {
 .documents {
   box-sizing: border-box;
   width: 1440px;
-  margin: 0 auto 0; }
+  margin: 0 auto 0;
+  padding: 0 132px 0; }
   @media (max-width: 1439px) {
     .documents {
       width: 1280px;
@@ -595,7 +596,7 @@ body {
     width: 275px;
     height: 126px;
     padding: 28px 43px 21px;
-    margin: 15px; }
+    margin: 9px; }
   .documents__item-svg {
     position: absolute;
     top: 0;
@@ -615,7 +616,8 @@ body {
 .catalog {
   box-sizing: border-box;
   width: 1440px;
-  margin: 0 auto 0; }
+  margin: 0 auto 0;
+  padding: 0 132px 0; }
   @media (max-width: 1439px) {
     .catalog {
       width: 1280px;
@@ -644,7 +646,7 @@ body {
     width: 273px;
     height: 305px;
     padding: 20px 30px;
-    margin: 20px 30px; }
+    margin: 10px 10px; }
     .catalog__item * {
       z-index: 2; }
   .catalog__item-border {
@@ -662,9 +664,11 @@ body {
   .catalog__item-img {
     z-index: 1; }
   .catalog__price-block {
+    position: relative;
     align-self: stretch;
     display: flex;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    padding-top: 35px; }
   .catalog__item-name {
     margin: 0;
     padding: 0;
@@ -672,6 +676,8 @@ body {
     font-size: 2.4rem;
     color: #444444;
     text-transform: uppercase;
+    position: absolute;
+    bottom: 22px;
     flex-basis: 100%;
     margin-bottom: 10px; }
   .catalog__item-price {
@@ -721,5 +727,47 @@ body {
     pointer-events: all; }
     .document-modal--active * {
       pointer-events: all; }
+
+.breadcrumbs {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  display: flex; }
+  .breadcrumbs__item + .breadcrumbs__item {
+    margin-left: 20px; }
+    .breadcrumbs__item + .breadcrumbs__item:before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-right: 20px;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 9px solid #aaaaaa; }
+  .breadcrumbs__link {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    text-decoration: none; }
+
+.item {
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0;
+  padding: 0 132px 0; }
+  @media (max-width: 1439px) {
+    .item {
+      width: 1280px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .item {
+      width: 1024px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .item {
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
