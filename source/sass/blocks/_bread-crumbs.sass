@@ -2,6 +2,10 @@
   @include resetlist()
   display: flex
 
+  li:first-child
+    a
+      text-decoration: underline
+
   &__item + &__item
     margin-left: 20px
     &:before
@@ -12,11 +16,11 @@
       margin-right: 20px
       border-top: 7px solid transparent
       border-bottom: 7px solid transparent
-      border-left: 9px solid lighten($text, 40%)
+      border-left: 9px solid lighten($text, 30%)
 
   &__link
     font-size: 1.8rem
     text-transform: uppercase
     letter-spacing: 2px
-    color: lighten($text, 40%)
+    color: lighten($text, 30%)
     text-decoration: none

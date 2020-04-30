@@ -733,6 +733,8 @@ body {
   margin: 0;
   list-style: none;
   display: flex; }
+  .breadcrumbs li:first-child a {
+    text-decoration: underline; }
   .breadcrumbs__item + .breadcrumbs__item {
     margin-left: 20px; }
     .breadcrumbs__item + .breadcrumbs__item:before {
@@ -743,31 +745,74 @@ body {
       margin-right: 20px;
       border-top: 7px solid transparent;
       border-bottom: 7px solid transparent;
-      border-left: 9px solid #aaaaaa; }
+      border-left: 9px solid #919191; }
   .breadcrumbs__link {
     font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #aaaaaa;
+    color: #919191;
     text-decoration: none; }
 
-.item {
+.product {
   box-sizing: border-box;
   width: 1440px;
   margin: 0 auto 0;
   padding: 0 132px 0; }
   @media (max-width: 1439px) {
-    .item {
+    .product {
       width: 1280px;
       margin: 0 auto 0;
       padding: 0 15px; } }
   @media (max-width: 1279px) {
-    .item {
+    .product {
       width: 1024px;
       margin: 0 auto 0;
       padding: 0 15px; } }
   @media (max-width: 1023px) {
-    .item {
+    .product {
       width: 100%; } }
+  .product__wrapper {
+    display: flex;
+    margin-top: 118px; }
+  .product__gallery {
+    height: 340px; }
+  .product__info {
+    width: 482px;
+    height: 365px; }
+  .product__info-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+
+.gallery {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  flex: 0 0; }
+  .gallery__img-wrap {
+    margin: 0;
+    padding: 0;
+    height: 92px;
+    width: 92px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 300ms; }
+    .gallery__img-wrap:hover {
+      transform: scale(1.1); }
+    .gallery__img-wrap--main {
+      margin-left: 55px;
+      height: 339px;
+      width: 339px; }
+      .gallery__img-wrap--main:hover {
+        transform: none; }
+  .gallery__img-wrap + .gallery__img-wrap {
+    margin-top: 30px; }
+  .gallery__img-wrap + .gallery__img-wrap--main {
+    margin-top: 0; }
+  .gallery__img {
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain; }
 
 /*# sourceMappingURL=style.css.map */
