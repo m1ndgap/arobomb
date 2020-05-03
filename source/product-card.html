@@ -22,17 +22,128 @@
                     <img src="./img/product-item-3.jpg" alt="" class="gallery__img">
                 </figure>
                 <figure class="gallery__img-wrap gallery__img-wrap--main">
-                    <img src="./img/product-item-4.jpg" alt="" class="gallery__img">
+                    <img src="./img/product-item-4.png" alt="" class="gallery__img">
                 </figure>
             </div>
             <div class="product__info">
                 <svg width="482" height="364" viewBox="0 0 482 364" fill="none" class="svg-gradient-line product__info-border">
                     <use xlink:href="#product-border-line"></use>
                 </svg>
+                <div class="product__info-text-block">
+                    <span class="product__code">арт.124374</span>
+                    <h1 class="product__title">Че гевара</h1>
+                    <span class="product__price">1400</span>
+                    <p class="product__text">короткое описание что это и зачем, либо другой текст на эту тему</p>
+                </div>
+                <div class="product__info-buttons">
+                    <button class="product__to-cart-btn link-btn">
+                        в корзину +
+                    </button>
+                    <a href="javascript:void(0)" class="product__buy-btn btn">
+                        купить
+                    </a>
+                </div>
             </div>
-
         </article>
+        <div class="product__tabs tabs">
+            <div class="tabs__buttons">
+                <button class="tabs__tab-button tabs__tab-button--active" data-tab="0" data-active="true">описание</button>
+                <button class="tabs__tab-button" data-tab="1" data-active="false">доставка</button>
+                <button class="tabs__tab-button" data-tab="2" data-active="false">инструкция</button>
+            </div>
+            <div class="tabs__text-area">
+                <div class="tabs__text-wrap tabs__text-wrap--active" data-textn="0" data-active="true">
+                    <p>Вы можете на нас положиться.</p>
+                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+                </div>
+                <div class="tabs__text-wrap" data-textn="1" data-active="false">
+                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превыша ет 200 евро, а вес составляет не более 31 кг.</p>
+                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+                </div>
+                <div class="tabs__text-wrap" data-textn="2" data-active="false">
+                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+                    <p>Вы можете на нас положиться.</p>
+                </div>
+            </div>
+        </div>
+        <div class="product__similar-items similar-items">
+            <h2 class="similar-items__main-title">с этим товаром покупают:</h2>
+            <div class="similar-items__wrapper">
+                <div class="similar-items__item">
+                    <div class="similar-items__img-wrap">
+                        <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
+                    </div>
+                    <a class="similar-items__link" href="javascript:void(0)">
+                        <h3 class="similar-items__title">bubble gum</h3>
+                    </a>
+                    <span class="similar-items__price">1400</span>
+                </div>
+                <div class="similar-items__item">
+                    <div class="similar-items__img-wrap">
+                        <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
+                    </div>
+                    <a class="similar-items__link" href="javascript:void(0)">
+                        <h3 class="similar-items__title">bubble gum</h3>
+                    </a>
+                    <span class="similar-items__price">1400</span>
+                </div>
+                <div class="similar-items__item">
+                    <div class="similar-items__img-wrap">
+                        <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
+                    </div>
+                    <a class="similar-items__link" href="javascript:void(0)">
+                        <h3 class="similar-items__title">bubble gum</h3>
+                    </a>
+                    <span class="similar-items__price">1400</span>
+                </div>
+                <div class="similar-items__item">
+                    <div class="similar-items__img-wrap">
+                        <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
+                    </div>
+                    <a class="similar-items__link" href="javascript:void(0)">
+                        <h3 class="similar-items__title">bubble gum</h3>
+                    </a>
+                    <span class="similar-items__price">1400</span>
+                </div>
+                <div class="similar-items__item">
+                    <div class="similar-items__img-wrap">
+                        <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
+                    </div>
+                    <a class="similar-items__link" href="javascript:void(0)">
+                        <h3 class="similar-items__title">bubble gum</h3>
+                    </a>
+                    <span class="similar-items__price">1400</span>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
+
+<div class="product-modal modal">
+    <h3 class="modal__name"></h3>
+    <div class="modal__thumbs">
+        <figure class="modal__thumb-wrap">
+            <img src="" data-thumbsrc="./img/product-item-1-thumb.png" data-bigsrc="./img/product-item-1.png" alt="" class="modal__thumb-img">
+        </figure>
+        <figure class="modal__thumb-wrap">
+            <img src="" data-thumbsrc="./img/product-item-2-thumb.png" data-bigsrc="./img/product-item-2.png" alt="" class="modal__thumb-img">
+        </figure>
+        <figure class="modal__thumb-wrap">
+            <img src="" data-thumbsrc="./img/product-item-3-thumb.png" data-bigsrc="./img/product-item-3.png" alt="" class="modal__thumb-img">
+        </figure>
+    </div>
+    <img class="modal__image" src="" data-bigsrc="./img/product-item-4.png"  data-thumbsrc="./img/product-item-4-thumb.png" alt="че гевара">
+    <svg viewBox="0 0 25 25" width="25" height="25" class="icon-close modal__close">
+        <use xlink:href="#icon-close"></use>
+    </svg>
+</div>
+
+<script src="./js/tabs.js"></script>
+<script src="./js/product-card-modal.js"></script>
+<script>
+    (function x(){
+        document.querySelector(".main-menu").classList.add('fixed-menu-trailing-gradient')
+    })();
+</script>
 
 //= ./html-components/_footer.html
