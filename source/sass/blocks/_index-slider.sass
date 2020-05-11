@@ -1,0 +1,94 @@
+.slider
+  .swiper-slide
+    position: relative
+
+  &__animation-1-img
+    position: absolute
+    top: 50%
+    left: 50%
+    max-width: 450px
+    transform: translate(-50%, -50%)
+    &:nth-child(1)
+      z-index: 3
+    &:nth-child(2)
+      z-index: 2
+    @include media("<xl")
+      max-width: 350px
+      left: 60%
+    img
+      width: 100%
+
+  &__animation-2-img
+    position: absolute
+    top: 50%
+    left: 50%
+    max-width: 450px
+    transform: translate(-50%, -50%)
+    @include media("<xl")
+      max-width: 350px
+      left: 60%
+    img
+      width: 100%
+
+  &__animation-swirl
+    transform: translate(-50%, -50%) scale(0.01) rotate(180deg)
+    max-width: unset
+    width: 100%
+    &--animate
+      animation-delay: 0s
+      animation-duration: 1s
+      animation-name: swirl
+      animation-iteration-count: 1
+      animation-fill-mode: forwards
+
+  &__animation-slide
+    &-top
+      transform: translate(-50%, -1700px)
+      &--animate
+        animation-delay: 0s
+        animation-duration: 1s
+        animation-name: slide-top
+        animation-iteration-count: 1
+        animation-fill-mode: forwards
+    &-bottom
+      transform: translate(-50%, 1700px)
+      &--animate
+        animation-delay: 0s
+        animation-duration: 1s
+        animation-name: slide-bottom
+        animation-iteration-count: 1
+        animation-fill-mode: forwards
+
+@keyframes swirl
+  from
+    transform: translate(-50%, -50%) scale(0.01) rotate(180deg)
+  to
+    transform: translate(-50%, -50%) scale(1) rotate(0deg)
+
+@keyframes slide-top
+  from
+    transform: translate(-50%, -1700px)
+  to
+    transform: translate(-50%, -50%)
+
+@keyframes slide-bottom
+  from
+    transform: translate(-50%, 1700px)
+  to
+    transform: translate(-50%, -50%)
+
+@keyframes letterShow
+  from
+    opacity: 0
+    transform: translate(0, -10px)
+  to
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes letterHide
+  from
+    opacity: 1
+    transform: translate(0, 0px)
+  to
+    opacity: 0
+    transform: translate(0, 10px)

@@ -1,7 +1,60 @@
 //= ./html-components/_header.html
 
-<main class="single-page">
+<main class="index">
+    <div class="index__static">
+        <h2 class="index__hash-title">#arobomb</h2>
+        <h1 class="index__main-title">дизайнерские автомобильные ароматизаторы со сменными картриджами</h1>
+        <div class="index__video-block">
+            <svg width="179" height="164" viewBox="0 0 170 164" fill="none" class="svg-gradient-line index__video-svg">
+                <use xlink:href="#circle-border-line"></use>
+            </svg>
+            <button class="index__video-btn">
+                <span>смотреть</span> <br><span>видео</span></button>
+        </div>
+        <div class="index__name-block">
+            <h2 class="index__product-title">
+                <span class="index__product-type" id="animated-title">сувенир</span>
+                <span class="index__product-name" id="animated-name">че гевара</span>
+            </h2>
+            <a href="./product-card.html" class="index__more-info-btn">
+                <span class="index__more-info-text">подробнее</span>
+                <svg viewBox="0 0 82 8" width="81" height="8" class="index__more-info-arrow">
+                    <use xlink:href="#index-arrow"></use>
+                </svg>
+            </a>
 
+        </div>
+        <div class="index__all-products-block">
+            <div class="index__progress-bar " >
+                <div class="index__progress-bar-filler index__progress-bar-filler--animate" id="progress-bar"></div>
+            </div>
+            <a href="./catalog.html" class="index__all-products-btn btn btn--gr">Смотреть весь ассортимент</a>
+        </div>
+    </div>
+    <div class="index__slider slider swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" data-animation="type-1" data-title="че гевара" data-subtitle="cувенир" data-url="https://vkontakte.com">
+                <figure class="slider__animation-1-img">
+                    <img src="./img/index-che.png" alt="">
+                </figure>
+                <figure class="slider__animation-1-img  slider__animation-swirl">
+                    <img src="./img/index-splash.jpg" alt="">
+                </figure>
+            </div>
+            <div class="swiper-slide" data-animation="type-2" data-title="TOMORROW" data-subtitle="эссенция" data-url="https://google.com">
+                <figure data-slide="top"  class="slider__animation-2-img slider__animation-slide-top">
+                    <img src="./img/index-bottle.png" alt="">
+                </figure>
+                <figure data-slide="bottom" class="slider__animation-2-img slider__animation-slide-bottom">
+                    <img src="./img/index-bottle.png" alt="">
+                </figure>
+            </div>
+        </div>
+    </div>
 </main>
+
+<script src="./js/index-slider.js"></script>
 
 //= ./html-components/_footer.html
