@@ -121,12 +121,13 @@
         flex-flow: column
         &-input
             display: block
-            height: 45px
+            padding: 15px 10px
             width: 454px
             border: none
             opacity: 0.9
             margin-bottom: 15px
-            padding: 10px
+            // font-size: 1.8rem
+            text-transform: uppercase
             @media screen and (max-width: 560px)
                 width: 100%
             &::placeholder
@@ -135,11 +136,13 @@
                 font-weight: 600
                 opacity: 0.5
         &-btn
+            appearance: none
+            border-radius: 0
             text-align: center
             border: 2px solid $btn
             transition: background-color $transition, color $transition, outline $transition 
             @media screen and (max-width: 560px)
-                height: 33px
+                padding: 10px 0
                 order: 1
                 margin-top: 50px
                 
@@ -167,6 +170,7 @@
     position: relative
     height: 22px
     width: 22px
+    padding: 0
     background: #A9A9A9
     margin: 0
     transition: outline $transition

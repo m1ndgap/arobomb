@@ -1192,12 +1192,12 @@ body {
   flex-flow: column; }
   .contact-us__form-input {
     display: block;
-    height: 45px;
+    padding: 15px 10px;
     width: 454px;
     border: none;
     opacity: 0.9;
     margin-bottom: 15px;
-    padding: 10px; }
+    text-transform: uppercase; }
     @media screen and (max-width: 560px) {
       .contact-us__form-input {
         width: 100%; } }
@@ -1227,12 +1227,16 @@ body {
       font-weight: 600;
       opacity: 0.5; }
   .contact-us__form-btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0;
     text-align: center;
     border: 2px solid #82AD24;
     transition: background-color 300ms, color 300ms, outline 300ms; }
     @media screen and (max-width: 560px) {
       .contact-us__form-btn {
-        height: 33px;
+        padding: 10px 0;
         order: 1;
         margin-top: 50px; } }
   .contact-us__form-cbx {
@@ -1262,6 +1266,7 @@ body {
   position: relative;
   height: 22px;
   width: 22px;
+  padding: 0;
   background: #A9A9A9;
   margin: 0;
   transition: outline 300ms; }
