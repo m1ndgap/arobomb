@@ -1,0 +1,31 @@
+.similar-items
+  margin-bottom: 50px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+  &__item
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+  &__main-title
+    @include subtitle(3.6rem)
+    margin-bottom: 50px
+  &__title
+    @include subtitle(2.4rem)
+    @include resetmargin
+  &__link
+    text-decoration: none
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      display: block
+
+
+  &__price
+    @include subtitle(1.8rem)
+    @include price-after()

@@ -2,11 +2,11 @@
 
 const docLinkCls = 'documents__item-link',
     docModalId = 'document-modal',
-    docModalCls = 'document-modal',
+    docModalCls = 'modal',
     docItemTitleCls = 'documents__item-title',
-    docModalTitleCls = 'document-modal__name',
-    docModalImgCls = 'document-modal__image',
-    docModalBtnCls = 'document-modal__close';
+    docModalTitleCls = 'modal__name',
+    docModalImgCls = 'modal__image',
+    docModalBtnCls = 'modal__close';
 
 let fetchDocModal = () => {
     let template = document.querySelector('#' + docModalId).content.cloneNode(true);

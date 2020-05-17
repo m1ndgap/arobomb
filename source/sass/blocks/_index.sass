@@ -1,0 +1,173 @@
+.index
+  height: 100vh
+
+  &__static
+    @include container--content()
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-start
+    height: 100%
+    padding-top: 172px
+    padding-bottom: 52px
+    z-index: 2
+    @include media("<huge")
+      padding-top: 172px
+      padding-bottom: 52px
+
+  &__hash-title
+    @include subtitle(7.2rem)
+    @include gbackground(100%, 0%)
+    @include resetmargin()
+    display: inline-block
+    margin-bottom: 27px
+    padding: 0 17px
+    font-weight: 900
+    color: $white
+
+  &__main-title
+    @include subtitle(1.8rem)
+    line-height: 3.0rem
+    text-transform: uppercase
+    font-weight: 900
+    max-width: 365px
+
+  &__video-block
+    position: relative
+    display: flex
+    justify-content: center
+    margin: auto 0 20px
+    padding: 54px 0 50px
+    width: 179px
+
+  &__video-svg
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+
+  &__video-btn
+    border: none
+    background: none
+    span
+      @include gbackground(200%, 50%)
+      position: relative
+      display: inline
+      font-size: 1.8rem
+      font-weight: 800
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: transparent
+
+      background-position: 100% 0
+      background-clip: text
+      -webkit-background-clip: text
+      cursor: pointer
+      transition: background-position $transition
+      z-index: 3
+    &:hover
+      span
+        background-position: 0 0
+    &:active, &:focus
+      outline: none
+
+  &__all-products-block
+    width: 100%
+    display: flex
+    margin-top: auto
+    align-items: center
+
+  &__all-products-btn
+    @include subtitle(1.4rem)
+    font-weight: 600
+    padding: 7px 10px
+    color: $white
+
+  &__progress-bar
+    position: relative
+    margin-right: 16px
+    flex-grow: 1
+    height: 3px
+    background-color: lighten($text, 65%)
+
+  &__progress-bar-filler
+    @include gbackground(100%, 0%)
+    position: absolute
+    top: 0
+    left: 0
+    height: 3px
+    &--animate
+      animation-duration: 5s
+      animation-name: progress-bar
+      animation-iteration-count: 1
+      animation-fill-mode: forwards
+
+  &__name-block
+    top: 50%
+    position: absolute
+    left: 750px
+
+  &__product-type
+    display: flex
+    font-size: 1.8rem
+    text-transform: uppercase
+    font-weight: 400
+    span
+      opacity: 0
+      transform: translate(0, -10px)
+      display: block
+      min-width: 15px
+
+  &__product-name
+    display: flex
+    font-size: 3.6rem
+    font-weight: bold
+    text-transform: uppercase
+    line-height: 100%
+    color: $black
+    span
+      opacity: 0
+      transform: translate(0, -10px)
+      display: block
+      min-width: 15px
+
+  &__more-info-btn
+    display: block
+    margin-top: 60px
+    text-decoration: none
+    &:hover
+      .index__more-info-text
+        color: $main-link-lighter
+      .index__more-info-arrow
+        transform: translateX(50px)
+        fill: $main-link-lighter
+
+  &__more-info-text
+    @include subtitle(1.8rem)
+    font-weight: bold
+    display: block
+    color: $main-link
+    transition: color $transition
+
+
+  &__more-info-arrow
+    fill: $main-link
+    transform: translateX(0)
+    transition: transform $transition, fill $transition
+
+  &__slider
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    //border: 2px solid red
+    width: 966px
+    z-index: 1
+
+
+
+@keyframes progress-bar
+  from
+    width: 0
+  to
+    width: 100%

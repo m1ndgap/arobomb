@@ -1,4 +1,4 @@
-.document-modal
+.modal
   position: fixed
   top: 0
   left: 0
@@ -30,9 +30,33 @@
     @include subtitle(3.6rem)
     max-width: 500px
     word-spacing: 500px
+  &__thumbs
+    position: absolute
+    top: 70px
+    left: 50px
+  &__thumb-wrap
+    @include resetmargin()
+    height: 121px
+    width: 121px
+    cursor: pointer
+    transform: scale(1)
+    transition: transform $transition
+    &:hover
+      transform: scale(1.1)
+  &__thumb-wrap + &__thumb-wrap
+    margin-top: 53px
+  &__thumb-img
+    width: 100%
+    object-fit: contain
+
 
   &--active
     opacity: 1
     pointer-events: all
+    z-index: 5
     *
       pointer-events: all
+
+.product-modal
+  background-image: url('../img/splash-bg-2.jpg')
+  background-size: cover
