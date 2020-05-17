@@ -22,7 +22,8 @@
     position: absolute
     top: 50%
     left: 50%
-    max-width: 450px
+    width: 450px
+    min-height: 675px
     transform: translate(-50%, -50%)
     @include media("<xl")
       max-width: 350px
@@ -33,6 +34,7 @@
   &__animation-swirl
     transform: translate(-50%, -50%) scale(0.01) rotate(180deg)
     max-width: unset
+    opacity: 0
     width: 100%
     &--animate
       animation-delay: 0s
@@ -41,8 +43,20 @@
       animation-iteration-count: 1
       animation-fill-mode: forwards
 
+  &__animation-drop
+    transform: translate(-50%, -50%) scale(2) rotate(-180deg)
+    opacity: 0
+    width: 100%
+    &--animate
+      animation-delay: 0s
+      animation-duration: 1s
+      animation-name: drop
+      animation-iteration-count: 1
+      animation-fill-mode: forwards
+
   &__animation-slide
     &-top
+      position: relative
       transform: translate(-50%, -1700px)
       &--animate
         animation-delay: 0s
@@ -50,6 +64,10 @@
         animation-name: slide-top
         animation-iteration-count: 1
         animation-fill-mode: forwards
+      img
+        display: block
+        margin: 0 auto
+        width: 215px
     &-bottom
       transform: translate(-50%, 1700px)
       &--animate
@@ -58,12 +76,25 @@
         animation-name: slide-bottom
         animation-iteration-count: 1
         animation-fill-mode: forwards
+      img
+        height: 100%
+        position: absolute
 
 @keyframes swirl
   from
     transform: translate(-50%, -50%) scale(0.01) rotate(180deg)
+    opacity: 0
   to
     transform: translate(-50%, -50%) scale(1) rotate(0deg)
+    opacity: 1
+
+@keyframes drop
+  from
+    transform: translate(-50%, -50%) scale(2) rotate(-180deg)
+    opacity: 0
+  to
+    transform: translate(-50%, -50%) scale(1) rotate(0deg)
+    opacity: 1
 
 @keyframes slide-top
   from
