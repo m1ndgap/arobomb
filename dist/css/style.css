@@ -647,8 +647,8 @@ body {
   stroke: url(#linear-grad); }
 
 .svg-gradient-arrow {
-  stroke: url(#linear-grad);
   fill: url(#linear-grad-3); }
+
 
 @font-face {
   font-family: 'Montserrat';
@@ -1832,6 +1832,7 @@ body {
     -o-object-fit: contain;
        object-fit: contain; }
 
+
 .cart {
   box-sizing: border-box;
   width: 1440px;
@@ -1850,6 +1851,7 @@ body {
   @media (max-width: 1023px) {
     .cart {
       width: 100%; } }
+
 
 .landing-1__title-section {
   box-sizing: border-box;
@@ -2070,6 +2072,7 @@ body {
   display: inline-block;
   color: #FFFFFF;
   font-size: 7.2rem;
+  font-weight: 900;
   text-transform: uppercase;
   padding: 0px 20px; }
   @media screen and (max-width: 560px) {
@@ -2281,6 +2284,75 @@ body {
   transition: outline 300ms; }
   #contact-us__cbx:checked ~ img {
     opacity: 1; }
+
+.about-product__section {
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0;
+  padding: 0 132px 0; }
+  @media (max-width: 1439px) {
+    .about-product__section {
+      width: 1280px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .about-product__section {
+      width: 1024px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .about-product__section {
+      width: 100%; } }
+
+.about-product__title {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  display: inline-block;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 7.2rem;
+  font-weight: 900;
+  padding: 0px 20px;
+  margin-bottom: 25px; }
+
+.about-product__products-1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 36px; }
+
+.about-product__gum {
+  display: flex; }
+  .about-product__gum-img {
+    width: 165px;
+    height: 354px; }
+  .about-product__gum-caption {
+    display: inline-block;
+    width: 162px;
+    margin-top: 45px;
+    margin-left: 70px;
+    padding: 10px 0; }
+
+.about-product__che {
+  align-self: baseline;
+  padding-top: 55px;
+  display: flex; }
+
+.about-product__sticker {
+  align-self: center; }
+
+.about-product__products-2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between; }
+
+.about-product__arrow-caption {
+  font-size: 1.8rem;
+  color: #444444; }
+
+.about-product__svg {
+  display: block; }
 
 .tabs {
   width: 868px; }
