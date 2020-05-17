@@ -1,6 +1,7 @@
 "use strict";
 
 let swirlCls = 'slider__animation-swirl';
+let dropCls = 'slider__animation-drop';
 let slideTopCls = 'slider__animation-slide-top';
 let slideBotmCls = 'slider__animation-slide-bottom';
 let textElCls = 'index__product-title';
@@ -13,6 +14,14 @@ let clearAnimationSwirl = (el) => {
     figures.forEach((fig) => {
         let swirly = fig.querySelector('.' + swirlCls);
         swirly.classList.remove(swirlCls + '--animate')
+    })
+}
+
+let clearAnimationDrop = (el) => {
+    let figures = el.querySelectorAll("[data-animation='type-1']")
+    figures.forEach((fig) => {
+        let swirly = fig.querySelector('.' + dropCls);
+        swirly.classList.remove(dropCls + '--animate')
     })
 }
 
@@ -115,6 +124,8 @@ let swiperParams = {
 
             if (activeSlide.dataset.animation === 'type-1') {
                 let swirl = activeSlide.querySelector('.' + swirlCls)
+                let drop = activeSlide.querySelector('.' + dropCls)
+                drop.classList.add(dropCls + '--animate')
                 swirl.classList.add(swirlCls + '--animate')
             } else if (activeSlide.dataset.animation === 'type-2') {
                 let slideTop = activeSlide.querySelector('.' + slideTopCls)
@@ -125,6 +136,7 @@ let swiperParams = {
 
             if (prevSlide.dataset.animation === 'type-1') {
                 clearAnimationSwirl(swiper.el);
+                clearAnimationDrop(swiper.el);
             } else if (prevSlide.dataset.animation === 'type-2') {
                 clearAnimationSlide(swiper.el);
             }

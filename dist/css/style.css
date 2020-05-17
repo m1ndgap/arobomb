@@ -647,8 +647,8 @@ body {
   stroke: url(#linear-grad); }
 
 .svg-gradient-arrow {
-  stroke: url(#linear-grad);
-  fill: url(#linear-grad); }
+  fill: url(#linear-grad-3); }
+
 
 @font-face {
   font-family: 'Montserrat';
@@ -1101,7 +1101,7 @@ body {
     max-width: 365px; }
   .index__video-block {
     position: relative;
-    display: flex;
+    display: none;
     justify-content: center;
     margin: auto 0 20px;
     padding: 54px 0 50px;
@@ -1263,7 +1263,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 450px;
+  width: 450px;
+  min-height: 675px;
   transform: translate(-50%, -50%); }
   @media (max-width: 1799px) {
     .slider__animation-2-img {
@@ -1275,6 +1276,7 @@ body {
 .slider__animation-swirl {
   transform: translate(-50%, -50%) scale(0.01) rotate(180deg);
   max-width: unset;
+  opacity: 0;
   width: 100%; }
   .slider__animation-swirl--animate {
     -webkit-animation-delay: 0s;
@@ -1288,7 +1290,24 @@ body {
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
 
+.slider__animation-drop {
+  transform: translate(-50%, -50%) scale(2) rotate(-180deg);
+  opacity: 0;
+  width: 100%; }
+  .slider__animation-drop--animate {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-name: drop;
+            animation-name: drop;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
 .slider__animation-slide-top {
+  position: relative;
   transform: translate(-50%, -1700px); }
   .slider__animation-slide-top--animate {
     -webkit-animation-delay: 0s;
@@ -1301,6 +1320,10 @@ body {
             animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
+  .slider__animation-slide-top img {
+    display: block;
+    margin: 0 auto;
+    width: 215px; }
 
 .slider__animation-slide-bottom {
   transform: translate(-50%, 1700px); }
@@ -1315,18 +1338,41 @@ body {
             animation-iteration-count: 1;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
+  .slider__animation-slide-bottom img {
+    height: 100%;
+    position: absolute; }
 
 @-webkit-keyframes swirl {
   from {
-    transform: translate(-50%, -50%) scale(0.01) rotate(180deg); }
+    transform: translate(-50%, -50%) scale(0.01) rotate(180deg);
+    opacity: 0; }
   to {
-    transform: translate(-50%, -50%) scale(1) rotate(0deg); } }
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1; } }
 
 @keyframes swirl {
   from {
-    transform: translate(-50%, -50%) scale(0.01) rotate(180deg); }
+    transform: translate(-50%, -50%) scale(0.01) rotate(180deg);
+    opacity: 0; }
   to {
-    transform: translate(-50%, -50%) scale(1) rotate(0deg); } }
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1; } }
+
+@-webkit-keyframes drop {
+  from {
+    transform: translate(-50%, -50%) scale(2) rotate(-180deg);
+    opacity: 0; }
+  to {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1; } }
+
+@keyframes drop {
+  from {
+    transform: translate(-50%, -50%) scale(2) rotate(-180deg);
+    opacity: 0; }
+  to {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 1; } }
 
 @-webkit-keyframes slide-top {
   from {
@@ -1785,6 +1831,27 @@ body {
     width: 100%;
     -o-object-fit: contain;
        object-fit: contain; }
+
+
+.cart {
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0;
+  padding: 0 132px 0; }
+  @media (max-width: 1439px) {
+    .cart {
+      width: 1280px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .cart {
+      width: 1024px;
+      margin: 0 auto 0;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .cart {
+      width: 100%; } }
+
 
 .landing-1__title-section {
   box-sizing: border-box;
