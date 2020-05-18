@@ -647,8 +647,8 @@ body {
   stroke: url(#linear-grad); }
 
 .svg-gradient-arrow {
+  stroke: url(#linear-grad);
   fill: url(#linear-grad-3); }
-
 
 @font-face {
   font-family: 'Montserrat';
@@ -1832,7 +1832,6 @@ body {
     -o-object-fit: contain;
        object-fit: contain; }
 
-
 .cart {
   box-sizing: border-box;
   width: 1440px;
@@ -1851,7 +1850,6 @@ body {
   @media (max-width: 1023px) {
     .cart {
       width: 100%; } }
-
 
 .landing-1__title-section {
   box-sizing: border-box;
