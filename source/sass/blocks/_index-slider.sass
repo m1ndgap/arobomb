@@ -26,7 +26,7 @@
     min-height: 675px
     transform: translate(-50%, -50%)
     @include media("<xl")
-      max-width: 350px
+      width: 350px
       left: 60%
     img
       width: 100%
@@ -69,11 +69,14 @@
         animation-iteration-count: 1
         animation-fill-mode: forwards
       img
-        display: block
-        margin: 0 auto
         width: 175px
+        @include media("<xl")
+          width: 134px
     &-bottom
       transform: translate(-50%, 1700px)
+      display: flex
+      justify-content: center
+      align-items: center
       &--animate
         animation-delay: 0s
         animation-duration: 1s
@@ -85,7 +88,7 @@
       &--layer-2
         z-index: 4
       img
-        height: 100%
+        width: 100%
         position: absolute
 
 
