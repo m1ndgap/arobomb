@@ -25,6 +25,8 @@ body
   &:hover
     color: $btn
     background-color: $white
+    .btn-arrow
+      fill: $btn
   &--gr
     padding: 4px 10px
     border: none
@@ -36,6 +38,9 @@ body
     &:hover
       background-position: 0 0
       color: $white
+  .btn-arrow
+    fill: $white
+    transition: fill $transition
 
 .link-btn
   font-size: 1.6rem
@@ -68,9 +73,9 @@ body
 
 .main
   &--padded
-    padding-top: 120px
+    padding-top: 140px
     @include media("<large")
-      padding-top: 100px
+      padding-top: 150px
     @include media("<tablet")
       padding-top: 90px
   &--bg-3
@@ -109,6 +114,11 @@ body
 
 .svg-gradient-arrow
   stroke: url(#linear-grad)
-
   fill: url(#linear-grad-3)
 
+.svg-circle-close
+  stroke: url(#linear-grad)
+  fill: none
+  cursor: pointer
+  &:hover
+    stroke: url(#linear-grad-3)
