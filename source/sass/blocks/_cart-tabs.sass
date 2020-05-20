@@ -1,6 +1,66 @@
-.cart__tab
-  @include resetinteractive()
-  padding: 15px 29px 18px
+.cart
 
-  &--active
+  &__tabs
+    padding-left: 45px
+
+  &__tab
+    @include resetinteractive()
     @include gbackground(100%)
+    padding: 15px 24px 18px 32px
+    font-family: "Montserrat", sans-serif
+    color: transparent
+    -webkit-background-clip: text
+    background-clip: text
+    border: 1px solid
+    border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+    border-image-slice: 1
+    transition: box-shadow $transition, color $transition
+    &:active, &:focus
+      outline: none
+      box-shadow: 0 0 3px 0 rgba($black ,0.5)
+
+
+    &--active
+      background-clip: border-box
+      -webkit-background-clip: border-box
+      color: $white
+
+  &__tab + &__tab
+    position: relative
+    margin-left: 53px
+    &:before
+      content: ""
+      position: absolute
+      left: -33px
+      top: 50%
+      transform: translate(0, -50%)
+      display: block
+      width: 0
+      height: 0
+      margin-right: 20px
+      border-top: 7px solid transparent
+      border-bottom: 7px solid transparent
+      border-left: 13px solid $gradient-end
+
+  &__tab-text-mobile
+    display: none
+    @include media('<tablet')
+      display: block
+
+  &__tab-text
+    text-transform: uppercase
+  &__tab-sub-text, &__tab-main-text
+    display: block
+    text-align: left
+    font-weight: 400
+  &__tab-sub-text
+    font-size: 1.8rem
+    line-height: 2.0rem
+    letter-spacing: -0.2px
+  &__tab-main-text
+    margin-left: -3px
+    font-weight: 900
+    font-size: 3rem
+    line-height: 106%
+    letter-spacing: 2.8px
+

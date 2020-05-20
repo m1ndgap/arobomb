@@ -163,7 +163,7 @@
     </div>
 </nav>
 
-<main class="main--padded">
+<main class="main--cart">
     <section class="cart">
         <div class="cart__tabs">
             <button type="button" data-tab="1" class="cart__tab cart__tab--active">
@@ -190,7 +190,7 @@
                 <div class="cart__items">
                     <div class="cart__item">
                         <figure class="cart__item-img-wrap">
-                            <img src="" alt="" class="cart_item-img">
+                            <img src="./img/cart-thumbnail-1.jpg" alt="" class="cart_item-img">
                         </figure>
                         <div class="cart__item-text">
                             <span class="cart__item-name">длинное название</span>
@@ -203,9 +203,17 @@
                             </span>
                         </div>
                         <div class="cart__item-ui">
-                            <button class="cart__item-btn"></button>
+                            <button type="button" class="cart__item-btn">
+                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                    <use xlink:href="#btn-arrow"></use>
+                                </svg>
+                            </button>
                             <input type="text" class="cart__item-number" value="1">
-                            <button class="cart__item-btn cart__item-btn--add"></button>
+                            <button type="button" class="cart__item-btn cart__item-btn--add">
+                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                    <use xlink:href="#btn-arrow"></use>
+                                </svg>
+                            </button>
                         </div>
                         <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
                             <use xlink:href="#circle-close"></use>

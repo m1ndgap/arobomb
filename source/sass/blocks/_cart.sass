@@ -2,10 +2,10 @@
   @include container--content()
 
 
-
   &__tab-content
     opacity: 0
     max-height: 0
+    overflow: hidden
     padding: 0
     pointer-events: none
     &--active
@@ -14,3 +14,89 @@
       padding: unset
       pointer-events: all
       transition: opacity $transition
+
+
+  &__wrapper
+    display: flex
+    margin-top: 21px
+
+
+  &__items
+    margin-top: 27px
+
+  &__item
+    display: flex
+
+  &__item-img-wrap
+    margin: 0 0 0 11px
+    max-width: 106px
+
+  &__item-img
+    width: 100%
+
+  &__item-text
+    margin: 8px 0 0 17px
+    display: flex
+    max-width: 218px
+    flex-flow: column nowrap
+
+
+  &__item-name
+    @include subtitle(1.8rem)
+    white-space: pre-line
+    font-weight: 900
+    word-spacing: 100px
+    line-height: 100%
+
+  &__item-price
+    margin-top: 2px
+    @include subtitle(2.4rem)
+    font-weight: 400
+    text-transform: none
+
+  &__item-code
+    margin-top: 10px
+    @include subtitle(1.4rem)
+
+
+  &__total-price
+    position: relative
+    margin-left: auto
+    width: 400px
+    height: 227px
+    padding: 39px 59px 45px 69px
+
+  &__price-border
+    position: absolute
+    top: 0
+    left: 0
+    pointer-events: none
+
+  &__total-price-title
+    display: block
+    @include subtitle(2.4rem)
+    font-weight: 900
+
+  &__total-price-value
+    display: block
+    margin-top: 3px
+    @include subtitle(2.4rem)
+    text-transform: none
+
+  &__total-price-proceed-btn
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-top: 43px
+    padding: 7px 17px 7px 32px
+    &:hover
+      svg
+        transform: translateX(7px)
+
+    span
+      letter-spacing: 0.6px
+    svg
+      position: relative
+

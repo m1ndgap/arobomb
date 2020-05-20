@@ -40,7 +40,7 @@ body
       color: $white
   .btn-arrow
     fill: $white
-    transition: fill $transition
+    transition: fill $transition, transform $transition
 
 .link-btn
   font-size: 1.6rem
@@ -78,6 +78,8 @@ body
       padding-top: 150px
     @include media("<tablet")
       padding-top: 90px
+  &--cart
+    padding-top: 95px
   &--bg-3
     background-image: url("../img/splash-bg-3.png")
     background-repeat: no-repeat
