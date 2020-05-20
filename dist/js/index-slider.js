@@ -28,10 +28,13 @@ let clearAnimationDrop = (el) => {
 let clearAnimationSlide = (el) => {
     let figures = el.querySelectorAll("[data-animation='type-2']")
     figures.forEach((fig) => {
-        let slideBot = fig.querySelector('.' + slideBotmCls);
+        let slideBot = fig.querySelectorAll('.' + slideBotmCls);
         let slideTop = fig.querySelector('.' + slideTopCls);
-        slideBot.classList.remove(slideBotmCls + '--animate')
         slideTop.classList.remove(slideTopCls + '--animate')
+        slideBot.forEach((btm) => {
+            btm.classList.remove(slideBotmCls + '--animate')
+        })
+
     })
 }
 
@@ -129,9 +132,11 @@ let swiperParams = {
                 swirl.classList.add(swirlCls + '--animate')
             } else if (activeSlide.dataset.animation === 'type-2') {
                 let slideTop = activeSlide.querySelector('.' + slideTopCls)
-                let slideBtm = activeSlide.querySelector('.' + slideBotmCls)
+                let slideBtm = activeSlide.querySelectorAll('.' + slideBotmCls)
                 slideTop.classList.add(slideTopCls + '--animate')
-                slideBtm.classList.add(slideBotmCls + '--animate')
+                slideBtm.forEach((btm) => {
+                    btm.classList.add(slideBotmCls + '--animate')
+                })
             }
 
             if (prevSlide.dataset.animation === 'type-1') {
