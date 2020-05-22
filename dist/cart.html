@@ -154,7 +154,7 @@
             </a>
             <a href="javascript:void(0)" class="main-menu__order-call-btn btn">заказать звонок</a>
         </div>
-        <a href="/basket" class="main-menu__basket">
+        <a href="/cart.html" class="main-menu__basket">
             <svg viewBox="0 0 15 15" width="31" height="31">
                 <use xlink:href="#basket"></use>
             </svg>
@@ -203,21 +203,62 @@
                             </span>
                         </div>
                         <div class="cart__item-ui">
-                            <button type="button" class="cart__item-btn">
-                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                    <use xlink:href="#btn-arrow"></use>
-                                </svg>
-                            </button>
-                            <input type="text" class="cart__item-number" value="1">
-                            <button type="button" class="cart__item-btn cart__item-btn--add">
-                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                    <use xlink:href="#btn-arrow"></use>
-                                </svg>
-                            </button>
+                            <span class="cart__item-ui-text">кол.во</span>
+                            <div class="cart__item-ui-wrap">
+                                <button type="button" class="cart__item-btn">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="cart__item-number" value="1">
+                                <button type="button" class="cart__item-btn cart__item-btn--add">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
-                            <use xlink:href="#circle-close"></use>
-                        </svg>
+                        <button type="button" class="cart__item-close">
+                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
+                                <use xlink:href="#circle-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__item">
+                        <figure class="cart__item-img-wrap">
+                            <img src="./img/cart-thumbnail-2.jpg" alt="" class="cart_item-img">
+                        </figure>
+                        <div class="cart__item-text">
+                            <span class="cart__item-name">длинное название</span>
+                            <span class="cart__item-price">
+                                <span class="cart__item-price-value">1400</span> р.
+                            </span>
+                            <span class="cart__item-code">
+                                Арт.
+                                <span class="cart__item-code-value">14720623</span>
+                            </span>
+                        </div>
+                        <div class="cart__item-ui">
+                            <span class="cart__item-ui-text">кол.во</span>
+                            <div class="cart__item-ui-wrap">
+                                <button type="button" class="cart__item-btn">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="cart__item-number" value="3">
+                                <button type="button" class="cart__item-btn cart__item-btn--add">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="cart__item-close">
+                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
+                                <use xlink:href="#circle-close"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="cart__total-price">
@@ -322,3 +363,10 @@
 <script src="./js/main-menu.js"></script>
 </body>
 </html>
+
+<script>
+    (function x(){
+        document.querySelector(".main-menu").classList.add('fixed-menu-trailing-gradient')
+        console.log(123123)
+    })();
+</script>

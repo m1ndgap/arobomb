@@ -25,6 +25,7 @@
     margin-top: 27px
 
   &__item
+    position: relative
     display: flex
 
   &__item-img-wrap
@@ -35,17 +36,14 @@
     width: 100%
 
   &__item-text
-    margin: 8px 0 0 17px
+    margin: 8px 23px 0 17px
     display: flex
-    max-width: 218px
+    max-width: 198px
     flex-flow: column nowrap
-
 
   &__item-name
     @include subtitle(1.8rem)
-    white-space: pre-line
     font-weight: 900
-    word-spacing: 100px
     line-height: 100%
 
   &__item-price
@@ -57,6 +55,78 @@
   &__item-code
     margin-top: 10px
     @include subtitle(1.4rem)
+
+
+  &__item-ui
+    width: 180px
+    padding-top: 10px
+
+  &__item-ui-text
+    display: block
+    @include subtitle(1.8rem)
+    font-weight: 900
+    text-align: center
+
+  &__item-ui-wrap
+    display: flex
+    margin-top: 17px
+
+  &__item-number
+    @include resetinteractive()
+    display: block
+    flex-shrink: 1
+    max-width: 38%
+    flex-basis: 38%
+    @include subtitle(2.4rem)
+    font-weight: 900
+    text-align: center
+    background-color: $white
+    &:focus, &:active
+      outline: 1px solid darken($white, 20%)
+
+
+  &__item-btn
+    @include resetinteractive()
+    padding: 12px 5px 12px 22px
+    flex-basis: 25%
+    background-color: $white
+    cursor: pointer
+    z-index: 3
+    transition: background-color $transition/3
+    &:active
+      outline: 0
+      background-color: darken($white, 20%)
+    &:focus
+      outline: 1px solid darken($white, 10%)
+    &:hover
+      svg
+        transform: rotate(180deg) translateX(2px)
+    svg
+      transform: rotate(180deg)
+      transition: transform $transition
+    &--add
+      padding: 12px 22px 12px 5px
+      svg
+        transform: rotate(0)
+      &:hover
+        svg
+          transform: rotate(0deg) translateX(2px)
+
+  &__item-close
+    @include resetinteractive()
+    margin-left: 88px
+    align-self: flex-start
+    svg
+      transform: translateY(0)
+      transition: transform $transition/3
+    &:focus
+      outline: 0
+      svg
+        stroke: url(#linear-grad-2)
+    &:active
+      svg
+        transform: translateY(-2px)
+
 
 
   &__total-price
@@ -99,4 +169,20 @@
       letter-spacing: 0.6px
     svg
       position: relative
+
+  &__delivery-info
+    margin-top: 110px
+    max-width: 665px
+
+  &__delivery-title
+    @include subtitle(3.6rem)
+    font-weight: 900
+
+  &__delivery-text
+    p
+      font-size: 1.8rem
+      line-height: 3rem
+    p + p
+      margin-top: 38px
+
 
