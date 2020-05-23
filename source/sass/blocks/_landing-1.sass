@@ -4,16 +4,26 @@
         @include container--content
 
     &__main-title
-        span
-            @include gbackground (1440px)
-            display: inline-block
-            padding: 15px
-            color: $white
-            font-size: 4.8rem
-            font-weight: 900
-            text-transform: uppercase
-            &:nth-child(2)
-                padding: 0 15px
+        @include gbackground (100%)
+
+    &__title-wrapper-1
+        margin-left: 15px
+
+    &__title-wrapper-2
+        box-shadow: 220px 0px 0px -14px #F5F8FF, 415px 0px 0px -14px #F5F8FF, 610px 0px 0px -14px #F5F8FF, 805px 0px 0px -14px #F5F8FF
+        padding: 15px 0
+        color: $white
+        font-size: 4.8rem
+        font-weight: 900
+        text-transform: uppercase
+        // &:nth-child(2)
+        //     padding: 0 15px
+
+    &__title-line
+        padding-right: 15px
+        &::after
+            white-space: break-spaces;
+            content: "\A"
 
     &__title-pitch
         display: flex

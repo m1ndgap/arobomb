@@ -40,6 +40,14 @@
 
     &__swiper-slide
 
+    &__img-slide-1
+        width: min-content
+        // Do I have to put specific height and width of img?
+
+    &__img-slide-2
+        width: min-content
+        // Do I have to put specific height and width of img?
+
     &__swiper-text
         // color: $text
         text-align: center 
@@ -57,20 +65,26 @@
 
         .swiper-slide // not &__swiper-slide ?
             display: flex
-            flex-wrap: wrap
-            justify-content: center
+            flex-direction: column
+            align-items: center
             padding: 20px
             width: 100%
 
         .swiper-pagination
-            bottom: 165px
-
+            top: 370px
+        
         .swiper-pagination-bullet
             width: 30%
             height: 1px
             margin: 0 5%
             background-color: $text
             border-radius: unset
+        .swiper-pagination-bullet::after
+            content: " "
+            padding: 10%
+            display: block
+            position: relative
+            bottom: 13px
 
         .swiper-pagination-bullet-active
             @include gbackground(100%)
