@@ -185,7 +185,7 @@
                 </span>
             </button>
         </div>
-        <section data-tabcontent="1" class="cart__tab-content cart__tab-content--1">
+        <section data-tabcontent="1" class="cart__tab-content cart__tab-content--1 cart__tab-content--active">
             <div class="cart__wrapper">
                 <div class="cart__items">
                     <div class="cart__item">
@@ -285,74 +285,75 @@
                 </div>
             </div>
         </section>
-        <section data-tabcontent="2" class="cart__tab-content cart__tab-content--2">
+        <section data-tabcontent="2" class="cart__tab-content cart__tab-content--2 cart__tab-content--active">
             <div class="cart__wrapper--tab-2">
-                <div class="cart__form-wrapper form__wrapper">
-                    <form action="" id="cart-form" class="cart__form form">
-                        <fieldset class="form__fieldset">
-                            <legend class="form__legend">личные данные</legend>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-name">name</label>
-                                <input type="text" id="cart-form-name" placeholder="Имя">
+
+                    <form action="" id="cart-form" class="cart__form cart-form form">
+                        <div class="cart-form__wrapper">
+                            <fieldset class="cart-form__fieldset">
+                                <legend class="cart-form__legend">личные данные</legend>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-name">name</label>
+                                    <input type="text" id="cart-form-name" placeholder="Имя">
+                                </div>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-tel">tel</label>
+                                    <input type="tel" id="cart-form-tel" placeholder="телефон">
+                                </div>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-email">email</label>
+                                    <input type="email" id="cart-form-email" placeholder="email">
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend class="cart-form__legend">ДОСТАВКА</legend>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-address">address</label>
+                                    <input type="text" id="cart-form-address" placeholder="Адрес">
+                                </div>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-checkbox" class="cart-form__custom-checkbox-label">
+                                        <input type="checkbox" id="cart-form-checkbox" class="cart-form__custom-checkbox">
+                                        <span class="cart-form__custom-checbox-text"></span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="cart-form__price-amount">
+                            <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line">
+                                <use xlink:href="#cart-border-line-wide"></use>
+                            </svg>
+                            <span class="cart-form__price-amount-title">сумма к оплате</span>
+                            <span class="cart-form__price-amount-value">
+                                <span class="cart-form__price-amount-number">4 499</span> р.
+                            </span>
+                        </div>
+                        <div class="cart-form__submit-block">
+                            <div class="cart-form__submit-btn-wrap">
+                                <input type="submit" form="cart-form">
+                                <span class="cart-form__submit-btn-text">
+                                    <span>оплатить</span>
+                                    <span>банковской картой</span>
+                                </span>
+                                <svg width="52" height="44" viewBox="0 0 52 44" class="">
+                                    <use xlink:href="#master-card-logo"></use>
+                                </svg>
+                                <svg width="59" height="19" viewBox="0 0 59 19" class="">
+                                    <use xlink:href="#visa-logo"></use>
+                                </svg>
                             </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-tel">tel</label>
-                                <input type="tel" id="cart-form-tel" placeholder="телефон">
+                            <div class="cart-form__bill-block">
+                                <button class="cart-form__bill-btn">
+                                    <span>получить счет</span>
+                                    <span>оплата по реквизитам</span>
+                                    <svg></svg>
+                                </button>
+                                <div class="cart-form__upload-wrap">
+                                    <input type="file" class="cart-form__upload" form="cart-form">
+                                </div>
                             </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-email">email</label>
-                                <input type="email" id="cart-form-email" placeholder="email">
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="form__legend">ДОСТАВКА</legend>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-address">address</label>
-                                <input type="text" id="cart-form-address" placeholder="Адрес">
-                            </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-checkbox" class="form__custom-checkbox-label">
-                                    <input type="checkbox" id="cart-form-checkbox" class="form__custom-checkbox">
-                                    <span class="form__custom-checbox-text"></span>
-                                </label>
-                            </div>
-                        </fieldset>
+                        </div>
                     </form>
-                </div>
-                <div class="cart__price-amount">
-                    <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line">
-                        <use xlink:href="#cart-border-line-wide"></use>
-                    </svg>
-                    <span class="cart__price-amount-title">сумма к оплате</span>
-                    <span class="cart__price-amount-value">
-                        <span class="cart__price-amount-number">4 499</span> р.
-                    </span>
-                </div>
-            </div>
-            <div class="cart__submit-block">
-                <div class="cart__submit-btn-wrap">
-                    <input type="submit" form="cart-form">
-                    <span class="cart__submit-btn-text">
-                        <span>оплатить</span>
-                        <span>банковской картой</span>
-                    </span>
-                    <svg width="52" height="44" viewBox="0 0 52 44" class="">
-                        <use xlink:href="#master-card-logo"></use>
-                    </svg>
-                    <svg width="59" height="19" viewBox="0 0 59 19" class="">
-                        <use xlink:href="#visa-logo"></use>
-                    </svg>
-                </div>
-                <div class="cart__bill-block">
-                    <button class="cart__bill-btn">
-                        <span>получить счет</span>
-                        <span>оплата по реквизитам</span>
-                        <svg></svg>
-                    </button>
-                    <div class="cart__upload-wrap">
-                        <input type="file" class="cart__upload" form="cart-form">
-                    </div>
-                </div>
             </div>
         </section>
     </section>

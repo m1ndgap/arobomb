@@ -25,7 +25,7 @@ const hideTabContent = (clickTab) => {
 }
 
 let tabSwitches = document.querySelectorAll('.' + cartTabsCls);
-showTabContent(tabSwitches[0])
+showTabContent(tabSwitches[1])
 
 tabSwitches.forEach((tabSwitch) => {
     tabSwitch.addEventListener('click', function(){

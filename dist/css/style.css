@@ -2055,6 +2055,16 @@ body {
   .cart__delivery-text p + p {
     margin-top: 38px; }
 
+.cart-form {
+  display: flex;
+  flex-flow: row wrap; }
+  .cart-form__wrapper {
+    flex-basis: 50%; }
+  .cart-form__price-amount {
+    flex-basis: 50%; }
+  .cart-form__submit-block {
+    flex-basis: 100%; }
+
 .cart__tabs {
   padding-left: 45px; }
 
