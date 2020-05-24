@@ -2327,7 +2327,8 @@ body {
          -moz-appearance: none;
               appearance: none;
       opacity: 0;
-      z-index: 3; }
+      z-index: 3;
+      cursor: pointer; }
     .cart-form__upload-wrap span {
       position: relative;
       z-index: 2; }
