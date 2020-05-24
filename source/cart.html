@@ -22,7 +22,7 @@
                 </span>
             </button>
         </div>
-        <section data-tabcontent="1" class="cart__tab-content cart__tab-content--1">
+        <section data-tabcontent="1" class="cart__tab-content cart__tab-content--1 cart__tab-content--active">
             <div class="cart__wrapper">
                 <div class="cart__items">
                     <div class="cart__item">
@@ -40,21 +40,62 @@
                             </span>
                         </div>
                         <div class="cart__item-ui">
-                            <button type="button" class="cart__item-btn">
-                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                    <use xlink:href="#btn-arrow"></use>
-                                </svg>
-                            </button>
-                            <input type="text" class="cart__item-number" value="1">
-                            <button type="button" class="cart__item-btn cart__item-btn--add">
-                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                    <use xlink:href="#btn-arrow"></use>
-                                </svg>
-                            </button>
+                            <span class="cart__item-ui-text">кол.во</span>
+                            <div class="cart__item-ui-wrap">
+                                <button type="button" class="cart__item-btn">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="cart__item-number" value="1">
+                                <button type="button" class="cart__item-btn cart__item-btn--add">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
-                            <use xlink:href="#circle-close"></use>
-                        </svg>
+                        <button type="button" class="cart__item-close">
+                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
+                                <use xlink:href="#circle-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__item">
+                        <figure class="cart__item-img-wrap">
+                            <img src="./img/cart-thumbnail-2.jpg" alt="" class="cart_item-img">
+                        </figure>
+                        <div class="cart__item-text">
+                            <span class="cart__item-name">длинное название</span>
+                            <span class="cart__item-price">
+                                <span class="cart__item-price-value">1400</span> р.
+                            </span>
+                            <span class="cart__item-code">
+                                Арт.
+                                <span class="cart__item-code-value">14720623</span>
+                            </span>
+                        </div>
+                        <div class="cart__item-ui">
+                            <span class="cart__item-ui-text">кол.во</span>
+                            <div class="cart__item-ui-wrap">
+                                <button type="button" class="cart__item-btn">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="cart__item-number" value="3">
+                                <button type="button" class="cart__item-btn cart__item-btn--add">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="cart__item-close">
+                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
+                                <use xlink:href="#circle-close"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="cart__total-price">
@@ -81,74 +122,81 @@
                 </div>
             </div>
         </section>
-        <section data-tabcontent="2" class="cart__tab-content cart__tab-content--2">
+        <section data-tabcontent="2" class="cart__tab-content cart__tab-content--2 cart__tab-content--active">
             <div class="cart__wrapper--tab-2">
-                <div class="cart__form-wrapper form__wrapper">
-                    <form action="" id="cart-form" class="cart__form form">
-                        <fieldset class="form__fieldset">
-                            <legend class="form__legend">личные данные</legend>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-name">name</label>
-                                <input type="text" id="cart-form-name" placeholder="Имя">
+
+                    <form action="" id="cart-form" class="cart__form cart-form form">
+                        <div class="cart-form__wrapper">
+                            <fieldset class="cart-form__fieldset">
+                                <legend class="cart-form__legend">личные данные</legend>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-name">name</label>
+                                    <input type="text" id="cart-form-name" placeholder="Имя">
+                                </div>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-tel">tel</label>
+                                    <input type="tel" id="cart-form-tel" placeholder="телефон">
+                                </div>
+                                <div class="cart-form__input-wrap cart-form__input-wrap--error">
+                                    <label for="cart-form-email">email</label>
+                                    <input type="email" id="cart-form-email" placeholder="заполните это поле">
+                                </div>
+                            </fieldset>
+                            <fieldset class="cart-form__fieldset">
+                                <legend class="cart-form__legend">ДОСТАВКА</legend>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-address">address</label>
+                                    <input type="text" id="cart-form-address" placeholder="Адрес">
+                                </div>
+                                <div class="cart-form__input-wrap cart-form__input-wrap--checkbox">
+                                    <label for="cart-form-checkbox" class="cart-form__custom-checkbox-label custom-checkbox">
+                                        <input type="checkbox" id="cart-form-checkbox" class="custom-checkbox__input">
+                                        <svg width="18" height="14" viewBox="0 0 18 14" class="custom-checkbox__checkmark">
+                                            <use xlink:href="#icon-checkmark"></use>
+                                        </svg>
+                                        <span class="custom-checkbox__text">я согласен с политикой конфиденциальности</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="cart-form__price-amount">
+                            <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line cart-form__price-border">
+                                <use xlink:href="#cart-border-line-wide"></use>
+                            </svg>
+                            <span class="cart-form__price-amount-title">сумма к оплате</span>
+                            <span class="cart-form__price-amount-value">
+                                <span class="cart-form__price-amount-number">4 499</span> р.
+                            </span>
+                        </div>
+                        <div class="cart-form__submit-block">
+                            <button type="submit" class="cart-form__submit-btn-wrap">
+                                <span class="cart-form__submit-btn-text">
+                                    <span>оплатить</span>
+                                    <span>банковской картой</span>
+                                </span>
+                                <span class="cart-form__submit-btn-icons">
+                                    <svg width="52" height="44" viewBox="0 0 52 44" class="">
+                                        <use xlink:href="#master-card-logo"></use>
+                                    </svg>
+                                    <svg width="59" height="19" viewBox="0 0 59 19" class="">
+                                        <use xlink:href="#visa-logo"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="cart-form__bill-block">
+                                <button class="cart-form__bill-btn">
+                                    <span>получить счет</span>
+                                    <span>оплата по реквизитам</span>
+                                    <span>+</span>
+                                </button>
+                                <div class="cart-form__upload-wrap">
+                                    <input type="file" class="cart-form__upload" form="cart-form">
+                                    <span>загрузить реквизиты компании </span>
+                                    <span>+</span>
+                                </div>
                             </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-tel">tel</label>
-                                <input type="tel" id="cart-form-tel" placeholder="телефон">
-                            </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-email">email</label>
-                                <input type="email" id="cart-form-email" placeholder="email">
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="form__legend">ДОСТАВКА</legend>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-address">address</label>
-                                <input type="text" id="cart-form-address" placeholder="Адрес">
-                            </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-checkbox" class="form__custom-checkbox-label">
-                                    <input type="checkbox" id="cart-form-checkbox" class="form__custom-checkbox">
-                                    <span class="form__custom-checbox-text"></span>
-                                </label>
-                            </div>
-                        </fieldset>
+                        </div>
                     </form>
-                </div>
-                <div class="cart__price-amount">
-                    <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line">
-                        <use xlink:href="#cart-border-line-wide"></use>
-                    </svg>
-                    <span class="cart__price-amount-title">сумма к оплате</span>
-                    <span class="cart__price-amount-value">
-                        <span class="cart__price-amount-number">4 499</span> р.
-                    </span>
-                </div>
-            </div>
-            <div class="cart__submit-block">
-                <div class="cart__submit-btn-wrap">
-                    <input type="submit" form="cart-form">
-                    <span class="cart__submit-btn-text">
-                        <span>оплатить</span>
-                        <span>банковской картой</span>
-                    </span>
-                    <svg width="52" height="44" viewBox="0 0 52 44" class="">
-                        <use xlink:href="#master-card-logo"></use>
-                    </svg>
-                    <svg width="59" height="19" viewBox="0 0 59 19" class="">
-                        <use xlink:href="#visa-logo"></use>
-                    </svg>
-                </div>
-                <div class="cart__bill-block">
-                    <button class="cart__bill-btn">
-                        <span>получить счет</span>
-                        <span>оплата по реквизитам</span>
-                        <svg></svg>
-                    </button>
-                    <div class="cart__upload-wrap">
-                        <input type="file" class="cart__upload" form="cart-form">
-                    </div>
-                </div>
             </div>
         </section>
     </section>
@@ -156,3 +204,10 @@
 
 <script src="./js/cart.js"></script>
 //= ./html-components/_footer.html
+
+<script>
+    (function x(){
+        document.querySelector(".main-menu").classList.add('fixed-menu-trailing-gradient')
+        console.log(123123)
+    })();
+</script>

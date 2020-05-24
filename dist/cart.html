@@ -64,11 +64,15 @@
 	c0.185,0.186,0.485,0.186,0.67,0L15,15.67l3.692,3.691c0.186,0.186,0.484,0.186,0.67,0c0.186-0.184,0.186-0.484,0-0.67L15.67,15z"></path>
 </symbol><symbol id="doc-border-line" viewBox="0 0 277 128">
     <path d="M267.367 124.961C256.513 129.787 235.413 122.947 187.736 122.024C155.376 121.395 154.97 124.374 100.496 126.01C52.4129 127.479 17.6185 128.36 6.15562 120.765C1.18499 117.451 3.51814 114.43 5.64841 107.338C12.6479 83.9254 -3.17699 82.9603 2.09796 60.3444C6.56138 41.0852 18.9372 38.1901 11.2277 26.5674C6.96715 20.1477 0.0691374 16.2035 4.634 11.4622C11.7349 4.1613 38.8197 2.27314 48.761 1.6018C90.5548 -1.29337 98.6701 7.18234 146.145 7.47606C182.461 7.68585 191.692 2.81861 229.834 5.37811C250.528 6.76275 263.005 7.60194 270.918 11.8818C284.916 19.4763 265.338 27.7003 267.367 49.6449C268.381 60.5962 273.555 61.3934 272.439 72.0929C271.222 83.7156 264.932 84.9324 263.309 95.3802C260.469 113.506 277.714 120.388 267.367 124.961Z" stroke-width="2" stroke-miterlimit="10"></path>
-    
+
 </symbol><symbol id="faq-down-arrow" viewBox="0 0 8 13">
 <path d="M3.64645 12.3536C3.84171 12.5488 4.15829 12.5488 4.35355 12.3536L7.53553 9.17157C7.7308 8.97631 7.7308 8.65973 7.53553 8.46447C7.34027 8.2692 7.02369 8.2692 6.82843 8.46447L4 11.2929L1.17157 8.46447C0.976311 8.2692 0.659729 8.2692 0.464466 8.46447C0.269204 8.65973 0.269204 8.97631 0.464466 9.17157L3.64645 12.3536ZM3.5 2.18557e-08L3.5 12L4.5 12L4.5 -2.18557e-08L3.5 2.18557e-08Z"></path>
 </symbol><symbol id="faq-up-arrow" viewBox="0 0 8 13">
 <path d="M4.35355 0.646446C4.15829 0.451184 3.84171 0.451184 3.64645 0.646446L0.464466 3.82843C0.269204 4.02369 0.269204 4.34027 0.464466 4.53553C0.659728 4.7308 0.976311 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646446ZM4.5 13L4.5 1L3.5 1L3.5 13L4.5 13Z"></path>
+
+</symbol><symbol id="icon-checkmark" viewBox="0 0 18 14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.7042 1.71015L5.92264 13.4099L0.294922 7.82126L1.7042 6.40213L5.92264 10.5913L16.2949 0.291016L17.7042 1.71015Z"></path>
+
 </symbol><symbol id="icon-close" viewBox="0 0 25 25">
 <path d="M14.3609 12.5022L24.6147 2.24839C25.1285 1.73452 25.1285 0.901416 24.6147 0.387598C24.1008 -0.126269 23.2676 -0.126269 22.7538 0.387598L12.5 10.6414L2.24619 0.387598C1.73232 -0.126269 0.899217 -0.126269 0.3854 0.387598C-0.128418 0.901465 -0.128467 1.73457 0.3854 2.24839L10.6392 12.5022L0.3854 22.756C-0.128467 23.2699 -0.128467 24.103 0.3854 24.6168C0.899266 25.1307 1.73237 25.1306 2.24619 24.6168L12.5 14.363L22.7537 24.6168C23.2676 25.1307 24.1007 25.1306 24.6146 24.6168C25.1284 24.1029 25.1284 23.2698 24.6146 22.756L14.3609 12.5022Z"></path>
 
@@ -158,7 +162,7 @@
             </a>
             <a href="javascript:void(0)" class="main-menu__order-call-btn btn">заказать звонок</a>
         </div>
-        <a href="/basket" class="main-menu__basket">
+        <a href="/cart.html" class="main-menu__basket">
             <svg viewBox="0 0 15 15" width="31" height="31">
                 <use xlink:href="#basket"></use>
             </svg>
@@ -189,7 +193,7 @@
                 </span>
             </button>
         </div>
-        <section data-tabcontent="1" class="cart__tab-content cart__tab-content--1">
+        <section data-tabcontent="1" class="cart__tab-content cart__tab-content--1 cart__tab-content--active">
             <div class="cart__wrapper">
                 <div class="cart__items">
                     <div class="cart__item">
@@ -207,21 +211,62 @@
                             </span>
                         </div>
                         <div class="cart__item-ui">
-                            <button type="button" class="cart__item-btn">
-                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                    <use xlink:href="#btn-arrow"></use>
-                                </svg>
-                            </button>
-                            <input type="text" class="cart__item-number" value="1">
-                            <button type="button" class="cart__item-btn cart__item-btn--add">
-                                <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                    <use xlink:href="#btn-arrow"></use>
-                                </svg>
-                            </button>
+                            <span class="cart__item-ui-text">кол.во</span>
+                            <div class="cart__item-ui-wrap">
+                                <button type="button" class="cart__item-btn">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="cart__item-number" value="1">
+                                <button type="button" class="cart__item-btn cart__item-btn--add">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
-                            <use xlink:href="#circle-close"></use>
-                        </svg>
+                        <button type="button" class="cart__item-close">
+                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
+                                <use xlink:href="#circle-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__item">
+                        <figure class="cart__item-img-wrap">
+                            <img src="./img/cart-thumbnail-2.jpg" alt="" class="cart_item-img">
+                        </figure>
+                        <div class="cart__item-text">
+                            <span class="cart__item-name">длинное название</span>
+                            <span class="cart__item-price">
+                                <span class="cart__item-price-value">1400</span> р.
+                            </span>
+                            <span class="cart__item-code">
+                                Арт.
+                                <span class="cart__item-code-value">14720623</span>
+                            </span>
+                        </div>
+                        <div class="cart__item-ui">
+                            <span class="cart__item-ui-text">кол.во</span>
+                            <div class="cart__item-ui-wrap">
+                                <button type="button" class="cart__item-btn">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                                <input type="text" class="cart__item-number" value="3">
+                                <button type="button" class="cart__item-btn cart__item-btn--add">
+                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                                        <use xlink:href="#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="cart__item-close">
+                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
+                                <use xlink:href="#circle-close"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="cart__total-price">
@@ -248,74 +293,81 @@
                 </div>
             </div>
         </section>
-        <section data-tabcontent="2" class="cart__tab-content cart__tab-content--2">
+        <section data-tabcontent="2" class="cart__tab-content cart__tab-content--2 cart__tab-content--active">
             <div class="cart__wrapper--tab-2">
-                <div class="cart__form-wrapper form__wrapper">
-                    <form action="" id="cart-form" class="cart__form form">
-                        <fieldset class="form__fieldset">
-                            <legend class="form__legend">личные данные</legend>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-name">name</label>
-                                <input type="text" id="cart-form-name" placeholder="Имя">
+
+                    <form action="" id="cart-form" class="cart__form cart-form form">
+                        <div class="cart-form__wrapper">
+                            <fieldset class="cart-form__fieldset">
+                                <legend class="cart-form__legend">личные данные</legend>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-name">name</label>
+                                    <input type="text" id="cart-form-name" placeholder="Имя">
+                                </div>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-tel">tel</label>
+                                    <input type="tel" id="cart-form-tel" placeholder="телефон">
+                                </div>
+                                <div class="cart-form__input-wrap cart-form__input-wrap--error">
+                                    <label for="cart-form-email">email</label>
+                                    <input type="email" id="cart-form-email" placeholder="заполните это поле">
+                                </div>
+                            </fieldset>
+                            <fieldset class="cart-form__fieldset">
+                                <legend class="cart-form__legend">ДОСТАВКА</legend>
+                                <div class="cart-form__input-wrap">
+                                    <label for="cart-form-address">address</label>
+                                    <input type="text" id="cart-form-address" placeholder="Адрес">
+                                </div>
+                                <div class="cart-form__input-wrap cart-form__input-wrap--checkbox">
+                                    <label for="cart-form-checkbox" class="cart-form__custom-checkbox-label custom-checkbox">
+                                        <input type="checkbox" id="cart-form-checkbox" class="custom-checkbox__input">
+                                        <svg width="18" height="14" viewBox="0 0 18 14" class="custom-checkbox__checkmark">
+                                            <use xlink:href="#icon-checkmark"></use>
+                                        </svg>
+                                        <span class="custom-checkbox__text">я согласен с политикой конфиденциальности</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="cart-form__price-amount">
+                            <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line cart-form__price-border">
+                                <use xlink:href="#cart-border-line-wide"></use>
+                            </svg>
+                            <span class="cart-form__price-amount-title">сумма к оплате</span>
+                            <span class="cart-form__price-amount-value">
+                                <span class="cart-form__price-amount-number">4 499</span> р.
+                            </span>
+                        </div>
+                        <div class="cart-form__submit-block">
+                            <button type="submit" class="cart-form__submit-btn-wrap">
+                                <span class="cart-form__submit-btn-text">
+                                    <span>оплатить</span>
+                                    <span>банковской картой</span>
+                                </span>
+                                <span class="cart-form__submit-btn-icons">
+                                    <svg width="52" height="44" viewBox="0 0 52 44" class="">
+                                        <use xlink:href="#master-card-logo"></use>
+                                    </svg>
+                                    <svg width="59" height="19" viewBox="0 0 59 19" class="">
+                                        <use xlink:href="#visa-logo"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="cart-form__bill-block">
+                                <button class="cart-form__bill-btn">
+                                    <span>получить счет</span>
+                                    <span>оплата по реквизитам</span>
+                                    <span>+</span>
+                                </button>
+                                <div class="cart-form__upload-wrap">
+                                    <input type="file" class="cart-form__upload" form="cart-form">
+                                    <span>загрузить реквизиты компании </span>
+                                    <span>+</span>
+                                </div>
                             </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-tel">tel</label>
-                                <input type="tel" id="cart-form-tel" placeholder="телефон">
-                            </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-email">email</label>
-                                <input type="email" id="cart-form-email" placeholder="email">
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend class="form__legend">ДОСТАВКА</legend>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-address">address</label>
-                                <input type="text" id="cart-form-address" placeholder="Адрес">
-                            </div>
-                            <div class="form__input-wrap">
-                                <label for="cart-form-checkbox" class="form__custom-checkbox-label">
-                                    <input type="checkbox" id="cart-form-checkbox" class="form__custom-checkbox">
-                                    <span class="form__custom-checbox-text"></span>
-                                </label>
-                            </div>
-                        </fieldset>
+                        </div>
                     </form>
-                </div>
-                <div class="cart__price-amount">
-                    <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line">
-                        <use xlink:href="#cart-border-line-wide"></use>
-                    </svg>
-                    <span class="cart__price-amount-title">сумма к оплате</span>
-                    <span class="cart__price-amount-value">
-                        <span class="cart__price-amount-number">4 499</span> р.
-                    </span>
-                </div>
-            </div>
-            <div class="cart__submit-block">
-                <div class="cart__submit-btn-wrap">
-                    <input type="submit" form="cart-form">
-                    <span class="cart__submit-btn-text">
-                        <span>оплатить</span>
-                        <span>банковской картой</span>
-                    </span>
-                    <svg width="52" height="44" viewBox="0 0 52 44" class="">
-                        <use xlink:href="#master-card-logo"></use>
-                    </svg>
-                    <svg width="59" height="19" viewBox="0 0 59 19" class="">
-                        <use xlink:href="#visa-logo"></use>
-                    </svg>
-                </div>
-                <div class="cart__bill-block">
-                    <button class="cart__bill-btn">
-                        <span>получить счет</span>
-                        <span>оплата по реквизитам</span>
-                        <svg></svg>
-                    </button>
-                    <div class="cart__upload-wrap">
-                        <input type="file" class="cart__upload" form="cart-form">
-                    </div>
-                </div>
             </div>
         </section>
     </section>
@@ -326,3 +378,10 @@
 <script src="./js/main-menu.js"></script>
 </body>
 </html>
+
+<script>
+    (function x(){
+        document.querySelector(".main-menu").classList.add('fixed-menu-trailing-gradient')
+        console.log(123123)
+    })();
+</script>
