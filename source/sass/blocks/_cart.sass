@@ -19,14 +19,28 @@
   &__wrapper
     display: flex
     margin-top: 21px
+    &--tab-2
+      margin-top: 54px
 
 
   &__items
-    margin-top: 27px
+    margin-top: 29px
 
   &__item
     position: relative
     display: flex
+
+  &__item + &__item
+    margin-top: 37px
+    &:before
+      content: ""
+      position: absolute
+      right: 6px
+      top: -22px
+      width: calc(100% - 140px)
+      height: 1px
+      @include gbackground(100%)
+
 
   &__item-img-wrap
     margin: 0 0 0 11px
@@ -114,7 +128,7 @@
 
   &__item-close
     @include resetinteractive()
-    margin-left: 88px
+    margin: 5px 0 0 68px
     align-self: flex-start
     svg
       transform: translateY(0)

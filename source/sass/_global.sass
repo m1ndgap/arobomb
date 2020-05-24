@@ -103,6 +103,38 @@ body
       background-size: 135%
 
 
+.custom-checkbox
+  position: relative
+  font-size: 1.2rem
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  cursor: pointer
+  @media screen and (max-width: 560px)
+    font-size: 1.0rem
+  &__text
+    padding-left: 15px
+    user-select: none
+  &__checkmark
+    position: absolute
+    left: 0
+    width: 22px
+    height: 22px
+    opacity: 0
+    transition: opacity $transition
+  &__input
+    appearance: none
+    cursor: pointer
+    position: relative
+    height: 22px
+    width: 22px
+    padding: 0
+    background: #A9A9A9
+    margin: 0
+    transition: outline $transition
+    &:checked
+      ~ img
+        opacity: 1
 
 
 .icon-close
@@ -124,3 +156,5 @@ body
   cursor: pointer
   &:hover
     stroke: url(#linear-grad-3)
+
+

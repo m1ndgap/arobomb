@@ -1,12 +1,228 @@
 .cart-form
   display: flex
+  justify-content: space-between
   flex-flow: row wrap
+  padding: 0 45px
 
   &__wrapper
     flex-basis: 50%
+    max-width: 454px
+    label:not(.cart-form__custom-checkbox-label)
+      display: none
+
+  &__fieldset
+    @include resetmargin
+    border: none
+
+  &__fieldset + &__fieldset
+    margin-top: 47px
+
+  &__legend
+    margin-bottom: 26px
+    @include subtitle(1.8rem)
+    font-weight: 900
+
+  &__input-wrap
+    width: 100%
+    input:not(.custom-checkbox__input)
+      width: 100%
+      padding: 16px 11px 15px
+      font-family: "Montserrat", sans-serif
+      font-weight: 500
+      text-transform: uppercase
+      color: $text
+      border: none
+      background-color: $white
+    &--checkbox
+      padding-top: 7px
+      span
+        padding-left: 11px
+        font-size: 1.2rem
+        letter-spacing: 2.4px
+        text-transform: none
+    &--error
+      input
+        outline: 1px solid $main-link
+        color: $main-link
+        &::placeholder
+          color: $main-link
+
+  &__input-wrap + &__input-wrap
+    margin-top: 15px
+
 
   &__price-amount
+    position: relative
+    display: block
     flex-basis: 50%
+    max-width: 464px
+    height: 227px
+    margin: 40px 54px 0 0
+    padding: 83px 46px 40px
+
+  &__price-border
+    position: absolute
+    top: 0
+    left: 0
+    pointer-events: none
+
+  &__price-amount-title
+    @include subtitle(3rem)
+    font-weight: 900
+
+  &__price-amount-value
+    display: block
+    margin-top: 3px
+    @include subtitle(2.4rem)
+    text-transform: none
+
 
   &__submit-block
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
     flex-basis:  100%
+    margin-top: 31px
+    padding-right: 53px
+
+  &__submit-btn-wrap
+    display: flex
+    justify-content: space-between
+    width: 454px
+    padding: 8px 14px 15px
+    background: $btn
+    border: none
+    cursor: pointer
+    transition: background-color $transition
+    &:hover
+      background: $white
+      .cart-form__submit-btn-text
+        span:nth-child(1), span:nth-child(2)
+          color: $btn
+      .cart-form__submit-btn-icons
+        svg
+          fill: $btn
+    &:disabled
+      opacity: 0.8
+      pointer-events: none
+      background-color: lighten($text, 30%)
+
+  &__submit-btn-text
+    margin: 15px 15px 4px
+    span
+      transition: color $transition
+    span:nth-child(1)
+      display: block
+      @include subtitle(3rem)
+      color: $white
+      font-weight: 900
+      text-align: left
+      letter-spacing: 0.3rem
+    span:nth-child(2)
+      display: block
+      margin: 3px 0 0 -2px
+      @include subtitle(1.8rem)
+      color: $white
+      font-weight: 300
+      text-align: left
+      letter-spacing: 0
+  &__submit-btn-icons
+    display: flex
+    flex-flow: column
+    margin: 7px 38px 0 0
+    svg
+      fill: $white
+      transition: fill $transition
+      &:nth-child(2)
+        margin: 12px 0 0 0
+        transform: translateX(-5px)
+
+
+  &__bill-btn
+    position: relative
+    padding: 23px 100px 16px 31px
+    background: transparent
+    border: 1px solid $btn
+    cursor: pointer
+    transition: background-color $transition, border $transition
+    &:hover
+      border: 1px solid $white
+      background: $btn
+      span:nth-child(1), span:nth-child(2), span:nth-child(3)
+        color: $white
+    span
+      transition: color $transition
+    span:nth-child(1)
+      display: block
+      @include subtitle(3rem)
+      color: $btn
+      font-weight: 900
+      text-align: left
+      letter-spacing: 0.3rem
+    span:nth-child(2)
+      display: block
+      margin: 3px 0 0 -2px
+      @include subtitle(1.8rem)
+      color: $btn
+      font-weight: 300
+      text-align: left
+      letter-spacing: 0
+    span:nth-child(3)
+      position: absolute
+      right: 24px
+      top: 50%
+      transform: translateY(-50%)
+      display: block
+      @include subtitle(3.5rem)
+      color: $btn
+      font-weight: 300
+
+  &__upload-wrap
+    margin-top: 21px
+    position: relative
+    border: 10px dashed $btn
+    padding: 4px 20px 5px
+    cursor: pointer
+    &::after
+      content: ""
+      position: absolute
+      top: -9px
+      bottom: -9px
+      left: -9px
+      right: -9px
+      background-color: $bg-color
+      display: block
+      z-index: 1
+      pointer-events: none
+    input
+      position: absolute
+      display: block
+      width: 100%
+      top: -9px
+      left: -9px
+      right: -9px
+      bottom: -9px
+      appearance: none
+      opacity: 0
+      z-index: 3
+    span
+      position: relative
+      z-index: 2
+    span:nth-of-type(1)
+      display: block
+      margin: 3px 0 0 -2px
+      @include subtitle(1.8rem)
+      color: $btn
+      font-weight: 300
+      text-align: left
+      letter-spacing: 0
+    span:nth-of-type(2)
+      position: absolute
+      right: 16px
+      top: 50%
+      transform: translateY(-50%)
+      display: block
+      @include subtitle(3.5rem)
+      color: $btn
+      font-weight: 300
+

@@ -300,27 +300,28 @@
                                     <label for="cart-form-tel">tel</label>
                                     <input type="tel" id="cart-form-tel" placeholder="телефон">
                                 </div>
-                                <div class="cart-form__input-wrap">
+                                <div class="cart-form__input-wrap cart-form__input-wrap--error">
                                     <label for="cart-form-email">email</label>
-                                    <input type="email" id="cart-form-email" placeholder="email">
+                                    <input type="email" id="cart-form-email" placeholder="заполните это поле">
                                 </div>
                             </fieldset>
-                            <fieldset>
+                            <fieldset class="cart-form__fieldset">
                                 <legend class="cart-form__legend">ДОСТАВКА</legend>
                                 <div class="cart-form__input-wrap">
                                     <label for="cart-form-address">address</label>
                                     <input type="text" id="cart-form-address" placeholder="Адрес">
                                 </div>
-                                <div class="cart-form__input-wrap">
-                                    <label for="cart-form-checkbox" class="cart-form__custom-checkbox-label">
-                                        <input type="checkbox" id="cart-form-checkbox" class="cart-form__custom-checkbox">
-                                        <span class="cart-form__custom-checbox-text"></span>
+                                <div class="cart-form__input-wrap cart-form__input-wrap--checkbox">
+                                    <label for="cart-form-checkbox" class="cart-form__custom-checkbox-label custom-checkbox">
+                                        <input type="checkbox" id="cart-form-checkbox" class="custom-checkbox__input">
+                                        <img src="../img/checkmark.svg" alt="" class="custom-checkbox__checkmark">
+                                        <span class="custom-checkbox__text">я согласен с политикой конфиденциальности</span>
                                     </label>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="cart-form__price-amount">
-                            <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line">
+                            <svg width="466" height="229" viewBox="0 0 466 229" fill="none" class="svg-gradient-line cart-form__price-border">
                                 <use xlink:href="#cart-border-line-wide"></use>
                             </svg>
                             <span class="cart-form__price-amount-title">сумма к оплате</span>
@@ -329,27 +330,30 @@
                             </span>
                         </div>
                         <div class="cart-form__submit-block">
-                            <div class="cart-form__submit-btn-wrap">
-                                <input type="submit" form="cart-form">
+                            <button type="submit" class="cart-form__submit-btn-wrap">
                                 <span class="cart-form__submit-btn-text">
                                     <span>оплатить</span>
                                     <span>банковской картой</span>
                                 </span>
-                                <svg width="52" height="44" viewBox="0 0 52 44" class="">
-                                    <use xlink:href="#master-card-logo"></use>
-                                </svg>
-                                <svg width="59" height="19" viewBox="0 0 59 19" class="">
-                                    <use xlink:href="#visa-logo"></use>
-                                </svg>
-                            </div>
+                                <span class="cart-form__submit-btn-icons">
+                                    <svg width="52" height="44" viewBox="0 0 52 44" class="">
+                                        <use xlink:href="#master-card-logo"></use>
+                                    </svg>
+                                    <svg width="59" height="19" viewBox="0 0 59 19" class="">
+                                        <use xlink:href="#visa-logo"></use>
+                                    </svg>
+                                </span>
+                            </button>
                             <div class="cart-form__bill-block">
                                 <button class="cart-form__bill-btn">
                                     <span>получить счет</span>
                                     <span>оплата по реквизитам</span>
-                                    <svg></svg>
+                                    <span>+</span>
                                 </button>
                                 <div class="cart-form__upload-wrap">
                                     <input type="file" class="cart-form__upload" form="cart-form">
+                                    <span>загрузить реквизиты компании </span>
+                                    <span>+</span>
                                 </div>
                             </div>
                         </div>
