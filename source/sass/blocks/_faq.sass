@@ -2,8 +2,12 @@
     @include container--content
     font-size: 1.8rem
 
-    &__title-wrapper
+    &__title-wrapper-1
         @include gbackground(100%)
+        margin-bottom: 100px
+
+    &__title-wrapper-2
+        margin-left: 15px
         
     &__title
         box-shadow: 325px 0px 0px 0px $bg-color, 590px 0px 0px 0px $bg-color
@@ -11,74 +15,57 @@
         font-size: 7.2rem
         font-weight: 800
         color: $white
+        padding-right: 15px
         
     &__questions
 
-    &__accordion-item
-        // .accordion-wrapper--active
-        //     @include gbackground(100%)
-        //     .accordion-title
-        //         color: $white
-        //     .accordion-btn
-        //         background: transparent
+    .accordion
+        .accordion-item
+            .accordion-title-wrapper
+                display: flex
+                justify-content: space-between
+                border-bottom: 1px solid
+                border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+                border-image-slice: 1
+                cursor: pointer
 
-        // This code goes here or down bellow??
+                .accordion-title
+                    @include subtitle($font-size: 1.8rem)
+                    font-weight: 800
+                    padding: 13px
 
-    &__accordion-title-wrapper,
-        display: flex
-        justify-content: space-between
-        border-bottom: 1px solid
-        border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
-        border-image-slice: 1
-        // cursor: pointer ??
+                .accordion-btn
+                    @include gbackground(100%)
+                    font-size: 1.6rem
+                    font-weight: normal
+                    color: $white
+                    padding: 13px
+                    display: flex
+                    width: 120px
+                    justify-content: space-between  
 
-        .accordion-title
-            @include subtitle($font-size: 1.8rem)
-            font-weight: 800
-            padding: 13px
+                .accordion-btn-action
 
-        .accordion-btn
-            @include gbackground(100%)
-            font-size: 1.6rem
-            font-weight: normal
-            color: $white
-            padding: 13px
-            display: flex
-            width: 120px
-            justify-content: space-between  
-
-        .accordion-btn-action
-
-        .accordion-arrow
-            fill: $white
-            // Do I need stroke: $white ?
-            align-self: center
-    
-    .accordion-wrapper--active
-            @include gbackground(100%)
-            .accordion-title
-                color: $white
-            .accordion-btn
-                background: transparent
-                align-items: baseline
-            .accordion-arrow
-                align-self: baseline
-
-    //This code goes here or up above??
-
-    
-
+                .accordion-arrow
+                    fill: $white
+                    align-self: center
             
+                &--active
+                        @include gbackground(100%)
+                        .accordion-title
+                            color: $white
+                        .accordion-btn
+                            background: transparent
+                            align-items: baseline
+                        .accordion-arrow
+                            align-self: baseline
 
-    &__answer
-        width: 726px
-        line-height: 3.0rem
-
-    &__q1
-    &__q2
-    &__q3
-    &__q4
-    &__q5
-
-    &__answer
-
+            .accordion-content
+                width: 726px
+                line-height: 3.0rem
+                .accordion-ol
+                    list-style-position: inside
+                    padding-left: 5px
+                    margin: 30px 0
+                    .accordion-li
+                        margin-bottom: 3.0rem

@@ -3228,30 +3228,35 @@ body {
   @media (max-width: 1023px) {
     .faq {
       width: 100%; } }
-  .faq__title-wrapper {
+  .faq__title-wrapper-1 {
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); }
+    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    margin-bottom: 100px; }
+  .faq__title-wrapper-2 {
+    margin-left: 15px; }
   .faq__title {
     box-shadow: 325px 0px 0px 0px #F5F8FF, 590px 0px 0px 0px #F5F8FF;
     display: inline;
     font-size: 7.2rem;
     font-weight: 800;
-    color: #FFFFFF; }
-  .faq__accordion-title-wrapper {
+    color: #FFFFFF;
+    padding-right: 15px; }
+  .faq .accordion .accordion-item .accordion-title-wrapper {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid;
     border-image-source: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
-    border-image-slice: 1; }
-    .faq__accordion-title-wrapper .accordion-title {
+    border-image-slice: 1;
+    cursor: pointer; }
+    .faq .accordion .accordion-item .accordion-title-wrapper .accordion-title {
       font-family: "Montserrat", sans-serif;
       font-size: 1.8rem;
       color: #444444;
       text-transform: uppercase;
       font-weight: 800;
       padding: 13px; }
-    .faq__accordion-title-wrapper .accordion-btn {
+    .faq .accordion .accordion-item .accordion-title-wrapper .accordion-btn {
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
@@ -3262,23 +3267,29 @@ body {
       display: flex;
       width: 120px;
       justify-content: space-between; }
-    .faq__accordion-title-wrapper .accordion-arrow {
+    .faq .accordion .accordion-item .accordion-title-wrapper .accordion-arrow {
       fill: #FFFFFF;
       align-self: center; }
-  .faq .accordion-wrapper--active {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); }
-    .faq .accordion-wrapper--active .accordion-title {
-      color: #FFFFFF; }
-    .faq .accordion-wrapper--active .accordion-btn {
-      background: transparent;
-      align-items: baseline; }
-    .faq .accordion-wrapper--active .accordion-arrow {
-      align-self: baseline; }
-  .faq__answer {
+    .faq .accordion .accordion-item .accordion-title-wrapper--active {
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); }
+      .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-title {
+        color: #FFFFFF; }
+      .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-btn {
+        background: transparent;
+        align-items: baseline; }
+      .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-arrow {
+        align-self: baseline; }
+  .faq .accordion .accordion-item .accordion-content {
     width: 726px;
     line-height: 3.0rem; }
+    .faq .accordion .accordion-item .accordion-content .accordion-ol {
+      list-style-position: inside;
+      padding-left: 5px;
+      margin: 30px 0; }
+      .faq .accordion .accordion-item .accordion-content .accordion-ol .accordion-li {
+        margin-bottom: 3.0rem; }
 
 .tabs {
   width: 868px; }
