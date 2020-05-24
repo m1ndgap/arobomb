@@ -663,6 +663,7 @@ body {
             user-select: none; }
   .custom-checkbox__checkmark {
     position: absolute;
+    fill: #FFFFFF;
     left: 0;
     width: 22px;
     height: 22px;
@@ -680,7 +681,7 @@ body {
     background: #A9A9A9;
     margin: 0;
     transition: outline 300ms; }
-    .custom-checkbox__input:checked ~ img {
+    .custom-checkbox__input:checked ~ svg {
       opacity: 1; }
 
 .icon-close {
