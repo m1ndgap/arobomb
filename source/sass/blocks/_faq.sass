@@ -1,6 +1,8 @@
 .faq
     @include container--content
     font-size: 1.8rem
+    @include media ("<tablet")
+        font-size: 1.4rem
 
     &__title-wrapper-1
         @include gbackground(100%)
@@ -10,12 +12,16 @@
         margin-left: 15px
         
     &__title
-        box-shadow: 325px 0px 0px 0px $bg-color, 590px 0px 0px 0px $bg-color
+        box-shadow: 125px 0px 0px 0px $bg-color, 210px 0px 0px 0px $bg-color, 340px 0px 0px 0px $bg-color, 525px 0px 0px 0px $bg-color, 710px 0px 0px 0px $bg-color
         display: inline
         font-size: 7.2rem
         font-weight: 800
         color: $white
         padding-right: 15px
+        text-transform: uppercase
+        @include media ("<tablet")
+            font-size: 3.0rem
+            
         
     &__questions
 
@@ -39,16 +45,27 @@
                     font-size: 1.6rem
                     font-weight: normal
                     color: $white
-                    padding: 13px
+                    padding: 13px 0
                     display: flex
                     width: 120px
-                    justify-content: space-between  
+                    justify-content: space-evenly  
+                    align-items: center
+                    @include media ("<tablet")
+                        background: transparent
+                        justify-content: flex-end
 
                 .accordion-btn-action
+                    margin: 0 10px
+                    @include media ("<tablet")
+                        display: none
 
                 .accordion-arrow
                     fill: $white
                     align-self: center
+                    margin: 0 10px
+                    @include media ("<tablet")
+                        fill: $black
+                        align-self: flex-end
             
                 &--active
                         @include gbackground(100%)
@@ -56,16 +73,18 @@
                             color: $white
                         .accordion-btn
                             background: transparent
-                            align-items: baseline
                         .accordion-arrow
-                            align-self: baseline
+                            fill: $white
 
             .accordion-content
                 width: 726px
                 line-height: 3.0rem
+                margin-left: 5px
+                @include media ("<tablet")
+                    width: 100%
                 .accordion-ol
                     list-style-position: inside
-                    padding-left: 5px
+                    padding: 0
                     margin: 30px 0
                     .accordion-li
                         margin-bottom: 3.0rem

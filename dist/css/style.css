@@ -3090,11 +3090,11 @@ body {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
-    color: #000;
+    color: #000000;
     font-size: 0.8rem; }
   .about-product__sticker-link {
     display: inline-block;
-    color: #000;
+    color: #000000;
     font-size: 1.1rem;
     margin: 15px 0 30px; }
   .about-product__sticker-arobomb {
@@ -3106,7 +3106,7 @@ body {
     font-size: 0.8rem;
     color: #FFFFFF; }
     .about-product__sticker-words-wrapper span {
-      background-color: #000;
+      background-color: #000000;
       padding: 1px 2px 2px 3px; }
   .about-product__products-2 {
     display: flex;
@@ -3228,6 +3228,9 @@ body {
   @media (max-width: 1023px) {
     .faq {
       width: 100%; } }
+  @media (max-width: 767px) {
+    .faq {
+      font-size: 1.4rem; } }
   .faq__title-wrapper-1 {
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -3236,12 +3239,16 @@ body {
   .faq__title-wrapper-2 {
     margin-left: 15px; }
   .faq__title {
-    box-shadow: 325px 0px 0px 0px #F5F8FF, 590px 0px 0px 0px #F5F8FF;
+    box-shadow: 125px 0px 0px 0px #F5F8FF, 210px 0px 0px 0px #F5F8FF, 340px 0px 0px 0px #F5F8FF, 525px 0px 0px 0px #F5F8FF, 710px 0px 0px 0px #F5F8FF;
     display: inline;
     font-size: 7.2rem;
     font-weight: 800;
     color: #FFFFFF;
-    padding-right: 15px; }
+    padding-right: 15px;
+    text-transform: uppercase; }
+    @media (max-width: 767px) {
+      .faq__title {
+        font-size: 3.0rem; } }
   .faq .accordion .accordion-item .accordion-title-wrapper {
     display: flex;
     justify-content: space-between;
@@ -3263,13 +3270,28 @@ body {
       font-size: 1.6rem;
       font-weight: normal;
       color: #FFFFFF;
-      padding: 13px;
+      padding: 13px 0;
       display: flex;
       width: 120px;
-      justify-content: space-between; }
+      justify-content: space-evenly;
+      align-items: center; }
+      @media (max-width: 767px) {
+        .faq .accordion .accordion-item .accordion-title-wrapper .accordion-btn {
+          background: transparent;
+          justify-content: flex-end; } }
+    .faq .accordion .accordion-item .accordion-title-wrapper .accordion-btn-action {
+      margin: 0 10px; }
+      @media (max-width: 767px) {
+        .faq .accordion .accordion-item .accordion-title-wrapper .accordion-btn-action {
+          display: none; } }
     .faq .accordion .accordion-item .accordion-title-wrapper .accordion-arrow {
       fill: #FFFFFF;
-      align-self: center; }
+      align-self: center;
+      margin: 0 10px; }
+      @media (max-width: 767px) {
+        .faq .accordion .accordion-item .accordion-title-wrapper .accordion-arrow {
+          fill: #000000;
+          align-self: flex-end; } }
     .faq .accordion .accordion-item .accordion-title-wrapper--active {
       background-size: 100% 100%;
       background-repeat: no-repeat;
@@ -3277,16 +3299,19 @@ body {
       .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-title {
         color: #FFFFFF; }
       .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-btn {
-        background: transparent;
-        align-items: baseline; }
+        background: transparent; }
       .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-arrow {
-        align-self: baseline; }
+        fill: #FFFFFF; }
   .faq .accordion .accordion-item .accordion-content {
     width: 726px;
-    line-height: 3.0rem; }
+    line-height: 3.0rem;
+    margin-left: 5px; }
+    @media (max-width: 767px) {
+      .faq .accordion .accordion-item .accordion-content {
+        width: 100%; } }
     .faq .accordion .accordion-item .accordion-content .accordion-ol {
       list-style-position: inside;
-      padding-left: 5px;
+      padding: 0;
       margin: 30px 0; }
       .faq .accordion .accordion-item .accordion-content .accordion-ol .accordion-li {
         margin-bottom: 3.0rem; }
