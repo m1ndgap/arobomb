@@ -4,8 +4,7 @@
     color: $text
     @include media ("<phone")
         font-size: 1.4rem
-    
-    
+       
     &__title
         @include gbackground(100%)
         display: inline-block
@@ -18,7 +17,6 @@
             font-size: 3.0rem
             padding: 10px 15px
             
-
     // start of 1st row of products
     &__products-1
         display: flex
@@ -39,14 +37,25 @@
     &__swiper-wrapper
 
     &__swiper-slide
+        &:nth-child(2)
+            position: relative
+            top: 20px
+            @include media ("<phone")
+                top: 40px
 
     &__img-slide-1
-        width: min-content
-        // Do I have to put specific height and width of img?
+        width: 248px
+        height: 360px
+        @include media ("<phone")
+            width: 206px
+            height: 299px
 
     &__img-slide-2
-        width: min-content
-        // Do I have to put specific height and width of img?
+        width: 165px
+        height: 354px
+        @include media ("<phone")
+            width: 125px
+            height: 268px
 
     &__swiper-text
         // color: $text
@@ -71,7 +80,9 @@
             width: 100%
 
         .swiper-pagination
-            top: 370px
+            top: 310px
+            @include media (">phone")
+                top: 370px
         
         .swiper-pagination-bullet
             width: 30%
@@ -79,25 +90,22 @@
             margin: 0 5%
             background-color: $text
             border-radius: unset
-        .swiper-pagination-bullet::after
-            content: " "
-            padding: 10%
-            display: block
-            position: relative
-            bottom: 13px
-
-        .swiper-pagination-bullet-active
-            @include gbackground(100%)
+            &::after
+                content: " "
+                padding: 10%
+                display: block
+                position: relative
+                bottom: 13px
+            &-active
+                @include gbackground(100%)
           
     &__gum
         &-wrapper
             display: flex
-            width: min-content
+            width: 319px
             @include media ("<tablet")
                 order: 2
                 flex-flow: column
-                width: 100%
-                width: fit-content
                 align-items: center
                 margin-bottom: 60px
         &-img
@@ -118,7 +126,6 @@
                 text-align: center // here or on span?
         &-caption
             display: inline-block
-            width: min-content
             margin-top: 45px
             margin-left: 70px
             padding: 10px 0
@@ -129,13 +136,12 @@
             @include media ("<tablet")
                 display: none
 
-
     &__che
         &-wrapper
             align-self: baseline
             // padding-top: 55px
             display: flex
-            width: min-content
+            width: 490px
             margin-top: 65px
             // margin: 0 -50px
             @include media ("<large")
@@ -174,12 +180,12 @@
         &-wrapper
             align-self: center
             display: flex
-            width: min-content
+            width: 320px //min-content
+            @include media ("<large")
+                width: 390px
             @include media ("<tablet")
                 order: 3
                 flex-flow: column
-                // width: 100%
-                width: min-content
                 align-items: center
                 margin-bottom: 60px
         &-arrow-caption-wrapper
@@ -198,9 +204,11 @@
             margin-bottom: 10px
             @include media ("<large")
                 margin-left: 0
-                width: 100%
             @include media ("<tablet")
                 text-align: center // here or on wrapper?
+                width: 190px
+            @include media ("<phone")
+                width: 175px
         &-arrow
             @include media ("<large")
                 margin-left: 70px
@@ -214,8 +222,10 @@
             box-shadow: 0 9px 20px #CCC
             display: flex
             flex-basis: 100%
-            flex-wrap: wrap
-            align-content: center
+            // flex-wrap: wrap
+            // align-content: center
+            flex-flow: column
+            align-items: center
             justify-content: center
             text-align: center
             padding: 10px
@@ -225,7 +235,7 @@
                 flex-basis: auto
         &-phrase
             display: inline-block
-            width: min-content
+            width: 83px //min-content
             color: $black
             font-size: 0.8rem
         &-link
@@ -236,7 +246,7 @@
         &-arobomb
             font-weight: 600
         &-words-wrapper
-            width: min-content
+            width: 55px //min-content
             font-size: 0.8rem
             color: $white
             span
@@ -264,12 +274,14 @@
         &-wrapper
             display: flex
             flex-wrap: wrap
-            width: min-content
+            width: 521px
             @include media ("<tablet")
-                width: min-content // here or on div of row?
+                width: 341px
                 flex-flow: column
                 align-items: center
                 margin-bottom: 60px
+            @include media ("<phone")
+                width: 100%
         &-arrow
             margin-left: 70px
             @include media ("<tablet")
@@ -306,10 +318,11 @@
         &-wrapper
             display: flex
             align-items: center
-            width: min-content
+            width: 470px
             @include media ("<tablet")
                 flex-flow: column
                 margin-bottom: 60px
+                width: 191px
         &-img
             width: 191px
             height: 171px
@@ -319,17 +332,17 @@
             display: flex
             flex-wrap: wrap
             justify-content: flex-end
-            width: min-content
+            width: 279px
             @include media ("<tablet")
-                width: fit-content
+                width: 100%
+                justify-content: center
         &-caption
             display: inline-block
             // font-size: 1.8rem
             // color: $text
-            width: min-content
+            width: 143px
             text-align: right
             @include media ("<tablet")
-                width: 100%
                 text-align: center // here or on wrapper?
         &-arrow
             @include media ("<tablet")
