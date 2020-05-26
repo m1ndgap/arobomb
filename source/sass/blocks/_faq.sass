@@ -1,84 +1,89 @@
 .faq
     @include container--content
     font-size: 1.8rem
+    @include media ("<tablet")
+        font-size: 1.4rem
 
-    &__title-wrapper
+    &__title-wrapper-1
         @include gbackground(100%)
+        margin-bottom: 100px
+
+    &__title-wrapper-2
+        margin-left: 15px
         
     &__title
-        box-shadow: 325px 0px 0px 0px $bg-color, 590px 0px 0px 0px $bg-color
+        box-shadow: 125px 0px 0px 0px $bg-color, 210px 0px 0px 0px $bg-color, 340px 0px 0px 0px $bg-color, 525px 0px 0px 0px $bg-color, 710px 0px 0px 0px $bg-color
         display: inline
         font-size: 7.2rem
         font-weight: 800
         color: $white
-        
-    &__questions
+        padding-right: 15px
+        text-transform: uppercase
+        @include media ("<tablet")
+            font-size: 3.0rem
+               
+    &__questions // same as .accordion
 
-    &__accordion-item
-        // .accordion-wrapper--active
-        //     @include gbackground(100%)
-        //     .accordion-title
-        //         color: $white
-        //     .accordion-btn
-        //         background: transparent
+    .accordion
+        .accordion-item
+            .accordion-title-wrapper
+                display: flex
+                justify-content: space-between
+                border-bottom: 1px solid
+                border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+                border-image-slice: 1
+                cursor: pointer
 
-        // This code goes here or down bellow??
+                .accordion-title
+                    @include subtitle($font-size: 1.8rem)
+                    font-weight: 800
+                    padding: 13px
 
-    &__accordion-title-wrapper,
-        display: flex
-        justify-content: space-between
-        border-bottom: 1px solid
-        border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
-        border-image-slice: 1
-        // cursor: pointer ??
+                .accordion-btn
+                    @include gbackground(100%)
+                    font-size: 1.6rem
+                    font-weight: normal
+                    color: $white
+                    padding: 13px 0
+                    display: flex
+                    width: 120px
+                    justify-content: space-evenly  
+                    align-items: center
+                    @include media ("<tablet")
+                        background: transparent
+                        justify-content: flex-end
 
-        .accordion-title
-            @include subtitle($font-size: 1.8rem)
-            font-weight: 800
-            padding: 13px
+                .accordion-btn-action
+                    margin: 0 10px
+                    @include media ("<tablet")
+                        display: none
 
-        .accordion-btn
-            @include gbackground(100%)
-            font-size: 1.6rem
-            font-weight: normal
-            color: $white
-            padding: 13px
-            display: flex
-            width: 120px
-            justify-content: space-between  
-
-        .accordion-btn-action
-
-        .accordion-arrow
-            fill: $white
-            // Do I need stroke: $white ?
-            align-self: center
-    
-    .accordion-wrapper--active
-            @include gbackground(100%)
-            .accordion-title
-                color: $white
-            .accordion-btn
-                background: transparent
-                align-items: baseline
-            .accordion-arrow
-                align-self: baseline
-
-    //This code goes here or up above??
-
-    
-
+                .accordion-arrow
+                    fill: $white
+                    align-self: center
+                    margin: 0 10px
+                    @include media ("<tablet")
+                        fill: $black
+                        align-self: flex-end
             
+                &--active
+                        @include gbackground(100%)
+                        .accordion-title
+                            color: $white
+                        .accordion-btn
+                            background: transparent
+                        .accordion-arrow
+                            fill: $white
 
-    &__answer
-        width: 726px
-        line-height: 3.0rem
-
-    &__q1
-    &__q2
-    &__q3
-    &__q4
-    &__q5
-
-    &__answer
-
+            .accordion-content
+                width: 726px
+                line-height: 3.0rem
+                margin-left: 5px
+                @include media ("<tablet")
+                    width: 100%
+                .accordion-ol
+                    list-style-position: inside
+                    padding: 0
+                    margin: 30px 0
+                    .accordion-li
+                        margin-bottom: 3.0rem

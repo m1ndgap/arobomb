@@ -69,6 +69,8 @@
 <path d="M3.64645 12.3536C3.84171 12.5488 4.15829 12.5488 4.35355 12.3536L7.53553 9.17157C7.7308 8.97631 7.7308 8.65973 7.53553 8.46447C7.34027 8.2692 7.02369 8.2692 6.82843 8.46447L4 11.2929L1.17157 8.46447C0.976311 8.2692 0.659729 8.2692 0.464466 8.46447C0.269204 8.65973 0.269204 8.97631 0.464466 9.17157L3.64645 12.3536ZM3.5 2.18557e-08L3.5 12L4.5 12L4.5 -2.18557e-08L3.5 2.18557e-08Z"></path>
 </symbol><symbol id="faq-up-arrow" viewBox="0 0 8 13">
 <path d="M4.35355 0.646446C4.15829 0.451184 3.84171 0.451184 3.64645 0.646446L0.464466 3.82843C0.269204 4.02369 0.269204 4.34027 0.464466 4.53553C0.659728 4.7308 0.976311 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646446ZM4.5 13L4.5 1L3.5 1L3.5 13L4.5 13Z"></path>
+</symbol><symbol id="icon-checkmark" viewBox="0 0 18 14">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.7042 1.71015L5.92264 13.4099L0.294922 7.82126L1.7042 6.40213L5.92264 10.5913L16.2949 0.291016L17.7042 1.71015Z"></path>
 </symbol><symbol id="icon-close" viewBox="0 0 25 25">
 <path d="M14.3609 12.5022L24.6147 2.24839C25.1285 1.73452 25.1285 0.901416 24.6147 0.387598C24.1008 -0.126269 23.2676 -0.126269 22.7538 0.387598L12.5 10.6414L2.24619 0.387598C1.73232 -0.126269 0.899217 -0.126269 0.3854 0.387598C-0.128418 0.901465 -0.128467 1.73457 0.3854 2.24839L10.6392 12.5022L0.3854 22.756C-0.128467 23.2699 -0.128467 24.103 0.3854 24.6168C0.899266 25.1307 1.73237 25.1306 2.24619 24.6168L12.5 14.363L22.7537 24.6168C23.2676 25.1307 24.1007 25.1306 24.6146 24.6168C25.1284 24.1029 25.1284 23.2698 24.6146 22.756L14.3609 12.5022Z"></path>
 
@@ -158,7 +160,7 @@
             </a>
             <a href="javascript:void(0)" class="main-menu__order-call-btn btn">заказать звонок</a>
         </div>
-        <a href="/basket" class="main-menu__basket">
+        <a href="/cart.html" class="main-menu__basket">
             <svg viewBox="0 0 15 15" width="31" height="31">
                 <use xlink:href="#basket"></use>
             </svg>
@@ -169,15 +171,17 @@
 
 <main class="main--padded">
     <section class="faq">
-        <div class="faq__title-wrapper">
-            <h1 class="faq__title">ОТВЕТЫ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
+        <div class="faq__title-wrapper-1">
+            <div class="faq__title-wrapper-2">
+                <h1 class="faq__title">ОТВЕТЫ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
+            </div>
         </div>
 
-        <div class="faq__questions">
+        <div class="faq__questions accordion">
 
-            <div class="faq__accordion-item faq__q1">
+            <div class="accordion-item">
 
-                <h2 class="faq__accordion-title-wrapper">
+                <h2 class="accordion-title-wrapper">
                     <span class="accordion-title">Почему у Вас такие низкие цены?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">открыть</span>
@@ -187,7 +191,7 @@
                     </div>
                 </h2>
 
-                <h2 class="faq__accordion-title-wrapper accordion-wrapper--active">
+                <h2 class="accordion-title-wrapper accordion-title-wrapper--active">
                     <span class="accordion-title">Почему у Вас такие низкие цены?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">закрыть</span>
@@ -197,13 +201,13 @@
                     </div>
                 </h2>
 
-                <div class="faq__answer accordion-content"></div>
+                <div class="accordion-content"></div>
 
             </div>
 
-            <div class="faq__accordion-item faq__q2">
+            <div class="accordion-item">
 
-                <h2 class="faq__accordion-title-wrapper">
+                <h2 class="accordion-title-wrapper">
                     <span class="accordion-title">Что включено в стоимость спортивных площадок?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">открыть</span>
@@ -213,7 +217,7 @@
                     </div>
                 </h2>
 
-                <h2 class="faq__accordion-title-wrapper accordion-wrapper--active">
+                <h2 class="accordion-title-wrapper accordion-title-wrapper--active">
                     <span class="accordion-title">Что включено в стоимость спортивных площадок?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">закрыть</span>
@@ -223,13 +227,13 @@
                     </div>
                 </h2>
 
-                <div class="faq__answer accordion-content"></div>
+                <div class="accordion-content"></div>
 
             </div>
 
-            <div class="faq__accordion-item faq__q3">
+            <div class="accordion-item">
 
-                <h2 class="faq__accordion-title-wrapper">
+                <h2 class="accordion-title-wrapper">
                     <span class="accordion-title">Можно ли менять конфигурацию комплекса, добавлять/убирать снаряды?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">открыть</span>
@@ -239,7 +243,7 @@
                     </div>
                 </h2>
 
-                <h2 class="faq__accordion-title-wrapper accordion-wrapper--active">
+                <h2 class="accordion-title-wrapper accordion-title-wrapper--active">
                     <span class="accordion-title">Можно ли менять конфигурацию комплекса, добавлять/убирать снаряды?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">закрыть</span>
@@ -249,20 +253,75 @@
                     </div>
                 </h2>
 
-                <div class="faq__answer accordion-content">
-                    <ol>
-                        <li>Вы приобретаете продукцию напрямую у производителя, без посредников.</li>
-                        <li>Объемы нашего производства позволяют сотрудничать напрямую с изготовителями исходного сырья и расходных материалов (труба, заглушка, краска и т.д.), что позволяет существенно снизить себестоимость выпускаемой продукции.</li>
-                        <li>Наше предприятие специализируется на изготовлении спортивного оборудования. Технологические процессы отлажены и автоматизированы.</li>
-                        <li>Являясь основателями некоммерческой организации "МОЛОДЕЖНО-СПОРТИВНОЕ ОБЪЕДИНЕНИЕ", сами столкнулись с проблемой цены и качества спортивных снарядов. Наладив собственное производство, мы решили её.</li>
+                <div class="accordion-content">
+                    <ol class="accordion-ol">
+                        <li class="accordion-li">Вы приобретаете продукцию напрямую у производителя, без посредников.</li>
+                        <li class="accordion-li">Объемы нашего производства позволяют сотрудничать напрямую с изготовителями исходного сырья и расходных материалов (труба, заглушка, краска и т.д.), что позволяет существенно снизить себестоимость выпускаемой продукции.</li>
+                        <li class="accordion-li">Наше предприятие специализируется на изготовлении спортивного оборудования. Технологические процессы отлажены и автоматизированы.</li>
+                        <li class="accordion-li">Являясь основателями некоммерческой организации "МОЛОДЕЖНО-СПОРТИВНОЕ ОБЪЕДИНЕНИЕ", сами столкнулись с проблемой цены и качества спортивных снарядов. Наладив собственное производство, мы решили её.</li>
                     </ol>
                 </div>
 
             </div>
 
-            <div class="faq__accordion-item faq__q4">
+            <div class="accordion-item">
 
-                <h2 class="faq__accordion-title-wrapper">
+                <h2 class="accordion-title-wrapper">
+                    <span class="accordion-title">ещё вопрос</span>
+                    <div class="accordion-btn">
+                        <span class="accordion-btn-action">открыть</span>
+                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion-arrow">
+                            <use xlink:href="#faq-down-arrow"></use>
+                        </svg>
+                    </div>
+                </h2>
+
+                <h2 class="accordion-title-wrapper accordion-title-wrapper--active">
+                    <span class="accordion-title">ещё вопрос</span>
+                    <div class="accordion-btn">
+                        <span class="accordion-btn-action">закрыть</span>
+                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion-arrow">
+                            <use xlink:href="#faq-up-arrow"></use>
+                        </svg>
+                    </div>
+                </h2>
+
+                <div class="accordion-content">
+                    <p>Вы можете на нас положиться.</p>
+                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+                </div>
+
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-title-wrapper">
+                    <span class="accordion-title">Почему у Вас такие низкие цены?</span>
+                    <div class="accordion-btn">
+                        <span class="accordion-btn-action">открыть</span>
+                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion-arrow">
+                            <use xlink:href="#faq-down-arrow"></use>
+                        </svg>
+                    </div>
+                </h2>
+
+                <h2 class="accordion-title-wrapper accordion-title-wrapper--active">
+                    <span class="accordion-title">Почему у Вас такие низкие цены?</span>
+                    <div class="accordion-btn">
+                        <span class="accordion-btn-action">закрыть</span>
+                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion-arrow">
+                            <use xlink:href="#faq-up-arrow"></use>
+                        </svg>
+                    </div>
+                </h2>
+
+                <div class="accordion-content"></div>
+
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-title-wrapper">
                     <span class="accordion-title">Что включено в стоимость спортивных площадок?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">открыть</span>
@@ -272,7 +331,7 @@
                     </div>
                 </h2>
 
-                <h2 class="faq__accordion-title-wrapper accordion-wrapper--active">
+                <h2 class="accordion-title-wrapper accordion-title-wrapper--active">
                     <span class="accordion-title">Что включено в стоимость спортивных площадок?</span>
                     <div class="accordion-btn">
                         <span class="accordion-btn-action">закрыть</span>
@@ -282,35 +341,10 @@
                     </div>
                 </h2>
 
-                <div class="faq__answer accordion-content"></div>
+                <div class="accordion-content"></div>
 
             </div>
 
-            <div class="faq__accordion-item faq__q5">
-
-                <h2 class="faq__accordion-title-wrapper">
-                    <span class="accordion-title">Что включено в стоимость спортивных площадок?</span>
-                    <div class="accordion-btn">
-                        <span class="accordion-btn-action">открыть</span>
-                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion-arrow">
-                            <use xlink:href="#faq-down-arrow"></use>
-                        </svg>
-                    </div>
-                </h2>
-
-                <h2 class="faq__accordion-title-wrapper accordion-wrapper--active">
-                    <span class="accordion-title">Что включено в стоимость спортивных площадок?</span>
-                    <div class="accordion-btn">
-                        <span class="accordion-btn-action">закрыть</span>
-                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion-arrow">
-                            <use xlink:href="#faq-up-arrow"></use>
-                        </svg>
-                    </div>
-                </h2>
-
-                <div class="faq__answer accordion-content"></div>
-
-            </div>
         </div>
     </section>
 </main>

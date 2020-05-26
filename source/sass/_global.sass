@@ -93,11 +93,16 @@ body
     background: url("../img/map.png")
     background-position: bottom right
     background-repeat: no-repeat
-    @media screen and (max-width: 680px)
-      background-size: contain
-      padding-bottom: 300px
-    @media screen and ( max-width: 560px )
+    // @media screen and (max-width: 680px)
+    //   background-size: contain
+    //   padding-bottom: 300px
+    // @media screen and ( max-width: 560px )
+    @include media ("<desktop")
+      // background-size: contain
       background-size: 135%
+      padding-bottom: 300px
+    // @include media ("<tiny")
+    //   background-size: 135%
 
 
 .custom-checkbox
