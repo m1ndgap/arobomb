@@ -628,13 +628,10 @@ body {
   background: url("../img/map.png");
   background-position: bottom right;
   background-repeat: no-repeat; }
-  @media screen and (max-width: 680px) {
+  @media (max-width: 1023px) {
     .main-contact-us {
-      background-size: contain;
+      background-size: 135%;
       padding-bottom: 300px; } }
-  @media screen and (max-width: 560px) {
-    .main-contact-us {
-      background-size: 135%; } }
 
 .custom-checkbox {
   position: relative;
@@ -2649,13 +2646,11 @@ body {
   font-weight: 900;
   text-transform: uppercase;
   padding: 0px 20px; }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__title {
       font-size: 3.0rem;
       padding: 10px;
-      font-weight: 800; } }
-  @media screen and (max-width: 560px) {
-    .contact-us__title {
+      font-weight: 800;
       margin-bottom: 50px; } }
 
 .contact-us__contact {
@@ -2673,7 +2668,7 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   margin: 20px 0; }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__address-subtitle {
       font-size: 1.8rem; } }
 
@@ -2684,7 +2679,7 @@ body {
   text-transform: uppercase;
   font-weight: 800;
   margin: 20px 0; }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__phone-email-subtitle {
       max-height: 0;
       padding: 0;
@@ -2694,7 +2689,7 @@ body {
 .contact-us__address {
   flex-basis: 50%;
   width: 50%; }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__address {
       order: 1;
       flex-basis: 100%;
@@ -2703,49 +2698,42 @@ body {
 
 .contact-us__phone-email {
   flex-basis: 50%; }
-  @media screen and (min-width: 1050px) {
-    .contact-us__phone-email {
-      width: 50%; } }
-  @media screen and (max-width: 1000px) {
+  @media (max-width: 1023px) {
     .contact-us__phone-email {
       margin-top: 60px;
       flex-basis: 100%; } }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__phone-email {
       margin: 0; } }
 
 .contact-us__phone-email--wrapper {
   display: flex; }
-  @media screen and (max-width: 1050px) {
+  @media (max-width: 1023px) {
     .contact-us__phone-email--wrapper {
       display: block; } }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__phone-email--wrapper {
       text-decoration: underline;
       font-size: 1.6rem; } }
 
-@media screen and (min-width: 1280px) {
-  .contact-us__phone-nrs {
-    margin-right: 100px; } }
-
-@media screen and (max-width: 1280px) {
-  .contact-us__phone-nrs {
-    margin-right: 40px; } }
-
-@media screen and (max-width: 560px) {
-  .contact-us__phone-nrs {
-    margin: 0; }
-    .contact-us__phone-nrs a {
-      margin-bottom: 30px; } }
+.contact-us__phone-nrs {
+  margin-right: 100px; }
+  @media (max-width: 1279px) {
+    .contact-us__phone-nrs {
+      margin-right: 40px; } }
+  @media (max-width: 767px) {
+    .contact-us__phone-nrs {
+      margin: 0; }
+      .contact-us__phone-nrs a {
+        margin-bottom: 30px; } }
 
 .contact-us__form--wrapper {
   flex-basis: 1;
   width: 540px;
   margin-top: 70px;
   padding-bottom: 45px; }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__form--wrapper {
-      width: 100%;
       margin-top: 50px;
       padding: 0; } }
 
@@ -2753,111 +2741,51 @@ body {
   text-transform: uppercase;
   font-size: 3.0rem;
   font-weight: 800;
-  background: -webkit-linear-gradient(0deg, #FF8BDE 0%, #669FFF 100%);
+  background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+          background-clip: text;
+  color: transparent;
   margin-bottom: 20px; }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__form-motto {
-      font-size: 2.4rem; } }
-  @media screen and (max-width: 560px) {
-    .contact-us__form-motto {
+      font-size: 2.4rem;
       margin-top: 0; } }
 
 .contact-us__after-form-motto {
   font-size: 2.4rem;
   margin: 20px 0 30px; }
-  @media screen and (max-width: 560px) {
+  @media (max-width: 767px) {
     .contact-us__after-form-motto {
       font-size: 1.8rem; } }
 
 .contact-us__form {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  display: flex;
-  flex-flow: column; }
+  font-size: 1.4rem; }
   .contact-us__form-input {
-    display: block;
-    padding: 15px 10px;
-    width: 454px;
-    border: none;
-    opacity: 0.9;
-    margin-bottom: 15px;
-    text-transform: uppercase; }
-    @media screen and (max-width: 560px) {
+    font-size: 1.8rem;
+    width: 454px; }
+    @media (max-width: 767px) {
       .contact-us__form-input {
         width: 100%; } }
     .contact-us__form-input::-webkit-input-placeholder {
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      font-weight: 600;
-      opacity: 0.5; }
+      font-size: 1.4rem; }
     .contact-us__form-input::-moz-placeholder {
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      font-weight: 600;
-      opacity: 0.5; }
+      font-size: 1.4rem; }
     .contact-us__form-input:-ms-input-placeholder {
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      font-weight: 600;
-      opacity: 0.5; }
+      font-size: 1.4rem; }
     .contact-us__form-input::-ms-input-placeholder {
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      font-weight: 600;
-      opacity: 0.5; }
+      font-size: 1.4rem; }
     .contact-us__form-input::placeholder {
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      font-weight: 600;
-      opacity: 0.5; }
-  .contact-us__form-btn {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    border-radius: 0;
-    text-align: center;
-    border: 2px solid #82AD24;
-    transition: background-color 300ms, color 300ms, outline 300ms; }
-    @media screen and (max-width: 560px) {
-      .contact-us__form-btn {
-        padding: 10px 0;
-        order: 1;
-        margin-top: 50px; } }
-  .contact-us__form-cbx {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    cursor: pointer; }
-    @media screen and (max-width: 560px) {
-      .contact-us__form-cbx {
+      font-size: 1.4rem; }
+  @media (max-width: 767px) {
+    .contact-us__form-btn {
+      padding: 10px 0;
+      order: 1;
+      margin-top: 50px; } }
+  .contact-us__form-cbx-label {
+    font-size: 1.2rem; }
+    @media (max-width: 767px) {
+      .contact-us__form-cbx-label {
         font-size: 1.0rem; } }
-    .contact-us__form-cbx span {
-      padding-left: 15px; }
-
-.contact-us__checkmark {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  opacity: 0;
-  transition: opacity 300ms; }
-
-#contact-us__cbx {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  cursor: pointer;
-  position: relative;
-  height: 22px;
-  width: 22px;
-  padding: 0;
-  background: #A9A9A9;
-  margin: 0;
-  transition: outline 300ms; }
-  #contact-us__cbx:checked ~ img {
-    opacity: 1; }
 
 .about-product {
   box-sizing: border-box;
@@ -3308,6 +3236,74 @@ body {
       margin: 30px 0; }
       .faq .accordion .accordion-item .accordion-content .accordion-ol .accordion-li {
         margin-bottom: 3.0rem; }
+
+.form {
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: column; }
+  .form-input {
+    display: block;
+    padding: 15px 10px;
+    border: none;
+    opacity: 0.9;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+    .form-input::-webkit-input-placeholder {
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.5; }
+    .form-input::-moz-placeholder {
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.5; }
+    .form-input:-ms-input-placeholder {
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.5; }
+    .form-input::-ms-input-placeholder {
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.5; }
+    .form-input::placeholder {
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.5; }
+  .form-btn {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0;
+    text-align: center;
+    border: 2px solid #82AD24;
+    transition: background-color 300ms, color 300ms, outline 300ms; }
+  .form-cbx-label {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    cursor: pointer; }
+    .form-cbx-label span {
+      padding-left: 15px; }
+  .form-checkbox {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    cursor: pointer;
+    position: relative;
+    height: 22px;
+    width: 22px;
+    padding: 0;
+    background: #A9A9A9;
+    margin: 0;
+    transition: outline 300ms; }
+    .form-checkbox:checked ~ svg {
+      opacity: 1; }
+  .form-checkmark {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    opacity: 0;
+    transition: opacity 300ms;
+    fill: #FFFFFF; }
 
 .tabs {
   width: 868px; }

@@ -197,13 +197,16 @@
                 <p class="contact-us__form-motto">МЫ ЕЖЕДНЕВНО РАБОТАЕМ НАД ТЕМ, ЧТОБЫ БЫТЬ ЛУЧШЕ</p>
                 <p class="contact-us__after-form-motto">Если у вас есть вопросы, идеи или вы хотите поделиться своим мнением, обязательно напишите нам</p>
                 <form action="" class="contact-us__form form">
-                    <input type="text" class="contact-us__form-input" placeholder="имя">
-                    <input type="text" class="contact-us__form-input" placeholder="email">
-                    <input type="text" class="contact-us__form-input" placeholder="сообщение">
-                    <input type="submit" class="contact-us__form-input contact-us__form-btn btn" value="отправить">
-                    <label class="contact-us__form-cbx" for="contact-us__cbx">
-                        <input type="checkbox" class="contact-us__form-input" id="contact-us__cbx" checked="">
-                        <img class="contact-us__checkmark" src="../img/checkmark.svg" alt="">
+                    <input type="text" class="contact-us__form-input form-input" placeholder="email">
+                    <input type="text" class="contact-us__form-input form-input" placeholder="имя">
+                    <input type="text" class="contact-us__form-input form-input" placeholder="сообщение">
+                    <input type="submit" class="contact-us__form-input form-input contact-us__form-btn form-btn btn" value="отправить">
+                    <label class="contact-us__form-cbx-label form-cbx-label" for="contact-us__cbx">
+                        <input type="checkbox" class="form-input contact-us__form-checkbox form-checkbox" id="contact-us__cbx" checked="">
+                        <!-- <img class="contact-us__checkmark" src="../img/checkmark.svg" alt=""> -->
+                        <svg width="18" height="14" viewBox="0 0 18 14" class="form-checkmark">
+                            <use xlink:href="#icon-checkmark"></use>
+                        </svg>
                         <span>я согласен с политикой конфидециальости</span>
                     </label>
                 </form>
