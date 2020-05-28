@@ -633,6 +633,9 @@ body {
       background-size: 135%;
       padding-bottom: 300px; } }
 
+.main--submenu {
+  padding-top: 250px; }
+
 .custom-checkbox {
   position: relative;
   font-size: 1.2rem;
@@ -744,11 +747,13 @@ body {
     .main-menu {
       background-color: #FFFFFF; } }
   .main-menu__container {
+    position: relative;
     box-sizing: border-box;
     width: 1440px;
     margin: 0 auto 0;
     display: flex;
-    align-items: flex-start; }
+    align-items: flex-start;
+    z-index: 5; }
     @media (max-width: 1439px) {
       .main-menu__container {
         width: 1280px;
@@ -1663,12 +1668,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: #444444;
     text-transform: uppercase;
     position: absolute;
     bottom: 22px;
+    width: 100%;
     flex-basis: 100%;
+    text-align: center;
     margin-bottom: 10px; }
   .catalog__item-price {
     font-size: 1.8rem; }
@@ -1676,6 +1683,147 @@ body {
       content: " p."; }
   .catalog__item-link {
     margin-left: auto; }
+
+.submenu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding-top: 95px;
+  z-index: 4; }
+  .submenu__wrapper {
+    box-sizing: border-box;
+    width: 1440px;
+    margin: 0 auto 0;
+    padding: 0 132px 0;
+    padding-left: 147px;
+    display: flex; }
+    @media (max-width: 1439px) {
+      .submenu__wrapper {
+        width: 1280px;
+        margin: 0 auto 0;
+        padding: 0 15px; } }
+    @media (max-width: 1279px) {
+      .submenu__wrapper {
+        width: 1024px;
+        margin: 0 auto 0;
+        padding: 0 15px; } }
+    @media (max-width: 1023px) {
+      .submenu__wrapper {
+        width: 100%; } }
+
+.submenu__section {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 25px;
+  color: transparent;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 50%, #669FFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  border: 1px solid;
+  border-image-source: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  background-position: 100% 0;
+  border-image-slice: 1;
+  transition: box-shadow 300ms, color 300ms, flex-grow 300ms, background-position 300ms;
+  cursor: pointer; }
+  .submenu__section:hover {
+    background-position: 0 0; }
+  .submenu__section:active, .submenu__section:focus {
+    outline: none;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
+  .submenu__section .submenu__title {
+    display: block;
+    line-height: 220%; }
+  .submenu__section .submenu__title-extra {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    color: #444444;
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 400;
+    max-height: unset;
+    transition: max-height 3000ms; }
+  .submenu__section .submenu__title-main {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    color: #444444;
+    text-transform: uppercase;
+    color: transparent;
+    font-weight: 900;
+    letter-spacing: 3px; }
+  .submenu__section .submenu__subsections {
+    max-width: 0;
+    padding: 0;
+    opacity: 0; }
+
+.submenu__section + .submenu__section {
+  margin-left: 70px; }
+
+.submenu__section--active {
+  padding: 16px 35px;
+  flex-grow: 1;
+  color: #FFFFFF;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  border-image-source: none;
+  border-image-slice: 0;
+  background-clip: border-box; }
+  .submenu__section--active .submenu__title-extra, .submenu__section--active .submenu__title-main {
+    color: #FFFFFF; }
+  .submenu__section--active .submenu__title-main {
+    line-height: 100%; }
+  .submenu__section--active .submenu__subsections {
+    margin: 16px 0 0 auto;
+    display: flex;
+    max-width: unset;
+    opacity: 1;
+    transition: max-width 3000ms; }
+  .submenu__section--active .submenu__subsection-item {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    color: #444444;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    white-space: nowrap;
+    color: #FFFFFF;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 300ms, max-width 300ms; }
+    .submenu__section--active .submenu__subsection-item:hover {
+      opacity: 1; }
+  .submenu__section--active .submenu__subsection-item--active {
+    opacity: 1; }
+  .submenu__section--active .submenu__subsection-item + .submenu__subsection-item {
+    position: relative;
+    margin-left: 30px; }
+    .submenu__section--active .submenu__subsection-item + .submenu__subsection-item:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      width: 1px;
+      height: calc(100% - 8px);
+      background-color: #FFFFFF; }
+
+.submenu--minified .submenu__wrapper {
+  justify-content: space-between; }
+  .submenu--minified .submenu__wrapper .submenu__section {
+    flex-grow: 0;
+    align-items: center; }
+    .submenu--minified .submenu__wrapper .submenu__section .submenu__title-extra {
+      max-height: 0;
+      overflow: hidden; }
+    .submenu--minified .submenu__wrapper .submenu__section .submenu__subsections {
+      max-height: 0;
+      max-width: 0;
+      overflow: hidden; }
 
 .modal {
   position: fixed;
@@ -3160,7 +3308,7 @@ body {
   .faq__title-wrapper-2 {
     margin-left: 15px; }
   .faq__title {
-    box-shadow: 125px 0px 0px 0px #F5F8FF, 210px 0px 0px 0px #F5F8FF, 340px 0px 0px 0px #F5F8FF, 525px 0px 0px 0px #F5F8FF, 710px 0px 0px 0px #F5F8FF;
+    box-shadow: 125px 0 0 0 #F5F8FF, 210px 0 0 0 #F5F8FF, 340px 0 0 0 #F5F8FF, 525px 0 0 0 #F5F8FF, 710px 0 0 0 #F5F8FF;
     display: inline;
     font-size: 7.2rem;
     font-weight: 800;
@@ -3208,7 +3356,8 @@ body {
     .faq .accordion .accordion-item .accordion-title-wrapper .accordion-arrow {
       fill: #FFFFFF;
       align-self: center;
-      margin: 0 10px; }
+      margin: 0 10px;
+      transition: transform 300ms; }
       @media (max-width: 767px) {
         .faq .accordion .accordion-item .accordion-title-wrapper .accordion-arrow {
           fill: #000000;
@@ -3222,19 +3371,26 @@ body {
       .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-btn {
         background: transparent; }
       .faq .accordion .accordion-item .accordion-title-wrapper--active .accordion-arrow {
-        fill: #FFFFFF; }
+        fill: #FFFFFF;
+        transform: scaleY(-1); }
+    .faq .accordion .accordion-item .accordion-title-wrapper--active ~ .accordion-content {
+      max-height: 1000px;
+      transition: max-height 1500ms; }
   .faq .accordion .accordion-item .accordion-content {
-    width: 726px;
+    max-height: 0;
+    overflow: hidden;
+    max-width: 726px;
     line-height: 3.0rem;
-    margin-left: 5px; }
+    margin-left: 5px;
+    transition: max-height 300ms; }
     @media (max-width: 767px) {
       .faq .accordion .accordion-item .accordion-content {
-        width: 100%; } }
-    .faq .accordion .accordion-item .accordion-content .accordion-ol {
+        max-width: 100%; } }
+    .faq .accordion .accordion-item .accordion-content ol {
       list-style-position: inside;
       padding: 0;
       margin: 30px 0; }
-      .faq .accordion .accordion-item .accordion-content .accordion-ol .accordion-li {
+      .faq .accordion .accordion-item .accordion-content ol li {
         margin-bottom: 3.0rem; }
 
 .form {

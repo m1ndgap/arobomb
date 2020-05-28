@@ -1,0 +1,118 @@
+.submenu
+  position: fixed
+  width: 100%
+  top: 0
+  padding-top: 95px
+  z-index: 4
+  &__wrapper
+    @include container--content
+    padding-left: 147px
+    display: flex
+
+
+.submenu__section
+  display: flex
+  align-items: flex-start
+  padding: 16px 25px
+  color: transparent
+  @include gbackground(200%, 50%)
+  -webkit-background-clip: text
+  background-clip: text
+  border: 1px solid
+  border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+  background-position: 100% 0
+  border-image-slice: 1
+  transition: box-shadow $transition, color $transition, flex-grow $transition, background-position $transition
+  cursor: pointer
+  &:hover
+    background-position: 0 0
+  &:active, &:focus
+    outline: none
+    box-shadow: 0 0 3px 0 rgba($black ,0.5)
+
+  .submenu__title
+    display: block
+    line-height: 220%
+
+  .submenu__title-extra
+    display: block
+    @include subtitle(1.8rem)
+    color: transparent
+    font-weight: 400
+    max-height: unset
+    transition: max-height $transition*10
+
+  .submenu__title-main
+    display: block
+    @include subtitle(3rem)
+    color: transparent
+    font-weight: 900
+    letter-spacing: 3px
+
+  .submenu__subsections
+    max-width: 0
+    padding: 0
+    opacity: 0
+
+
+.submenu__section + .submenu__section
+  margin-left: 70px
+
+.submenu__section--active
+  padding: 16px 35px
+  flex-grow: 1
+  color: $white
+  @include gbackground(100%)
+  border-image-source: none
+  border-image-slice: 0
+  background-clip: border-box
+  .submenu__title-extra, .submenu__title-main
+    color: $white
+  .submenu__title-main
+    line-height: 100%
+  .submenu__subsections
+    margin: 16px 0 0 auto
+    display: flex
+    max-width: unset
+    opacity: 1
+    transition: max-width $transition*10
+  .submenu__subsection-item
+    @include subtitle(1.8rem)
+    font-weight: 800
+    letter-spacing: 1.8px
+    white-space: nowrap
+    color: $white
+    text-decoration: none
+    opacity: 0.5
+    transition: opacity $transition, max-width $transition
+    &:hover
+      opacity: 1
+  .submenu__subsection-item--active
+    opacity: 1
+  .submenu__subsection-item + .submenu__subsection-item
+    position: relative
+    margin-left: 30px
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      left: - 15px
+      transform: translateY(-50%)
+      width: 1px
+      height: calc(100% - 8px)
+      background-color: $white
+
+.submenu--minified
+  .submenu__wrapper
+    justify-content: space-between
+    .submenu__section
+      flex-grow: 0
+      align-items: center
+      .submenu__title-extra
+        max-height: 0
+        overflow: hidden
+      .submenu__subsections
+        max-height: 0
+        max-width: 0
+        overflow: hidden

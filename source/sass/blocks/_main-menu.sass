@@ -7,9 +7,11 @@
     background-color: $white
 
   &__container
+    position: relative
     @include container()
     display: flex
     align-items: flex-start
+    z-index: 5
     @include media("<huge")
       flex-flow: row wrap
     @include media("<tablet")
