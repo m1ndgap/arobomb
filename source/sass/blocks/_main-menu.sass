@@ -3,8 +3,16 @@
   width: 100%
   transition: background-color $transition
   z-index: 5
-  @include media("<tablet")
-    background-color: $white
+  background-color: $white
+  padding-bottom: 10px
+  &:after
+    content: ""
+    position: absolute
+    top: 100%
+    display: block
+    width: 100%
+    height: 20px
+    background-image: linear-gradient(180deg, $white, rgba($white, 0.001))
 
   &__container
     position: relative
@@ -312,14 +320,8 @@
     @include media("<tablet")
       display: block
 
-.fixed-menu-trailing-gradient
-  background-color: $white
-  padding-bottom: 10px
+.fixed-menu-transparent-bg
+  background: transparent
   &:after
-    content: ""
-    position: absolute
-    top: 100%
-    display: block
-    width: 100%
-    height: 20px
-    background-image: linear-gradient(180deg, $white, rgba($white, 0.001))
+    display: none
+
