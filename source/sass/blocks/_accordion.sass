@@ -1,76 +1,74 @@
 .accordion
-  .accordion-item
-    .accordion-title-wrapper
-        display: flex
-        justify-content: space-between
-        border-bottom: 1px solid
-        border-top: 0
-        border-left: 0
-        border-right: 0
-        border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
-        border-image-slice: 1
-        cursor: pointer
+  &-item
+  &-title-wrapper
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid
+    border-top: 0
+    border-left: 0
+    border-right: 0
+    border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+    border-image-slice: 1
+    cursor: pointer
+    &--active
+      @include gbackground(100%)
+      .accordion-title
+        color: $white
+      .accordion-btn
+        background: transparent
+      .accordion-arrow
+        fill: $white
+        transform: scaleY(-1)
 
-        .accordion-title
-            @include subtitle($font-size: 1.8rem)
-            font-weight: 800
-            padding: 13px
+    &--active ~ .accordion-content
+      max-height: 1000px
+      transition: max-height $transition*5
 
-        .accordion-btn
-            @include gbackground(100%)
-            font-size: 1.6rem
-            font-weight: normal
-            color: $white
-            padding: 13px 0
-            display: flex
-            width: 120px
-            justify-content: space-evenly
-            align-items: center
+  &-title
+    // @include subtitle($font-size: 1.8rem)
+    // font-weight: 800
+    padding: 13px
 
-            @include media ("<tablet")
-                background: transparent
-                justify-content: flex-end
+  &-btn
+    @include gbackground(100%)
+    // font-size: 1.6rem
+    // font-weight: normal
+    color: $white
+    padding: 13px 0
+    display: flex
+    // width: 120px
+    justify-content: space-evenly
+    align-items: center
+    @include media ("<tablet")
+      background: transparent
+      justify-content: flex-end
 
-        .accordion-btn-action
-            margin: 0 10px
-            @include media ("<tablet")
-                display: none
+  &-btn-action
+    margin: 0 10px
+    @include media ("<tablet")
+      display: none
 
-        .accordion-arrow
-            fill: $white
-            align-self: center
-            margin: 0 10px
-            transition: transform $transition
-            @include media ("<tablet")
-                fill: $black
-                align-self: flex-end
+  &-arrow
+    fill: $white
+    align-self: center
+    margin: 0 10px
+    transition: transform $transition
+    @include media ("<tablet")
+      fill: $black
+      align-self: flex-end
 
-        &--active
-                @include gbackground(100%)
-                .accordion-title
-                    color: $white
-                .accordion-btn
-                    background: transparent
-                .accordion-arrow
-                    fill: $white
-                    transform: scaleY(-1)
-
-        &--active ~ .accordion-content
-            max-height: 1000px
-            transition: max-height $transition*5
-
-    .accordion-content
-        max-height: 0
-        overflow: hidden
-        max-width: 726px
-        line-height: 3.0rem
-        margin-left: 5px
-        transition: max-height $transition
-        @include media ("<tablet")
-            max-width: 100%
-        ol
-            list-style-position: inside
-            padding: 0
-            margin: 30px 0
-            li
-                margin-bottom: 3.0rem
+  &-content
+    max-height: 0
+    overflow: hidden
+    // max-width: 726px
+    // line-height: 3.0rem
+    margin-left: 5px
+    transition: max-height $transition
+    @include media ("<tablet")
+      max-width: 100%
+    ol
+      list-style-position: inside
+      padding: 0
+      margin: 30px 0
+      li
+        margin-bottom: 3.0rem
