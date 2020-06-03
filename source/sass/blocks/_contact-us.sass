@@ -1,132 +1,130 @@
 .contact-us
 
-    &__section
-        @include container--content
-        color: $text
+  &__section
+    @include container--content
+    color: $text
 
-    &__info-form--wrapper
-        display: flex
-        flex-wrap: wrap
-        font-size: 1.8rem
+  &__info-form--wrapper
+    display: flex
+    flex-wrap: wrap
+    font-size: 1.8rem
 
-    &__title
-        @include gbackground(100%)
-        display: inline-block
-        color: $white
-        font-size: 7.2rem
-        font-weight: 900
-        text-transform: uppercase
-        padding: 0px 20px
-        @include media ("<tablet")
-            font-size: 3.0rem
-            padding: 10px
-            font-weight: 800
-            margin-bottom: 50px
+  &__title
+    @include gbackground(100%)
+    display: inline-block
+    color: $white
+    font-size: 7.2rem
+    font-weight: 900
+    text-transform: uppercase
+    padding: 0px 20px
+    @include media ("<tablet")
+      font-size: 3.0rem
+      padding: 10px
+      font-weight: 800
+      margin-bottom: 50px
 
-    &__contact
-        @include resetinteractive
-        display: block
-        color: $text
-        line-height: 3.0rem
+  &__contact
+    @include resetinteractive
+    display: block
+    color: $text
+    line-height: 3.0rem
 
-    &__address-subtitle
-        @include subtitle(3.6rem)
-        font-weight: 800
-        margin: 20px 0
-        @include media ("<tablet")
-            font-size: 1.8rem
+  &__address-subtitle
+    @include subtitle(3.6rem)
+    font-weight: 800
+    margin: 20px 0
+    @include media ("<tablet")
+      font-size: 1.8rem
 
-    &__phone-email-subtitle
-        @include subtitle(3.6rem)
-        font-weight: 800
-        margin: 20px 0
-        @include media ("<tablet")
-            max-height: 0
-            padding: 0
-            overflow: hidden
-            margin: 0
-        
-    &__address
-        flex-basis: 50%
-        width: 50%
-        @include media ("<tablet")
-            order: 1
-            flex-basis: 100%
-            margin-top: 70px
-            font-size: 1.6rem
+  &__phone-email-subtitle
+    @include subtitle(3.6rem)
+    font-weight: 800
+    margin: 20px 0
+    @include media ("<tablet")
+      max-height: 0
+      padding: 0
+      overflow: hidden
+      margin: 0
+      
+  &__address
+    flex-basis: 50%
+    width: 50%
+    @include media ("<tablet")
+      order: 1
+      flex-basis: 100%
+      margin-top: 70px
+      font-size: 1.6rem
 
-    &__phone-email
-        flex-basis: 50%
-        @include media ("<desktop")
-            margin-top: 60px
-            flex-basis: 100%
-        @include media ("<tablet")
-            margin: 0
-    
-    &__phone-email--wrapper
-        display: flex
-        @include media ("<desktop")
-            display: block
-        @include media ("<tablet")
-            text-decoration: underline
-            font-size: 1.6rem
+  &__phone-email
+    flex-basis: 50%
+    @include media ("<desktop")
+      margin-top: 60px
+      flex-basis: 100%
+    @include media ("<tablet")
+      margin: 0
+  
+  &__phone-email--wrapper
+    display: flex
+    @include media ("<desktop")
+      display: block
+    @include media ("<tablet")
+      text-decoration: underline
+      font-size: 1.6rem
 
-    &__phone-nrs
-        margin-right: 100px
-        @include media ("<large")
-            margin-right: 40px
-        @include media ("<tablet")
-            margin: 0
-            a
-                margin-bottom: 30px
+  &__phone-nrs
+    margin-right: 100px
+    @include media ("<large")
+      margin-right: 40px
+    @include media ("<tablet")
+      margin: 0
+      a
+        margin-bottom: 30px
 
-    &__email
+  &__email
 
-    &__form--wrapper
-        flex-basis: 1
-        width: 540px
-        margin-top: 70px
-        padding-bottom: 45px
-        @include media ("<tablet")
-            margin-top: 50px
-            padding: 0
-        
-    &__form-motto
-        text-transform: uppercase
-        font-size: 3.0rem
-        font-weight: 800
-        background: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
-        background-clip: text
-        color: transparent
-        margin-bottom: 20px
-        @include media ("<tablet")
-            font-size: 2.4rem
-            margin-top: 0
+  &__form--wrapper
+    flex-basis: 1
+    width: 540px
+    margin-top: 70px
+    padding-bottom: 45px
+    @include media ("<tablet")
+      margin-top: 50px
+      padding: 0
+      
+  &__form-motto
+    text-transform: uppercase
+    font-size: 3.0rem
+    font-weight: 800
+    background: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+    background-clip: text
+    color: transparent
+    margin-bottom: 20px
+    @include media ("<tablet")
+      font-size: 2.4rem
+      margin-top: 0
 
-    &__after-form-motto
-        font-size: 2.4rem
-        margin: 20px 0 30px
-        @include media ("<tablet")
-            font-size: 1.8rem
+  &__after-form-motto
+    font-size: 2.4rem
+    margin: 20px 0 30px
+    @include media ("<tablet")
+      font-size: 1.8rem
 
-    &__form
+  &__form
+    font-size: 1.4rem
+    &-input
+      font-size: 1.8rem
+      width: 454px
+      @include media ("<tablet")
+        width: 100%
+      &::placeholder
         font-size: 1.4rem
-        &-input
-            font-size: 1.8rem
-            width: 454px
-            @include media ("<tablet")
-                width: 100%
-            &::placeholder
-                font-size: 1.4rem
-        &-btn
-            @include media ("<tablet")
-                padding: 10px 0
-                order: 1
-                margin-top: 50px
-                
-        &-cbx-label
-            font-size: 1.2rem
-            @include media ("<tablet")
-                font-size: 1.0rem
-
-        
+    &-btn
+      @include media ("<tablet")
+        padding: 10px 0
+        order: 1
+        margin-top: 50px
+            
+    &-cbx-label
+      font-size: 1.2rem
+      @include media ("<tablet")
+        font-size: 1.0rem

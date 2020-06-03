@@ -1,53 +1,53 @@
 .form
+  text-transform: uppercase
+  display: flex
+  flex-flow: column
+  
+  &-input
+    display: block
+    padding: 15px 10px
+    border: none
+    opacity: 0.9
+    margin-bottom: 15px
+    text-transform: uppercase
+    &::placeholder
+      text-transform: uppercase
+      font-weight: 600
+      opacity: 0.5
+          
+  &-btn
+    appearance: none
+    border-radius: 0
+    text-align: center
+    border: 2px solid $btn
+    transition: background-color $transition, color $transition, outline $transition 
+          
+  &-cbx-label
     text-transform: uppercase
     display: flex
-    flex-flow: column
-    
-    &-input
-        display: block
-        padding: 15px 10px
-        border: none
-        opacity: 0.9
-        margin-bottom: 15px
-        text-transform: uppercase
-        &::placeholder
-            text-transform: uppercase
-            font-weight: 600
-            opacity: 0.5
-            
-    &-btn
-        appearance: none
-        border-radius: 0
-        text-align: center
-        border: 2px solid $btn
-        transition: background-color $transition, color $transition, outline $transition 
-            
-    &-cbx-label
-        text-transform: uppercase
-        display: flex
-        align-items: center
-        cursor: pointer
-        span
-            padding-left: 15px
+    align-items: center
+    cursor: pointer
+    span
+      padding-left: 15px
 
-    &-checkbox
-        appearance: none
-        cursor: pointer
-        position: relative
-        height: 22px
-        width: 22px
-        padding: 0
-        background: #A9A9A9
-        margin: 0
-        transition: outline $transition
-        &:checked
-            ~ svg 
-                opacity: 1
+  &-checkbox
+    appearance: none
+    cursor: pointer
+    position: relative
+    height: 22px
+    width: 22px
+    padding: 0
+    background: #A9A9A9
+    margin: 0
+    transition: outline $transition
+    &:checked
+      ~ svg 
+        opacity: 1
 
-    &-checkmark
-        position: absolute
-        width: 22px
-        height: 22px
-        opacity: 0
-        transition: opacity $transition
-        fill: $white
+  &-checkmark
+    position: absolute
+    width: 22px
+    height: 22px
+    opacity: 0
+    transition: opacity $transition
+    fill: $white
