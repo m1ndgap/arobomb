@@ -1,102 +1,102 @@
 .faq
-    @include container--content
-    font-size: 1.8rem
+  @include container--content
+  font-size: 1.8rem
+  @include media ("<tablet")
+    font-size: 1.4rem
+
+  &__title-wrapper-1
+    @include gbackground(100%)
+    margin-bottom: 100px
+
+  &__title-wrapper-2
+    margin-left: 15px
+
+  &__title
+    box-shadow: 125px 0 0 0 $bg-color, 210px 0 0 0 $bg-color, 340px 0 0 0 $bg-color, 525px 0 0 0 $bg-color, 710px 0 0 0 $bg-color
+    display: inline
+    font-size: 7.2rem
+    font-weight: 800
+    color: $white
+    padding-right: 15px
+    text-transform: uppercase
     @include media ("<tablet")
-        font-size: 1.4rem
+      font-size: 3.0rem
 
-    &__title-wrapper-1
-        @include gbackground(100%)
-        margin-bottom: 100px
+  &__questions // same as .accordion class
 
-    &__title-wrapper-2
-        margin-left: 15px
+  .accordion
+      .accordion-item
+          .accordion-title-wrapper
+              display: flex
+              justify-content: space-between
+              border-bottom: 1px solid
+              border-top: 0
+              border-left: 0
+              border-right: 0
+              border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+              border-image-slice: 1
+              cursor: pointer
 
-    &__title
-        box-shadow: 125px 0 0 0 $bg-color, 210px 0 0 0 $bg-color, 340px 0 0 0 $bg-color, 525px 0 0 0 $bg-color, 710px 0 0 0 $bg-color
-        display: inline
-        font-size: 7.2rem
-        font-weight: 800
-        color: $white
-        padding-right: 15px
-        text-transform: uppercase
-        @include media ("<tablet")
-            font-size: 3.0rem
+              .accordion-title
+                  @include subtitle($font-size: 1.8rem)
+                  font-weight: 800
+                  padding: 13px
 
-    &__questions // same as .accordion class
+              .accordion-btn
+                  @include gbackground(100%)
+                  font-size: 1.6rem
+                  font-weight: normal
+                  color: $white
+                  padding: 13px 0
+                  display: flex
+                  width: 120px
+                  justify-content: space-evenly
+                  align-items: center
 
-    .accordion
-        .accordion-item
-            .accordion-title-wrapper
-                display: flex
-                justify-content: space-between
-                border-bottom: 1px solid
-                border-top: 0
-                border-left: 0
-                border-right: 0
-                border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
-                border-image-slice: 1
-                cursor: pointer
+                  @include media ("<tablet")
+                      background: transparent
+                      justify-content: flex-end
 
-                .accordion-title
-                    @include subtitle($font-size: 1.8rem)
-                    font-weight: 800
-                    padding: 13px
+              .accordion-btn-action
+                  margin: 0 10px
+                  @include media ("<tablet")
+                      display: none
 
-                .accordion-btn
-                    @include gbackground(100%)
-                    font-size: 1.6rem
-                    font-weight: normal
-                    color: $white
-                    padding: 13px 0
-                    display: flex
-                    width: 120px
-                    justify-content: space-evenly
-                    align-items: center
+              .accordion-arrow
+                  fill: $white
+                  align-self: center
+                  margin: 0 10px
+                  transition: transform $transition
+                  @include media ("<tablet")
+                      fill: $black
+                      align-self: flex-end
 
-                    @include media ("<tablet")
-                        background: transparent
-                        justify-content: flex-end
+              &--active
+                      @include gbackground(100%)
+                      .accordion-title
+                          color: $white
+                      .accordion-btn
+                          background: transparent
+                      .accordion-arrow
+                          fill: $white
+                          transform: scaleY(-1)
 
-                .accordion-btn-action
-                    margin: 0 10px
-                    @include media ("<tablet")
-                        display: none
+              &--active ~ .accordion-content
+                  max-height: 1000px
+                  transition: max-height $transition*5
 
-                .accordion-arrow
-                    fill: $white
-                    align-self: center
-                    margin: 0 10px
-                    transition: transform $transition
-                    @include media ("<tablet")
-                        fill: $black
-                        align-self: flex-end
-
-                &--active
-                        @include gbackground(100%)
-                        .accordion-title
-                            color: $white
-                        .accordion-btn
-                            background: transparent
-                        .accordion-arrow
-                            fill: $white
-                            transform: scaleY(-1)
-
-                &--active ~ .accordion-content
-                    max-height: 1000px
-                    transition: max-height $transition*5
-
-            .accordion-content
-                max-height: 0
-                overflow: hidden
-                max-width: 726px
-                line-height: 3.0rem
-                margin-left: 5px
-                transition: max-height $transition
-                @include media ("<tablet")
-                    max-width: 100%
-                ol
-                    list-style-position: inside
-                    padding: 0
-                    margin: 30px 0
-                    li
-                        margin-bottom: 3.0rem
+          .accordion-content
+              max-height: 0
+              overflow: hidden
+              max-width: 726px
+              line-height: 3.0rem
+              margin-left: 5px
+              transition: max-height $transition
+              @include media ("<tablet")
+                  max-width: 100%
+              ol
+                  list-style-position: inside
+                  padding: 0
+                  margin: 30px 0
+                  li
+                      margin-bottom: 3.0rem
