@@ -3502,6 +3502,163 @@ body {
     .accordion-content ol li {
       margin-bottom: 3.0rem; }
 
+.cbmodal {
+  background-image: url("../img/cbm-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  padding: 30px; }
+  .cbmodal__brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000000;
+    text-align: center; }
+  .cbmodal-form__wrapper {
+    max-width: 454px;
+    width: 95%;
+    color: #444444;
+    position: absolute;
+    top: 30%; }
+    @media (max-width: 399px) {
+      .cbmodal-form__wrapper {
+        max-width: 276px; } }
+  .cbmodal-form__title {
+    font-size: 3.0rem;
+    text-transform: uppercase;
+    margin: 0; }
+    @media (max-width: 399px) {
+      .cbmodal-form__title {
+        color: #FFFFFF;
+        font-size: 2.2rem; } }
+  .cbmodal-form__subtitle {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin: 0 0 30px; }
+    @media (max-width: 399px) {
+      .cbmodal-form__subtitle {
+        color: #FFFFFF;
+        font-size: 2rem; } }
+  .cbmodal-form__form {
+    width: 100%; }
+    .cbmodal-form__form-input-wrap {
+      margin-bottom: 15px; }
+      .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input) {
+        width: 100%; }
+        .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn) {
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+          opacity: 0.7;
+          padding: 15px 10px;
+          border: none;
+          color: #FFFFFF;
+          font-weight: 800;
+          font-size: 1.8rem; }
+          @media (max-width: 399px) {
+            .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn) {
+              background: #FFFFFF;
+              opacity: 1; } }
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-webkit-input-placeholder {
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.4rem; }
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-moz-placeholder {
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.4rem; }
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn):-ms-input-placeholder {
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.4rem; }
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-ms-input-placeholder {
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.4rem; }
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::placeholder {
+            color: #FFFFFF;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.4rem; }
+            @media (max-width: 399px) {
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-webkit-input-placeholder {
+                color: #444444;
+                opacity: 0.5; }
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-moz-placeholder {
+                color: #444444;
+                opacity: 0.5; }
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn):-ms-input-placeholder {
+                color: #444444;
+                opacity: 0.5; }
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-ms-input-placeholder {
+                color: #444444;
+                opacity: 0.5; }
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::placeholder {
+                color: #444444;
+                opacity: 0.5; } }
+    .cbmodal-form__form label:not(.cbmodal-form__form-cbx-label) {
+      display: none; }
+    .cbmodal-form__form-input-wrap--cbx {
+      margin: 35px 0;
+      font-size: 1.2rem; }
+      @media (max-width: 399px) {
+        .cbmodal-form__form-input-wrap--cbx {
+          display: none; } }
+    .cbmodal-form__form-btn-wrap {
+      font-size: 1.4rem; }
+      @media (max-width: 399px) {
+        .cbmodal-form__form-btn-wrap {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          margin: 0;
+          letter-spacing: 0.2rem; } }
+    .cbmodal-form__form-btn {
+      padding: 15px; }
+  .cbmodal-thanks__wrapper {
+    position: absolute;
+    top: 30%;
+    text-transform: uppercase;
+    width: 640px; }
+    @media (max-width: 767px) {
+      .cbmodal-thanks__wrapper {
+        width: 265px; } }
+  .cbmodal-thanks__title span {
+    background-size: 640px 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    color: #FFFFFF;
+    font-size: 7.2rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 0 20px; }
+    @media (max-width: 767px) {
+      .cbmodal-thanks__title span {
+        background-size: 265px 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+        font-size: 3rem;
+        padding: 0 10px; } }
+  .cbmodal-thanks__subtitle {
+    color: #444444;
+    font-size: 1.8rem;
+    font-weight: 600; }
+    @media (max-width: 767px) {
+      .cbmodal-thanks__subtitle {
+        font-size: 1.4rem;
+        color: #FFFFFF; } }
+
+.modal-wrapper {
+  opacity: 0;
+  pointer-events: none; }
+  .modal-wrapper--active {
+    opacity: 1;
+    pointer-events: all; }
+
 .tabs {
   width: 868px; }
   .tabs__buttons {
