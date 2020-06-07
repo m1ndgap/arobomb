@@ -15,6 +15,9 @@
     @include media("<xl")
       max-width: 350px
       left: 60%
+    @include media("<tablet")
+      width: 225px
+      top: 55%
     img
       width: 100%
 
@@ -28,6 +31,10 @@
     @include media("<xl")
       width: 350px
       left: 60%
+    @include media("<tablet")
+      width: 225px
+      min-height: unset
+      top: 55%
     img
       width: 100%
 
@@ -72,6 +79,8 @@
         width: 175px
         @include media("<xl")
           width: 134px
+        @include media("<tablet")
+          width: 87px
     &-bottom
       transform: translate(-50%, 1700px)
       display: flex
