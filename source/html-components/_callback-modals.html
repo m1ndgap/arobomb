@@ -1,5 +1,5 @@
 
-<div class="cbmodal modal modal--active">
+<div class="cbmodal modal">
 
     <h1 class="cbmodal__brand">#AroBomb</h1>
 
@@ -8,8 +8,8 @@
 
         <h2 class="cbmodal-form__title">ОСТАВЬТЕ СВОИ ДАННЫЕ</h2>
         <p class="cbmodal-form__subtitle">И МЫ ПЕРЕЗВОНИМ ВАМ</p>
-    
-        <form action="" class="cbmodal-form__form"> 
+
+        <form action="" class="cbmodal-form__form">
             <div class="cbmodal-form__form-wrapper">
                 <div class="cbmodal-form__form-input-wrap">
                     <label for="cbmodal-form__form-name">name</label>
@@ -29,14 +29,14 @@
                     </label>
                 </div>
                 <div class="cbmodal-form__form-input-wrap cbmodal-form__form-btn-wrap">
-                    <input type="submit" class="cbmodal-form__form-btn btn" value="заказать обратный звонок">
+                    <input type="submit" class="cbmodal-form__submit-btn btn" value="заказать обратный звонок">
                 </div>
             </div>
         </form>
     </div>
 
     <!-- 2nd modal -->
-    <div class="cbmodal-thanks__wrapper modal-wrapper modal-wrapper--active">
+    <div class="cbmodal-thanks__wrapper modal-wrapper">
 
         <h2 class="cbmodal-thanks__title">
             <span>ваша заявка</span>
@@ -47,4 +47,9 @@
 
     </div>
 
+    <button type="button" class="modal__close">
+        <svg viewBox="0 0 25 25" width="25" height="25" class=" icon-close">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button>
 </div>

@@ -46,7 +46,7 @@
         input
           &:not(.cbmodal-form__form-cbx-input)
             width: 100%
-            &:not(.cbmodal-form__form-btn)
+            &:not(.cbmodal-form__submit-btn)
               @include gbackground (100%)
               opacity: 0.7
               padding: 15px 10px
@@ -123,6 +123,10 @@
 .modal-wrapper
   opacity: 0
   pointer-events: none
+  *
+    pointer-events: none
   &--active
     opacity: 1
     pointer-events: all
+    *
+      pointer-events: all

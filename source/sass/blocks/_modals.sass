@@ -19,10 +19,18 @@
   *
     pointer-events: none
   &__close
+    @include resetinteractive()
     position: absolute
     top: 50px
     right: 70px
     cursor: pointer
+    &:focus
+      outline: 0
+      svg
+        stroke: url(#linear-grad-2)
+    &:active
+      svg
+        transform: translateY(-2px)
   &__name
     position: absolute
     top: 90px

@@ -1856,10 +1856,19 @@ body {
   .modal * {
     pointer-events: none; }
   .modal__close {
+    text-decoration: none;
+    background: none;
+    border: none;
     position: absolute;
     top: 50px;
     right: 70px;
     cursor: pointer; }
+    .modal__close:focus {
+      outline: 0; }
+      .modal__close:focus svg {
+        stroke: url(#linear-grad-2); }
+    .modal__close:active svg {
+      transform: translateY(-2px); }
   .modal__name {
     position: absolute;
     top: 90px;
@@ -3544,7 +3553,7 @@ body {
       margin-bottom: 15px; }
       .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input) {
         width: 100%; }
-        .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn) {
+        .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn) {
           background-size: 100% 100%;
           background-repeat: no-repeat;
           background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
@@ -3555,48 +3564,48 @@ body {
           font-weight: 800;
           font-size: 1.8rem; }
           @media (max-width: 399px) {
-            .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn) {
+            .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn) {
               background: #FFFFFF;
               opacity: 1; } }
-          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-webkit-input-placeholder {
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::-webkit-input-placeholder {
             color: #FFFFFF;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.4rem; }
-          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-moz-placeholder {
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::-moz-placeholder {
             color: #FFFFFF;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.4rem; }
-          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn):-ms-input-placeholder {
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn):-ms-input-placeholder {
             color: #FFFFFF;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.4rem; }
-          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-ms-input-placeholder {
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::-ms-input-placeholder {
             color: #FFFFFF;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.4rem; }
-          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::placeholder {
+          .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::placeholder {
             color: #FFFFFF;
             text-transform: uppercase;
             font-weight: 600;
             font-size: 1.4rem; }
             @media (max-width: 399px) {
-              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-webkit-input-placeholder {
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::-webkit-input-placeholder {
                 color: #444444;
                 opacity: 0.5; }
-              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-moz-placeholder {
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::-moz-placeholder {
                 color: #444444;
                 opacity: 0.5; }
-              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn):-ms-input-placeholder {
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn):-ms-input-placeholder {
                 color: #444444;
                 opacity: 0.5; }
-              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::-ms-input-placeholder {
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::-ms-input-placeholder {
                 color: #444444;
                 opacity: 0.5; }
-              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__form-btn)::placeholder {
+              .cbmodal-form__form-input-wrap input:not(.cbmodal-form__form-cbx-input):not(.cbmodal-form__submit-btn)::placeholder {
                 color: #444444;
                 opacity: 0.5; } }
     .cbmodal-form__form label:not(.cbmodal-form__form-cbx-label) {
@@ -3655,9 +3664,13 @@ body {
 .modal-wrapper {
   opacity: 0;
   pointer-events: none; }
+  .modal-wrapper * {
+    pointer-events: none; }
   .modal-wrapper--active {
     opacity: 1;
     pointer-events: all; }
+    .modal-wrapper--active * {
+      pointer-events: all; }
 
 .tabs {
   width: 868px; }
