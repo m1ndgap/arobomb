@@ -1,18 +1,9 @@
-.cbm-1
+.cbmodal
   background-image: url('../img/cbm-bg.jpg')
   background-repeat: no-repeat
   background-position: left
   background-size: cover
   padding: 30px
-
-  &__wrapper
-    max-width: 454px
-    width: 95%
-    color: $text
-    position: absolute
-    top: 30%
-    @include media ("<tiny")
-      max-width: 276px
 
   &__brand
     font-size: 1.8rem
@@ -20,70 +11,118 @@
     color: $black
     text-align: center
 
-  &__title
-    font-size: 3.0rem
-    text-transform: uppercase
-    margin: 0
-    @include media ("<tiny")
-      color: $white
-      font-size: 2.2rem
+  &-form
 
-  &__subtitle
-    font-size: 2.4rem
-    text-transform: uppercase
-    margin: 0 0 30px
-    @include media ("<tiny")
-      color: $white
-      font-size: 2rem
-
-  &__form
-    width: 100%
-    &-input-wrap
-      margin-bottom: 15px
-      // width: 100%
-
-      input
-        &:not(.cbm-1__form-cbx-input)
-          width: 100%
-          &:not(.cbm-1__form-btn)
-            @include gbackground (100%)
-            opacity: 0.7
-            padding: 15px 10px
-            border: none
-            color: $white
-            font-weight: 800
-            font-size: 1.8rem
-            @include media ("<tiny")
-              background: $white
-              opacity: 1
-            &::placeholder
-              color: $white
-              text-transform: uppercase
-              font-weight: 600
-              font-size: 1.4rem
-              @include media ("<tiny")
-                color: $text
-                opacity: 0.5
-
-
-    label:not(.cbm-1__form-cbx-label)
-      display: none
-
-    &-input-wrap--cbx
-      margin: 35px 0
-      font-size: 1.2rem
+    &__wrapper
+      max-width: 454px
+      width: 95%
+      color: $text
+      position: absolute
+      top: 30%
       @include media ("<tiny")
+        max-width: 276px
+
+    &__title
+      font-size: 3.0rem
+      text-transform: uppercase
+      margin: 0
+      @include media ("<tiny")
+        color: $white
+        font-size: 2.2rem
+
+    &__subtitle
+      font-size: 2.4rem
+      text-transform: uppercase
+      margin: 0 0 30px
+      @include media ("<tiny")
+        color: $white
+        font-size: 2rem
+
+    &__form
+      width: 100%
+      &-input-wrap
+        margin-bottom: 15px
+
+        input
+          &:not(.cbmodal-form__form-cbx-input)
+            width: 100%
+            &:not(.cbmodal-form__form-btn)
+              @include gbackground (100%)
+              opacity: 0.7
+              padding: 15px 10px
+              border: none
+              color: $white
+              font-weight: 800
+              font-size: 1.8rem
+              @include media ("<tiny")
+                background: $white
+                opacity: 1
+              &::placeholder
+                color: $white
+                text-transform: uppercase
+                font-weight: 600
+                font-size: 1.4rem
+                @include media ("<tiny")
+                  color: $text
+                  opacity: 0.5
+
+      label:not(.cbmodal-form__form-cbx-label)
         display: none
 
-    &-btn-wrap
-      font-size: 1.4rem
-      @include media ("<tiny")
-        position: fixed
-        bottom: 0
-        left: 0
-        width: 100%
-        margin: 0
-        letter-spacing: 0.2rem
+      &-input-wrap--cbx
+        margin: 35px 0
+        font-size: 1.2rem
+        @include media ("<tiny")
+          display: none
 
-    &-btn
-      padding: 15px
+      &-btn-wrap
+        font-size: 1.4rem
+        @include media ("<tiny")
+          position: fixed
+          bottom: 0
+          left: 0
+          width: 100%
+          margin: 0
+          letter-spacing: 0.2rem
+
+      &-btn
+        padding: 15px
+
+
+  &-thanks
+
+    &__wrapper
+      position: absolute
+      top: 30%
+      text-transform: uppercase
+      width: 640px
+      @include media ("<tablet")
+        width: 265px
+
+    &__title
+      span
+        @include gbackground(640px)
+        color: $white
+        font-size: 7.2rem
+        font-weight: 800
+        margin: 0
+        padding: 0 20px
+        @include media ("<tablet")
+          @include gbackground(265px)
+          font-size: 3rem
+          padding: 0 10px
+
+    &__subtitle
+      color: $text
+      font-size: 1.8rem
+      font-weight: 600
+      @include media ("<tablet")
+        font-size: 1.4rem
+        color: $white
+
+.modal-wrapper
+  opacity: 0
+  pointer-events: none
+  &--active
+    opacity: 1
+    pointer-events: all
