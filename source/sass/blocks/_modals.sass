@@ -9,15 +9,17 @@
   height: 100vh
   padding: 80px 10px 10px
   background-color: $bg-color
-  background-image: url('../img/splash-bg-1.jpg')
-  background-repeat: no-repeat
-  background-position: center
-  background-size: contain
   transition: opacity $transition
   opacity: 0
   pointer-events: none
   *
     pointer-events: none
+  @include media("<huge")
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: center
+    padding: 30px 10px 10px
+
   &__close
     @include resetinteractive()
     position: absolute
@@ -31,17 +33,35 @@
     &:active
       svg
         transform: translateY(-2px)
+    @include media("<desktop")
+      top: 5px
+      right: 5px
+      width: 15px
+
   &__name
+    @include resetmargin
     position: absolute
     top: 90px
     left: 100px
     @include subtitle(3.6rem)
-    max-width: 500px
+    max-width: 60%
     word-spacing: 500px
+    @include media("<huge")
+      position: static
+      margin-bottom: 15px
+      max-width: 100%
+      text-align: center
+      font-size: 3rem
+      word-spacing: unset
+    @include media("<desktop")
+      margin-top: 20px
+      font-size: 2rem
+
   &__thumbs
     position: absolute
     top: 70px
     left: 50px
+
   &__thumb-wrap
     @include resetmargin()
     height: 121px
@@ -51,12 +71,18 @@
     transition: transform $transition
     &:hover
       transform: scale(1.1)
+
   &__thumb-wrap + &__thumb-wrap
     margin-top: 53px
   &__thumb-img
     width: 100%
     object-fit: contain
 
+  &__image
+    @include media("<huge")
+      margin-top: 30px
+      max-width: 500px
+      width: 100%
 
   &--active
     opacity: 1
@@ -67,4 +93,10 @@
 
 .product-modal
   background-image: url('../img/splash-bg-2.jpg')
+  background-size: cover
+
+.document-modal
+  background-image: url('../img/splash-bg-1.jpg')
+  background-repeat: no-repeat
+  background-position: center
   background-size: cover
