@@ -2864,6 +2864,19 @@ body {
     color: #FFFFFF;
     text-transform: uppercase;
     font-weight: 600; }
+  .catalog-form__input--error {
+    outline: 1px solid #D62267;
+    color: #D62267; }
+    .catalog-form__input--error::-webkit-input-placeholder {
+      color: #D62267; }
+    .catalog-form__input--error::-moz-placeholder {
+      color: #D62267; }
+    .catalog-form__input--error:-ms-input-placeholder {
+      color: #D62267; }
+    .catalog-form__input--error::-ms-input-placeholder {
+      color: #D62267; }
+    .catalog-form__input--error::placeholder {
+      color: #D62267; }
 
 .catalog-form__btn {
   width: 373px;
@@ -3476,6 +3489,19 @@ body {
       text-transform: uppercase;
       font-weight: 600;
       opacity: 0.5; }
+    .form-input--error {
+      outline: 1px solid #D62267;
+      color: #D62267; }
+      .form-input--error::-webkit-input-placeholder {
+        color: #D62267; }
+      .form-input--error::-moz-placeholder {
+        color: #D62267; }
+      .form-input--error:-ms-input-placeholder {
+        color: #D62267; }
+      .form-input--error::-ms-input-placeholder {
+        color: #D62267; }
+      .form-input--error::placeholder {
+        color: #D62267; }
   .form-btn {
     -webkit-appearance: none;
        -moz-appearance: none;
