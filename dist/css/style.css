@@ -2613,6 +2613,8 @@ body {
     background-clip: border-box;
     -webkit-background-clip: border-box;
     color: #FFFFFF; }
+    .cart__tab--active .cart__tab-sub-text, .cart__tab--active .cart__tab-main-text {
+      color: #FFFFFF; }
 
 .cart__tab + .cart__tab {
   position: relative;
@@ -2638,17 +2640,33 @@ body {
       display: block; } }
 
 .cart__tab-text {
-  text-transform: uppercase; }
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  max-width: 150px; }
+  .cart__tab-text--tab-1 {
+    max-width: 187px; }
+  .cart__tab-text--tab-2 {
+    max-width: 250px; }
 
 .cart__tab-sub-text, .cart__tab-main-text {
-  display: block;
+  display: inline;
   text-align: left;
-  font-weight: 400; }
+  font-weight: 400;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text; }
 
 .cart__tab-sub-text {
   font-size: 1.8rem;
   line-height: 2.0rem;
-  letter-spacing: -0.2px; }
+  letter-spacing: -0.2px;
+  text-align: left; }
 
 .cart__tab-main-text {
   margin-left: -3px;
@@ -3807,10 +3825,29 @@ body {
     transition: background-position 300ms; }
     .tabs__tab-button:hover {
       background-position: 0 0; }
+    .tabs__tab-button span {
+      background-size: 200% 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(90deg, #FF8BDE 50%, #669FFF 100%);
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: transparent;
+      border: none;
+      background-position: 100% 0;
+      background-clip: text;
+      -webkit-background-clip: text;
+      cursor: pointer;
+      transition: background-position 300ms; }
+      .tabs__tab-button span:hover {
+        background-position: 0 0; }
     .tabs__tab-button--active {
       background-clip: border-box;
       -webkit-background-clip: border-box;
       color: #FFFFFF; }
+      .tabs__tab-button--active > span {
+        color: #FFFFFF; }
   .tabs__text-area {
     position: relative; }
   .tabs__text-wrap {

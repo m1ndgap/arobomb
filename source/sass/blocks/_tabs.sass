@@ -30,10 +30,30 @@
     transition: background-position $transition
     &:hover
       background-position: 0 0
+
+    // fix for safari background-clip: text, so lame
+    span
+      @include gbackground(200%, 50%)
+      font-size: 1.8rem
+      font-weight: 800
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: transparent
+      border: none
+      background-position: 100% 0
+      background-clip: text
+      -webkit-background-clip: text
+      cursor: pointer
+      transition: background-position $transition
+      &:hover
+        background-position: 0 0
+
     &--active
       background-clip: border-box
       -webkit-background-clip: border-box
       color: $white
+      > span
+        color: $white
 
   &__text-area
     position: relative

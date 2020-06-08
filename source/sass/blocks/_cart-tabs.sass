@@ -3,6 +3,7 @@
   &__tabs
     padding-left: 45px
 
+
   &__tab
     @include resetinteractive()
     @include gbackground(100%)
@@ -18,12 +19,13 @@
     &:active, &:focus
       outline: none
       box-shadow: 0 0 3px 0 rgba($black ,0.5)
-
-
     &--active
       background-clip: border-box
       -webkit-background-clip: border-box
       color: $white
+      // safari hacks
+      .cart__tab-sub-text, .cart__tab-main-text
+        color: $white
 
   &__tab + &__tab
     position: relative
@@ -48,15 +50,31 @@
       display: block
 
   &__tab-text
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-start
+    justify-content: flex-start
     text-transform: uppercase
+    max-width: 150px
+    &--tab-1
+      max-width: 187px
+    &--tab-2
+      max-width: 250px
+
   &__tab-sub-text, &__tab-main-text
-    display: block
+    display: inline
     text-align: left
     font-weight: 400
+    // safari hacks
+    @include gbackground(100%)
+    color: transparent
+    -webkit-background-clip: text
+    background-clip: text
   &__tab-sub-text
     font-size: 1.8rem
     line-height: 2.0rem
     letter-spacing: -0.2px
+    text-align: left
   &__tab-main-text
     margin-left: -3px
     font-weight: 900
