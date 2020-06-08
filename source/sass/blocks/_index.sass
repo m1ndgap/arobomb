@@ -1,5 +1,7 @@
 .index
   height: 100vh
+  @include media("<tablet")
+    height: 85vh
 
   &__static
     @include container--content()
@@ -14,6 +16,8 @@
     @include media("<huge")
       padding-top: 172px
       padding-bottom: 52px
+    @include media("<tablet")
+      padding-top: 65px
 
   &__hash-title
     @include subtitle(7.2rem)
@@ -24,6 +28,10 @@
     padding: 0 17px
     font-weight: 900
     color: $white
+    @include media("<desktop")
+      font-size: 5rem
+    @include media("<tablet")
+      font-size: 3rem
 
   &__main-title
     @include subtitle(1.8rem)
@@ -31,6 +39,12 @@
     text-transform: uppercase
     font-weight: 900
     max-width: 365px
+    @include media("<desktop")
+      font-size: 1.6rem
+    @include media("<tablet")
+      max-width: 70%
+      font-size: 1.2rem
+      line-height: 2rem
 
   &__video-block
     position: relative
@@ -77,11 +91,36 @@
     margin-top: auto
     align-items: center
 
+
+
   &__all-products-btn
+    position: relative
     @include subtitle(1.4rem)
     font-weight: 600
     padding: 7px 10px
     color: $white
+    transition: color $transition
+    br
+      display: none
+    @include media("<tablet")
+      color: $main-link
+      background: none
+      padding-bottom: 15px
+      &:hover
+        background: none
+        color: $main-link-lighter
+      br
+        display: inline
+
+
+  &__all-products-arrow
+    display: none
+    @include media("<tablet")
+      position: absolute
+      bottom: 0
+      display: block
+      fill: $main-link
+
 
   &__progress-bar
     position: relative
@@ -89,6 +128,8 @@
     flex-grow: 1
     height: 3px
     background-color: lighten($text, 65%)
+    @include media("<tablet")
+      display: none
 
   &__progress-bar-filler
     @include gbackground(100%, 0%)
@@ -106,6 +147,10 @@
     top: 50%
     position: absolute
     left: 750px
+    @include media("<huge")
+      left: 15px
+    @include media("<tablet")
+      position: static
 
   &__product-type
     display: flex
@@ -117,6 +162,8 @@
       transform: translate(0, -10px)
       display: block
       min-width: 15px
+    @include media("<tablet")
+      font-size: 1.2rem
 
   &__product-name
     display: flex
@@ -130,6 +177,9 @@
       transform: translate(0, -10px)
       display: block
       min-width: 15px
+    @include media("<tablet")
+      font-size: 1.8rem
+
 
   &__more-info-btn
     display: block
@@ -141,6 +191,8 @@
       .index__more-info-arrow
         transform: translateX(50px)
         fill: $main-link-lighter
+    @include media("<tablet")
+      display: none
 
   &__more-info-text
     @include subtitle(1.8rem)
@@ -163,6 +215,8 @@
     //border: 2px solid red
     width: 966px
     z-index: 1
+    @include media("<desktop")
+      width: 100%
 
 
 
