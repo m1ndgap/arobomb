@@ -635,6 +635,9 @@ body {
 
 .main--submenu {
   padding-top: 250px; }
+  @media (max-width: 767px) {
+    .main--submenu {
+      padding-top: 160px; } }
 
 .custom-checkbox {
   position: relative;
