@@ -1,6 +1,6 @@
 .accordion
-  &-item
-  &-title-wrapper
+  &__item
+  &__title-wrapper
     display: flex
     justify-content: space-between
     border-bottom: 1px solid
@@ -12,43 +12,38 @@
     cursor: pointer
     &--active
       @include gbackground(100%)
-      .accordion-title
+      .accordion__title
         color: $white
-      .accordion-btn
+      .accordion__btn
         background: transparent
-      .accordion-arrow
+      .accordion__arrow
         fill: $white
         transform: scaleY(-1)
 
-    &--active ~ .accordion-content
+    &--active ~ .accordion__content
       max-height: 1000px
       transition: max-height $transition*5
 
-  &-title
-    // @include subtitle($font-size: 1.8rem)
-    // font-weight: 800
+  &__title
     padding: 13px
 
-  &-btn
+  &__btn
     @include gbackground(100%)
-    // font-size: 1.6rem
-    // font-weight: normal
     color: $white
     padding: 13px 0
     display: flex
-    // width: 120px
     justify-content: space-evenly
     align-items: center
     @include media ("<tablet")
       background: transparent
       justify-content: flex-end
 
-  &-btn-action
+  &__btn-action
     margin: 0 10px
     @include media ("<tablet")
       display: none
 
-  &-arrow
+  &__arrow
     fill: $white
     align-self: center
     margin: 0 10px
@@ -57,11 +52,9 @@
       fill: $black
       align-self: flex-end
 
-  &-content
+  &__content
     max-height: 0
     overflow: hidden
-    // max-width: 726px
-    // line-height: 3.0rem
     margin-left: 5px
     transition: max-height $transition
     @include media ("<tablet")

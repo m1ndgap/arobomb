@@ -3,7 +3,7 @@
   display: flex
   flex-flow: column
   
-  &-input
+  &__input
     display: block
     padding: 15px 10px
     border: none
@@ -20,14 +20,14 @@
       &::placeholder
         color: $main-link
           
-  &-btn
+  &__btn
     appearance: none
     border-radius: 0
     text-align: center
     border: 2px solid $btn
     transition: background-color $transition, color $transition, outline $transition 
           
-  &-cbx-label
+  &__cbx-label
     text-transform: uppercase
     display: flex
     align-items: center
@@ -35,7 +35,7 @@
     span
       padding-left: 15px
 
-  &-checkbox
+  &__checkbox
     appearance: none
     cursor: pointer
     position: relative
@@ -49,7 +49,7 @@
       ~ svg 
         opacity: 1
 
-  &-checkmark
+  &__checkmark
     position: absolute
     width: 22px
     height: 22px
