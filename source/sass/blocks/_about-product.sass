@@ -31,73 +31,64 @@
       align-items: center
     // @include media ("<phone")
     //     font-size: 1.4rem
-      
-  &__swiper-container
 
-  &__swiper-wrapper
-
-  &__swiper-slide
-    &:nth-child(2)
-      position: relative
-      top: 20px
-      @include media ("<phone")
-        top: 40px
-
-  &__img-slide-1
-    width: 248px
-    height: 360px
-    @include media ("<phone")
-      width: 206px
-      height: 299px
-
-  &__img-slide-2
-    width: 165px
-    height: 354px
-    @include media ("<phone")
-      width: 125px
-      height: 268px
-
-  &__swiper-text
-    // color: $text
-    text-align: center 
-    margin: 40px 0
-
-  &__swiper-pagination
-
-  .swiper-container // not &__swiper-container ?
-    width: 100%
-    margin-top: 60px
-    @include media (">=tablet")
-      display: none
+  .swiper
+    &-container
+      width: 100%
+      margin-top: 60px
+      @include media (">=tablet")
+        display: none
     
-    .swiper-wrapper
-
-    .swiper-slide // not &__swiper-slide ?
+    &-slide
       display: flex
       flex-direction: column
       align-items: center
       padding: 20px
       width: 100%
+      &:nth-child(2)
+        position: relative
+        top: 20px
+        @include media ("<phone")
+          top: 40px
+      p
+        text-align: center 
+        margin: 40px 0
 
-    .swiper-pagination
+    &-img-slide-1
+      width: 248px
+      height: 360px
+      @include media ("<phone")
+        width: 206px
+        height: 299px
+
+    &-img-slide-2
+      width: 165px
+      height: 354px
+      @include media ("<phone")
+        width: 125px
+        height: 268px
+
+    &-pagination
       top: 310px
       @include media (">phone")
         top: 370px
     
-    .swiper-pagination-bullet
-      width: 30%
-      height: 1px
-      margin: 0 5%
-      background-color: $text
-      border-radius: unset
-      &::after
-        content: " "
-        padding: 10%
-        display: block
-        position: relative
-        bottom: 13px
-      &-active
-        @include gbackground(100%)
+      .swiper-pagination-bullet
+        width: 30%
+        height: 1px
+        margin: 0 5%
+        background-color: $text
+        border-radius: unset
+        &:focus
+          outline: none
+        &::after
+          content: " "
+          padding: 10%
+          display: block
+          position: relative
+          bottom: 13px
+        &-active
+          @include gbackground(100%)
         
   &__gum
     &-wrapper

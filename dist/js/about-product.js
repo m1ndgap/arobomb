@@ -1,9 +1,9 @@
 "use strict"
 
-var aboutProductSwiper = new Swiper('.about-product__swiper-container', {
+var aboutProductSwiper = new Swiper('.swiper-container', {
     speed: 400,
     pagination: {
-        el: '.about-product__swiper-pagination',
+        el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
     }
