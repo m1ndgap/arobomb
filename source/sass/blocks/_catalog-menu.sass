@@ -17,11 +17,11 @@
   @include media("<huge")
     padding-top: 140px
   @include media("<desktop")
-    padding-bottom: 30px
+    padding-bottom: 40px
     //&:after
       top: calc(100% + 30px)
   @include media("<tablet")
-    padding-top: 90px
+    padding-top: 75px
 
   &__wrapper
     position: relative
@@ -60,7 +60,7 @@
   @include media("<desktop")
     border: 0
   @include media("<tablet")
-    padding: 10px
+    padding: 12px
     flex-basis: 33%
     align-items: center
     justify-content: center
@@ -74,6 +74,8 @@
         background-position: 0 0
       .submenu__title-main
         background-position: 0 0
+    @include media("<tablet")
+      line-height: 100%
 
   .submenu__title-extra
     display: block

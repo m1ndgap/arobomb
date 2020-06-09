@@ -753,6 +753,8 @@ body {
     width: 100%;
     height: 20px;
     background-image: linear-gradient(180deg, #FFFFFF, rgba(255, 255, 255, 0.001)); }
+  .main-menu--no-after:after {
+    content: none; }
   .main-menu__container {
     position: relative;
     box-sizing: border-box;
@@ -1721,6 +1723,13 @@ body {
       transform: translate(0, -20px); }
     .catalog__wrapper > div:nth-child(even) {
       transform: translate(0, 20px); }
+    @media (max-width: 1439px) {
+      .catalog__wrapper {
+        justify-content: center; }
+        .catalog__wrapper > div:nth-child(odd) {
+          transform: translate(0, 0); }
+        .catalog__wrapper > div:nth-child(even) {
+          transform: translate(0, 0); } }
   .catalog__item {
     position: relative;
     display: flex;
@@ -1736,7 +1745,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; }
+    z-index: 1;
+    width: 100%; }
   .catalog__item-code {
     position: absolute;
     top: 23px;
@@ -1752,6 +1762,9 @@ body {
     display: flex;
     flex-flow: row wrap;
     padding-top: 35px; }
+    @media (max-width: 1023px) {
+      .catalog__price-block {
+        padding-top: 26px; } }
   .catalog__item-name {
     margin: 0;
     padding: 0;
@@ -1765,6 +1778,9 @@ body {
     flex-basis: 100%;
     text-align: center;
     margin-bottom: 10px; }
+    @media (max-width: 1023px) {
+      .catalog__item-name {
+        font-size: 1.6rem; } }
   .catalog__item-price {
     font-size: 1.8rem; }
     .catalog__item-price:after {
@@ -1793,10 +1809,10 @@ body {
       padding-top: 140px; } }
   @media (max-width: 1023px) {
     .submenu {
-      padding-bottom: 30px; } }
+      padding-bottom: 40px; } }
   @media (max-width: 767px) {
     .submenu {
-      padding-top: 90px; } }
+      padding-top: 75px; } }
   .submenu__wrapper {
     position: relative;
     box-sizing: border-box;
@@ -1855,7 +1871,7 @@ body {
       border: 0; } }
   @media (max-width: 767px) {
     .submenu__section {
-      padding: 10px;
+      padding: 12px;
       flex-basis: 33%;
       align-items: center;
       justify-content: center; } }
@@ -1866,6 +1882,9 @@ body {
       background-position: 0 0; }
     .submenu__section .submenu__title:hover .submenu__title-main {
       background-position: 0 0; }
+    @media (max-width: 767px) {
+      .submenu__section .submenu__title {
+        line-height: 100%; } }
   .submenu__section .submenu__title-extra {
     display: block;
     font-family: "Montserrat", sans-serif;
