@@ -2907,12 +2907,8 @@ body {
     line-height: 2.0rem; }
 
 .landing-1__pitch-button {
-  text-decoration: none;
-  background: none;
-  border: none;
-  color: #FFFFFF;
-  background-color: #82AD24;
   display: flex;
+  font-size: 1.8rem;
   width: 396px;
   height: 62px;
   padding: 24px;
