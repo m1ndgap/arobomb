@@ -1,9 +1,9 @@
 "use strict";
 
 const accordionCls = `accordion`
-const accordionTitleCls = `accordion-title-wrapper`
-const accordionContentCls = `accordion-content`
-const accordionTabTitle = `accordion-btn-action`
+const accordionTitleCls = `accordion__title-wrapper`
+const accordionContentCls = `accordion__content`
+const accordionTabTitle = `accordion__btn-action`
 
 const closedText = `закрыть`;
 const openText = `открыть`;

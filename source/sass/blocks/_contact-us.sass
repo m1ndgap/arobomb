@@ -1,8 +1,6 @@
 .contact-us
-
-  &__section
-    @include container--content
-    color: $text
+  @include container--content
+  color: $text
 
   &__info-form--wrapper
     display: flex
@@ -80,7 +78,7 @@
       a
         margin-bottom: 30px
 
-  &__email
+  &__email // delete this from HTML?
 
   &__form--wrapper
     flex-basis: 1
@@ -109,23 +107,25 @@
     @include media ("<tablet")
       font-size: 1.8rem
 
-  &__form
+  .form
     font-size: 1.4rem
-    &-input
+    max-width: 454px
+
+    &__input
       font-size: 1.8rem
-      width: 454px
-      @include media ("<tablet")
-        width: 100%
       &::placeholder
         font-size: 1.4rem
 
-    &-btn
-      @include media ("<tablet")
+    &__btn
+      @include media ("<tiny")
         padding: 10px 0
         order: 1
         margin-top: 50px
 
-    &-cbx-label
+    &__cbx-label
       font-size: 1.2rem
       @include media ("<tablet")
         font-size: 1.0rem
+      @include media ("<tiny")
+        margin-top: 15px
+

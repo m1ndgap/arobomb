@@ -151,6 +151,10 @@ body
   transition: fill $transition
   &:hover
     fill: url(#linear-grad-2)
+  @include media ("<tablet")
+    fill: #231F20
+    height: 16px
+    width: 16px
 
 .svg-gradient-line
   stroke: url(#linear-grad)

@@ -1,36 +1,38 @@
-.catalog-form__wrapper
-  display: flex
-  margin-top: 75px
-  justify-content: space-between
+.catalog-form
 
-.catalog-form__img
-  margin-left: -20px
+  &__wrapper
+    display: flex
+    margin-top: 75px
+    justify-content: space-between
 
-.catalog-form__form
+  &__img
+    margin-left: -20px
 
-.catalog-form__input
-  @include gbackground (100%)
-  opacity: 0.5
-  width: 373px
-  height: 45px
-  padding: 15px 10px
-  border: none
-  margin-bottom: 30px
-  color: $white
-  font-weight: 800
-  &::placeholder
+  &__form
+
+  &__input
+    @include gbackground (100%)
+    opacity: 0.5
+    width: 373px
+    height: 45px
+    padding: 15px 10px
+    border: none
+    margin-bottom: 30px
     color: $white
-    text-transform: uppercase
-    font-weight: 600
-  &--error
-    outline: 1px solid $main-link
-    color: $main-link
+    font-weight: 800
     &::placeholder
+      color: $white
+      text-transform: uppercase
+      font-weight: 600
+    &--error
+      outline: 1px solid $main-link
       color: $main-link
+      &::placeholder
+        color: $main-link
 
-.catalog-form__btn
-  width: 373px
-  height: 45px
-  padding: 15px 10px
-  border: 2px solid $btn
-  transition: background-color $transition, color $transition, outline $transition
+  &__btn
+    width: 373px
+    height: 45px
+    padding: 15px 10px
+    border: 2px solid $btn
+    transition: background-color $transition, color $transition, outline $transition
