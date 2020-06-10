@@ -87,6 +87,7 @@
 
   &__item-number
     @include resetinteractive()
+    margin: 0
     display: block
     flex-shrink: 1
     max-width: 38%
@@ -101,8 +102,10 @@
 
   &__item-btn
     @include resetinteractive()
+    margin: 0
     padding: 12px 5px 12px 22px
     flex-basis: 25%
+    flex-shrink: 0
     background-color: $white
     cursor: pointer
     z-index: 3

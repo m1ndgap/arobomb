@@ -14,6 +14,10 @@
     height: 20px
     background-image: linear-gradient(180deg, $white, rgba($white, 0.001))
 
+  &--no-after
+    &:after
+      content: none
+
   &__container
     position: relative
     @include container()
