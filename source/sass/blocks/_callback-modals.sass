@@ -42,86 +42,88 @@
 
     &__form
       width: 100%
-      &-input-wrap
-        margin-bottom: 15px
-        // background-clip: text
-        // background-color: $white
-        .btn
-          width: 100%
-          padding: 15px
 
-      &-input
-        width: 100%
-        @include gbackground (100%)
-        color: $white
-        opacity: 0.7
-        padding: 15px 10px
-        border: none
-        font-weight: 600
-        font-size: 1.8rem
-        @include media ("<tiny")
-          background: $white
-          opacity: 1
-          color: $text
-        &::placeholder
-          color: $white
-          text-transform: uppercase
-          font-weight: 600
-          font-size: 1.4rem
-          @include media ("<tiny")
-            color: $text
-            opacity: 0.5
-        &--error
-          outline: 1px solid $main-link
-          color: $main-link
-          &::placeholder
-            color: $main-link
-
-        // input
-        //   &:not(.cbmodal-form__form-cbx-input)
-        //     width: 100%
-        //     &:not(.cbmodal-form__submit-btn)
-        //       @include gbackground (100%)
-        //       color: $white
-        //       opacity: 0.7
-        //       padding: 15px 10px
-        //       border: none
-        //       font-weight: 600
-        //       font-size: 1.8rem
-        //       @include media ("<tiny")
-        //         background: $white
-        //         opacity: 1
-        //         color: $text
-        //       &::placeholder
-        //         color: $white
-        //         text-transform: uppercase
-        //         font-weight: 600
-        //         font-size: 1.4rem
-        //         @include media ("<tiny")
-        //           color: $text
-        //           opacity: 0.5
-
-      label:not(.cbmodal-form__form-cbx-label)
+      label:not(.cbmodal-form__cbx-label)
         display: none
 
-      &-input-wrap--cbx
-        margin: 35px 0
-        font-size: 1.2rem
-        @include media ("<tiny")
-          display: none
+    &__input-wrap
+      margin-bottom: 15px
+      // background-clip: text
+      // background-color: $white
+      .btn
+        width: 100%
+        padding: 15px
 
-      &-btn-wrap
+    &__input
+      width: 100%
+      @include gbackground (100%)
+      color: $white
+      outline-color: $gradient-end
+      opacity: 0.7
+      padding: 15px 10px
+      border: none
+      font-weight: 600
+      font-size: 1.8rem
+      @include media ("<tiny")
+        background: $white
+        opacity: 1
+        color: $text
+      &::placeholder
+        color: $white
+        text-transform: uppercase
+        font-weight: 600
         font-size: 1.4rem
         @include media ("<tiny")
-          position: fixed
-          bottom: 0
-          left: 0
-          width: 100%
-          margin: 0
-          letter-spacing: 0.2rem
+          color: $text
+          opacity: 0.5
+      &--error
+        outline: 1px solid $main-link
+        color: $main-link
+        &::placeholder
+          color: $main-link
 
-      // &-btn
-      //   padding: 15px
+      // input
+      //   &:not(.cbmodal-form__form-cbx-input)
+      //     width: 100%
+      //     &:not(.cbmodal-form__submit-btn)
+      //       @include gbackground (100%)
+      //       color: $white
+      //       opacity: 0.7
+      //       padding: 15px 10px
+      //       border: none
+      //       font-weight: 600
+      //       font-size: 1.8rem
+      //       @include media ("<tiny")
+      //         background: $white
+      //         opacity: 1
+      //         color: $text
+      //       &::placeholder
+      //         color: $white
+      //         text-transform: uppercase
+      //         font-weight: 600
+      //         font-size: 1.4rem
+      //         @include media ("<tiny")
+      //           color: $text
+      //           opacity: 0.5
+
+    &__input-wrap--cbx
+      margin: 35px 0
+      font-size: 1.2rem
+      @include media ("<tiny")
+        display: none
+
+    &__btn-wrap
+      font-size: 1.4rem
+      @include media ("<tiny")
+        position: fixed
+        bottom: 0
+        left: 0
+        width: 100%
+        margin: 0
+        letter-spacing: 0.2rem
+
+    // &-btn
+    //   padding: 15px
 
 
   &-thanks
