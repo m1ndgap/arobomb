@@ -1,7 +1,13 @@
 .landing-1
 
-  &__title-section
+  section
     @include container--content
+
+  section + section
+    margin-top: 150px
+
+  &__title-section
+    // margin-bottom: 120px
 
   &__main-title
     @include gbackground (100%)
@@ -45,9 +51,6 @@
       line-height: 2.0rem
 
   &__pitch-button
-    // @include resetinteractive
-    // color: $white
-    // background-color: $btn
     display: flex
     font-size: 1.8rem
     width: 396px
@@ -69,14 +72,27 @@
     @include subtitle(3.6rem)
     font-weight: 800
 
-  &__orb-list-1 // have to change in on HTML for uniform styling of sections?
-    @include container--content
+  &__orb-list-1
+    .orb-list__wrap
+      .orb-list__item
+        width: 175px
+      div:nth-of-type(2)
+        span
+          margin-left: 30px
+  
+  &__orb-list-2
+    .orb-list__item
+      width: 303px
+    .orb-list__wrap
+      &:first-child
+        div:nth-of-type(3)
+          .orb-list__svg-img
+            margin-left: -20px
+      &:last-child
+        div:nth-of-type(3)
+          .orb-list__svg-img
+            margin-top: 10px
 
-  &__container // have to change it on HTML for uniform styling of sections?
-    @include container--content
+  // &__partners-section // have to change it on HTML for uniform styling of sections?
 
-  &__partners-section // have to change it on HTML for uniform styling of sections?
-    @include container--content
-
-  &__form-section // have to change it on HTML for uniform styling of sections?
-    @include container--content
+  // &__form-section // have to change it on HTML for uniform styling of sections?

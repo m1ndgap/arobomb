@@ -1,0 +1,43 @@
+.orb-list
+
+  &__flex-column
+    display: flex
+    flex-flow: column
+    .orb-list__item
+      align-items: baseline
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    span
+      color: $text
+      font-size: 1.8rem
+      font-weight: 600
+
+  &__wrap + &__wrap
+    margin-top: 40px
+
+  &__item
+    display: flex
+    flex-flow: column
+    align-items: center
+
+  &__svgs
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 145px
+    position: relative
+
+  &__svg-bg
+    fill: url(#linear-grad-4)
+    position: absolute;
+    top: 0
+    left: 0
+    z-index: 0
+
+  &__svg-img
+    fill: $white
+    z-index: 1
+    margin-top: -15px
