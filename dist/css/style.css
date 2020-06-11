@@ -622,7 +622,8 @@ body {
   text-transform: uppercase;
   background-image: url("../img/splash-bg-4.png");
   background-repeat: no-repeat;
-  background-position: left bottom; }
+  background-position: left bottom;
+  padding-bottom: 30px; }
 
 .main-contact-us {
   background: url("../img/map.png");
@@ -702,6 +703,11 @@ body {
   cursor: pointer; }
   .svg-circle-close:hover {
     stroke: url(#linear-grad-3); }
+
+.svg-grad-big-arrow {
+  fill: url(#linear-grad-4);
+  position: absolute;
+  right: 0; }
 
 @font-face {
   font-family: 'Montserrat';
@@ -2949,6 +2955,87 @@ body {
 
 .landing-1__orb-list-2 .orb-list__wrap:last-child div:nth-of-type(3) .orb-list__svg-img {
   margin-top: 10px; }
+
+.landing-1__promo {
+  position: relative;
+  margin-bottom: -150px; }
+  .landing-1__promo > div {
+    display: flex; }
+  .landing-1__promo-row-1 {
+    justify-content: space-between; }
+    .landing-1__promo-row-1 > div:nth-child(2) {
+      top: 95px;
+      left: -150px; }
+  .landing-1__promo-row-2 {
+    justify-content: space-around;
+    position: relative;
+    top: -260px;
+    left: -20px; }
+    .landing-1__promo-row-2 > div:nth-child(2) {
+      top: -100px; }
+
+.landing-1__promo-item {
+  position: relative;
+  display: flex; }
+
+.landing-1__prize-description {
+  display: flex;
+  flex-flow: column; }
+  .landing-1__prize-description span:first-child {
+    color: #FFFFFF;
+    font-size: 24rem;
+    font-weight: 900;
+    line-height: 20rem; }
+  .landing-1__prize-description span:not(first-child) {
+    color: #444444;
+    font-size: 1.8rem;
+    font-weight: 800; }
+
+.landing-1 .prize-1 {
+  margin-left: -280px;
+  margin-top: 125px;
+  width: 150px; }
+
+.landing-1 .prize-2 {
+  width: 205px;
+  margin-left: -65px;
+  margin-top: -45px; }
+
+.landing-1 .prize-3 {
+  width: 165px;
+  margin-left: -28px;
+  margin-top: -23px; }
+
+.landing-1 .prize-4 {
+  width: 185px;
+  margin-left: -30px;
+  margin-top: -21px; }
+
+.landing-1__promo-splash {
+  position: relative;
+  top: -95px;
+  z-index: -1;
+  left: -140px; }
+
+.landing-1__promo-img-che {
+  position: absolute;
+  top: 160px;
+  left: 0px;
+  width: 232px;
+  height: 234px; }
+
+.landing-1__promo-img-shelf {
+  width: 341px;
+  height: 245px; }
+
+.landing-1__promo-img-gift {
+  width: 354px;
+  height: 247px; }
+
+.landing-1__promo-img-car {
+  width: 318px;
+  height: 167px;
+  z-index: 0; }
 
 .catalog-form__wrapper {
   display: flex;
