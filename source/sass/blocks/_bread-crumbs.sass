@@ -1,6 +1,8 @@
 .breadcrumbs
   @include resetlist()
   display: flex
+  @include media("<tablet")
+    display: none
 
   li:first-child
     a
