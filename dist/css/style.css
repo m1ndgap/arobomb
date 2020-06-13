@@ -2886,9 +2886,11 @@ body {
     outline: none;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
   .cart__tab--active {
+    padding: 16px 25px 19px 33px;
     background-clip: border-box;
     -webkit-background-clip: border-box;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    border: 0; }
     .cart__tab--active .cart__tab-sub-text, .cart__tab--active .cart__tab-main-text {
       color: #FFFFFF; }
 
