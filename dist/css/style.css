@@ -3037,6 +3037,9 @@ body {
   height: 167px;
   z-index: 0; }
 
+.landing-1__partners-section {
+  height: 480px; }
+
 .catalog-form__wrapper {
   display: flex;
   margin-top: 75px;
