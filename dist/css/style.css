@@ -2266,6 +2266,8 @@ body {
     @media (max-width: 767px) {
       .product__info {
         width: 100%;
+        height: unset;
+        padding: 30px 0 30px;
         max-width: 500px; } }
   .product__info-border {
     position: absolute;
@@ -2328,7 +2330,8 @@ body {
         font-size: 1.6rem; } }
     @media (max-width: 767px) {
       .product__text {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        margin: 10px 0; } }
   .product__info-buttons {
     position: relative;
     display: flex;
@@ -2338,6 +2341,7 @@ body {
     z-index: 2; }
     @media (max-width: 767px) {
       .product__info-buttons {
+        margin-top: 10px;
         width: 100%;
         justify-content: space-around; } }
   .product__to-cart-btn {
