@@ -74,7 +74,7 @@ gulp.task("server", function () {
     server.init({
         server: "dist/",
         notify: false,
-        open: true,
+        open: false,
         cors: true,
         ui: false
     });

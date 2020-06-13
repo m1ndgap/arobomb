@@ -10,7 +10,6 @@ const cbmodalCloseCls = `modal__close`;
 const cbModalSubmitCls = `cbmodal-form__submit-btn`;
 
 
-
 let cbBtn = document.querySelector(`.` + cbBtnCls);
 let cbModal = document.querySelector(`.` + cbmodalCls);
 
