@@ -4,7 +4,7 @@
   color: $text
   @include media ("<phone")
     font-size: 1.4rem
-      
+
   &__title
     @include gbackground(100%)
     display: inline-block
@@ -16,7 +16,7 @@
     @include media ("<tablet")
       font-size: 3.0rem
       padding: 10px 15px
-          
+
   // start of 1st row of products
   &__products-1
     display: flex
@@ -34,7 +34,7 @@
       margin-top: 60px
       @include media (">=tablet")
         display: none
-    
+
     &-slide
       display: flex
       flex-direction: column
@@ -47,7 +47,7 @@
         @include media ("<phone")
           top: 40px
       p
-        text-align: center 
+        text-align: center
         margin: 40px 0
 
     &-img-slide-1
@@ -68,7 +68,7 @@
       top: 310px
       @include media (">phone")
         top: 370px
-    
+
       .swiper-pagination-bullet
         width: 30%
         height: 1px
@@ -85,7 +85,7 @@
           bottom: 13px
         &-active
           @include gbackground(100%)
-        
+
   &__gum
     &-wrapper
       display: flex
@@ -130,11 +130,11 @@
       margin-top: 65px
       // margin: 0 -50px
       @include media ("<large")
-        order: 1;
+        order: 1
         margin-top: -105px
       @include media ("<tablet")
         // margin-top: 65px
-        display: none          
+        display: none
     &-arrow-caption-1
       margin-top: 25px
     &-arrow-1
@@ -155,7 +155,7 @@
       display: inline-block
       width: 150px
     &-arrow-2
-      margin-left: -20px    
+      margin-left: -20px
 
   &__sticker
     &-wrapper

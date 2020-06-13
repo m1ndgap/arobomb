@@ -12,6 +12,7 @@
   transition: opacity $transition
   opacity: 0
   pointer-events: none
+  z-index: -1
   *
     pointer-events: none
   @include media("<huge")
@@ -19,6 +20,13 @@
     justify-content: flex-start
     align-items: center
     padding: 30px 10px 10px
+
+  &--active
+    opacity: 1
+    pointer-events: all
+    z-index: 5
+    *
+      pointer-events: all
 
   &__close
     @include resetinteractive()
@@ -86,12 +94,7 @@
       max-width: 500px
       width: 100%
 
-  &--active
-    opacity: 1
-    pointer-events: all
-    z-index: 5
-    *
-      pointer-events: all
+
 
 .product-modal
   background-image: url('../img/splash-bg-2.jpg')

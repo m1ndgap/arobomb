@@ -1,25 +1,56 @@
 "use strict";
 
-var productCardMobileSlider = new Swiper('.swiper-container', {
-    // Default parameters
-    slidesPerView: 1,
-    spaceBetween: 10,
-    // Responsive breakpoints
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 4,
-            spaceBetween: 40
+/* Swiper
+**************************************************************/
+var swiper= Swiper;
+var init = false;
+
+
+/* Which media query
+**************************************************************/
+function swiperMode() {
+    let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+    let tablet = window.matchMedia('(min-width: 769px) and (max-width: 1024px)');
+    let desktop = window.matchMedia('(min-width: 1025px)');
+
+    // Enable (for mobile)
+    if(mobile.matches) {
+        if (!init) {
+            console.log(12312)
+            init = true;
+            swiper = new Swiper('.product__mobile-slider', {
+                speed: 400,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                }
+            });
         }
+
     }
-})
+
+    // Disable (for tablet)
+    else if(tablet.matches) {
+        swiper.destroy();
+        init = false;
+    }
+
+    // Disable (for desktop)
+    else if(desktop.matches) {
+        swiper.destroy();
+        init = false;
+    }
+}
+
+/* On Load
+**************************************************************/
+window.addEventListener('load', function() {
+    swiperMode();
+});
+
+/* On Resize
+**************************************************************/
+window.addEventListener('resize', function() {
+    swiperMode();
+});
