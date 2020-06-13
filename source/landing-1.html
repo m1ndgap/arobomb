@@ -3,13 +3,9 @@
 <main class="main--padded main--bg-3 landing-1">
     <section class="landing-1__title-section">
         <h1 class="landing-1__main-title">
-            <div class="landing-1__title-wrapper-1">
-                <span class="landing-1__title-wrapper-2">
-                    <span class="landing-1__title-line">оригинальные ароматизаторы</span>
-                    <span class="landing-1__title-line">оптом от производителя</span>
-                    <span class="landing-1__title-line">с бесплатной доставкой по России</span>
-                </span>
-            </div>
+            <span class="landing-1__title-line">оригинальные ароматизаторы</span>
+            <span class="landing-1__title-line">оптом от производителя</span>
+            <span class="landing-1__title-line">с бесплатной доставкой по России</span>
         </h1>
 
         <div class="landing-1__title-pitch">
@@ -27,13 +23,13 @@
 
                 <a class="landing-1__pitch-button btn" href="">
                     <span>получить каталог</span>
-                    <svg width="28" height="8" viewBox="0 0 28 8" class="btn-arrow">
-                        <use xlink:href="#btn-arrow"></use>
+                    <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
+                        <use xlink:href="#big-btn-arrow"></use>
                     </svg>
                 </a>
             </div>
 
-            <img class="landing-1__pitch-img" src="../img/aroma-shelves.png" alt="RUSSIAN WORDED DESCRIPTION OF IMAGE">
+            <img class="landing-1__pitch-img" src="../img/aroma-shelves.png" alt="">
         </div>
     </section>
 
@@ -109,12 +105,53 @@
     <section class="">
         <h2 class="landing-1__subtitle">в НАШЕМ АССОРТИМЕНТЕ</h2>
 
-        <!-- icons -->
+        <div class="landing-1__tabs tabs">
+            <div class="tabs__buttons">
+                <button type="button" class="tabs__tab-button tabs__tab-button--active" data-tab="0" data-active="true">
+                    <span>сувениры</span>
+                </button>
+                <button type="button" class="tabs__tab-button" data-tab="1" data-active="false">
+                    <span>ароматизаторы</span>
+                </button>
+                <button type="button" class="tabs__tab-button" data-tab="2" data-active="false">
+                    <span>подарочная коробка</span>
+                </button>
+            </div>
+            <div class="tabs__text-area">
+                <div class="swiper-container tabs__text-wrap tabs__text-wrap--active" data-textn="0" data-active="true">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
+                    </div>
+                    <!-- Arrows -->
+                    <div class="swiper-button-next">
+                        <svg width="10" height="12" viewBox="0 0 10 12" class="">
+                            <use xlink:href="#swiper-arrow"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <svg width="10" height="12" viewBox="0 0 10 12" class="">
+                            <use xlink:href="#swiper-arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tabs__text-wrap" data-textn="1" data-active="false"></div>
+                <div class="tabs__text-wrap" data-textn="2" data-active="false"></div>
+            </div>
+        </div>
 
-        <a class="btn" href="">
+        <a class="landing-1__goto-catalog btn" href="">
             <span>скачать презентацию и каталог</span>
-            <svg width="28" height="8" viewBox="0 0 28 8" class="btn-arrow">
-                <use xlink:href="#btn-arrow"></use>
+            <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
+                <use xlink:href="#big-btn-arrow"></use>
             </svg>
         </a>
 
@@ -261,10 +298,10 @@
 
         </div>
 
-        <a class="btn" href="">
+        <a class="landing-1__goto-catalog btn" href="">
             <span>скачать презентацию и каталог</span>
-            <svg width="28" height="8" viewBox="0 0 28 8" class="btn-arrow">
-                <use xlink:href="#btn-arrow"></use>
+            <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
+                <use xlink:href="#big-btn-arrow"></use>
             </svg>
         </a>
 
@@ -296,5 +333,8 @@
     
     </section>
 </main>
+
+<script src="./js/tabs.js"></script>
+<script src="./js/landing-1.js"></script>
 
 //= ./html-components/_footer.html
