@@ -1318,7 +1318,9 @@ body {
     left: 750px; }
     @media (max-width: 1439px) {
       .index__name-block {
-        left: 15px; } }
+        top: unset;
+        left: 15px;
+        bottom: 86px; } }
     @media (max-width: 767px) {
       .index__name-block {
         position: static; } }
@@ -1352,7 +1354,7 @@ body {
         font-size: 1.8rem; } }
   .index__more-info-btn {
     display: block;
-    margin-top: 60px;
+    margin-top: 40px;
     text-decoration: none; }
     .index__more-info-btn:hover .index__more-info-text {
       color: #F16299; }
