@@ -148,7 +148,9 @@
     position: absolute
     left: 750px
     @include media("<huge")
+      top: unset
       left: 15px
+      bottom: 86px
     @include media("<tablet")
       position: static
 
@@ -183,7 +185,7 @@
 
   &__more-info-btn
     display: block
-    margin-top: 60px
+    margin-top: 40px
     text-decoration: none
     &:hover
       .index__more-info-text

@@ -2,7 +2,7 @@
 
 <main class="main--padded">
     <section class="product">
-        <ul class="breadcrumbs">
+        <ul class="product__breadcrumbs breadcrumbs">
             <li class="breadcrumbs__item">
                 <a href="" class="breadcrumbs__link">сувенир</a>
             </li>
@@ -13,17 +13,42 @@
         <article class="product__wrapper">
             <div class="product__gallery gallery">
                 <figure class="gallery__img-wrap">
-                    <img src="./img/product-item-1.jpg" alt="" class="gallery__img">
+                    <img srcset="./img/product-item-1.png, ./img/product-item-1@2x.png 2x"
+                         src="./img/product-item-1.png" alt="" class="gallery__img">
                 </figure>
                 <figure class="gallery__img-wrap">
-                    <img src="./img/product-item-2.jpg" alt="" class="gallery__img">
+                    <img srcset="./img/product-item-2.png, ./img/product-item-2@2x.png 2x"
+                         src="./img/product-item-2.png" alt="" class="gallery__img">
                 </figure>
                 <figure class="gallery__img-wrap">
-                    <img src="./img/product-item-3.jpg" alt="" class="gallery__img">
+                    <img srcset="./img/product-item-3.png, ./img/product-item-3@2x.png 2x"
+                            src="./img/product-item-3.png" alt="" class="gallery__img">
                 </figure>
                 <figure class="gallery__img-wrap gallery__img-wrap--main">
-                    <img src="./img/product-item-4.png" alt="" class="gallery__img">
+                    <img srcset="./img/product-item-4.png, ./img/product-item-4@2x.png 2x"
+                            src="./img/product-item-4.png" alt="" class="gallery__img">
                 </figure>
+            </div>
+            <div class="product__mobile-slider swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img srcset="./img/product-item-1.png, ./img/product-item-1@2x.png 2x"
+                             src="./img/product-item-1.png" alt="" class="gallery__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img srcset="./img/product-item-2.png, ./img/product-item-2@2x.png 2x"
+                             src="./img/product-item-2.png" alt="" class="gallery__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img srcset="./img/product-item-3.png, ./img/product-item-3@2x.png 2x"
+                             src="./img/product-item-3.png" alt="" class="gallery__img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img srcset="./img/product-item-4.png, ./img/product-item-4@2x.png 2x"
+                             src="./img/product-item-4.png" alt="" class="gallery__img">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
             <div class="product__info">
                 <svg width="482" height="364" viewBox="0 0 482 364" fill="none" class="svg-gradient-line product__info-border">
@@ -58,14 +83,32 @@
                 </button>
             </div>
             <div class="tabs__text-area">
+                <button type="button" class="tabs__tab-button-mob tabs__tab-button-mob--active" data-tab="0" data-active="true">
+                    <span>описание</span>
+                    <svg width="8" height="13" viewBox="0 0 8 13" class="">
+                        <use xlink:href=#faq-down-arrow></use>
+                    </svg>
+                </button>
                 <div class="tabs__text-wrap tabs__text-wrap--active" data-textn="0" data-active="true">
                     <p>Вы можете на нас положиться.</p>
                     <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
                 </div>
+                <button type="button" class="tabs__tab-button-mob" data-tab="1" data-active="false">
+                    <span>доставка</span>
+                    <svg width="8" height="13" viewBox="0 0 8 13" class="">
+                        <use xlink:href=#faq-down-arrow></use>
+                    </svg>
+                </button>
                 <div class="tabs__text-wrap" data-textn="1" data-active="false">
                     <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превыша ет 200 евро, а вес составляет не более 31 кг.</p>
                     <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
                 </div>
+                <button type="button" class="tabs__tab-button-mob" data-tab="2" data-active="false">
+                    <span>инструкция</span>
+                    <svg width="8" height="13" viewBox="0 0 8 13" class="">
+                        <use xlink:href=#faq-down-arrow></use>
+                    </svg>
+                </button>
                 <div class="tabs__text-wrap" data-textn="2" data-active="false">
                     <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
                     <p>Вы можете на нас положиться.</p>
@@ -76,45 +119,45 @@
             <h2 class="similar-items__main-title">с этим товаром покупают:</h2>
             <div class="similar-items__wrapper">
                 <div class="similar-items__item">
-                    <div class="similar-items__img-wrap">
+                    <figure class="similar-items__img-wrap">
                         <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
-                    </div>
+                    </figure>
                     <a class="similar-items__link" href="javascript:void(0)">
                         <h3 class="similar-items__title">bubble gum</h3>
                     </a>
                     <span class="similar-items__price">1400</span>
                 </div>
                 <div class="similar-items__item">
-                    <div class="similar-items__img-wrap">
+                    <figure class="similar-items__img-wrap">
                         <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
-                    </div>
+                    </figure>
                     <a class="similar-items__link" href="javascript:void(0)">
                         <h3 class="similar-items__title">bubble gum</h3>
                     </a>
                     <span class="similar-items__price">1400</span>
                 </div>
                 <div class="similar-items__item">
-                    <div class="similar-items__img-wrap">
+                    <figure class="similar-items__img-wrap">
                         <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
-                    </div>
+                    </figure>
                     <a class="similar-items__link" href="javascript:void(0)">
                         <h3 class="similar-items__title">bubble gum</h3>
                     </a>
                     <span class="similar-items__price">1400</span>
                 </div>
                 <div class="similar-items__item">
-                    <div class="similar-items__img-wrap">
+                    <figure class="similar-items__img-wrap">
                         <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
-                    </div>
+                    </figure>
                     <a class="similar-items__link" href="javascript:void(0)">
                         <h3 class="similar-items__title">bubble gum</h3>
                     </a>
                     <span class="similar-items__price">1400</span>
                 </div>
                 <div class="similar-items__item">
-                    <div class="similar-items__img-wrap">
+                    <figure class="similar-items__img-wrap">
                         <img src="./img/bubble-gum__similar-items.png" alt="bubble gum aroma flask" class="similar-items__img">
-                    </div>
+                    </figure>
                     <a class="similar-items__link" href="javascript:void(0)">
                         <h3 class="similar-items__title">bubble gum</h3>
                     </a>
@@ -146,10 +189,12 @@
 
 <script src="./js/tabs.js"></script>
 <script src="./js/product-card-modal.js"></script>
+<script src="./js/product-card-slider.js"></script>
 <script>
     (function x(){
         document.querySelector(".main-menu").classList.add('fixed-menu-trailing-gradient')
     })();
 </script>
 
+//= ./html-components/_callback-modals.html
 //= ./html-components/_footer.html
