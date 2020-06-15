@@ -1,12 +1,24 @@
 .product
   @include container--content()
 
+  &__breadcrumbs
+    @include media("<tablet")
+      margin-top: 30px
+
   &__wrapper
     display: flex
     margin-top: 118px
+    @include media("<desktop")
+      margin-top: 38px
+      flex-flow: column nowrap
+      align-items: center
+    @include media("<tablet")
+      margin-top: 0
 
   &__gallery
     height: 340px
+    @include media("<tablet")
+      display: none
 
   &__info
     position: relative
@@ -17,12 +29,21 @@
     height: 365px
     padding: 45px 0 70px 0
     margin-left: auto
+    @include media("<desktop")
+      margin-left: unset
+    @include media("<tablet")
+      width: 100%
+      height: unset
+      padding: 30px 0 30px
+      max-width: 500px
 
   &__info-border
     position: absolute
     top: 0
     left: 0
     z-index: 1
+    @include media("<large")
+      display: none
 
   &__info-text-block
     position: relative
@@ -43,10 +64,19 @@
     @include resetmargin()
     font-weight: 900
     text-align: center
+    @include media("<large")
+      font-size: 3rem
+    @include media("<tablet")
+      font-size: 1.8rem
 
   &__price
     font-size: 2.4rem
     @include price-after()
+    @include media("<large")
+      margin-top: 20px
+      font-size: 2rem
+    @include media("<tablet")
+      font-size: 1.8rem
 
   &__text
     display: flex
@@ -55,6 +85,11 @@
     margin: 30px 0 20px
     font-size: 1.8rem
     text-align: center
+    @include media("<large")
+      font-size: 1.6rem
+    @include media("<tablet")
+      font-size: 1.4rem
+      margin: 10px 0
 
   &__info-buttons
     position: relative
@@ -63,6 +98,10 @@
     width: 60%
     margin-top: auto
     z-index: 2
+    @include media("<tablet")
+      margin-top: 10px
+      width: 100%
+      justify-content: space-around
 
   &__to-cart-btn
     font-weight: 600
@@ -73,4 +112,54 @@
     padding: 7px 51px
 
   &__tabs
+    width: 868px
     margin: 130px 0 80px
+    @include media("<large")
+      width: 100%
+      margin: 50px auto 50px
+    @include media("<tablet")
+      width: calc(100% + 30px)
+      margin: 30px -15px 30px
+
+
+  .swiper
+    &-container
+      width: 100%
+      margin-top: 20px
+      @include media (">tablet")
+        display: none
+
+
+    &-slide
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 20px
+      width: 100%
+      img
+        max-height: 193px
+
+
+    &-pagination
+      position: absolute
+      width: 80%
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      display: flex
+      .swiper-pagination-bullet
+        flex-grow: 1
+        height: 1px
+        margin: 0 5px
+        background-color: $text
+        border-radius: unset
+        &:focus
+          outline: none
+        &::after
+          content: " "
+          padding: 10%
+          display: block
+          position: relative
+          bottom: 13px
+        &-active
+          @include gbackground(100%)
