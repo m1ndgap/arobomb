@@ -4,11 +4,18 @@
     display: flex
     margin-top: 75px
     justify-content: space-between
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
 
   &__img
     margin-left: -20px
+    @include media ("<large")
+      width: 62%
 
   &__form
+    display: flex
+    flex-flow: column
 
   &__input
     @include gbackground (100%)
