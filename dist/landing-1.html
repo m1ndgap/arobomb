@@ -415,7 +415,7 @@
                 </button>
             </div>
             <div class="tabs__text-area">
-                <div class="swiper-container tabs__text-wrap tabs__text-wrap--active" data-textn="0" data-active="true">
+                <div class="tabs-swiper-container tabs__text-wrap tabs__text-wrap--active" data-textn="0" data-active="true">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
                         <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt=""></div>
@@ -440,7 +440,7 @@
                     </div>
                 </div>
 
-                <div class="swiper-container tabs__text-wrap" data-textn="1" data-active="false">
+                <div class="tabs-swiper-container tabs__text-wrap" data-textn="1" data-active="false">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-shelf-1x.png, ./img/landing-1_promo-shelf-2x.png 2x" src="./img/landing-1_promo-shelf-2x.png" alt=""></div>
                         <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-shelf-1x.png, ./img/landing-1_promo-shelf-2x.png 2x" src="./img/landing-1_promo-shelf-2x.png" alt=""></div>
@@ -465,7 +465,7 @@
                     </div>
                 </div>
 
-                <div class="swiper-container tabs__text-wrap" data-textn="2" data-active="false">
+                <div class="tabs-swiper-container tabs__text-wrap" data-textn="2" data-active="false">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-gift-1x.png, ./img/landing-1_promo-gift-2x.png 2x" src="./img/landing-1_promo-gift-2x.png" alt=""></div>
                         <div class="swiper-slide"><img class="landing-1__swiper-img" srcset="./img/landing-1_promo-gift-1x.png, ./img/landing-1_promo-gift-2x.png 2x" src="./img/landing-1_promo-gift-2x.png" alt=""></div>
@@ -653,9 +653,43 @@
     <section class="landing-1__partners-section">
         <h2 class="landing-1__subtitle">Отзывы наших партнеров</h2>
 
-        <div class="landing-1__partners-slider">
-            <img src="" alt="">
-
+        <div class="partners-swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="landing-1__swiper-img" srcset="./img/partner1.jpg, ./img/partner1-2x 2x" src="./img/partner1-2x.jpg" alt="">
+                    <div>
+                        <h3>иван васильевич</h3>
+                        <span>меняет профессию</span>
+                        <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="landing-1__swiper-img" srcset="./img/partner1.jpg, ./img/partner1-2x 2x" src="./img/partner1-2x.jpg" alt="">
+                    <div>
+                        <h3>bla bla bla</h3>
+                        <span>blaaaaa</span>
+                        <p>blabblab</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="landing-1__swiper-img" srcset="./img/partner1.jpg, ./img/partner1-2x 2x" src="./img/partner1-2x.jpg" alt="">
+                    <div>
+                        <h3>etc etc etc</h3>
+                        <span>etcetera</span>
+                        <p>etc.... etc...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="10" height="12" viewBox="0 0 10 12" class="">
+                    <use xlink:href="#swiper-arrow"></use>
+                </svg>
+            </div>
+            <div class="swiper-button-prev">
+                <svg width="10" height="12" viewBox="0 0 10 12" class="">
+                    <use xlink:href="#swiper-arrow"></use>
+                </svg>
+            </div>
         </div>
 
     </section>
