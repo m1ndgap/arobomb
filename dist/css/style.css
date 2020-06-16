@@ -3068,9 +3068,9 @@ body {
   position: relative;
   margin: 58px 0;
   font-size: 1.8rem; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1023px) {
     .landing-1__title-pitch {
-      font-size: 1.3rem; } }
+      font-size: 1.5rem; } }
   @media (max-width: 767px) {
     .landing-1__title-pitch {
       margin: 35px 0; } }
@@ -3091,7 +3091,8 @@ body {
   top: 142px; }
   @media (max-width: 1439px) {
     .landing-1__pitch-img {
-      width: 795px; } }
+      width: 795px;
+      right: -40px; } }
   @media (max-width: 1023px) {
     .landing-1__pitch-img {
       width: 700px;
@@ -3132,9 +3133,9 @@ body {
   padding: 20px;
   align-items: center;
   justify-content: space-evenly; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1023px) {
     .landing-1__pitch-button {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       width: 288px;
       padding: 14px; } }
   @media (max-width: 767px) {
@@ -3160,6 +3161,9 @@ body {
   color: #444444;
   text-transform: uppercase;
   font-weight: 800; }
+  @media (max-width: 1279px) {
+    .landing-1__subtitle {
+      font-size: 3rem; } }
 
 .landing-1__orb-list-1 .orb-list__wrap {
   flex-wrap: wrap; }
@@ -3248,10 +3252,16 @@ body {
 .landing-1__promo {
   position: relative;
   margin-bottom: 135px; }
+  @media (max-width: 1439px) {
+    .landing-1__promo {
+      transform: scale(0.7); } }
   .landing-1__promo > div {
     display: flex; }
   .landing-1__promo-row-1 {
     justify-content: space-between; }
+    @media (max-width: 1279px) {
+      .landing-1__promo-row-1 > div:first-child {
+        left: -115px; } }
     .landing-1__promo-row-1 > div:nth-child(2) {
       margin-top: 87px;
       left: -127px; }
@@ -3260,6 +3270,9 @@ body {
     position: relative;
     left: -20px;
     margin-top: 105px; }
+    @media (max-width: 1279px) {
+      .landing-1__promo-row-2 > div:first-child {
+        left: -105px; } }
     .landing-1__promo-row-2 > div:nth-child(2) {
       top: -67px;
       left: 10px; }
@@ -4347,6 +4360,10 @@ body {
     color: #444444;
     font-size: 1.8rem;
     font-weight: 600; }
+    @media (max-width: 1023px) {
+      .orb-list__wrap span {
+        font-size: 1.5rem;
+        margin: 0 5px; } }
 
 .orb-list__wrap + .orb-list__wrap {
   margin-top: 40px; }

@@ -15,7 +15,7 @@
     font-weight: 900
     text-transform: uppercase
     @include media ("<large")
-      font-size: 3.5rem
+      font-size: 3.5rem // 3.6rem
     @include media ("<=desktop")
       @include gbackground (100%)
       padding: 0 15px
@@ -37,8 +37,8 @@
     position: relative
     margin: 58px 0
     font-size: 1.8rem
-    @include media ("<large")
-      font-size: 1.3rem
+    @include media ("<desktop")
+      font-size: 1.5rem
     @include media ("<tablet")
       margin: 35px 0
 
@@ -63,6 +63,7 @@
     // margin-top: 142px
     @include media ("<huge")
       width: 795px
+      right: -40px
     @include media ("<desktop")
       width: 700px
       right: -50px
@@ -102,8 +103,8 @@
     padding: 20px // 24px
     align-items: center
     justify-content: space-evenly
-    @include media ("<large")
-      font-size: 1.3rem
+    @include media ("<desktop")
+      font-size: 1.5rem
       width: 288px
       padding: 14px
     @include media ("<tablet")
@@ -123,12 +124,17 @@
   &__subtitle
     @include subtitle(3.6rem)
     font-weight: 800
+    @include media ("<large")
+      font-size: 3rem // 2.6-.7rem
+    @include media ("<=desktop")
+    @include media ("<tablet")
+    @include media ("<tiny")
 
   &__orb-list-1
     .orb-list__wrap
       flex-wrap: wrap
       @include media ("<tiny") // or maybe I'll just make the orbs smaller
-          display: block
+        display: block
           
       .orb-list__item
         width: 175px
@@ -242,22 +248,31 @@
     // display: flex
     position: relative
     margin-bottom: 135px
+    @include media ("<huge")
+      transform: scale(0.7)
     > div // promo-rows
       display: flex
       // justify-content: space-between
 
     &-row-1
       justify-content: space-between
+      > div:first-child
+        @include media ("<large")
+          left: -115px
       > div:nth-child(2)
         // top: 87px
         margin-top: 87px
         left: -127px
+
     &-row-2
       justify-content: space-around
       position: relative
       // top: -260px
       left: -20px
       margin-top: 105px
+      > div:first-child
+        @include media ("<large")
+          left: -105px
       > div:nth-child(2)
         top: -67px
         left: 10px
@@ -275,7 +290,7 @@
     display: flex
     > div:not(.landing-1__promo-img-splash)
       display: flex
-      flex-flow: column
+      flex-flow: column      
       span
         &:first-child
           color: $white
