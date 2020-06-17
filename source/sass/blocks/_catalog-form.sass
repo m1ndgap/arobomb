@@ -11,23 +11,30 @@
   &__img
     margin-left: -20px
     @include media ("<large")
-      width: 62%
+      max-width: 62%
+    @include media ("<desktop")
+      max-width: 100%
 
   &__form
     display: flex
     flex-flow: column
+    @include media ("<desktop")
+      width: 500px
+      max-width: 100%
 
   &__input
     @include gbackground (100%)
     opacity: 0.5
     width: 373px
-    height: 45px
+    // height: 45px
     padding: 15px 10px
     border: none
     margin-bottom: 30px
     color: $white
     font-weight: 800
-    // outline-color: $gradient-end
+    @include media ("<desktop")
+      width: 100%
+      opacity: 0.7
     &::placeholder
       color: $white
       text-transform: uppercase
@@ -44,3 +51,5 @@
     padding: 15px 10px
     border: 2px solid $btn
     transition: background-color $transition, color $transition, outline $transition
+    @include media ("<desktop")
+      width: 100%

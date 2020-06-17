@@ -88,6 +88,7 @@ body
     background-position: right top, left bottom
     text-transform: uppercase
     padding-bottom: 30px
+    overflow: hidden
   &-contact-us
     background: url("../img/map.png")
     background-position: bottom right
@@ -173,4 +174,5 @@ body
   fill: url(#linear-grad-4)
   position: absolute
   right: 0
-  // z-index: -1
+  @include media ("<large")
+    display: none
