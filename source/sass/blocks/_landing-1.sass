@@ -2,27 +2,28 @@
 
   section
     @include container--content
-
+    &:nth-of-type(1), &:nth-of-type(5) // title and splash sections
+      overflow: hidden
+      
   section + section
     margin-top: 150px
+    @include media ("<tablet")
+      margin-top: 100px
 
-  &__title-section
-    // margin-bottom: 120px
-
+  // 1ST SECTION
   &__main-title
     color: $white
     font-size: 4.8rem
     font-weight: 900
     text-transform: uppercase
     @include media ("<large")
-      font-size: 3.5rem
+      font-size: 3.5rem // 3.6rem
     @include media ("<=desktop")
       @include gbackground (100%)
       padding: 0 15px
     @include media ("<tablet")
       font-size: 2.5rem
-    @include media ("<tiny")
-      font-size: 2rem
+ 
     span
       @include media (">desktop")
         @include gbackground (1136px)
@@ -37,53 +38,29 @@
     position: relative
     margin: 58px 0
     font-size: 1.8rem
-    @include media ("<large")
-      font-size: 1.3rem
+    @include media ("<desktop")
+      font-size: 1.5rem
     @include media ("<tablet")
       margin: 35px 0
 
   // title-pitch children
-
   &__title-pitch--wrapper
     width: 100%
     z-index: 1
+    @include media ("<desktop" and ">=tablet")
+      margin-bottom: 100px
 
   &__pitch-topics
     margin-bottom: 87px
     @include media ("<desktop")
       margin-bottom: 30px
 
-  &__pitch-img
-    position: absolute
-    right: 0
-    top: 142px
-    // margin: 0 -200px
-    // align-self: flex-end
-    // margin-bottom: 120px
-    // margin-top: 142px
-    @include media ("<huge")
-      width: 795px
-    @include media ("<desktop")
-      width: 700px
-      right: -50px
-    @include media ("<tablet")
-      // right: -50px
-      // right: -70px
-      top: 180px
-      width: 570px // 575px
-      right: -65px
-    @include media ("<tiny")
-      width: 445px
-      right: -50px
-      top: 275px
-    // @include media ("<large")
-    //   width: 67%
-
   &__pitch-price
     margin-bottom: 108px
     @include media ("<desktop")
       margin-bottom: 70px
     @include media ("<tablet")
+      margin-bottom: 30px
       p
         display: inline
     span
@@ -94,6 +71,21 @@
       @include media ("<tablet")
         font-size: 1.9rem
 
+  &__pitch-img
+    position: absolute
+    right: 0
+    top: 142px
+    @include media ("<huge")
+      width: 795px
+      right: -40px
+    @include media ("<desktop")
+      width: 700px
+      right: -50px
+    @include media ("<tablet")
+      position: static
+      width: 120%
+      margin-left: -60px
+
   &__pitch-button
     display: flex
     font-size: 1.8rem
@@ -102,51 +94,78 @@
     padding: 20px // 24px
     align-items: center
     justify-content: space-evenly
-    @include media ("<large")
-      font-size: 1.3rem
+    @include media ("<desktop")
+      font-size: 1.5rem
       width: 288px
       padding: 14px
     @include media ("<tablet")
-      margin: 300px auto
-      width: 396px
-    @include media ("<tiny")
+      // margin: 300px auto
+      margin: 0 auto
+      max-width: 396px
+    @include media ("<=tiny")
       width: 100%
-  // end of title-pitch direct children
+      font-size: 1.3rem
+  // end of title-pitch children
+
 
   &__price-block
     @include gbackground (100%)
+    display: inline-block
     color: $white
-    padding: 4px 7px 5px
+    padding: 3px 6px // 4px 7px 5px
     text-transform: none
     font-weight: 900
 
   &__subtitle
     @include subtitle(3.6rem)
     font-weight: 800
+    @include media ("<large")
+      font-size: 3rem
+    @include media ("<tablet")
+      font-size: 2.3rem
+      line-height: 3.2rem
+    &:not(.landing-1__promo-title)
+      margin-bottom: 75px
+      @include media ("<tablet")
+        margin-bottom: 50px
 
+
+  // 2ND SECTION
   &__orb-list-1
     .orb-list__wrap
       flex-wrap: wrap
-      @include media ("<tiny") // or maybe I'll just make the orbs smaller
-          display: block
+      @include media ("<desktop")
+        justify-content: center
+      @include media ("<tiny")
+        display: block
 
       .orb-list__item
         width: 175px
-        @include media ("<tiny") // or maybe I'll just make the orbs smaller
+        @include media ("<desktop")
+          flex-basis: 33%
+          span
+            text-align: center
+        @include media ("<tablet")
+          flex-basis: 50%
+        @include media ("<tiny")
           margin: 30px auto
 
-        &:nth-child(1), &:nth-child(2), &:nth-child(3)
-          @include media ("<desktop")
-            flex-basis: 33%
-          @include media ("<tablet")
-            flex-basis: 50%
+        // &:nth-child(1), &:nth-child(2), &:nth-child(3) // give names to items? items 1-3
+        //   @include media ("<desktop")
+        //     flex-basis: 33%
+        //   @include media ("<tablet")
+        //     flex-basis: 50%
 
-        &:nth-child(2)
+        &:nth-child(2) // give names to items? item-2
           span
             margin-left: 30px
+            max-width: 200px
             @include media ("<desktop")
-              text-align: center
               margin: 0
+        //     @include media ("<desktop")
+        //       text-align: center
+        //       margin: 0
+
 
         &:nth-child(3)
           @include media ("<tablet")
@@ -164,25 +183,61 @@
 
   .tabs
     width: 100%
+    @include media ("<large")
+      margin: 50px auto 50px
+    @include media ("<tablet")
+      width: calc(100% + 30px)
+      margin: 30px -15px 30px
 
   .tabs__buttons
     width: 973px
+    @include media ("<desktop")
+      display: none
 
   .tabs__text-area
     overflow: hidden
     // display: flex
     // justify-content: center
 
+  .tabs__text-wrap
+    @include media("<desktop")
+      position: static
+      padding: 0
+      max-height: 0
+      overflow: hidden
+      transition: opacity $transition, max-height $transition
+      p
+        font-size: 1.4rem
+        line-height: 2.0rem
+
+      &--active
+        padding: 20px
+        max-height: 1500px
+        border-bottom: 2px solid
+        border-top: 0
+        border-left: 0
+        border-right: 0
+        border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+        border-image-slice: 1
+        transition: opacity $transition, max-height $transition*5
+
     .landing-1__swiper-img
       width: 100%
+      max-width: 185px
+      margin: 0 auto
 
     .swiper-slide
       width: 185px
       height: 185px
+      display: flex
+      align-items: center
+      // padding: 5px // check if necessary
 
   .tabs-swiper-container
     width: 100%
     margin: 100px 0
+    @include media ("<desktop")
+      margin: 0
     // &::before
     //   content: ""
     //   background-image: linear-gradient(90deg, $bg-color, rgba(255, 255, 255, 0.001))
@@ -209,7 +264,8 @@
     height: 86px
     margin-top: -43px
     background: $bg-color
-    // box-shadow: 0px 0px 5px 0px $bg-color
+    @include media ("<desktop")
+      display: none
     &:hover
       background: #e5edff
       transition: 400ms
@@ -225,67 +281,134 @@
   .swiper-button-prev
     left: 0
 
+
+  .tabs__tab-button-mob
+    @include media("<desktop")
+      margin: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      padding: 16px 10px
+      border-bottom: 2px solid
+      border-top: 0
+      border-left: 0
+      border-right: 0
+      border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+      border-image-slice: 1
+      &:hover
+        background-position: 100% 0
+      span
+        margin-left: auto
+        &:hover
+          background-position: 100% 0
+      svg
+        fill: url(#linear-grad-2)
+        margin-left: auto
+        transition: transform $transition
+  
+
+  // 4TH SECTION
   &__orb-list-2
     .orb-list__item
       width: 303px
-    .orb-list__wrap
-      &:first-child
-        div:nth-of-type(3)
-          .orb-list__svg-img
-            margin-left: -20px
-      &:last-child
-        div:nth-of-type(3)
-          .orb-list__svg-img
-            margin-top: 10px
+      flex-basis: 33%
+      @include media ("<tablet")
+        flex-basis: 50%
+      @include media ("<tablet")
+        max-width: 175px
+      span
+        max-width: 280px
+        @include media ("<tablet")
+          text-align: center
 
+    .orb-list__wrap
+      flex-wrap: wrap
+      > div:nth-of-type(3)
+        .orb-list__svg-img
+          margin-left: -20px
+      > div:nth-of-type(6)
+        .orb-list__svg-img
+          margin-top: 10px
+        span
+          max-width: 303px
+
+
+  // 5TH SECTION
   &__promo
-    // display: flex
     position: relative
     margin-bottom: 135px
+    @include media ("<tablet")
+      margin: 0
+      
     > div // promo-rows
       display: flex
-      // justify-content: space-between
+      @include media ("<tablet")
+        display: block
 
-    &-row-1
-      justify-content: space-between
-      > div:nth-child(2)
-        // top: 87px
-        margin-top: 87px
-        left: -127px
-    &-row-2
-      justify-content: space-around
-      position: relative
-      // top: -260px
-      left: -20px
-      margin-top: 105px
-      > div:nth-child(2)
-        top: -67px
-        left: 10px
+  &__promo-row--1
+    justify-content: space-between
 
-      // &:nth-child(2) // promo-row-1
-      //   justify-content: space-between
-      // &:nth-child(3) // promo-row-2
-      //   justify-content: space-around
-      //   position: relative
-      //   top: -260px
-      //   left: -20px
+  &__promo-row--2
+    justify-content: space-around
+    position: relative
+    left: -20px
+    margin-top: 105px
+    @include media ("<desktop")
+      margin-top: 120px
+    @include media ("<tablet")
+      margin-top: 40px
+      left: 0
 
   &__promo-item
     position: relative
     display: flex
-    > div:not(.landing-1__promo-img-splash)
+    @include media ("<tablet")
+      position: static
+      display: flex
+      justify-content: center
+      margin-bottom: 70px
+    > div
       display: flex
       flex-flow: column
+
       span
         &:first-child
           color: $white
           font-size: 24rem
           font-weight: 900
           line-height: 19rem
+          @include media ("<desktop")
+            font-size: 16.8rem
+            line-height: 13.3rem
         &:not(first-child)
           color: $text
           font-size: 1.8rem
           font-weight: 800
+
+          @include media ("<desktop")
+            font-size: 1.5rem
+
+  &__promo-item-img-wrapper
+    position: relative
+
+  &__promo-item-bg
+    position: absolute
+    top: -100px
+    z-index: -1
+    left: -140px
+    @include media ("<desktop")
+      width: 365.2px
+      height: 538.3px
+    @include media ("<tablet")
+      left: -160px
+
+  &__promo-item--1
+    @include media ("<huge")
+      left: 115px
+    @include media ("<tablet")
+      margin-left: 30px
+    .landing-1__promo-item-img
 
   &__promo-img
     &-splash // change to 123
@@ -300,62 +423,127 @@
       left: -7px
       width: 232px
       height: 234px
-    &-shelf
+      @include media ("<desktop")
+        width: 162.4px
+        height: 163.8px
+      @include media ("<desktop")
+        left: 0
+        top: 186px
+        margin-left: 15px
+      @include media ("<tablet")
+        margin: 0
+    .landing-1__promo-item-description
+          // margin-left: -280px
+          margin-top: 125px
+          width: 150px
+
+  &__promo-item--2
+    margin-top: 87px // top: 87px
+    left: -127px
+    @include media ("<large")
+      left: 0
+    .landing-1__promo-item-img
       width: 341px
       height: 245px
-    &-gift
-      width: 354px
-      height: 247px
-    &-car
-      width: 318px
-      height: 167px
-      z-index: 0
+      @include media ("<desktop")
+        width: 238.7px
+        height: 171.5px
+    .landing-1__promo-item-description
+          width: 205px
+          margin-left: -65px
+          margin-top: -30px
+          @include media ("<desktop")
+            margin-left: -50px
+            width: 150px
 
-  &__promo-description-1
-    // margin-left: -280px
-    margin-top: 125px
-    width: 150px
+  &__promo-item--3
+    @include media ("<huge")
+      left: 115px
+    @include media ("<large")
+      left: 0
+    @include media ("<desktop")
+      margin-left: 70px
+    @include media ("<tablet")
+      margin-left: -15px
+    .landing-1__promo-item-img
+          width: 354px
+          height: 247px
+          @include media ("<desktop")
+            width: 247.8px
+            height: 172.9px
+    .landing-1__promo-item-description
+          width: 165px
+          margin-left: -28px
+          margin-top: -23px
 
-  &__promo-description-2
-    width: 205px
-    margin-left: -65px
-    margin-top: -30px
-
-  &__promo-description-3
-    width: 165px
-    margin-left: -28px
-    margin-top: -23px
-
-  &__promo-description-4
-    width: 185px
-    margin-left: -30px
-    margin-top: -40px
+  &__promo-item--4
+    top: -67px
+    left: 10px
+    @include media ("<desktop")
+      left: 0
+    @include media ("<tablet")
+      // margin-top: 30px
+      margin-left: 0
+    .landing-1__promo-item-img
+          width: 318px
+          height: 167px
+          z-index: 0
+          @include media ("<desktop")
+            width: 222.6px
+            height: 116.9px
+    .landing-1__promo-item-description
+          width: 185px
+          margin-top: -40px
+          margin-left: -30px
+          @include media ("<desktop")
+            margin-left: 0
+            width: 150px
+          @include media ("<tablet")
+            margin-top: -25px
+            margin-left: -35px          
 
   &__goto-catalog
     font-size: 1.8rem
     padding: 15px
-    width: 584px
+    max-width: 584px
     display: flex
     align-items: center
     justify-content: space-evenly
     margin: auto
+    span
+      margin-right: 10px
+    @include media ("<desktop")
+      font-size: 1.5rem
+    @include media ("<=tiny")
+      font-size: 1.3rem
 
-  &__partners-section // have to change it on HTML for uniform styling of sections?
+
+  // 6TH SECTION
+  // &__partners-section // have to DELETE this class from HTML for uniform styling of sections?
+  section:nth-of-type(6)
     .partners-swiper-container
       overflow: hidden
       position: relative
       margin: 100px 0
+      @include media ("<desktop")
+        margin: 0
 
     .swiper-slide
       display: flex
-      > *
-        display: block
+
       h3
         font-size: 2.4rem
         margin: 0
         font-weight: 800
+        @include media ("<huge")
+          font-size: 2rem
+        @include media ("<tiny")
+          font-size: 1.8rem
       span
         font-size: 1.8rem
+        @include media ("<huge")
+          font-size: 1.5rem
+
       p
         padding: 50px 140px 0 80px
         margin: 0
@@ -363,14 +551,50 @@
         line-height: 3.0rem
         text-transform: none
         text-align: justify
+        @include media ("<huge")
+          font-size: 1.5rem
+          line-height: 2.8rem
+        @include media ("<desktop")
+          padding: 30px 25px 0 0
+        @include media ("<tablet")
+          margin-top: 235px
+          padding: 0
+          text-align: left
 
-    .landing-1__swiper-img
+    .landing-1__swiper-img--wrapper
+      display: block
       width: 272px
-      height: 279px
+      flex-shrink: 0
       margin-right: 55px
+      @include media ("<desktop")
+        margin-right: 30px
+      @include media ("<tablet")
+        position: absolute
+        top: 55px
+        width: 200px
+        margin-left: 30px
+      
+    .landing-1__swiper-img
+      width: 100%
+      // width: 272px
+      // height: 279px
+      // margin-right: 55px
+      // margin-left: 1px
+      // @include media ("<desktop")
+      //   margin-right: 30px
+    
+    .landing-1__swiper-text
+      display: block
+      @include media ("<tablet")
+        max-width: 500px
+        margin: 0 30px
+      @include media ("<tiny")
+        margin: 0
+
       margin-left: 1px
+
 
     .swiper-button-prev
       left: 327px
 
-  // &__form-section // have to change it on HTML for uniform styling of sections?
+  // &__form-section // have to DELETE this class from HTML for uniform styling of sections?
