@@ -2,6 +2,8 @@
 
   section
     @include container--content
+    // @include media (">tiny") // IS THIS THE SOLUTION??
+    //   @include container--content
     &:nth-of-type(1), &:nth-of-type(5) // title and splash sections
       overflow: hidden
       
@@ -23,6 +25,8 @@
       padding: 0 15px
     @include media ("<tablet")
       font-size: 2.5rem
+    @include media ("<=tiny")
+      font-size: 2rem
  
     span
       @include media (">desktop")
@@ -42,6 +46,13 @@
       font-size: 1.5rem
     @include media ("<tablet")
       margin: 35px 0
+    @include media ("<=tiny")
+      font-size: 1rem
+      font-weight: 600
+      color: $white
+      line-height: 1.4rem
+      p
+        margin: 0 35px 0 0
 
   // title-pitch children
   &__title-pitch--wrapper
@@ -70,6 +81,8 @@
         font-size: 2.6rem
       @include media ("<tablet")
         font-size: 1.9rem
+    @include media ("<=tiny")
+      display: none
 
   &__pitch-img
     position: absolute
@@ -83,8 +96,11 @@
       right: -50px
     @include media ("<tablet")
       position: static
-      width: 120%
-      margin-left: -60px
+      width: 425px
+      display: block
+      margin: 0 auto
+    @include media ("<=tiny")
+      margin-left: -95px
 
   &__pitch-button
     display: flex
@@ -107,6 +123,9 @@
       font-size: 1.3rem
   // end of title-pitch children
 
+  .btn
+    @include media ("<=tiny")
+      width: 100%
 
   &__price-block
     @include gbackground (100%)
@@ -122,8 +141,9 @@
     @include media ("<large")
       font-size: 3rem
     @include media ("<tablet")
-      font-size: 2.3rem
-      line-height: 3.2rem
+      font-size: 2.2rem
+      line-height: 3rem
+      // letter-spacing: 0.1rem // LOOKS REALLY BAD
     &:not(.landing-1__promo-title)
       margin-bottom: 75px
       @include media ("<tablet")
@@ -283,6 +303,31 @@
   .swiper-button-prev
     left: 0
 
+  .swiper-pagination // REVIEW
+    width: 80%
+    bottom: auto
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    .swiper-pagination-bullet
+      flex-grow: 1
+      height: 1px
+      margin: 0 5px
+      background-color: $text
+      border-radius: unset
+      &:focus
+        outline: none
+      &::after
+        content: " "
+        padding: 10%
+        display: block
+        position: relative
+        bottom: 13px
+      &-active
+        @include gbackground(100%)
+    @include media (">=desktop")
+      display: none
+
 
   .tabs__tab-button-mob
     @include media("<desktop")
@@ -357,78 +402,109 @@
     left: -20px
     margin-top: 105px
     @include media ("<desktop")
-      margin-top: 120px
+      margin-top: 65px
     @include media ("<tablet")
       margin-top: 40px
       left: 0
 
-  &__promo-item
-    position: relative
-    display: flex
-    @include media ("<tablet")
-      position: static
+  &__promo
+    .landing-1__promo-item
+      position: relative
       display: flex
-      justify-content: center
-      margin-bottom: 70px
-    > div
-      display: flex
-      flex-flow: column
-
-      span
-        &:first-child
-          color: $white
-          font-size: 24rem
-          font-weight: 900
-          line-height: 19rem
-          @include media ("<desktop")
-            font-size: 16.8rem
-            line-height: 13.3rem
-        &:not(first-child)
-          color: $text
-          font-size: 1.8rem
-          font-weight: 800
-
-          @include media ("<desktop")
-            font-size: 1.5rem
+      @include media ("<tablet")
+        position: static
+        display: flex
+        justify-content: center
+        margin-bottom: 70px
+      @include media ("<=tiny")
+        display: block
+        margin-bottom: 60px
+        position: static
+      > .landing-1__promo-item-img
+        object-fit: contain
+        @include media ("<=tiny")
+          position: static
+          display: block
+      > .landing-1__promo-item-description
+        display: flex
+        flex-flow: column
+        @include media ("<=tiny")
+          display: block
+          text-align: center
+          margin: 20px auto 0
+        > span
+          &:first-child
+            color: $white
+            font-size: 24rem
+            font-weight: 900
+            line-height: 19rem
+            @include media ("<desktop")
+              font-size: 16.8rem
+              line-height: 13.3rem
+            @include media ("<=tiny")
+              display: none
+          &:not(first-child)
+            color: $text
+            font-size: 1.8rem
+            font-weight: 800
+            @include media ("<desktop")
+              font-size: 1.5rem
 
   &__promo-item-img-wrapper
     position: relative
+    @include media ("<=tiny")
+      position: static
+      margin: 0 auto
 
   &__promo-item-bg
     position: absolute
     top: -100px
     z-index: -1
     left: -140px
+    width: 534px
+    img
+      width: 100%
     @include media ("<desktop")
-      width: 365.2px
-      height: 538.3px
+      width: 393px
+      // width: 365.2px
+      // height: 538.3px
     @include media ("<tablet")
       left: -160px
+      transform: translateX(-50%)
+      left: 50%
+    @include media ("<=tiny")
+      top: -195px
 
   &__promo-item--1
     @include media ("<huge")
       left: 115px
     @include media ("<tablet")
       margin-left: 30px
+    @include media ("<=tiny")
+      margin-left: 0
     .landing-1__promo-item-img
       position: relative
       top: 155px
       left: -7px
       width: 232px
-      height: 234px
+      // height: 234px
       @include media ("<desktop")
-        width: 162.4px
-        height: 163.8px
-      @include media ("<desktop")
+        width: 171px
+        // height: 163.8px
         left: 0
-        top: 186px
-        margin-left: 15px
-      @include media ("<tablet")
-        margin: 0
+        top: 0 // 186px
+        margin-top: 95px
+        margin-left: -30px // 15px
+      @include media ("<=tiny")
+        position: static
+        display: block
+        margin: 60px auto 20px
     .landing-1__promo-item-description
       // margin-left: -280px
       margin-top: 125px
       width: 150px
+      @include media ("<desktop")
+        margin-top: 95px
 
   &__promo-item--2
     margin-top: 87px // top: 87px
@@ -437,17 +513,19 @@
       left: 0
     .landing-1__promo-item-img
       width: 341px
-      height: 245px
-      @include media ("<desktop")
-        width: 238.7px
-        height: 171.5px
+      @include media ("<=tiny")
+        transform: translateX(-50%)
+        margin: 0 50%
     .landing-1__promo-item-description
-      width: 205px
+      max-width: 190px
       margin-left: -65px
       margin-top: -30px
+      > span > span
+        text-transform: none
       @include media ("<desktop")
-        margin-left: -50px
-        width: 150px
+        margin-left: -75px
+        max-width: 158px
+        // width: 150px
 
   &__promo-item--3
     @include media ("<huge")
@@ -455,19 +533,23 @@
     @include media ("<large")
       left: 0
     @include media ("<desktop")
-      margin-left: 70px
+      margin-left: 50px // 70px
     @include media ("<tablet")
       margin-left: -15px
     .landing-1__promo-item-img
       width: 354px
-      height: 247px
+      // height: 247px
       @include media ("<desktop")
-        width: 247.8px
-        height: 172.9px
+        width: 306px
+      @include media ("<=tiny")
+        margin: 0 auto
     .landing-1__promo-item-description
-      width: 165px
+      // width: 165px
+      max-width: 140px
       margin-left: -28px
       margin-top: -23px
+      @include media ("<desktop")
+        margin: auto 0 auto -45px // OK?
 
   &__promo-item--4
     top: -67px
@@ -479,21 +561,22 @@
       margin-left: 0
     .landing-1__promo-item-img
       width: 318px
-      height: 167px
       z-index: 0
       @include media ("<desktop")
-        width: 222.6px
-        height: 116.9px
+        width: 249px
+      @include media ("<=tiny")
+        margin: 0 auto
     .landing-1__promo-item-description
       width: 185px
       margin-top: -40px
       margin-left: -30px
       @include media ("<desktop")
-        margin-left: 0
+        // margin-left: 0
+        margin-top: 60px
         width: 150px
       @include media ("<tablet")
         margin-top: -25px
-        margin-left: -35px          
+        margin-left: 0         
 
   &__goto-catalog
     font-size: 1.8rem
@@ -524,18 +607,52 @@
     .swiper-slide
       display: flex
 
+    .landing-1__swiper-img--wrapper
+      display: block
+      width: 272px
+      flex-shrink: 0
+      margin-right: 55px
+      @include media ("<desktop")
+        margin-right: 30px
+      @include media ("<tablet")
+        position: static
+        width: 100px
+        margin: 0 20px 0 0;
+      @include media ("<=tiny")
+        width: 58px
+
+    .landing-1__swiper-img
+      width: 100%
+    
+    .landing-1__swiper-text
+      display: block
+      @include media ("<tablet")
+        max-width: 500px // DOESN'T WORK ON <p>
+        margin: 0
+
       h3
+        color: $text
         font-size: 2.4rem
         margin: 0
         font-weight: 800
         @include media ("<huge")
           font-size: 2rem
-        @include media ("<tiny")
+        @include media ("<tablet")
           font-size: 1.8rem
+        @include media ("<=tiny")
+          font-size: 1.6rem
+          line-height: 2rem
+
       span
+        color: $text
         font-size: 1.8rem
         @include media ("<huge")
           font-size: 1.5rem
+        @include media ("<tablet")
+          font-size: 1.4rem
+        @include media ("<=tiny")
+          font-size: 1.2rem
+          line-height: 1.5rem
 
       p
         padding: 50px 140px 0 80px
@@ -550,41 +667,16 @@
         @include media ("<desktop")
           padding: 30px 25px 0 0
         @include media ("<tablet")
-          margin-top: 235px
           padding: 0
           text-align: left
-
-    .landing-1__swiper-img--wrapper
-      display: block
-      width: 272px
-      flex-shrink: 0
-      margin-right: 55px
-      @include media ("<desktop")
-        margin-right: 30px
-      @include media ("<tablet")
-        position: absolute
-        top: 55px
-        width: 200px
-        margin-left: 30px
-      
-    .landing-1__swiper-img
-      width: 100%
-      // width: 272px
-      // height: 279px
-      // margin-right: 55px
-      // margin-left: 1px
-      // @include media ("<desktop")
-      //   margin-right: 30px
-    
-    .landing-1__swiper-text
-      display: block
-      @include media ("<tablet")
-        max-width: 500px
-        margin: 0 30px
-      @include media ("<tiny")
-        margin: 0
-
-      margin-left: 1px
+          font-size: 1.4rem
+          margin-top: 80px
+          margin-left: -120px
+          // max-width: 500px
+        @include media ("<=tiny")
+          margin-top: 40px
+          margin-left: -78px
+          line-height: 2rem
 
     .swiper-button-prev
       left: 327px
