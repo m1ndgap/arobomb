@@ -3177,8 +3177,7 @@ body {
       .landing-1__pitch-price p {
         display: inline; } }
   .landing-1__pitch-price span {
-    font-size: 3.6rem;
-    line-height: 2.0rem; }
+    font-size: 3.6rem; }
     @media (max-width: 1279px) {
       .landing-1__pitch-price span {
         font-size: 2.6rem; } }
@@ -3231,7 +3230,7 @@ body {
   background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
   display: inline-block;
   color: #FFFFFF;
-  padding: 3px 6px;
+  padding: 3px 7px;
   text-transform: none;
   font-weight: 900; }
 
@@ -3281,6 +3280,17 @@ body {
       @media (max-width: 1023px) {
         .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(2) span {
           margin: 0; } }
+    @media (max-width: 767px) {
+      .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(3) {
+        flex-basis: 100%; } }
+    @media (max-width: 1023px) {
+      .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(4) {
+        flex-basis: 50%; } }
+    @media (max-width: 1023px) {
+      .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(5) {
+        flex-basis: 50%; }
+        .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(5) span {
+          text-align: center; } }
 
 .landing-1 .tabs {
   width: 100%; }
@@ -3681,7 +3691,8 @@ body {
   width: 100%; }
 
 .landing-1 section:nth-of-type(6) .landing-1__swiper-text {
-  display: block; }
+  display: block;
+  margin-left: 1px; }
   @media (max-width: 767px) {
     .landing-1 section:nth-of-type(6) .landing-1__swiper-text {
       max-width: 500px;
