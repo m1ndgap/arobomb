@@ -3357,7 +3357,8 @@ body {
   width: 33px;
   height: 86px;
   margin-top: -43px;
-  background: #F5F8FF; }
+  background: #F5F8FF;
+  z-index: 1; }
   @media (max-width: 1023px) {
     .landing-1 .swiper-button-next, .landing-1 .swiper-button-prev {
       display: none; } }
