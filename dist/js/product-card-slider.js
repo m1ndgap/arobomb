@@ -5,6 +5,14 @@
 var swiper= Swiper;
 var init = false;
 
+const swiperParamsMobile = {
+    speed: 400,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    }
+}
 
 /* Which media query
 **************************************************************/
@@ -18,14 +26,7 @@ function swiperMode() {
         if (!init) {
             console.log(12312)
             init = true;
-            swiper = new Swiper('.product__mobile-slider', {
-                speed: 400,
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
-                    clickable: true,
-                }
-            });
+            swiper = new Swiper('.product__mobile-slider', swiperParamsMobile);
         }
 
     }
