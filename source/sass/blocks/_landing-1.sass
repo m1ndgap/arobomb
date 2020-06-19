@@ -30,7 +30,7 @@
         padding: 0 15px
       @include media (">desktop")
         &::after
-          white-space: break-spaces;
+          white-space: break-spaces
           content: "\A"
 
   &__title-pitch
@@ -138,7 +138,7 @@
         justify-content: center
       @include media ("<tiny")
         display: block
-          
+
       .orb-list__item
         width: 175px
         @include media ("<desktop")
@@ -166,27 +166,21 @@
         //       text-align: center
         //       margin: 0
 
-        // &:nth-child(3) // give names to items? item-3
-        //   @include media ("<tablet")
-        //     flex-basis: 100%
-          
-        // &:nth-child(4) // give names to items? item-4
-        //   @include media ("<desktop")
-        //     flex-basis: 35%
-        //   @include media ("<tablet")
-        //     flex-basis: 50%
 
-        // &:nth-child(5) // give names to items? item-5
-        //   @include media ("<desktop")
-        //     flex-basis: 35%
-        //     span
-        //       text-align: center
-        //       max-width: 175px
-        //   @include media ("<tablet")
-        //     flex-basis: 50%
+        &:nth-child(3)
+          @include media ("<tablet")
+            flex-basis: 100%
 
+        &:nth-child(4)
+          @include media ("<desktop")
+            flex-basis: 50%
 
-  // 3RD SECTION
+        &:nth-child(5)
+          @include media ("<desktop")
+            flex-basis: 50%
+            span
+              text-align: center
+
   .tabs
     width: 100%
     @include media ("<large")
@@ -286,6 +280,7 @@
 
   .swiper-button-prev
     left: 0
+
 
   .tabs__tab-button-mob
     @include media("<desktop")
@@ -390,6 +385,7 @@
           color: $text
           font-size: 1.8rem
           font-weight: 800
+
           @include media ("<desktop")
             font-size: 1.5rem
 
@@ -413,6 +409,14 @@
     @include media ("<tablet")
       margin-left: 30px
     .landing-1__promo-item-img
+
+  &__promo-img
+    &-splash // change to 123
+      position: absolute
+      top: -100px
+      z-index: -1
+      left: -140px
+    &-che
       // z-index: 1
       position: relative
       top: 155px
@@ -586,6 +590,9 @@
         margin: 0 30px
       @include media ("<tiny")
         margin: 0
+
+      margin-left: 1px
+
 
     .swiper-button-prev
       left: 327px
