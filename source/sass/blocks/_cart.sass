@@ -1,10 +1,14 @@
 .cart
   @include container--content()
+  position: relative
 
   &__tabs
+    position: relative
     @include media("<desktop")
       display: flex
       justify-content: center
+
+
 
   &__tab-content
     opacity: 0
@@ -35,14 +39,19 @@
       align-items: center
       width: 100%
       max-width: 600px
+    @include media("<tablet")
+      max-width: unset
 
 
   &__items
     margin-top: 29px
+    @include media("<tablet")
+      width: 100%
 
   &__item
     position: relative
     display: flex
+
 
   &__item + &__item
     margin-top: 37px
@@ -54,11 +63,20 @@
       width: calc(100% - 140px)
       height: 1px
       @include gbackground(100%)
+    @include media("<tablet")
+      &:before
+        width: 100%
 
 
   &__item-img-wrap
     margin: 0 0 0 11px
     max-width: 106px
+    @include media("<tablet")
+      width: 62px
+      max-width: unset
+      flex-shrink: 0
+      display: flex
+      align-items: center
 
   &__item-img
     width: 100%
@@ -68,36 +86,57 @@
     display: flex
     max-width: 198px
     flex-flow: column nowrap
+    @include media("<tablet")
+      max-width: unset
+      margin: 8px -150px 0 10px
 
   &__item-name
     @include subtitle(1.8rem)
     font-weight: 900
     line-height: 100%
+    @include media("<tablet")
+      font-size: 1.2rem
 
   &__item-price
     margin-top: 2px
     @include subtitle(2.4rem)
     font-weight: 400
     text-transform: none
+    @include media("<tablet")
+      font-size: 1.4rem
+      order: 1
+      margin: auto 0 7px 0
 
   &__item-code
     margin-top: 10px
     @include subtitle(1.4rem)
+    @include media("<tablet")
+      font-size: 0.8rem
+      margin-top: 5px
 
 
   &__item-ui
     width: 180px
     padding-top: 10px
+    @include media("<tablet")
+      width: 130px
+      margin-top: 50px
+      margin-left: auto
 
   &__item-ui-text
     display: block
     @include subtitle(1.8rem)
     font-weight: 900
     text-align: center
+    margin-bottom: 17px
+    @include media("<tablet")
+      display: none
 
   &__item-ui-wrap
     display: flex
-    margin-top: 17px
+
+
+
 
   &__item-number
     @include resetinteractive()
@@ -112,7 +151,10 @@
     background-color: $white
     &:focus, &:active
       outline: 1px solid darken($white, 20%)
-
+    @include media("<tablet")
+      font-size: 1.2rem
+      width: 47px
+      flex-basis: unset
 
   &__item-btn
     @include resetinteractive()
@@ -142,6 +184,10 @@
       &:hover
         svg
           transform: rotate(0deg) translateX(2px)
+    @include media("<tablet")
+      padding: 9px 5px
+      svg
+        max-width: 23px
 
   &__item-close
     @include resetinteractive()
@@ -157,7 +203,14 @@
     &:active
       svg
         transform: translateY(-2px)
-
+    @include media("<tablet")
+      position: absolute
+      top: 0
+      right: 5px
+      margin-left: 0
+      svg
+        width: 20px
+        height: 20px
 
 
   &__total-price
@@ -199,7 +252,7 @@
     text-transform: none
     @include media("<tablet")
       margin-top: unset
-      margin-left: 10px
+      margin-left: auto
 
   &__total-price-proceed-btn
     position: relative

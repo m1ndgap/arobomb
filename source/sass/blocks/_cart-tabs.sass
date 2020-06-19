@@ -28,6 +28,13 @@
       // safari hacks
       .cart__tab-sub-text, .cart__tab-main-text
         color: $white
+    @include media("<tablet")
+      position: absolute
+      left: 0
+      width: 100%
+      opacity: 0
+      &--active
+        opacity: 1
 
   &__tab + &__tab
     position: relative
@@ -45,6 +52,9 @@
       border-top: 7px solid transparent
       border-bottom: 7px solid transparent
       border-left: 13px solid $gradient-end
+    @include media("<tablet")
+      &:before
+        display: none
 
   &__tab-text-mobile
     display: none
