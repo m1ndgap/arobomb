@@ -3281,6 +3281,17 @@ body {
       @media (max-width: 1023px) {
         .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(2) span {
           margin: 0; } }
+    @media (max-width: 767px) {
+      .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(3) {
+        flex-basis: 100%; } }
+    @media (max-width: 1023px) {
+      .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(4) {
+        flex-basis: 50%; } }
+    @media (max-width: 1023px) {
+      .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(5) {
+        flex-basis: 50%; }
+        .landing-1__orb-list-1 .orb-list__wrap .orb-list__item:nth-child(5) span {
+          text-align: center; } }
 
 .landing-1 .tabs {
   width: 100%; }
@@ -3496,26 +3507,32 @@ body {
   .landing-1__promo-item--1 {
     margin-left: 30px; } }
 
-.landing-1__promo-item--1 .landing-1__promo-item-img {
+.landing-1__promo-img-splash {
+  position: absolute;
+  top: -100px;
+  z-index: -1;
+  left: -140px; }
+
+.landing-1__promo-img-che {
   position: relative;
   top: 155px;
   left: -7px;
   width: 232px;
   height: 234px; }
   @media (max-width: 1023px) {
-    .landing-1__promo-item--1 .landing-1__promo-item-img {
+    .landing-1__promo-img-che {
       width: 162.4px;
       height: 163.8px; } }
   @media (max-width: 1023px) {
-    .landing-1__promo-item--1 .landing-1__promo-item-img {
+    .landing-1__promo-img-che {
       left: 0;
       top: 186px;
       margin-left: 15px; } }
   @media (max-width: 767px) {
-    .landing-1__promo-item--1 .landing-1__promo-item-img {
+    .landing-1__promo-img-che {
       margin: 0; } }
 
-.landing-1__promo-item--1 .landing-1__promo-item-description {
+.landing-1__promo-img .landing-1__promo-item-description {
   margin-top: 125px;
   width: 150px; }
 
@@ -3681,7 +3698,8 @@ body {
   width: 100%; }
 
 .landing-1 section:nth-of-type(6) .landing-1__swiper-text {
-  display: block; }
+  display: block;
+  margin-left: 1px; }
   @media (max-width: 767px) {
     .landing-1 section:nth-of-type(6) .landing-1__swiper-text {
       max-width: 500px;
