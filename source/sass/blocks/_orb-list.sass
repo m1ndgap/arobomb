@@ -3,10 +3,12 @@
   &__flex-column
     display: flex
     flex-flow: column
+    @include media ("<tablet")
+      margin-bottom: -40px
     .orb-list__item
       align-items: baseline
       @include media ("<tablet")
-        margin: 20px 10px
+        margin-bottom: 40px
         align-items: center
 
   &__wrap
@@ -21,8 +23,8 @@
       @include media ("<desktop")
         font-size: 1.5rem
         margin: 0 5px
-      // @include media ("<tablet")
-      //   font-size: 1.3rem
+      @include media ("<=tiny")
+        font-size: 1.2rem
 
   &__item
     display: flex

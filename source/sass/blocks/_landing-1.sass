@@ -156,8 +156,6 @@
       flex-wrap: wrap
       @include media ("<desktop")
         justify-content: center
-      @include media ("<tiny")
-        display: block
 
       .orb-list__item
         width: 175px
@@ -167,14 +165,21 @@
             text-align: center
         @include media ("<tablet")
           flex-basis: 50%
-        @include media ("<tiny")
-          margin: 30px auto
+        @include media ("<=tiny")
+          max-width: 150px
+          span
+            margin-top: -20px
+          .orb-list__svgs
+            width: 95px
+          .orb-list__svg-bg
+            width: 100%
+          .orb-list__svg-img
+            width: 45px
 
-        // &:nth-child(1), &:nth-child(2), &:nth-child(3) // give names to items? items 1-3
-        //   @include media ("<desktop")
-        //     flex-basis: 33%
-        //   @include media ("<tablet")
-        //     flex-basis: 50%
+        &:nth-child(1)
+          span
+            @include media ("<=tiny")
+              margin-top: -10px
 
         &:nth-child(2) // give names to items? item-2
           span
@@ -182,24 +187,19 @@
             max-width: 200px
             @include media ("<desktop")
               margin: 0
-        //     @include media ("<desktop")
-        //       text-align: center
-        //       margin: 0
-
+            @include media ("<=tiny")
+              margin-top: -25px
 
         &:nth-child(3)
-          @include media ("<tablet")
-            flex-basis: 100%
+          .orb-list__svgs
+            @include media ("<=tiny")
+              width: 100px
 
-        &:nth-child(4)
-          @include media ("<desktop")
-            flex-basis: 50%
-
-        &:nth-child(5)
-          @include media ("<desktop")
-            flex-basis: 50%
-            span
-              text-align: center
+        // &:nth-child(5)
+          // @include media ("<desktop")
+          //   flex-basis: 100%
+        //     span
+        //       text-align: center
 
   // 3RD SECTION
   .tabs
@@ -268,6 +268,7 @@
     //   height: 100%
 
   .swiper-wrapper
+    // margin-bottom: 30px
     // &::before
     //   content: ""
     //   background-image: linear-gradient(90deg, $bg-color, rgba(255, 255, 255, 0.001))
@@ -304,7 +305,9 @@
     left: 0
 
   .swiper-pagination // REVIEW
-    width: 80%
+    @include media (">=desktop")
+      display: none
+    width: 90%
     bottom: auto
     left: 50%
     transform: translateX(-50%)
@@ -312,7 +315,7 @@
     .swiper-pagination-bullet
       flex-grow: 1
       height: 1px
-      margin: 0 5px
+      margin: 0 8px
       background-color: $text
       border-radius: unset
       &:focus
@@ -325,8 +328,6 @@
         bottom: 13px
       &-active
         @include gbackground(100%)
-    @include media (">=desktop")
-      display: none
 
 
   .tabs__tab-button-mob
@@ -364,21 +365,54 @@
         flex-basis: 50%
       @include media ("<tablet")
         max-width: 175px
+      @include media ("<=tiny")
+        max-width: 144px
       span
         max-width: 280px
         @include media ("<tablet")
           text-align: center
+        @include media ("<=tiny")
+          line-height: 2rem
+          margin-top: -10px
 
     .orb-list__wrap
       flex-wrap: wrap
       > div:nth-of-type(3)
+        .orb-list__svgs
+          @include media ("<=tiny")
+            width: 110px
+        .orb-list__svg-bg
+          @include media ("<=tiny")
+            width: 110px
         .orb-list__svg-img
           margin-left: -20px
+          @include media ("<=tiny")
+            width: 60px
       > div:nth-of-type(6)
+        .orb-list__svgs
+          @include media ("<=tiny")
+            width: 95px
+        .orb-list__svg-bg
+          @include media ("<=tiny")
+            width: 95px
         .orb-list__svg-img
           margin-top: 10px
+          @include media ("<=tiny")
+            width: 60px
         span
           max-width: 303px
+      
+    .orb-list__svgs
+      @include media ("<=tiny")
+        width: 105px
+
+    .orb-list__svg-bg
+      @include media ("<=tiny")
+        width: 105px
+
+    .orb-list__svg-img
+      @include media ("<=tiny")
+        width: 50px
 
 
   // 5TH SECTION
@@ -603,6 +637,11 @@
       margin: 100px 0
       @include media ("<desktop")
         margin: 0
+        padding-bottom: 71px
+      @include media ("<tablet")
+        margin-top: 41px
+      @include media ("<=tiny")
+        padding-bottom: 31px
 
     .swiper-slide
       display: flex
@@ -680,5 +719,13 @@
 
     .swiper-button-prev
       left: 327px
+    
+    .swiper-pagination
+      width: 105% // better this than to change margin on bullets?
+      margin-top: 70px
+      @include media ("<tablet")
+        margin-top: 40px
+      @include media ("<=tiny")
+        margin-top: 30px
 
   // &__form-section // have to DELETE this class from HTML for uniform styling of sections?

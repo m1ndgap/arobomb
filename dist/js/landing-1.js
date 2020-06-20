@@ -2,10 +2,10 @@
 
 let landing1TabsSwiper = new Swiper('.tabs-swiper-container', {
 	speed: 400,
-	slidesPerView: 1,
+	slidesPerView: 2,
 	spaceBetween: 30,
 	observer: true,
-	centeredSlides: true,
+	centeredSlides: false,
 	grabCursor: true,
 	loop: true,
 	navigation: {
@@ -17,15 +17,11 @@ let landing1TabsSwiper = new Swiper('.tabs-swiper-container', {
         clickable: true,
     },
 	breakpoints: {
-		400: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-			centeredSlides: false,
-		},
 		500: {
 			slidesPerView: 3,
+			centeredSlides: true,
 		},
-		
+	
 		600: {
 			slidesPerView: 4,
 			centeredSlides: false,
@@ -33,7 +29,7 @@ let landing1TabsSwiper = new Swiper('.tabs-swiper-container', {
 		
 		900: {
 			slidesPerView: 5,
-			spaceBetween: 30
+			centeredSlides: true,
 		}
 	}
 });
