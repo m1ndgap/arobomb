@@ -3,12 +3,22 @@
   justify-content: space-between
   flex-flow: row wrap
   padding: 0 45px
+  @include media("<desktop")
+    width: 100%
+    max-width: 500px
+    margin: 0 auto
+    padding: 0 3px 50px 3px
 
   &__wrapper
     flex-basis: 50%
     max-width: 454px
     label:not(.cart-form__custom-checkbox-label)
       display: none
+    @include media("<large")
+      flex-basis: 46%
+    @include media("<desktop")
+      flex-basis: 100%
+      max-width: unset
 
   &__fieldset
     @include resetmargin
@@ -32,8 +42,10 @@
       text-transform: uppercase
       color: $text
       border: none
+      border-radius: 0
       background-color: $white
     &--checkbox
+      flex-shrink: 0
       padding-top: 7px
       span
         padding-left: 11px
@@ -59,16 +71,28 @@
     height: 227px
     margin: 40px 54px 0 0
     padding: 83px 46px 40px
+    @include media("<large")
+      margin: 0 0 0 10px
+    @include media("<desktop")
+      margin-top: 30px
+      padding: 0
+      height: unset
+      flex-basis: 100%
+
 
   &__price-border
     position: absolute
     top: 0
     left: 0
     pointer-events: none
+    @include media("<desktop")
+      display: none
 
   &__price-amount-title
     @include subtitle(3rem)
     font-weight: 900
+    @include media("<desktop")
+      font-size: 2.2rem
 
   &__price-amount-value
     display: block
@@ -78,12 +102,19 @@
 
 
   &__submit-block
+    position: relative
     display: flex
     justify-content: space-between
     align-items: flex-start
     flex-basis:  100%
     margin-top: 31px
     padding-right: 53px
+    @include media("<large")
+      padding: 0
+    @include media("<desktop")
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: center
 
   &__submit-btn-wrap
     display: flex
@@ -107,6 +138,14 @@
       pointer-events: none
       background-color: lighten($text, 30%)
 
+    @include media("<large")
+      flex-basis: 45%
+    @include media("<desktop")
+      width: 100%
+      max-width: 500px
+      padding: 5px
+      align-items: center
+
   &__submit-btn-text
     margin: 15px 15px 4px
     span
@@ -126,6 +165,14 @@
       font-weight: 300
       text-align: left
       letter-spacing: 0
+    @include media("<desktop")
+      margin: 0 0 0 20px
+      span:nth-child(1)
+        font-size: 1.2rem
+      span:nth-child(2)
+        font-size: 1.2rem
+
+
   &__submit-btn-icons
     display: flex
     flex-flow: column
@@ -136,6 +183,39 @@
       &:nth-child(2)
         margin: 12px 0 0 0
         transform: translateX(-5px)
+    @include media("<desktop")
+      margin: 5px
+      svg
+        height: 35px
+        &:nth-child(2)
+          height: 20px
+
+  &__bill-block
+    &:before
+      content: "или"
+      position: absolute
+      top: 35px
+      left: 48%
+      transform: translateX(-50%)
+      display: block
+      @include subtitle(1.8rem)
+      font-weight: 900
+      color: lighten($text, 30%)
+    @include media("<large")
+      &:before
+        font-size: 1.2rem
+        left: 47.6%
+
+    @include media("<desktop")
+      position: relative
+      margin-top: 61px
+      width: 100%
+      max-width: 500px
+      &:before
+        font-size: 1.6rem
+        left: 50%
+        top: unset
+        bottom: calc(100% + 22px)
 
 
   &__bill-btn
@@ -176,6 +256,12 @@
       @include subtitle(3.5rem)
       color: $btn
       font-weight: 300
+
+    @include media("<desktop")
+      padding: 20px
+      width: 100%
+      span:nth-of-type(1), span:nth-child(2)
+        font-size: 1.2rem
 
   &__upload-wrap
     margin-top: 21px
@@ -226,4 +312,6 @@
       @include subtitle(3.5rem)
       color: $btn
       font-weight: 300
+    @include media("<desktop")
+      display: none
 

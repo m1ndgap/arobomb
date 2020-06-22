@@ -2,6 +2,10 @@
 
   &__tabs
     padding-left: 45px
+    @include media("<desktop")
+      padding-left: 0
+    @include media("<tablet")
+      height: 40px
 
 
   &__tab
@@ -30,6 +34,7 @@
         color: $white
     @include media("<tablet")
       position: absolute
+      padding: 12px 13px
       left: 0
       width: 100%
       opacity: 0
@@ -53,13 +58,13 @@
       border-bottom: 7px solid transparent
       border-left: 13px solid $gradient-end
     @include media("<tablet")
+      position: absolute
+      margin-left: 0
       &:before
         display: none
+      &--active
+        pointer-events: none
 
-  &__tab-text-mobile
-    display: none
-    @include media('<tablet')
-      display: block
 
   &__tab-text
     display: flex
@@ -72,6 +77,9 @@
       max-width: 187px
     &--tab-2
       max-width: 250px
+    @include media('<tablet')
+      max-width: unset
+      flex-flow: row nowrap
 
   &__tab-sub-text, &__tab-main-text
     display: inline
@@ -82,15 +90,41 @@
     color: transparent
     -webkit-background-clip: text
     background-clip: text
+
+
   &__tab-sub-text
     font-size: 1.8rem
     line-height: 2.0rem
     letter-spacing: -0.2px
     text-align: left
+    @include media('<tablet')
+      font-size: 1.2rem
+      font-weight: 800
+      letter-spacing: 2px
+      line-height: 100%
+
   &__tab-main-text
     margin-left: -3px
     font-weight: 900
     font-size: 3rem
     line-height: 106%
     letter-spacing: 2.8px
+    @include media('<tablet')
+      margin-left: 10px
+      font-size: 1.2rem
+      font-weight: 800
+      letter-spacing: 2px
+      line-height: 100%
+
+  &__tab-text-mobile
+    display: none
+    @include media('<tablet')
+      margin-left: auto
+      display: block
+      font-size: 1.2rem
+      font-weight: 800
+      letter-spacing: 4px
+      line-height: 100%
+      &--thin
+        font-weight: 500
 

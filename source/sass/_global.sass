@@ -82,6 +82,8 @@ body
     padding-top: 95px
     @include media("<huge")
       padding-top: 150px
+    @include media("<tablet")
+      padding-top: 90px
   &--bg-3
     background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-4.jpg")
     background-repeat: no-repeat
@@ -140,6 +142,8 @@ body
     background: #A9A9A9
     margin: 0
     transition: outline $transition
+    border-radius: 0
+    flex-shrink: 0
     &:checked
       ~ svg
         opacity: 1
