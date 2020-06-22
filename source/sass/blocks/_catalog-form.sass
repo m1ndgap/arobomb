@@ -37,10 +37,20 @@
     @include media ("<desktop")
       width: 100%
       opacity: 0.7
+    @include media ("<tablet")
+      background: $white
+      opacity: 1
+      color: $black
+      font-size: 1.4rem
     &::placeholder
       color: $white
       text-transform: uppercase
       font-weight: 600
+      @include media ("<tablet")
+        color: $text
+        opacity: 0.5
+    &:focus
+      opacity: 0.9
     &--error
       outline: 1px solid $main-link
       color: $main-link
@@ -49,7 +59,6 @@
 
   &__btn
     width: 373px
-    height: 45px
     padding: 15px 10px
     border: 2px solid $btn
     transition: background-color $transition, color $transition, outline $transition
