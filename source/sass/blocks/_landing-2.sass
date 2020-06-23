@@ -63,36 +63,49 @@
   &__orb-list-1
     .orb-list__wrap
       flex-wrap: wrap
-      @include media ("<desktop")
+      @include media ("<large")
         justify-content: center
 
       .orb-list__item
         width: 196px
-        @include media (">=huge")
+        @include media (">=large")
           align-items: baseline
-        @include media ("<huge")
+        @include media ("<large") // not working when I refresh page
           flex-basis: 33%
+          margin: 0 10px 40px
           span
             text-align: center
         @include media ("<tablet")
           flex-basis: 50%
         @include media ("<=tiny")
           max-width: 150px
-
           span
             margin-top: -20px
             @include media ("<huge")
-              font-size: 1.5rem
+              font-size: 1.2rem
               margin: 0 5px
-
           .orb-list__svgs
-            width: 95px
-            
+            width: 95px 
           .orb-list__svg-bg
             width: 100%
-
           .orb-list__svg-img
             width: 45px
+        
+        &:nth-child(2), &:nth-child(3) // give names to items? item-2
+          span
+            @include media ("<=tiny")
+              margin-top: -15px
+
+        &:nth-child(3)
+          @include media ("<=tiny")
+            margin-right: 30px
+
+        &:nth-child(4), &:nth-child(5)
+          @include media ("<=tiny")
+            max-width: 110px
+            span
+                margin-top: -22px
+          
 
   // 7TH SECTION
   section:nth-of-type(7)
