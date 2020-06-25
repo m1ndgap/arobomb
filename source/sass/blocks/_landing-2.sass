@@ -70,9 +70,8 @@
         width: 196px
         @include media (">=large")
           align-items: baseline
-        @include media ("<large") // not working when I refresh page
+        @include media ("<large")
           flex-basis: 33%
-          margin: 0 10px 40px
           span
             text-align: center
         @include media ("<tablet")
@@ -106,6 +105,80 @@
             span
                 margin-top: -22px
           
+
+  // 3RD SECTION
+
+
+  // 4TH SECTION
+
+
+  // 5TH SECTION
+  &__orb-list-2
+
+    .landing-2__subtitle // apply to all subtitles?
+      margin-bottom: 100px
+      @include media ("<desktop")
+        margin-bottom: 50px
+      @include media ("<tablet")
+        margin-bottom: 30px
+
+    .orb-list__item
+      width: 303px
+      flex-basis: 33%
+      @include media ("<tablet")
+        flex-basis: 50%
+        max-width: 185px
+      @include media ("<=tiny")
+        max-width: 144px
+      span
+        max-width: 296px
+        @include media ("<tablet")
+          text-align: center
+        @include media ("<=tiny")
+          line-height: 2rem
+          margin-top: -10px
+
+    .orb-list__wrap
+      flex-wrap: wrap
+      > div:nth-of-type(1)
+        .orb-list__svg-img
+          margin-top: 0 // what is making this become necessary?
+        span
+          max-width: 200px
+          margin-top: 15px
+      > div:nth-of-type(3)
+        .orb-list__svgs
+          @include media ("<=tiny")
+            width: 110px
+        .orb-list__svg-bg
+          @include media ("<=tiny")
+            width: 110px
+      > div:nth-of-type(5)
+        span
+          max-width: 276px
+      > div:nth-of-type(6)
+        .orb-list__svgs
+          @include media ("<=tiny")
+            width: 95px
+        .orb-list__svg-bg
+          @include media ("<=tiny")
+            width: 95px
+        span
+          // max-width: 303px
+          margin-top: 15px
+      
+    .orb-list__svgs
+      @include media ("<=tiny")
+        width: 105px
+
+    .orb-list__svg-bg
+      @include media ("<=tiny")
+        width: 105px
+
+    .orb-list__svg-img
+      @include media ("<=tiny")
+        width: 60px
+
 
   // 7TH SECTION
   section:nth-of-type(7)
