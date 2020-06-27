@@ -48,15 +48,25 @@
         content: "\A"
 
 
+  &__text-highlight
+    @include gbackground (100%)
+    display: inline-block
+    color: $white
+    padding: 5px 15px
+    // padding: 3px 7px // from landing-1
+    font-weight: 900
+
+
   &__subtitle
     @include subtitle(3.6rem)
+    line-height: 4.4rem
     font-weight: 800
+    letter-spacing: 0.2rem
     @include media ("<large")
       font-size: 3rem
     @include media ("<tablet")
       font-size: 2.2rem
       line-height: 3rem
-      // letter-spacing: 0.1rem // LOOKS REALLY BAD
 
   
   // 2ND SECTION
@@ -107,6 +117,195 @@
           
 
   // 3RD SECTION
+  &__promo
+    position: relative
+    margin-bottom: 135px
+    @include media ("<tablet")
+      margin: 0
+      
+    > div // promo-rows
+      display: flex
+      @include media ("<tablet")
+        display: block
+
+  &__promo-row--1
+    justify-content: space-between
+    position: relative
+    top: 35px
+
+  &__promo-row--2
+    justify-content: space-around
+    position: relative
+    margin-left: 163px
+    margin-top: 30px
+    @include media ("<desktop")
+      margin-top: 65px
+    @include media ("<tablet")
+      margin-top: 40px
+      left: 0
+
+  &__promo
+    // margin-top: 60px
+
+    .svg-grad-big-arrow
+      left: 110px
+
+    .landing-2__promo-item
+      position: relative
+      display: flex
+      flex-basis: 50%
+      @include media ("<tablet")
+        position: static
+        display: flex
+        justify-content: center
+        margin-bottom: 70px
+      @include media ("<=tiny")
+        display: block
+        margin-bottom: 60px
+        position: static
+      > span
+        color: $white
+        font-size: 28.8rem
+        font-weight: 900
+        line-height: 35.1rem
+        @include media ("<desktop")
+          // font-size: 16.8rem
+          // line-height: 13.3rem
+        @include media ("<=tiny")
+          display: none
+      > .landing-2__promo-item-description
+        display: flex
+        flex-flow: column
+        @include media ("<=tiny")
+          display: block
+          text-align: center
+          margin: 20px auto 0
+        > span
+          &:first-of-type
+            color: $text
+            font-size: 1.8rem
+            font-weight: 800
+            text-transform: uppercase
+            @include media ("<desktop")
+              font-size: 1.5rem
+          &:not(first-of-type)
+            font-size: 1.6rem
+
+      .svg-promo
+        margin-bottom: 15px
+
+      .landing-2__text-highlight
+        padding: 3px 5px
+
+  &__promo-item--1
+    .landing-2__promo-item-description
+      max-width: 448px
+      span:first-of-type
+        margin-bottom: 20px
+  
+  &__promo-item--2
+    bottom: 25px
+    .landing-2__promo-item-description
+      align-self: center
+      max-width: 325px
+      span:first-of-type
+        margin-bottom: 25px
+  
+  &__promo-item--3
+    .landing-2__promo-item-description
+      align-self: center // not exactly it...
+      max-width: 230px
+
+  &__promo-item--4
+    margin-left: 100px
+    .landing-2__promo-item-description
+      align-self: center
+      max-width: 245px
+    
+            
+  // &__promo-item--1
+  //   @include media ("<huge")
+  //     left: 115px
+  //   @include media ("<tablet")
+  //     margin-left: 30px
+  //   @include media ("<=tiny")
+  //     margin-left: 0
+  //   .landing-2__promo-item-img
+  //     position: relative
+  //     top: 155px
+  //     left: -7px
+  //     width: 232px
+  //     // height: 234px
+  //     @include media ("<desktop")
+  //       width: 171px
+  //       // height: 163.8px
+  //       left: 0
+  //       top: 0 // 186px
+  //       margin-top: 95px
+  //       margin-left: -30px // 15px
+  //     @include media ("<=tiny")
+  //       position: static
+  //       display: block
+  //       margin: 60px auto 20px
+  //   .landing-2__promo-item-description
+  //     // margin-left: -280px
+  //     margin-top: 125px
+  //     width: 150px
+  //     @include media ("<desktop")
+  //       margin-top: 95px
+
+  // &__promo-item--2
+  //   margin-top: 87px // top: 87px
+  //   left: -127px
+  //   @include media ("<large")
+  //     left: 0
+  //   .landing-1__promo-item-description
+  //     max-width: 190px
+  //     margin-left: -65px
+  //     margin-top: -30px
+  //     > span > span
+  //       text-transform: none
+  //     @include media ("<desktop")
+  //       margin-left: -75px
+  //       max-width: 158px
+  //       // width: 150px
+
+  // &__promo-item--3
+  //   @include media ("<huge")
+  //     left: 115px
+  //   @include media ("<large")
+  //     left: 0
+  //   @include media ("<desktop")
+  //     margin-left: 50px // 70px
+  //   @include media ("<tablet")
+  //     margin-left: -15px
+  //   .landing-1__promo-item-description
+  //     // width: 165px
+  //     max-width: 140px
+  //     margin-left: -28px
+  //     margin-top: -23px
+  //     @include media ("<desktop")
+  //       margin: auto 0 auto -45px // OK?
+
+  // &__promo-item--4
+  //   top: -67px
+  //   left: 10px
+  //   @include media ("<desktop")
+  //     left: 0
+  //   @include media ("<tablet")
+  //     // margin-top: 30px
+  //     margin-left: 0
+  //   .landing-1__promo-item-description
+  //     width: 185px
+  //     margin-top: -40px
+  //     margin-left: -30px
+  //     @include media ("<desktop")
+  //       // margin-left: 0
+  //       margin-top: 60px
+  //       width: 150px
+  //     @include media ("<tablet")
+  //       margin-top: -25px
+  //       margin-left: 0
 
 
   // 4TH SECTION
@@ -188,11 +387,11 @@
       margin: 100px 0
       @include media ("<desktop")
         margin: 0
-        padding-bottom: 71px
+        padding-bottom: 90px
       @include media ("<tablet")
-        margin-top: 41px
+        margin-top: 60px
       @include media ("<=tiny")
-        padding-bottom: 31px
+        padding-bottom: 50px
 
     .swiper-slide
       display: flex
@@ -298,15 +497,15 @@
     @include media (">=desktop")
       display: none
     width: 105% // better this than to change margin on bullets?
-    bottom: auto
+    bottom: auto // 15px
     left: 50%
     transform: translateX(-50%)
     display: flex
-    margin-top: 70px
+    margin-top: 70px // 85px
     @include media ("<tablet")
-      margin-top: 40px
+      margin-top: 40px // 55px
     @include media ("<=tiny")
-      margin-top: 30px
+      margin-top: 30px // 45px
 
     .swiper-pagination-bullet
       flex-grow: 1
@@ -318,7 +517,7 @@
         outline: none
       &::after
         content: " "
-        padding: 10%
+        padding: 15px
         display: block
         position: relative
         bottom: 13px

@@ -179,9 +179,12 @@ body
   &:hover
     stroke: url(#linear-grad-3)
 
-.svg-grad-big-arrow
+// might go into landing.sass
+.svg-grad-big-arrow 
   fill: url(#linear-grad-4)
   position: absolute
-  right: 0
   @include media ("<large")
     display: none
+
+.svg-promo // maybe just put this on landing through nesting, doesn't need a class
+  fill: url(#linear-grad-4)
