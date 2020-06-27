@@ -51,6 +51,11 @@
             <stop offset="1" stop-color="#669FFF"></stop>
         </linearGradient>
     
+<linearGradient id="paint0_linear" x1="1.00001" y1="182.848" x2="1287" y2="182.848" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF8BDE"></stop>
+<stop offset="1" stop-color="#669FFF"></stop>
+</linearGradient>
+
 <linearGradient id="paint0_linear" x1="9.75794e-08" y1="12.881" x2="25" y2="12.881" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FF8BDE"></stop>
 <stop offset="1" stop-color="#669FFF"></stop>
@@ -269,6 +274,9 @@
 <path d="M3.64645 12.3536C3.84171 12.5488 4.15829 12.5488 4.35355 12.3536L7.53553 9.17157C7.7308 8.97631 7.7308 8.65973 7.53553 8.46447C7.34027 8.2692 7.02369 8.2692 6.82843 8.46447L4 11.2929L1.17157 8.46447C0.976311 8.2692 0.659729 8.2692 0.464466 8.46447C0.269204 8.65973 0.269204 8.97631 0.464466 9.17157L3.64645 12.3536ZM3.5 2.18557e-08L3.5 12L4.5 12L4.5 -2.18557e-08L3.5 2.18557e-08Z"></path>
 </symbol><symbol id="faq-up-arrow" viewBox="0 0 8 13">
 <path d="M4.35355 0.646446C4.15829 0.451184 3.84171 0.451184 3.64645 0.646446L0.464466 3.82843C0.269204 4.02369 0.269204 4.34027 0.464466 4.53553C0.659728 4.7308 0.976311 4.7308 1.17157 4.53553L4 1.70711L6.82843 4.53553C7.02369 4.7308 7.34027 4.7308 7.53553 4.53553C7.7308 4.34027 7.7308 4.02369 7.53553 3.82843L4.35355 0.646446ZM4.5 13L4.5 1L3.5 1L3.5 13L4.5 13Z"></path>
+</symbol><symbol id="form-wrap" viewBox="0 0 1288 355">
+<path d="M1249.5 324.525C1171.6 358.833 1054.48 334.146 989.824 327.057C905.143 317.815 926.626 340.603 782.292 343.515C621.064 346.806 603.856 318.068 460.044 325.791C380.16 330.095 386.104 338.831 260.855 348.579C60.2057 364.15 10.8777 344.148 2.22188 314.397C-3.8268 293.508 14.4235 282.874 16.8221 225.778C18.4907 184.887 9.93915 173.367 9.522 132.096C9.41771 122.854 8.89628 62.7196 25.1651 32.0829C56.9728 -27.6716 158.445 15.4985 346.371 24.487C462.13 30.0573 452.431 15.1187 590.403 21.955C695.838 27.2721 721.388 37.0202 809.407 34.6148C839.859 33.8552 849.453 32.336 1000.25 15.6251C1161.38 -2.22529 1242.41 -10.201 1266.19 32.0829C1278.49 53.8578 1282.77 90.3181 1280.79 118.17C1277.76 161.973 1260.14 170.961 1263.06 206.789C1266.39 248.439 1292.36 262.745 1286 289.077C1281.62 307.561 1264.83 317.815 1249.5 324.525Z" stroke-width="2" stroke-miterlimit="10"></path>
+
 </symbol><symbol id="icon-checkmark" viewBox="0 0 18 14">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7042 1.71015L5.92264 13.4099L0.294922 7.82126L1.7042 6.40213L5.92264 10.5913L16.2949 0.291016L17.7042 1.71015Z"></path>
 </symbol><symbol id="icon-close" viewBox="0 0 25 25">
@@ -701,7 +709,18 @@
     <section>
         <h2 class="landing-2__subtitle">предварительный расчет вложений и прибыли:</h2>
         <p>точный расчет и финальные условия производиться менеджером и согласовываются вместе с вами</p>
-        <!-- <p> inside h2? -->
+
+        <!-- REWVIEW THIS ENTIRE THING BELOW -->
+        <div class="landing-2__calculator-wrapper">
+            <div class="landing-2__calculator-imgs">
+                <!-- <img class="landing-2__calculator-bg" srcset="./img/landing-2_calculator-bg.png, ./img/landing-2_calculator-bg-2x.png 2x" src="./img/landing-2_calculator-bg-2x.png" alt=""> -->
+                <img class="landing-2__calculator-img" srcset="./img/landing-1_promo-che-1x.png, ./img/landing-1_promo-che-2x.png 2x" src="./img/landing-1_promo-che-2x.png" alt="">
+            </div>
+            <div class="landing-2__calculator">
+                <h3 class="landing-2__text-highlight">калькулятор прибыли:</h3>
+                <!-- REVIEW -->
+            </div>
+        </div>
 
     </section>
 
@@ -789,7 +808,13 @@
     </section>
 
     <section>
+
+        <svg width="1288" height="355" viewBox="0 0 1288 355">
+            <use xlink:href="#form-wrap"></use>
+        </svg>
+
         <h2 class="landing-2__subtitle">Получите расчет прибыли прямо сейчас</h2>
+
 
     </section>
 

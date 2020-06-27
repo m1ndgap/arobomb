@@ -4313,6 +4313,39 @@ body {
     align-self: center;
     max-width: 245px; }
 
+.landing-2 section:nth-of-type(4) h2 {
+  margin-bottom: 0; }
+
+.landing-2 section:nth-of-type(4) h2 + p {
+  color: #444444;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0; }
+
+.landing-2 section:nth-of-type(4) h3 {
+  font-size: 3.6rem;
+  line-height: 2rem;
+  font-weight: 800;
+  padding: 20px;
+  text-transform: uppercase; }
+
+.landing-2__calculator-wrapper {
+  display: flex;
+  justify-content: space-between; }
+
+.landing-2__calculator-imgs {
+  position: relative; }
+
+.landing-2__calculator-bg {
+  position: absolute; }
+
+.landing-2__calculator-img {
+  position: relative; }
+
+.landing-2__calculator {
+  width: 50%; }
+
 .landing-2__orb-list-2 .landing-2__subtitle {
   margin-bottom: 100px; }
   @media (max-width: 1023px) {
@@ -4377,6 +4410,15 @@ body {
 @media (max-width: 400px) {
   .landing-2__orb-list-2 .orb-list__svg-img {
     width: 60px; } }
+
+.landing-2 section:nth-of-type(6) {
+  position: relative; }
+  .landing-2 section:nth-of-type(6) svg {
+    stroke: url(#linear-grad-4);
+    fill: transparent;
+    position: absolute;
+    left: 53px;
+    top: -78px; }
 
 .landing-2 section:nth-of-type(7) .partners-swiper-container {
   overflow: hidden;
