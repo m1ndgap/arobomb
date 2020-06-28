@@ -1,0 +1,42 @@
+.pcalculator
+  position: relative
+  display: flex
+  justify-content: space-between
+
+  &__text
+    position: relative
+    z-index: 2
+    h2
+      margin-bottom: 0
+      font-size: 3.4rem
+      letter-spacing: 0.2rem
+      font-weight: 900
+
+    h2 + p
+      color: $text
+      font-size: 1.6rem
+      line-height: 2rem
+      letter-spacing: 0.1rem
+      margin-top: 0
+      text-transform: uppercase
+
+  &__subtitle
+    position: relative
+    z-index: 2
+
+  &__imgs
+    position: relative
+    z-index: 1
+
+  &__bg
+    position: absolute
+    top: 50%
+    left: -50%
+    transform: translateY(-50%)
+
+  &__img
+    position: relative
+
+  &__calculator
+    z-index: 2
+    width: 50%

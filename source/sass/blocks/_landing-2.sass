@@ -2,7 +2,7 @@
 
   section
     @include container--content
-      
+
   section + section
     margin-top: 150px
     @include media ("<tablet")
@@ -34,7 +34,7 @@
     @include media ("<=tiny")
       font-size: 2rem
       line-height: 2.7rem
- 
+
     span
       padding: 10px 15px
       @include gbackground (700px)
@@ -68,7 +68,7 @@
       font-size: 2.2rem
       line-height: 3rem
 
-  
+
   // 2ND SECTION
   &__orb-list-1
     .orb-list__wrap
@@ -94,12 +94,12 @@
               font-size: 1.2rem
               margin: 0 5px
           .orb-list__svgs
-            width: 95px 
+            width: 95px
           .orb-list__svg-bg
             width: 100%
           .orb-list__svg-img
             width: 45px
-        
+
         &:nth-child(2), &:nth-child(3) // give names to items? item-2
           span
             @include media ("<=tiny")
@@ -114,15 +114,20 @@
             max-width: 110px
             span
                 margin-top: -22px
-          
+
 
   // 3RD SECTION
+
+  &__promo-section
+    position: relative
+    z-index: 3
+
   &__promo
     position: relative
     margin-bottom: 135px
     @include media ("<tablet")
       margin: 0
-      
+
     > div // promo-rows
       display: flex
       @include media ("<tablet")
@@ -144,7 +149,10 @@
       margin-top: 40px
       left: 0
 
+
+
   &__promo
+
 
     .svg-grad-big-arrow
       left: 110px
@@ -201,7 +209,7 @@
       max-width: 448px
       span:first-of-type
         margin-bottom: 20px
-  
+
   &__promo-item--2
     bottom: 25px
     .landing-2__promo-item-description
@@ -209,7 +217,7 @@
       max-width: 325px
       span:first-of-type
         margin-bottom: 25px
-  
+
   &__promo-item--3
     .landing-2__promo-item-description
       align-self: center // not exactly it...
@@ -223,21 +231,15 @@
 
 
   // 4TH SECTION
-  section:nth-of-type(4)
+  &__calculator-section
     // background-image: url("../img/landing-2_calculator-bg.png")
     // background-repeat: no-repeat
     // background-position: left center
     // overflow: visible
+    position: relative
+    z-index: 2
 
-    h2
-      margin-bottom: 0
 
-    h2 + p
-      color: $text
-      font-size: 1.6rem
-      line-height: 2rem
-      letter-spacing: 0.2rem
-      margin-top: 0
 
     h3 // REVIEW
       font-size: 3.6rem
@@ -246,25 +248,13 @@
       padding: 20px
       text-transform: uppercase
 
-  &__calculator-wrapper
-    display: flex
-    justify-content: space-between
-
-  &__calculator-imgs
-    position: relative
-
-  &__calculator-bg
-    position: absolute
-
-  &__calculator-img
-    position: relative
-
-  &__calculator
-    width: 50%
 
 
   // 5TH SECTION
   &__orb-list-2
+    position: relative
+    z-index: 3
+
 
     .landing-2__subtitle // apply to all subtitles?
       margin-bottom: 100px
@@ -317,7 +307,7 @@
         span
           // max-width: 303px
           margin-top: 15px
-      
+
     .orb-list__svgs
       @include media ("<=tiny")
         width: 105px
@@ -399,7 +389,7 @@
 
   &__inline-form-input + &__inline-form-input
     border-left: solid 1px $white
-    
+
 
 
   // 7TH SECTION
@@ -429,13 +419,13 @@
       @include media ("<tablet")
         position: static
         width: 100px
-        margin: 0 20px 0 0;
+        margin: 0 20px 0 0
       @include media ("<=tiny")
         width: 58px
 
     .landing-2__swiper-img
       width: 100%
-    
+
     .landing-2__swiper-text
       display: block
       @include media ("<tablet")
@@ -546,4 +536,3 @@
         bottom: 13px
       &-active
         @include gbackground(100%)
-    
