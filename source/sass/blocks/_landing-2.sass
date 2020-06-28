@@ -335,12 +335,71 @@
   section:nth-of-type(6)
     position: relative
 
-    svg
+    > svg
       stroke: url(#linear-grad-4)
       fill: transparent
       position: absolute
       left: 53px // REVIEW
       top: -78px // REVIEW
+
+    .form__btn
+      margin-left: 19px
+      font-size: 1.4rem
+      line-height: 1.3rem
+      padding: 15px 20px
+      z-index: 1
+
+    .form__cbx-label
+      margin-top: 19px
+      span
+        font-size: 1.4rem
+        line-height: 1.7rem
+        letter-spacing: 0.2rem
+        color: $text
+        z-index: 1
+
+  &__inline-form
+    margin-top: 57px
+
+  &__inline-form-input--wrap
+    display: flex
+
+  &__inline-form-input-clientinfo
+    @include gbackground (100%) // 94opx
+    opacity: 0.7
+    display: flex
+
+  &__inline-form-input
+    background-color: transparent
+    width: 235px
+    padding: 15px
+    border: none
+    color: $white
+    font-weight: 800
+    font-size: 1.8rem
+    // @include media ("<desktop")
+    //   width: 100%
+    //   opacity: 0.7
+    // @include media ("<tablet")
+    //   background: $white
+    //   opacity: 1
+    //   color: $black
+    //   font-size: 1.4rem
+    &::placeholder
+      color: $white
+      text-transform: uppercase
+      font-weight: 600
+      font-size: 1.4rem
+      line-height: 1.3rem
+      @include media ("<tablet")
+        color: $text
+        opacity: 0.5
+    &:focus
+      opacity: 0.9
+
+  &__inline-form-input + &__inline-form-input
+    border-left: solid 1px $white
+    
 
 
   // 7TH SECTION
