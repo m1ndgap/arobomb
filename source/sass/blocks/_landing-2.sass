@@ -171,7 +171,6 @@
 
 
   // 3RD SECTION
-
   &__promo-section
     position: relative
     z-index: 3
@@ -191,6 +190,10 @@
     justify-content: space-between
     position: relative
     top: 35px
+    @include media ("<desktop")
+      position: static
+      margin-top: 40px
+      justify-content: space-around
 
   &__promo-row--2
     justify-content: space-around
@@ -198,7 +201,9 @@
     margin-left: 163px
     margin-top: 30px
     @include media ("<desktop")
+      position: static
       margin-top: 65px
+      margin-left: 0
     @include media ("<tablet")
       margin-top: 40px
       left: 0
@@ -215,6 +220,8 @@
       position: relative
       display: flex
       flex-basis: 50%
+      @include media ("<desktop")
+        flex-basis: auto
       @include media ("<tablet")
         position: static
         display: flex
@@ -230,9 +237,6 @@
         font-weight: 900
         line-height: 35.1rem
         @include media ("<desktop")
-          // font-size: 16.8rem
-          // line-height: 13.3rem
-        @include media ("<=tiny")
           display: none
       > .landing-2__promo-item-description
         display: flex
@@ -261,11 +265,14 @@
   &__promo-item--1
     .landing-2__promo-item-description
       max-width: 448px
+      margin-right: 10px
       span:first-of-type
         margin-bottom: 20px
 
   &__promo-item--2
     bottom: 25px
+    @include media ("<desktop")
+      bottom: auto
     .landing-2__promo-item-description
       align-self: center
       max-width: 325px
@@ -409,15 +416,19 @@
 
   &__inline-form-input--wrap
     display: flex
+    @include media ("<large")
+      flex-basis: 50%
 
   &__inline-form-input-clientinfo
     @include gbackground (100%) // 94opx
     opacity: 0.7
     display: flex
+    flex-wrap: wrap
 
   &__inline-form-input
     background-color: transparent
-    width: 235px
+    // width: 235px
+    width: 100%
     padding: 15px
     border: none
     color: $white
@@ -437,9 +448,7 @@
       font-weight: 600
       font-size: 1.4rem
       line-height: 1.3rem
-      @include media ("<tablet")
-        color: $text
-        opacity: 0.5
+
     &:focus
       opacity: 0.9
 
@@ -450,6 +459,13 @@
       width: 1px
       height: 28px
       align-self: center
+
+  &__inline-form-input--wrap
+    &:nth-child(3)
+      &::before
+        @include media ("<desktop")
+          display: none
+
 
 
 
