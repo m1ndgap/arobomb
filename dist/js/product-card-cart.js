@@ -25,5 +25,5 @@ toCartBtn.addEventListener(`click`, function(){
 buyBtn.addEventListener(`click`, function(){
     let item = this.closest(`.${itemCls}`)
     addToCart(collectDataCatalog(item))
-    window.location.href = '/cart.html'
+    window.location.href = './cart/'
 })

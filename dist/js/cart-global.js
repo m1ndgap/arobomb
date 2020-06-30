@@ -8,7 +8,6 @@ function refreshCartBadge(){
         cartItems += ls[property].quantity
     }
     cartBadge.innerText = cartItems;
-    console.log(cartBadge.innerText)
     if (cartBadge.innerText == 0) {
         cartBadge.classList.remove(`main-menu__basket-items--active`)
     } else (
