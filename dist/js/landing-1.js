@@ -3,7 +3,7 @@
 let landing1TabsSwiper = new Swiper('.tabs-swiper-container', {
 	speed: 400,
 	slidesPerView: 2,
-	spaceBetween: 30,
+	spaceBetween: 45,
 	observer: true,
 	centeredSlides: false,
 	grabCursor: true,
@@ -21,12 +21,12 @@ let landing1TabsSwiper = new Swiper('.tabs-swiper-container', {
 			slidesPerView: 3,
 			centeredSlides: true,
 		},
-	
+
 		600: {
 			slidesPerView: 4,
 			centeredSlides: false,
 		},
-		
+
 		900: {
 			slidesPerView: 5,
 			centeredSlides: true,

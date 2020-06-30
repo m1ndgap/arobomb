@@ -3769,6 +3769,9 @@ body {
       -o-object-fit: contain;
          object-fit: contain; } }
 
+.landing-1 .tabs__text-wrap .swiper-wrapper {
+  max-height: 100%; }
+
 .landing-1 .tabs__text-wrap .swiper-slide {
   width: 185px;
   height: 185px;
