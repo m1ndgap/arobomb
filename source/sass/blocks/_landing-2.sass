@@ -52,6 +52,45 @@
         white-space: break-spaces
         content: "\A"
 
+  &__after-title-text
+    font-size: 1.8rem
+    line-height: 3rem
+    color: $text
+    text-transform: uppercase
+    margin-top: 30px
+    span
+      font-weight: 800
+
+  &__header-info-tags
+    display: flex
+    max-width: 545px
+    color: $text
+    margin-top: 90px
+
+    > div
+      flex-basis: 50%
+
+    .landing-2__text-highlight
+      font-weight: 800
+      font-size: 3.6rem
+      line-height: 2rem
+      padding: 10px
+
+  &__header-tag-text--1
+    font-size: 1.8rem
+    line-height: 2rem
+    text-transform: uppercase
+    font-weight: 500
+    margin: 0
+    max-width: 190px
+
+  &__header-tag-text--2
+    font-size: 1.8rem
+    line-height: 2rem
+    text-transform: uppercase
+    font-weight: 500
+    margin: 0
+    max-width: 126px
 
   &__text-highlight
     @include gbackground (100%)
@@ -61,6 +100,16 @@
     // padding: 3px 7px // from landing-1
     font-weight: 900
 
+  &__header-btn
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-weight: 600
+    font-size: 1.8rem
+    line-height: 1.3rem
+    margin-top: 165px
+    padding: 24px
+    width: 396px
 
   &__subtitle
     @include subtitle(3.6rem)
@@ -336,6 +385,8 @@
       position: absolute
       left: 53px // REVIEW
       top: -78px // REVIEW
+      @include media ("<huge")
+        display: none
 
     .form__btn
       margin-left: 19px
@@ -392,8 +443,13 @@
     &:focus
       opacity: 0.9
 
-  &__inline-form-input + &__inline-form-input
-    border-left: solid 1px $white
+  &__inline-form-input--wrap + &__inline-form-input--wrap
+    &::before
+      content: " "
+      background-color: $white
+      width: 1px
+      height: 28px
+      align-self: center
 
 
 

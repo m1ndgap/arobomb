@@ -4459,6 +4459,44 @@ body {
       white-space: break-spaces;
       content: "\A"; }
 
+.landing-2__after-title-text {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: #444444;
+  text-transform: uppercase;
+  margin-top: 30px; }
+  .landing-2__after-title-text span {
+    font-weight: 800; }
+
+.landing-2__header-info-tags {
+  display: flex;
+  max-width: 545px;
+  color: #444444;
+  margin-top: 90px; }
+  .landing-2__header-info-tags > div {
+    flex-basis: 50%; }
+  .landing-2__header-info-tags .landing-2__text-highlight {
+    font-weight: 800;
+    font-size: 3.6rem;
+    line-height: 2rem;
+    padding: 10px; }
+
+.landing-2__header-tag-text--1 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  max-width: 190px; }
+
+.landing-2__header-tag-text--2 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  max-width: 126px; }
+
 .landing-2__text-highlight {
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -4467,6 +4505,17 @@ body {
   color: #FFFFFF;
   padding: 5px 15px;
   font-weight: 900; }
+
+.landing-2__header-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.3rem;
+  margin-top: 165px;
+  padding: 24px;
+  width: 396px; }
 
 .landing-2__subtitle {
   font-family: "Montserrat", sans-serif;
@@ -4717,6 +4766,9 @@ body {
     position: absolute;
     left: 53px;
     top: -78px; }
+    @media (max-width: 1439px) {
+      .landing-2 section:nth-of-type(6) > svg {
+        display: none; } }
   .landing-2 section:nth-of-type(6) .form__btn {
     margin-left: 19px;
     font-size: 1.4rem;
@@ -4802,8 +4854,12 @@ body {
   .landing-2__inline-form-input:focus {
     opacity: 0.9; }
 
-.landing-2__inline-form-input + .landing-2__inline-form-input {
-  border-left: solid 1px #FFFFFF; }
+.landing-2__inline-form-input--wrap + .landing-2__inline-form-input--wrap::before {
+  content: " ";
+  background-color: #FFFFFF;
+  width: 1px;
+  height: 28px;
+  align-self: center; }
 
 .landing-2 section:nth-of-type(7) .partners-swiper-container {
   overflow: hidden;
