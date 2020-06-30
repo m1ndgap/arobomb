@@ -532,7 +532,7 @@
                     </ul>
                 </li>
                 <li class="main-menu__list-item">
-                    <a href="./product-card.html" class="main-menu__link">Продукт</a>
+                    <a href="./about-product.html" class="main-menu__link">Продукт</a>
                 </li>
                 <li class="main-menu__list-item">
                     <a href="./documents.html" class="main-menu__link">Документы</a>
@@ -554,7 +554,7 @@
             <svg viewBox="0 0 15 15" width="31" height="31">
                 <use xlink:href="#basket"></use>
             </svg>
-            <span class="main-menu__basket-items">2</span>
+            <span class="main-menu__basket-items main-menu__basket-items--active">0</span>
         </a>
     </div>
 </nav>
@@ -622,7 +622,64 @@
 <script src="./js/documents-modal.js"></script>
 
 
+<div class="cbmodal modal">
+
+    <h1 class="cbmodal__brand">#AroBomb</h1>
+
+    <!-- 1st modal -->
+    <div class="cbmodal-form__wrapper modal-wrapper modal-wrapper--active">
+
+        <h2 class="cbmodal-form__title">ОСТАВЬТЕ СВОИ ДАННЫЕ</h2>
+        <p class="cbmodal-form__subtitle">И МЫ ПЕРЕЗВОНИМ ВАМ</p>
+
+        <form action="" class="cbmodal-form__form">
+            <div class="cbmodal-form__form-wrapper">
+                <div class="cbmodal-form__input-wrap">
+                    <label for="cbmodal-form__name">name</label>
+                    <input type="text" id="cbmodal-form__name" class="cbmodal-form__input" placeholder="имя">
+                </div>
+                <div class="cbmodal-form__input-wrap">
+                    <label for="cbmodal-form__tel">tel</label>
+                    <input type="text" id="cbmodal-form__tel" class="cbmodal-form__input cbmodal-form__input--error" placeholder="телефон">
+                </div>
+                <div class="cbmodal-form__input-wrap cbmodal-form__input-wrap--cbx">
+                    <label for="cbmodal-form__cbx" class="cbmodal-form__cbx-label form__cbx-label">
+                        <input type="checkbox" id="cbmodal-form__cbx" class="cbmodal-form__cbx-input form__checkbox">
+                        <svg width="18" height="14" viewBox="0 0 18 14" class="form__checkmark">
+                            <use xlink:href="#icon-checkmark"></use>
+                        </svg>
+                        <span>я согласен с политикой конфидециальости</span>
+                    </label>
+                </div>
+                <div class="cbmodal-form__input-wrap cbmodal-form__btn-wrap">
+                    <input type="submit" class="btn cbmodal-form__submit-btn" value="заказать обратный звонок">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- 2nd modal -->
+    <div class="cbmodal-thanks__wrapper modal-wrapper">
+
+        <h2 class="cbmodal-thanks__title">
+            <span>ваша заявка</span>
+            <span>принята!</span>
+        </h2>
+
+        <p class="cbmodal-thanks__subtitle">Наш менеджер скоро свяжется с Вами</p>
+
+    </div>
+
+    <!-- X -->
+    <button type="button" class="modal__close">
+        <svg viewBox="0 0 25 25" width="25" height="25" class="icon-close">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button>
+</div>
+
 <script src="./js/main-menu.js"></script>
+<script src="./js/cart-global.js"></script>
 <script src="./js/callback-modal.js"></script>
 </body>
 </html>

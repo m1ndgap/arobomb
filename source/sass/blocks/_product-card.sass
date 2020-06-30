@@ -107,6 +107,11 @@
     font-weight: 600
     letter-spacing: 0.5px
     cursor: pointer
+    transition: color $transition, transorm $transition
+    &:hover
+      color: lighten($btn, 15%)
+    &:active
+      transform: scale(1.05)
 
   &__buy-btn
     padding: 7px 51px

@@ -32,3 +32,5 @@ tabSwitches.forEach((tabSwitch) => {
         showTabContent(this)
     });
 })
+
+

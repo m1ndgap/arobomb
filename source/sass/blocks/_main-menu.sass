@@ -311,13 +311,17 @@
     width: 23px
     height: 23px
     padding: 5px
-    font-size: 1.4rem
+    font-size: 1.2rem
     font-weight: 500
     line-height: 100%
     text-align: center
     color: $text
     background-color: $white
     border-radius: 50%
+    opacity: 0
+    &--active
+      opacity: 1
+      transition: opacity $transition
 
   #nav-icon
     display: none

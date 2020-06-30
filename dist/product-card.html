@@ -532,7 +532,7 @@
                     </ul>
                 </li>
                 <li class="main-menu__list-item">
-                    <a href="./product-card.html" class="main-menu__link">Продукт</a>
+                    <a href="./about-product.html" class="main-menu__link">Продукт</a>
                 </li>
                 <li class="main-menu__list-item">
                     <a href="./documents.html" class="main-menu__link">Документы</a>
@@ -554,7 +554,7 @@
             <svg viewBox="0 0 15 15" width="31" height="31">
                 <use xlink:href="#basket"></use>
             </svg>
-            <span class="main-menu__basket-items">2</span>
+            <span class="main-menu__basket-items main-menu__basket-items--active">0</span>
         </a>
     </div>
 </nav>
@@ -601,7 +601,7 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <div class="product__info">
+            <div class="product__info" data-type="aroma" data-code="333333" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1110" data-name="че гевара">
                 <svg width="482" height="364" viewBox="0 0 482 364" fill="none" class="svg-gradient-line product__info-border">
                     <use xlink:href="#product-border-line"></use>
                 </svg>
@@ -741,6 +741,9 @@
 <script src="./js/tabs.js"></script>
 <script src="./js/product-card-modal.js"></script>
 <script src="./js/product-card-slider.js"></script>
+<script src="./js/cart-add.js"></script>
+<script src="./js/product-card-cart.js"></script>
+
 <script>
     (function x(){
         document.querySelector(".main-menu").classList.add('fixed-menu-trailing-gradient')
@@ -805,6 +808,7 @@
 </div>
 
 <script src="./js/main-menu.js"></script>
+<script src="./js/cart-global.js"></script>
 <script src="./js/callback-modal.js"></script>
 </body>
 </html>
