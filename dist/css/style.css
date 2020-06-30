@@ -761,7 +761,8 @@ body {
   background-repeat: no-repeat;
   background-position: right top, left bottom;
   padding-bottom: 30px;
-  background-color: #F5F8FF; }
+  background-color: #F5F8FF;
+  overflow: hidden; }
 
 .main-contact-us {
   background: url("../img/map.png");
@@ -3496,6 +3497,57 @@ body {
     .pcalculator__range .rs-pointer:before, .pcalculator__range .rs-pointer:after {
       display: none; }
 
+.landing-2__header-slider-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin: 50px -240px 0; }
+
+.landing-2__header-slider-controls {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 50px;
+  margin-bottom: 150px;
+  z-index: 3; }
+
+.landing-2__header-slider-pagination {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #D62267;
+  text-transform: uppercase;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 300ms; }
+  .landing-2__header-slider-pagination svg {
+    opacity: 0;
+    fill: #D62267;
+    transition: fill 300ms, transform 300ms, opacity 300ms; }
+  .landing-2__header-slider-pagination:hover {
+    opacity: 0.9; }
+    .landing-2__header-slider-pagination:hover svg {
+      transform: translateX(10px); }
+  .landing-2__header-slider-pagination--active {
+    opacity: 1; }
+    .landing-2__header-slider-pagination--active svg {
+      opacity: 1; }
+
+.landing-2__header-slider-pagination + .landing-2__header-slider-pagination {
+  margin-top: 30px; }
+
+.landing-2__header-slider {
+  z-index: 1;
+  max-width: 1000px; }
+  .landing-2__header-slider .swiper-wrapper {
+    display: flex;
+    align-items: flex-end; }
+
+.landing-2 .swiper-slide {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: flex-end; }
+  .landing-2 .swiper-slide img {
+    max-width: 100%; }
+
 .landing-1 section {
   box-sizing: border-box;
   width: 1440px;
@@ -4350,6 +4402,12 @@ body {
   @media (max-width: 767px) {
     .landing-2 section + section {
       margin-top: 100px; } }
+
+.landing-2__header {
+  display: flex; }
+
+.landing-2__main-title-wrapper {
+  min-width: 60%; }
 
 .landing-2__main-title {
   color: #FFFFFF;

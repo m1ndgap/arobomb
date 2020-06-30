@@ -52,7 +52,56 @@ var calcSlider = new rSlider({
     }
 });
 
-// calcSlider.addEventListener('change', function (evt) {
-//     console.log(1231)
-// })
+///////////////////////////////////////
+//////////// SLIDER ///////////////////
+///////////////////////////////////////
+
+let sliderWrapCls = `landing-2__header-slider-wrapper`;
+let paginationCls = `landing-2__header-slider-pagination`;
+
+function switchPagination(paginations, num){
+    paginations.forEach(function (el) {
+        el.classList.remove(`${paginationCls}--active`)
+    })
+    let activeTab = [...paginations].filter(thistab => thistab.dataset.slide == +num)[0];
+    activeTab.classList.add(`${paginationCls}--active`)
+}
+
+const l2sliderParams = {
+    speed: 500,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    autoplay: {
+        delay: 4200,
+    },
+    loop: true,
+    // preloadImages: false,
+    // // Enable lazy loading
+    // lazy: true,
+    on: {
+        init: function () {
+
+        },
+        slideChangeTransitionEnd: function () {
+            let activeSlideNum = this.$el[0].querySelector('.swiper-slide-active').getAttribute('data-swiper-slide-index')
+            switchPagination(paginations, activeSlideNum)
+        }
+    },
+};
+
+let sliderEl = document.querySelector(`.${sliderWrapCls}`);
+let paginations = sliderEl.querySelectorAll(`.${paginationCls}`);
+let l2slider = new Swiper('.landing-2__header-slider', l2sliderParams);
+
+
+
+paginations.forEach(function(el){
+    el.addEventListener('click', function(){
+        let slideNum = this.dataset.slide
+        l2slider.slideToLoop(+slideNum)
+        switchPagination(paginations, slideNum)
+    })
+})
 

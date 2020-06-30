@@ -96,6 +96,7 @@ body
     background-position: right top, left bottom
     padding-bottom: 30px
     background-color: $bg-color // won't work while I have jpg's on bg
+    overflow: hidden
   &-contact-us
     background: url("../img/map.png")
     background-position: bottom right
@@ -180,7 +181,7 @@ body
     stroke: url(#linear-grad-3)
 
 // might go into landing.sass
-.svg-grad-big-arrow 
+.svg-grad-big-arrow
   fill: url(#linear-grad-4)
   position: absolute
   @include media ("<large")

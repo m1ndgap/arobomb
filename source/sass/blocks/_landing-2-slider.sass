@@ -1,0 +1,54 @@
+.landing-2
+  &__header-slider-wrapper
+    display: flex
+    align-items: flex-end
+    margin: 50px -240px 0
+
+  &__header-slider-controls
+    display: flex
+    flex-flow: column nowrap
+    max-width: 50px
+    margin-bottom: 150px
+    z-index: 3
+
+
+  &__header-slider-pagination
+    font-size: 1.8rem
+    font-weight: 900
+    color: $main-link
+    text-transform: uppercase
+    opacity: 0.7
+    cursor: pointer
+    transition: opacity $transition
+    svg
+      opacity: 0
+      fill: $main-link
+      transition: fill $transition, transform $transition, opacity $transition
+    &:hover
+      opacity: 0.9
+      svg
+        transform: translateX(10px)
+    &--active
+      opacity: 1
+      svg
+        opacity: 1
+
+
+  &__header-slider-pagination + &__header-slider-pagination
+    margin-top: 30px
+
+  &__header-slider
+    z-index: 1
+    max-width: 1000px
+    .swiper-wrapper
+      display: flex
+      align-items: flex-end
+
+  .swiper-slide
+    width: 100%
+    max-width: 100%
+    display: flex
+    align-items: flex-end
+
+    img
+      max-width: 100%
