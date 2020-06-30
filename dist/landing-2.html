@@ -725,24 +725,25 @@
                 <h3 class="landing-2__text-highlight">калькулятор прибыли:</h3>
                 <div class="pcalculator__ui-wrap">
                     <div class="pcalculator__range">
-                        <input type="text" id="calculator-range">
+                         <input type="text" id="calculator-range">
+                        <span class="pcalculator__current-value">300,000</span>
                     </div>
                     <div class="pcalculator__values">
                         <div class="pcalculator__info-text pcalculator__info-text--partners">
                             <span class="pcalculator__info-title">количество потенциальных патрнеров:</span>
-                            <span class="pcalculator__info-value">120</span>
+                            <span class="pcalculator__info-value" id="pcalc-partners">120</span>
                         </div>
                         <div class="pcalculator__info-text pcalculator__info-text--approx">
                             <span class="pcalculator__info-title">ориентировочная сумма вложений:</span>
-                            <span class="pcalculator__info-value">150,000 р.</span>
+                            <span class="pcalculator__info-value" id="pcalc-invest">150,000 р.</span>
                         </div>
                         <div class="pcalculator__info-text pcalculator__info-text--sales">
                             <span class="pcalculator__info-title">количество продаж в месяц</span>
-                            <span class="pcalculator__info-value">1,500</span>
+                            <span class="pcalculator__info-value" id="pcalc-mosales">1,500</span>
                         </div>
                         <div class="pcalculator__info-text pcalculator__info-text--profit">
-                            <span class="pcalculator__info-title">количество продаж в месяц</span>
-                            <span class="pcalculator__info-value">90,500 р.</span>
+                            <span class="pcalculator__info-title">ВАША ПРИБЫЛЬ В МЕСЯЦ:</span>
+                            <span class="pcalculator__info-value" id="pcalc-profit">90,500 р.</span>
                         </div>
                     </div>
                 </div>
@@ -965,7 +966,65 @@
     </section>
 </main>
 
+
+<div class="cbmodal modal">
+
+    <h1 class="cbmodal__brand">#AroBomb</h1>
+
+    <!-- 1st modal -->
+    <div class="cbmodal-form__wrapper modal-wrapper modal-wrapper--active">
+
+        <h2 class="cbmodal-form__title">ОСТАВЬТЕ СВОИ ДАННЫЕ</h2>
+        <p class="cbmodal-form__subtitle">И МЫ ПЕРЕЗВОНИМ ВАМ</p>
+
+        <form action="" class="cbmodal-form__form">
+            <div class="cbmodal-form__form-wrapper">
+                <div class="cbmodal-form__input-wrap">
+                    <label for="cbmodal-form__name">name</label>
+                    <input type="text" id="cbmodal-form__name" class="cbmodal-form__input" placeholder="имя">
+                </div>
+                <div class="cbmodal-form__input-wrap">
+                    <label for="cbmodal-form__tel">tel</label>
+                    <input type="text" id="cbmodal-form__tel" class="cbmodal-form__input cbmodal-form__input--error" placeholder="телефон">
+                </div>
+                <div class="cbmodal-form__input-wrap cbmodal-form__input-wrap--cbx">
+                    <label for="cbmodal-form__cbx" class="cbmodal-form__cbx-label form__cbx-label">
+                        <input type="checkbox" id="cbmodal-form__cbx" class="cbmodal-form__cbx-input form__checkbox">
+                        <svg width="18" height="14" viewBox="0 0 18 14" class="form__checkmark">
+                            <use xlink:href="#icon-checkmark"></use>
+                        </svg>
+                        <span>я согласен с политикой конфидециальости</span>
+                    </label>
+                </div>
+                <div class="cbmodal-form__input-wrap cbmodal-form__btn-wrap">
+                    <input type="submit" class="btn cbmodal-form__submit-btn" value="заказать обратный звонок">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- 2nd modal -->
+    <div class="cbmodal-thanks__wrapper modal-wrapper">
+
+        <h2 class="cbmodal-thanks__title">
+            <span>ваша заявка</span>
+            <span>принята!</span>
+        </h2>
+
+        <p class="cbmodal-thanks__subtitle">Наш менеджер скоро свяжется с Вами</p>
+
+    </div>
+
+    <!-- X -->
+    <button type="button" class="modal__close">
+        <svg viewBox="0 0 25 25" width="25" height="25" class="icon-close">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button>
+</div>
+
 <script src="./js/landing-1.js"></script>
+<script src="./js/landing-2.js"></script>
 
 
 <script src="./js/main-menu.js"></script>

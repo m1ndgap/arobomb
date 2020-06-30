@@ -170,24 +170,25 @@
                 <h3 class="landing-2__text-highlight">калькулятор прибыли:</h3>
                 <div class="pcalculator__ui-wrap">
                     <div class="pcalculator__range">
-                        <input type="text" id="calculator-range" />
+                         <input type="text" id="calculator-range" />
+                        <span class="pcalculator__current-value">300,000</span>
                     </div>
                     <div class="pcalculator__values">
                         <div class="pcalculator__info-text pcalculator__info-text--partners">
                             <span class="pcalculator__info-title">количество потенциальных патрнеров:</span>
-                            <span class="pcalculator__info-value">120</span>
+                            <span class="pcalculator__info-value" id="pcalc-partners">120</span>
                         </div>
                         <div class="pcalculator__info-text pcalculator__info-text--approx">
                             <span class="pcalculator__info-title">ориентировочная сумма вложений:</span>
-                            <span class="pcalculator__info-value">150,000 р.</span>
+                            <span class="pcalculator__info-value"  id="pcalc-invest">150,000 р.</span>
                         </div>
                         <div class="pcalculator__info-text pcalculator__info-text--sales">
                             <span class="pcalculator__info-title">количество продаж в месяц</span>
-                            <span class="pcalculator__info-value">1,500</span>
+                            <span class="pcalculator__info-value" id="pcalc-mosales">1,500</span>
                         </div>
                         <div class="pcalculator__info-text pcalculator__info-text--profit">
-                            <span class="pcalculator__info-title">количество продаж в месяц</span>
-                            <span class="pcalculator__info-value">90,500 р.</span>
+                            <span class="pcalculator__info-title">ВАША ПРИБЫЛЬ В МЕСЯЦ:</span>
+                            <span class="pcalculator__info-value" id="pcalc-profit">90,500 р.</span>
                         </div>
                     </div>
                 </div>
@@ -410,6 +411,9 @@
     </section>
 </main>
 
+//= ./html-components/_callback-modals.html
+
 <script src="./js/landing-1.js"></script>
+<script src="./js/landing-2.js"></script>
 
 //= ./html-components/_footer.html
