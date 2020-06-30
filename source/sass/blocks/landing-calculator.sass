@@ -46,6 +46,12 @@
     flex-flow: column nowrap
     justify-content: center
 
+  &__range-title
+    font-size: 1.8rem
+    font-weight: 600
+    text-transform: uppercase
+    margin-bottom: 29px
+
   &__current-value
     display: inline-block
     margin: 0 auto
@@ -92,11 +98,47 @@
   &__range
     .rs-scale
       span
+        z-index: 1
         ins
           opacity: 0
         &:last-child, &:first-child
           ins
+            font-size: 1.4rem
+            font-weight: 600
+            font-family: "Montserrat", sans-serif
+            color: $text
             opacity: 1
+        &:after
+          content: ""
+          position: absolute
+          top: -4px
+          display: block
+          height: 10px
+          width: 1px
+          background-color: lighten($text, 60%)
     .rs-tooltip
       background: transparent
       border: none
+    .rs-bg, .rs-selected
+      z-index: 2
+      height: 3px
+    .rs-bg
+      border: none
+      background-color: lighten($text, 60%)
+    .rs-selected
+      border: none
+      background-color: transparent
+      @include gbackground()
+    .rs-pointer
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      top: -3px
+      background: transparent
+      @include gbackground(200%, -100%)
+      z-index: 3
+      border: none
+      box-shadow: none
+      &:before, &:after
+        display: none
+
