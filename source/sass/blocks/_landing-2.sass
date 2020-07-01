@@ -192,7 +192,7 @@
     top: 35px
     @include media ("<desktop")
       position: static
-      margin-top: 40px
+      margin-top: 70px // check subtitle margin-bottom
       justify-content: space-around
 
   &__promo-row--2
@@ -202,7 +202,7 @@
     margin-top: 30px
     @include media ("<desktop")
       position: static
-      margin-top: 65px
+      margin-top: 65px // change?
       margin-left: 0
     @include media ("<tablet")
       margin-top: 40px
@@ -423,7 +423,8 @@
     @include gbackground (100%) // 94opx
     opacity: 0.7
     display: flex
-    flex-wrap: wrap
+    @include media ("<large")
+      flex-wrap: wrap
 
   &__inline-form-input
     background-color: transparent
@@ -582,7 +583,7 @@
 
   .swiper-button-next
     transform: rotate(180deg)
-    right: 0
+    right: 1px
 
   .swiper-button-prev
     left: 327px
