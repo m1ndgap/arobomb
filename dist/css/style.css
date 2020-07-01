@@ -992,6 +992,8 @@ body {
     @media (max-width: 767px) {
       .main-menu__logo {
         margin: 0; } }
+  .main-menu__logo-sup {
+    font-size: 1.2rem; }
   .main-menu__wrapper {
     position: relative;
     margin-left: 49px;
