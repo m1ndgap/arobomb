@@ -2761,7 +2761,7 @@ body {
     background-color: #FFFFFF;
     cursor: pointer;
     z-index: 3;
-    transition: background-color 100ms; }
+    transition: background-color 100ms, opacity 300ms; }
     .cart__item-btn:active {
       outline: 0;
       background-color: #cccccc; }
@@ -2772,6 +2772,10 @@ body {
     .cart__item-btn svg {
       transform: rotate(180deg);
       transition: transform 300ms; }
+    .cart__item-btn--disabled {
+      opacity: 0.3;
+      background-color: #b3b3b3;
+      pointer-events: none; }
     .cart__item-btn--add {
       padding: 12px 22px 12px 5px; }
       .cart__item-btn--add svg {

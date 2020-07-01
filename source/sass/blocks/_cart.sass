@@ -169,7 +169,7 @@
     background-color: $white
     cursor: pointer
     z-index: 3
-    transition: background-color $transition/3
+    transition: background-color $transition/3, opacity $transition
     &:active
       outline: 0
       background-color: darken($white, 20%)
@@ -181,6 +181,10 @@
     svg
       transform: rotate(180deg)
       transition: transform $transition
+    &--disabled
+      opacity: 0.3
+      background-color: darken($white, 30%)
+      pointer-events: none
     &--add
       padding: 12px 22px 12px 5px
       svg

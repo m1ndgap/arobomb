@@ -54,6 +54,10 @@ function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
+function removeSpaces(x) {
+    return x.toString().replace(/\s/g, '');
+}
+
 function collectData(item){
     return {
         code: item.dataset.code,
@@ -65,8 +69,8 @@ function collectData(item){
 }
 
 function updateTotalPrice(int) {
-    let OldTotal = parseInt(totalPrice1.innerText)
-    let newTotal = OldTotal + int
+    let OldTotal = parseInt(removeSpaces(totalPrice1.innerText))
+    let newTotal = OldTotal + parseInt(int)
     totalPrice2.innerText = numberWithSpaces(newTotal);
     totalPrice1.innerText = numberWithSpaces(newTotal);
 }
@@ -92,7 +96,7 @@ function createItem(obj, code){
                         <div class="cart__item-ui">
                             <span class="cart__item-ui-text">кол.во</span>
                             <div class="cart__item-ui-wrap">
-                                <button type="button" class="cart__item-btn">
+                                <button type="button" class="cart__item-btn cart__item-btn--remove">
                                     <svg width="28" height="8" viewBox="0 0 28 8" class="">
                                         <use xlink:href="#btn-arrow"></use>
                                     </svg>
@@ -114,7 +118,16 @@ function createItem(obj, code){
 
     let close = newEl.querySelector(`.cart__item-close`)
     let input = newEl.querySelector(`.cart__item-number`)
+    let initValue = parseInt(input.value);
+    let add = newEl.querySelector(`.cart__item-btn--add`)
+    let remove = newEl.querySelector(`.cart__item-btn--remove`)
     let item = newEl.querySelector(`.cart__item`)
+
+    if (input.value >= 9999) {
+        add.classList.add(`cart__item-btn--disabled`);
+    } else if (input.value == 1) {
+        remove.classList.add(`cart__item-btn--disabled`);
+    }
 
     close.addEventListener(`click`, function (evt) {
         let _this = this;
@@ -124,12 +137,56 @@ function createItem(obj, code){
         if (isCartEmpty()) {
             disablePayment();
         }
+        updateTotalPrice(-(parseInt(input.value)*parseInt(price)));
     })
 
     input.addEventListener(`change`, function (evt) {
-        let _this = this;
-        console.log(evt.target.value)
-        setCartQty(collectData(item), evt.target.value)
+        let value = parseInt(evt.target.value);
+        if (value >= 9999) {
+            value = 9999;
+            add.classList.add(`cart__item-btn--disabled`);
+        } else if (value == 1) {
+            remove.classList.add(`cart__item-btn--disabled`);
+            add.classList.remove(`cart__item-btn--disabled`);
+        } else {
+            add.classList.remove(`cart__item-btn--disabled`)
+            remove.classList.remove(`cart__item-btn--disabled`);
+        }
+        evt.target.value = value
+        if (initValue > value) {
+            updateTotalPrice(-(initValue-value)*parseInt(price))
+            debugger
+        } else if (initValue < value) {
+            updateTotalPrice((value-initValue)*parseInt(price))
+            debugger
+        }
+        initValue = value;
+        setCartQty(collectData(item), value)
+    })
+
+    add.addEventListener(`click`, function(evt){
+        remove.classList.remove(`cart__item-btn--disabled`);
+        let oldValue = parseInt(input.value)
+        input.value = parseInt(oldValue + 1)
+        if (input.value >= 9999) {
+            input.value = 9999;
+            add.classList.add(`cart__item-btn--disabled`);
+        }
+        updateTotalPrice(price)
+        updateQty(collectData(item), true)
+    })
+
+    remove.addEventListener(`click`, function(evt){
+        add.classList.remove(`cart__item-btn--disabled`);
+        let oldValue = parseInt(input.value)
+        input.value = parseInt(oldValue - 1)
+        if (input.value == 1) {
+            input.value = 1;
+            remove.classList.add(`cart__item-btn--disabled`);
+        }
+        updateTotalPrice(-price)
+        updateQty(collectData(item), false)
+
     })
 
     updateTotalPrice(totalPrice);
