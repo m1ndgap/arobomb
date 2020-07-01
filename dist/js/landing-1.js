@@ -48,3 +48,42 @@ let landing1PartnersSwiper = new Swiper('.partners-swiper-container', {
         clickable: true,
     }
 })
+
+
+////////////// modal
+
+const l1modalCls = `l1modal`;
+const l1BtnCls = `landing-1__pitch-button`;
+
+const l1modalFormCls = `l1modal-form__wrapper`;
+const l1modalThanksCls = `l1modal-thanks__wrapper`;
+
+const l1modalCloseCls = `modal__close`;
+const l1modalSubmitCls = `l1modal-form__submit-btn`;
+
+
+let l1Btn = document.querySelector(`.` + l1BtnCls);
+let l1modal = document.querySelector(`.` + l1modalCls);
+
+let l1Submit = l1modal.querySelector(`.` + l1modalSubmitCls);
+let l1Close = l1modal.querySelector(`.` + l1modalCloseCls);
+let l1modalForm = l1modal.querySelector(`.` + l1modalFormCls);
+let l1modalThanks = l1modal.querySelector(`.` + l1modalThanksCls);
+
+l1Btn.addEventListener(`click`, function(e){
+	e.preventDefault();
+	l1modal.classList.add(`modal--active`)
+})
+
+l1Submit.addEventListener(`click`, function (e) {
+	e.preventDefault();
+	l1modalForm.classList.remove(`modal-wrapper--active`)
+	l1modalThanks.classList.add(`modal-wrapper--active`)
+})
+
+l1Close.addEventListener(`click`, function(e){
+	e.preventDefault();
+	l1modal.classList.remove(`modal--active`)
+	l1modalForm.classList.add(`modal-wrapper--active`)
+	l1modalThanks.classList.remove(`modal-wrapper--active`)
+})
