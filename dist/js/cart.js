@@ -145,7 +145,8 @@ function createItem(obj, code){
         if (value >= 9999) {
             value = 9999;
             add.classList.add(`cart__item-btn--disabled`);
-        } else if (value == 1) {
+        } else if (value <= 1) {
+            value = 1;
             remove.classList.add(`cart__item-btn--disabled`);
             add.classList.remove(`cart__item-btn--disabled`);
         } else {
@@ -155,10 +156,8 @@ function createItem(obj, code){
         evt.target.value = value
         if (initValue > value) {
             updateTotalPrice(-(initValue-value)*parseInt(price))
-            debugger
         } else if (initValue < value) {
             updateTotalPrice((value-initValue)*parseInt(price))
-            debugger
         }
         initValue = value;
         setCartQty(collectData(item), value)
