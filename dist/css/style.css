@@ -4121,7 +4121,7 @@ body {
 
 .landing-1 .swiper-button-next {
   transform: rotate(180deg);
-  right: 0; }
+  right: 1px; }
 
 .landing-1 .swiper-button-prev {
   left: 0; }
@@ -4822,7 +4822,7 @@ body {
   @media (max-width: 1023px) {
     .landing-2__promo-row--1 {
       position: static;
-      margin-top: 40px;
+      margin-top: 70px;
       justify-content: space-around; } }
 
 .landing-2__promo-row--2 {
@@ -5032,8 +5032,10 @@ body {
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
   opacity: 0.7;
-  display: flex;
-  flex-wrap: wrap; }
+  display: flex; }
+  @media (max-width: 1279px) {
+    .landing-2__inline-form-input-clientinfo {
+      flex-wrap: wrap; } }
 
 .landing-2__inline-form-input {
   background-color: transparent;
@@ -5211,7 +5213,7 @@ body {
 
 .landing-2 .swiper-button-next {
   transform: rotate(180deg);
-  right: 0; }
+  right: 1px; }
 
 .landing-2 .swiper-button-prev {
   left: 327px; }
