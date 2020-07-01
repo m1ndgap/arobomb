@@ -47,6 +47,8 @@
 
   &__items
     margin-top: 29px
+    flex-grow: 1
+    max-width: 645px
     @include media("<tablet")
       width: 100%
 
@@ -140,7 +142,6 @@
 
 
 
-
   &__item-number
     @include resetinteractive()
     margin: 0
@@ -215,6 +216,16 @@
         width: 20px
         height: 20px
 
+  &__cart-empty
+    display: block
+    margin-top: 50px
+    font-size: 2.4rem
+    text-transform: uppercase
+    color: lighten($text, 40%)
+    opacity: 0
+    &--active
+      opacity: 1
+      transition: opacity $transition
 
   &__total-price
     position: relative

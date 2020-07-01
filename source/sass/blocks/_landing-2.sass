@@ -475,8 +475,6 @@
       overflow: hidden
       position: relative
       margin: 100px 0
-      max-height: 100%
-      height: unset
       @include media ("<desktop")
         margin: 0
         padding-bottom: 90px
@@ -484,6 +482,10 @@
         margin-top: 60px
       @include media ("<=tiny")
         padding-bottom: 50px
+
+      .swiper-wrapper
+        max-height: 100%
+        height: unset
 
     .swiper-slide
       display: flex

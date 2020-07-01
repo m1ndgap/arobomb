@@ -681,6 +681,10 @@ body {
     background-color: #FFFFFF; }
     .btn:hover .btn-arrow {
       fill: #82AD24; }
+  .btn--disabled {
+    background-color: #c4c4c4;
+    border-color: #c4c4c4;
+    pointer-events: none; }
   .btn--gr {
     padding: 4px 10px;
     border: none;
@@ -2623,7 +2627,9 @@ body {
         .cart__wrapper--tab-2 {
           margin-top: 24px; } }
   .cart__items {
-    margin-top: 29px; }
+    margin-top: 29px;
+    flex-grow: 1;
+    max-width: 645px; }
     @media (max-width: 767px) {
       .cart__items {
         width: 100%; } }
@@ -2801,6 +2807,16 @@ body {
         .cart__item-close svg {
           width: 20px;
           height: 20px; } }
+  .cart__cart-empty {
+    display: block;
+    margin-top: 50px;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    opacity: 0; }
+    .cart__cart-empty--active {
+      opacity: 1;
+      transition: opacity 300ms; }
   .cart__total-price {
     position: relative;
     margin-left: auto;
@@ -3262,10 +3278,14 @@ body {
   border: 1px solid;
   border-image-source: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
   border-image-slice: 1;
-  transition: box-shadow 300ms, color 300ms; }
+  transition: box-shadow 300ms, color 300ms;
+  cursor: pointer; }
   .cart__tab:active, .cart__tab:focus {
     outline: none;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
+  .cart__tab--disabled {
+    opacity: 0.5;
+    pointer-events: none; }
   .cart__tab--active {
     padding: 16px 25px 19px 33px;
     background-clip: border-box;
@@ -4292,6 +4312,9 @@ body {
   @media (max-width: 400px) {
     .landing-1 section:nth-of-type(6) .partners-swiper-container {
       padding-bottom: 50px; } }
+  .landing-1 section:nth-of-type(6) .partners-swiper-container .swiper-wrapper {
+    height: unset;
+    max-height: 100%; }
 
 .landing-1 section:nth-of-type(6) .swiper-slide {
   display: flex; }
@@ -4882,9 +4905,7 @@ body {
 .landing-2 section:nth-of-type(7) .partners-swiper-container {
   overflow: hidden;
   position: relative;
-  margin: 100px 0;
-  max-height: 100%;
-  height: unset; }
+  margin: 100px 0; }
   @media (max-width: 1023px) {
     .landing-2 section:nth-of-type(7) .partners-swiper-container {
       margin: 0;
@@ -4895,6 +4916,9 @@ body {
   @media (max-width: 400px) {
     .landing-2 section:nth-of-type(7) .partners-swiper-container {
       padding-bottom: 50px; } }
+  .landing-2 section:nth-of-type(7) .partners-swiper-container .swiper-wrapper {
+    max-height: 100%;
+    height: unset; }
 
 .landing-2 section:nth-of-type(7) .swiper-slide {
   display: flex; }

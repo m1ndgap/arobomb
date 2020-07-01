@@ -2,6 +2,10 @@
 
 let cartTabsCls = 'cart__tab' ;
 let cartTabContentCls = 'cart__tab-content';
+let proceedBtnCls = `cart__total-price-proceed-btn`;
+let emptyCartCls = `cart__cart-empty`;
+let totalPrice1Cls = `cart__total-price-number`;
+let totalPrice2Cls = `cart-form__price-amount-number`;
 
 const showTabContent = (tab) => {
     const contentTabs = document.querySelectorAll('.' + cartTabContentCls);
@@ -25,6 +29,10 @@ const hideTabContent = (clickTab) => {
 }
 
 let tabSwitches = document.querySelectorAll('.' + cartTabsCls);
+let proceedBtn = document.querySelector(`.${proceedBtnCls}`)
+let emptyCartWarning = document.querySelector(`.${emptyCartCls}`)
+let totalPrice1 = document.querySelector(`.${totalPrice1Cls}`)
+let totalPrice2 = document.querySelector(`.${totalPrice2Cls}`)
 showTabContent(tabSwitches[0])
 
 tabSwitches.forEach((tabSwitch) => {
@@ -33,10 +41,18 @@ tabSwitches.forEach((tabSwitch) => {
     });
 })
 
+proceedBtn.addEventListener(`click`, function (evt) {
+    showTabContent(tabSwitches[1])
+})
+
 
 /////////////////////////////////
 ///////// generating products ///
 /////////////////////////////////
+
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 
 function collectData(item){
     return {
@@ -48,9 +64,18 @@ function collectData(item){
     }
 }
 
+function updateTotalPrice(int) {
+    let OldTotal = parseInt(totalPrice1.innerText)
+    let newTotal = OldTotal + int
+    totalPrice2.innerText = numberWithSpaces(newTotal);
+    totalPrice1.innerText = numberWithSpaces(newTotal);
+}
+
 
 function createItem(obj, code){
     let {type, images, price, name, quantity} = obj;
+    let totalPrice = parseInt(price) * quantity;
+    console.log(totalPrice)
     let newEl = document.createElement(`div`);
     newEl.innerHTML = `<div class="cart__item" data-type="${type}" data-code="${code}" data-img="${images[0]}" data-retinaImg="${images[2]}" data-price="${price}" data-name="${name}">
                         <figure class="cart__item-img-wrap">
@@ -88,21 +113,58 @@ function createItem(obj, code){
                     </div>`
 
     let close = newEl.querySelector(`.cart__item-close`)
+    let input = newEl.querySelector(`.cart__item-number`)
     let item = newEl.querySelector(`.cart__item`)
+
     close.addEventListener(`click`, function (evt) {
         let _this = this;
-
         item.remove()
         removeFromCart(collectData(item));
+        refreshCartBadge();
+        if (isCartEmpty()) {
+            disablePayment();
+        }
     })
+
+    input.addEventListener(`change`, function (evt) {
+        let _this = this;
+        console.log(evt.target.value)
+        setCartQty(collectData(item), evt.target.value)
+    })
+
+    updateTotalPrice(totalPrice);
+
     return newEl.firstChild
 }
 
 let ls = JSON.parse(localStorage.getItem(`arobombCart`));
 let cartItems = document.querySelector(`.cart__items`)
-for (const property in ls) {
-    if (ls.hasOwnProperty(property)) {
-        console.log(createItem(ls[property], property))
-        cartItems.append(createItem(ls[property], property));
+if (ls) {
+    for (const property in ls) {
+        if (ls.hasOwnProperty(property)) {
+            cartItems.append(createItem(ls[property], property));
+        }
     }
+    enablePayment();
+}
+
+//////////////////////////////////
+///// enable/disable payment /////
+//////////////////////////////////
+
+
+function isCartEmpty(){
+    return !Boolean(document.querySelector(`.cart__item`));
+}
+
+function disablePayment(){
+    tabSwitches[1].classList.add(`${cartTabsCls}--disabled`);
+    proceedBtn.classList.add(`btn--disabled`);
+    emptyCartWarning.classList.add(`${emptyCartCls}--active`);
+}
+
+function enablePayment(){
+    tabSwitches[1].classList.remove(`${cartTabsCls}--disabled`);
+    proceedBtn.classList.remove(`btn--disabled`);
+    emptyCartWarning.classList.remove(`${emptyCartCls}--active`);
 }

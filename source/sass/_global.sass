@@ -27,6 +27,10 @@ body
     background-color: $white
     .btn-arrow
       fill: $btn
+  &--disabled
+    background-color: lighten($text, 50%)
+    border-color: lighten($text, 50%)
+    pointer-events: none
   &--gr
     padding: 4px 10px
     border: none

@@ -20,9 +20,13 @@
     border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
     border-image-slice: 1
     transition: box-shadow $transition, color $transition
+    cursor: pointer
     &:active, &:focus
       outline: none
       box-shadow: 0 0 3px 0 rgba($black ,0.5)
+    &--disabled
+      opacity: 0.5
+      pointer-events: none
     &--active
       padding: 16px 25px 19px 33px
       background-clip: border-box

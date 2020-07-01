@@ -571,7 +571,7 @@
                     </span>
                 </span>
             </button>
-            <button type="button" data-tab="2" class="cart__tab">
+            <button type="button" data-tab="2" class="cart__tab cart__tab--disabled">
                 <span class="cart__tab-text  cart__tab-text--tab-2">
                     <span class="cart__tab-sub-text">доставка</span>
                     <span class="cart__tab-main-text">и оплата</span>
@@ -584,78 +584,43 @@
         <section data-tabcontent="1" class="cart__tab-content cart__tab-content--1 cart__tab-content--active">
             <div class="cart__wrapper">
                 <div class="cart__items">
-                    <div class="cart__item">
-                        <figure class="cart__item-img-wrap">
-                            <img src="./img/cart-thumbnail-1.jpg" alt="" class="cart__item-img">
-                        </figure>
-                        <div class="cart__item-text">
-                            <span class="cart__item-name">длинное название</span>
-                            <span class="cart__item-price">
-                                <span class="cart__item-price-value">1400</span> р.
-                            </span>
-                            <span class="cart__item-code">
-                                Арт.
-                                <span class="cart__item-code-value">14720623</span>
-                            </span>
-                        </div>
-                        <div class="cart__item-ui">
-                            <span class="cart__item-ui-text">кол.во</span>
-                            <div class="cart__item-ui-wrap">
-                                <button type="button" class="cart__item-btn">
-                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                        <use xlink:href="#btn-arrow"></use>
-                                    </svg>
-                                </button>
-                                <input type="text" class="cart__item-number" value="1">
-                                <button type="button" class="cart__item-btn cart__item-btn--add">
-                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                        <use xlink:href="#btn-arrow"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <button type="button" class="cart__item-close">
-                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
-                                <use xlink:href="#circle-close"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="cart__item">
-                        <figure class="cart__item-img-wrap">
-                            <img src="./img/cart-thumbnail-2.jpg" alt="" class="cart__item-img">
-                        </figure>
-                        <div class="cart__item-text">
-                            <span class="cart__item-name">длинное название</span>
-                            <span class="cart__item-price">
-                                <span class="cart__item-price-value">1400</span> р.
-                            </span>
-                            <span class="cart__item-code">
-                                Арт.
-                                <span class="cart__item-code-value">14720623</span>
-                            </span>
-                        </div>
-                        <div class="cart__item-ui">
-                            <span class="cart__item-ui-text">кол.во</span>
-                            <div class="cart__item-ui-wrap">
-                                <button type="button" class="cart__item-btn">
-                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                        <use xlink:href="#btn-arrow"></use>
-                                    </svg>
-                                </button>
-                                <input type="text" class="cart__item-number" value="3">
-                                <button type="button" class="cart__item-btn cart__item-btn--add">
-                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">
-                                        <use xlink:href="#btn-arrow"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <button type="button" class="cart__item-close">
-                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
-                                <use xlink:href="#circle-close"></use>
-                            </svg>
-                        </button>
-                    </div>
+<!--                    <div class="cart__item">-->
+<!--                        <figure class="cart__item-img-wrap">-->
+<!--                            <img src="./img/cart-thumbnail-1.jpg" alt="" class="cart__item-img">-->
+<!--                        </figure>-->
+<!--                        <div class="cart__item-text">-->
+<!--                            <span class="cart__item-name">длинное название</span>-->
+<!--                            <span class="cart__item-price">-->
+<!--                                <span class="cart__item-price-value">1400</span> р.-->
+<!--                            </span>-->
+<!--                            <span class="cart__item-code">-->
+<!--                                Арт.-->
+<!--                                <span class="cart__item-code-value">14720623</span>-->
+<!--                            </span>-->
+<!--                        </div>-->
+<!--                        <div class="cart__item-ui">-->
+<!--                            <span class="cart__item-ui-text">кол.во</span>-->
+<!--                            <div class="cart__item-ui-wrap">-->
+<!--                                <button type="button" class="cart__item-btn">-->
+<!--                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">-->
+<!--                                        <use xlink:href="#btn-arrow"></use>-->
+<!--                                    </svg>-->
+<!--                                </button>-->
+<!--                                <input type="text" class="cart__item-number" value="1">-->
+<!--                                <button type="button" class="cart__item-btn cart__item-btn&#45;&#45;add">-->
+<!--                                    <svg width="28" height="8" viewBox="0 0 28 8" class="">-->
+<!--                                        <use xlink:href="#btn-arrow"></use>-->
+<!--                                    </svg>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <button type="button" class="cart__item-close">-->
+<!--                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">-->
+<!--                                <use xlink:href="#circle-close"></use>-->
+<!--                            </svg>-->
+<!--                        </button>-->
+<!--                    </div>-->
+                        <span class="cart__cart-empty cart__cart-empty--active">ваша корзина пуста</span>
                 </div>
                 <div class="cart__total-price">
                     <svg width="399" height="227" viewBox="0 0 399 227" fill="none" class="svg-gradient-line cart__price-border">
@@ -663,9 +628,9 @@
                     </svg>
                     <span class="cart__total-price-title">итог:</span>
                     <span class="cart__total-price-value">
-                        <span class="cart__total-price-number">4 499</span> р.
+                        <span class="cart__total-price-number">0</span> р.
                     </span>
-                    <button class="cart__total-price-proceed-btn btn">
+                    <button type="button" class="cart__total-price-proceed-btn btn btn--disabled">
                         <span>перейти к оплате</span>
                         <svg width="28" height="8" viewBox="0 0 28 8" class="btn-arrow">
                             <use xlink:href="#btn-arrow"></use>
@@ -709,7 +674,7 @@
                                 </div>
                                 <div class="cart-form__input-wrap cart-form__input-wrap--checkbox">
                                     <label for="cart-form-checkbox" class="cart-form__custom-checkbox-label custom-checkbox">
-                                        <input type="checkbox" id="cart-form-checkbox" class="custom-checkbox__input">
+                                        <input type="checkbox" checked="" id="cart-form-checkbox" class="custom-checkbox__input">
                                         <svg width="18" height="14" viewBox="0 0 18 14" class="custom-checkbox__checkmark">
                                             <use xlink:href="#icon-checkmark"></use>
                                         </svg>
@@ -724,7 +689,7 @@
                             </svg>
                             <span class="cart-form__price-amount-title">сумма к оплате</span>
                             <span class="cart-form__price-amount-value">
-                                <span class="cart-form__price-amount-number">4 499</span> р.
+                                <span class="cart-form__price-amount-number">0</span> р.
                             </span>
                         </div>
                         <div class="cart-form__submit-block">
