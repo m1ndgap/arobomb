@@ -161,6 +161,7 @@ function createItem(obj, code){
         }
         initValue = value;
         setCartQty(collectData(item), value)
+        console.log(initValue)
     })
 
     add.addEventListener(`click`, function(evt){
@@ -179,13 +180,12 @@ function createItem(obj, code){
         add.classList.remove(`cart__item-btn--disabled`);
         let oldValue = parseInt(input.value)
         input.value = parseInt(oldValue - 1)
-        if (input.value == 1) {
+        if (input.value <= 1) {
             input.value = 1;
             remove.classList.add(`cart__item-btn--disabled`);
         }
         updateTotalPrice(-price)
         updateQty(collectData(item), false)
-
     })
 
     updateTotalPrice(totalPrice);
