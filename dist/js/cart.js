@@ -75,6 +75,19 @@ function updateTotalPrice(int) {
     totalPrice1.innerText = numberWithSpaces(newTotal);
 }
 
+function countPrice(){
+    let totalPrice = 0;
+    let items = document.querySelectorAll(`.cart__item`);
+    items.forEach(function(el){
+        let price = parseInt(el.dataset.price);
+        let value = parseInt(el.querySelector('input').value);
+        totalPrice += price * value;
+    })
+    totalPrice2.innerText = numberWithSpaces(totalPrice);
+    totalPrice1.innerText = numberWithSpaces(totalPrice);
+}
+
+
 
 function createItem(obj, code){
     let {type, images, price, name, quantity} = obj;
@@ -137,7 +150,7 @@ function createItem(obj, code){
         if (isCartEmpty()) {
             disablePayment();
         }
-        updateTotalPrice(-(parseInt(input.value)*parseInt(price)));
+        countPrice();
     })
 
     input.addEventListener(`change`, function (evt) {
@@ -154,11 +167,12 @@ function createItem(obj, code){
             remove.classList.remove(`cart__item-btn--disabled`);
         }
         evt.target.value = value
-        if (initValue > value) {
-            updateTotalPrice(-(initValue-value)*parseInt(price))
-        } else if (initValue < value) {
-            updateTotalPrice((value-initValue)*parseInt(price))
-        }
+        countPrice();
+        // if (initValue > value) {
+        //     updateTotalPrice(-(initValue-value)*parseInt(price))
+        // } else if (initValue < value) {
+        //     updateTotalPrice((value-initValue)*parseInt(price))
+        // }
         initValue = value;
         setCartQty(collectData(item), value)
         console.log(initValue)
@@ -172,7 +186,7 @@ function createItem(obj, code){
             input.value = 9999;
             add.classList.add(`cart__item-btn--disabled`);
         }
-        updateTotalPrice(price)
+        countPrice();
         updateQty(collectData(item), true)
     })
 
@@ -184,11 +198,9 @@ function createItem(obj, code){
             input.value = 1;
             remove.classList.add(`cart__item-btn--disabled`);
         }
-        updateTotalPrice(-price)
+        countPrice();
         updateQty(collectData(item), false)
     })
-
-    updateTotalPrice(totalPrice);
 
     return newEl.firstChild
 }
@@ -202,6 +214,7 @@ if (ls) {
         }
     }
     enablePayment();
+    countPrice();
 }
 
 //////////////////////////////////

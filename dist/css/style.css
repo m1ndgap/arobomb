@@ -984,7 +984,8 @@ body {
     text-decoration: none;
     font-weight: 800;
     font-size: 1.8rem;
-    color: #000000; }
+    color: #000000;
+    display: flex; }
     @media (max-width: 1439px) {
       .main-menu__logo {
         order: 1;
@@ -3428,8 +3429,8 @@ body {
     z-index: 1; }
   .pcalculator__bg {
     position: absolute;
-    top: 50%;
-    left: -25%;
+    top: 44%;
+    left: -88%;
     transform: translateY(-50%); }
   .pcalculator__img {
     position: relative; }
