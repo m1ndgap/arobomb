@@ -3627,7 +3627,7 @@ body {
         font-size: 2rem; } }
   .l1modal-form__form {
     width: 100%; }
-    .l1modal-form__form label:not(.cbmodal-form__cbx-label) {
+    .l1modal-form__form label:not(.l1modal-form__cbx-label) {
       display: none; }
   .l1modal-form__input-wrap {
     margin-bottom: 15px; }
