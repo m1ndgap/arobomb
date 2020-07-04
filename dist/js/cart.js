@@ -237,3 +237,18 @@ function enablePayment(){
     proceedBtn.classList.remove(`btn--disabled`);
     emptyCartWarning.classList.remove(`${emptyCartCls}--active`);
 }
+
+
+function arrayReplace(array, elemToReplace, substitutionElem) {
+    //  write code here.
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i] == elemToReplace) {
+            array[i] = substitutionElem;
+        }
+    }
+    return array;
+}
+
+const array = [1,2,1];
+console.log(arrayReplace(array, 1, 3));
