@@ -410,7 +410,7 @@
 
 
   // 6TH SECTION
-  section:nth-of-type(6)
+  &__flat-form-section
     position: relative
 
     > svg
@@ -438,22 +438,22 @@
         color: $text
         z-index: 1
 
-  &__inline-form
+  &__flat-form
     margin-top: 57px
 
-  &__inline-form-input--wrap
+  &__flat-form-input--wrap
     display: flex
     @include media ("<large")
       flex-basis: 50%
 
-  &__inline-form-input-clientinfo
+  &__flat-form-input-clientinfo
     @include gbackground (100%) // 94opx
     opacity: 0.7
     display: flex
     @include media ("<large")
       flex-wrap: wrap
 
-  &__inline-form-input
+  &__flat-form-input
     background-color: transparent
     // width: 235px
     width: 100%
@@ -480,7 +480,7 @@
     &:focus
       opacity: 0.9
 
-  &__inline-form-input--wrap + &__inline-form-input--wrap
+  &__flat-form-input--wrap + &__flat-form-input--wrap
     &::before
       content: " "
       background-color: $white
@@ -488,7 +488,7 @@
       height: 28px
       align-self: center
 
-  &__inline-form-input--wrap
+  &__flat-form-input--wrap
     &:nth-child(3)
       &::before
         @include media ("<desktop")
@@ -498,7 +498,7 @@
 
 
   // 7TH SECTION
-  section:nth-of-type(7)
+  &__partners-section // this or section:nth-of-type(7) ?
     .partners-swiper-container
       overflow: hidden
       position: relative
