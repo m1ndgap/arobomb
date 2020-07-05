@@ -3765,6 +3765,27 @@ body {
     .modal-wrapper--active * {
       pointer-events: all; }
 
+.landingmb {
+  display: none; }
+  @media (max-width: 767px) {
+    .landingmb {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%; }
+      .landingmb:hover {
+        background-color: #82AD24;
+        color: #FFFFFF; }
+      .landingmb--red {
+        background-color: red; } }
+  .landingmb__arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #FFFFFF; }
+
 .landing-1 section {
   box-sizing: border-box;
   width: 1440px;
