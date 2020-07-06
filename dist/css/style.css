@@ -936,7 +936,7 @@ body {
   position: fixed;
   width: 100%;
   transition: background-color 300ms;
-  z-index: 5;
+  z-index: 11;
   background-color: #FFFFFF;
   padding-bottom: 10px; }
   .main-menu:after {
@@ -2263,7 +2263,7 @@ body {
   .modal--active {
     opacity: 1;
     pointer-events: all;
-    z-index: 5; }
+    z-index: 15; }
     .modal--active * {
       pointer-events: all; }
   .modal__close {
@@ -2286,9 +2286,9 @@ body {
       transform: translateY(-2px); }
     @media (max-width: 767px) {
       .modal__close {
-        top: 10px;
+        top: 20px;
         right: 10px;
-        width: 20px; } }
+        width: 30px; } }
   .modal__name {
     margin: 0;
     padding: 0;
@@ -3592,6 +3592,14 @@ body {
   background-position: left;
   background-size: cover;
   padding: 30px; }
+  @media (max-width: 767px) {
+    .l1modal {
+      padding: 15px; } }
+  .l1modal input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 0; }
   .l1modal__brand {
     font-size: 1.8rem;
     font-weight: 800;
@@ -3605,7 +3613,7 @@ body {
     width: 95%;
     color: #444444;
     position: absolute;
-    top: 30%; }
+    top: 17%; }
     @media (max-width: 399px) {
       .l1modal-form__wrapper {
         max-width: 276px; } }
@@ -3780,6 +3788,14 @@ body {
         color: #FFFFFF; }
       .landingmb--red {
         background-color: red; } }
+  .landingmb__main-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    font-weight: 900;
+    max-width: 85%; }
+  .landingmb__sub-text {
+    font-weight: 400;
+    letter-spacing: 0.1rem; }
   .landingmb__arrow {
     position: absolute;
     right: 15px;

@@ -7,16 +7,28 @@ let l1button2Id = `landing-1-button-2`
 
 function changeBtn(btnTarget){
     console.log(btnTarget)
+    fixBtn.href = btnTarget.href
+    fixBtn.dataset.modal = btnTarget.dataset.modal
+    let fixBtnMainText = fixBtn.querySelector(`.landingmb__main-text`)
+    let fixBtnSubText = fixBtn.querySelector(`.landingmb__sub-text`)
+    fixBtnMainText.innerText = btnTarget.dataset.mobtext
+    if (btnTarget.dataset.mobsubtext) {
+        fixBtnSubText.innerText = btnTarget.dataset.mobsubtext
+    } else {
+        fixBtnSubText.innerText = ''
+    }
+
 }
 
 
 
 let controller = new ScrollMagic.Controller();
 let fixBtn = document.querySelector(`.${fixBtnCls}`);
-let l1btn2 = document.querySelector(`#${l1button2Id}`);
 let l1btn1 = document.querySelector(`#${l1button1Id}`);
+let l1btn2 = document.querySelector(`#${l1button2Id}`);
 
 
+changeBtn(l1btn1)
 
 
 let scene1 = new ScrollMagic.Scene({
@@ -38,5 +50,3 @@ let scene2 = new ScrollMagic.Scene({
         changeBtn(l1btn2)
     });
 
-
-console.log(scene1.offset())

@@ -54,6 +54,7 @@ let landing1PartnersSwiper = new Swiper('.partners-swiper-container', {
 
 const l1modalCls = `l1modal`;
 const l1BtnCls = `landing-1__pitch-button`;
+const l1MobBtnCls = `landingmb`;
 
 const l1modalFormCls = `l1modal-form__wrapper`;
 const l1modalThanksCls = `l1modal-thanks__wrapper`;
@@ -63,6 +64,7 @@ const l1modalSubmitCls = `l1modal-form__submit-btn`;
 
 
 let l1Btn = document.querySelector(`.` + l1BtnCls);
+let l1MobBtn = document.querySelector(`.` + l1MobBtnCls);
 let l1modal = document.querySelector(`.` + l1modalCls);
 
 let l1Submit = l1modal.querySelector(`.` + l1modalSubmitCls);
@@ -73,6 +75,14 @@ let l1modalThanks = l1modal.querySelector(`.` + l1modalThanksCls);
 l1Btn.addEventListener(`click`, function(e){
 	e.preventDefault();
 	l1modal.classList.add(`modal--active`)
+})
+
+l1MobBtn.addEventListener(`click`, function(e){
+	console.log(this.dataset.modal)
+	if (this.dataset.modal == `true`) {
+		e.preventDefault();
+		l1modal.classList.add(`modal--active`)
+	}
 })
 
 l1Submit.addEventListener(`click`, function (e) {

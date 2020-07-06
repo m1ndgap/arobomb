@@ -4,6 +4,12 @@
   background-position: left
   background-size: cover
   padding: 30px
+  @include media ("<tablet")
+    padding: 15px
+
+  input
+    appearance: none
+    border-radius: 0
 
   &__brand
     font-size: 1.8rem
@@ -20,7 +26,7 @@
       width: 95%
       color: $text
       position: absolute
-      top: 30%
+      top: 17%
       @include media ("<tiny")
         max-width: 276px
 
