@@ -2,7 +2,7 @@
 
   section
     @include container--content
-    &:nth-of-type(1), &:nth-of-type(5) // title and splash sections
+    &:nth-of-type(1), &:nth-of-type(5) // title and splash/promo sections. Name them?
       overflow: hidden
 
   section + section
@@ -87,7 +87,7 @@
   &__title-pitch--wrapper
     width: 100%
     z-index: 1
-    @include media ("<desktop" and ">=tablet")
+    @include media ("<desktop" and ">=tablet") // OK?
       margin-bottom: 100px
 
   &__pitch-topics
@@ -668,8 +668,7 @@
 
 
   // 6TH SECTION
-  // &__partners-section // have to DELETE this class from HTML for uniform styling of sections?
-  section:nth-of-type(6)
+  &__partners-section // this or section:nth-of-type(6) ?
     .partners-swiper-container
       overflow: hidden
       position: relative

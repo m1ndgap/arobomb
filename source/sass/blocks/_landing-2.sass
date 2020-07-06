@@ -127,8 +127,11 @@
   &__orb-list-1
     .orb-list__wrap
       flex-wrap: wrap
+      margin-top: 80px
       @include media ("<large")
         justify-content: center
+      @include media ("<tablet")
+        margin-top: 50px
 
       .orb-list__item
         width: 196px
@@ -169,11 +172,32 @@
             span
                 margin-top: -22px
 
+  &__orb-list-1-btn
+    padding: 18px 24px
+    font-size: 1.8rem
+    line-height: 1.3rem
+    max-width: 396px
+    display: flex
+    align-items: center
+    justify-content: space-around
+    margin: 45px auto
+    @include media ("<=tiny") // or tablet?
+      display: none
+
 
   // 3RD SECTION
   &__promo-section
     position: relative
     z-index: 3
+    
+    // REVIEW
+    .landing-2__subtitle
+      .landing-2__text-highlight
+        @include media ("<tablet")
+          padding: 5px 10px
+        @include media ("<=tiny")
+          // width: min-content
+    // /REVIEW
 
   &__promo
     position: relative
@@ -212,7 +236,6 @@
 
   &__promo
 
-
     .svg-grad-big-arrow
       left: 110px
 
@@ -242,7 +265,7 @@
         display: flex
         flex-flow: column
         @include media ("<=tiny")
-          display: block
+          // display: block
           text-align: center
           margin: 20px auto 0
         > span
@@ -252,12 +275,14 @@
             font-weight: 800
             text-transform: uppercase
             @include media ("<desktop")
-              font-size: 1.5rem
+              font-size: 1.4rem
           &:not(first-of-type)
             font-size: 1.6rem
 
       .svg-promo
         margin-bottom: 15px
+        @include media ("<tiny")
+          margin: 0 auto 20px
 
       .landing-2__text-highlight
         padding: 3px 5px
@@ -286,6 +311,8 @@
 
   &__promo-item--4
     margin-left: 100px
+    @include media ("<tiny")
+      margin-left: 0
     .landing-2__promo-item-description
       align-self: center
       max-width: 245px
@@ -383,7 +410,7 @@
 
 
   // 6TH SECTION
-  section:nth-of-type(6)
+  &__flat-form-section
     position: relative
 
     > svg
@@ -411,22 +438,22 @@
         color: $text
         z-index: 1
 
-  &__inline-form
+  &__flat-form
     margin-top: 57px
 
-  &__inline-form-input--wrap
+  &__flat-form-input--wrap
     display: flex
     @include media ("<large")
       flex-basis: 50%
 
-  &__inline-form-input-clientinfo
+  &__flat-form-input-clientinfo
     @include gbackground (100%) // 94opx
     opacity: 0.7
     display: flex
     @include media ("<large")
       flex-wrap: wrap
 
-  &__inline-form-input
+  &__flat-form-input
     background-color: transparent
     // width: 235px
     width: 100%
@@ -453,7 +480,7 @@
     &:focus
       opacity: 0.9
 
-  &__inline-form-input--wrap + &__inline-form-input--wrap
+  &__flat-form-input--wrap + &__flat-form-input--wrap
     &::before
       content: " "
       background-color: $white
@@ -461,7 +488,7 @@
       height: 28px
       align-self: center
 
-  &__inline-form-input--wrap
+  &__flat-form-input--wrap
     &:nth-child(3)
       &::before
         @include media ("<desktop")
@@ -471,16 +498,14 @@
 
 
   // 7TH SECTION
-  section:nth-of-type(7)
+  &__partners-section // this or section:nth-of-type(7) ?
     .partners-swiper-container
       overflow: hidden
       position: relative
       margin: 100px 0
       @include media ("<desktop")
-        margin: 0
+        margin: 50px 0
         padding-bottom: 90px
-      @include media ("<tablet")
-        margin-top: 60px
       @include media ("<=tiny")
         padding-bottom: 50px
 
