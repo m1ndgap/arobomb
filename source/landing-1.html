@@ -36,7 +36,7 @@
                              ./img/aroma-shelves-2x.png 2x"
                      src="./img/aroma-shelves-2x.png" alt="">
 
-                <a class="landing-1__pitch-button btn" href="">
+                <a class="landing-1__pitch-button btn" id="landing-1-button-1" href="./dfp.pdf" data-modal="true" data-mobtext="">
                     <span>получить каталог</span>
                     <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
                         <use xlink:href="#big-btn-arrow"></use>
@@ -116,7 +116,7 @@
 
     </section>
 
-    <section>
+    <section class="landing-1__slider-section">
         <h2 class="landing-1__subtitle">в НАШЕМ АССОРТИМЕНТЕ</h2>
 
         <div class="landing-1__tabs tabs">
@@ -318,7 +318,7 @@
             </div>
         </div>
 
-        <a class="landing-1__goto-catalog btn" href="">
+        <a class="landing-1__goto-catalog btn" id="landing-1-button-2" href="./pdf.pdf" data-modal="false" data-mobtext="скачать презентацию и каталог">
             <span>скачать презентацию и каталог</span>
             <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
                 <use xlink:href="#big-btn-arrow"></use>
@@ -607,6 +607,14 @@
     </section>
 </main>
 
+<button id="landing-mobile-btn" class="landingmb btn" type="button" data-modal="false">
+    <span class="landingmb__main-text">получить каталог</span>
+    <span class="landingmb__sub-text">минимальный заказ от 4,950 р.</span>
+    <svg width="28" height="8" viewBox="0 0 28 8" class="landingmb__arrow">
+        <use xlink:href="#btn-arrow"></use>
+    </svg>
+</button>
+
 <div class="l1modal modal">
 
     <h1 class="l1modal__brand">#AroBomb</h1>
@@ -670,6 +678,7 @@
 
 <script src="./js/tabs.js"></script>
 <script src="./js/landing-1.js"></script>
+<script src="./js/landing-fixed-button.js"></script>
 
 
 
