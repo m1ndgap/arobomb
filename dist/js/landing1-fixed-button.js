@@ -23,6 +23,7 @@ function changeBtn(btnTarget){
 
 
 let controller = new ScrollMagic.Controller();
+let controller2 = new ScrollMagic.Controller();
 let fixBtn = document.querySelector(`.${fixBtnCls}`);
 let l1btn1 = document.querySelector(`#${l1button1Id}`);
 let l1btn2 = document.querySelector(`#${l1button2Id}`);
@@ -49,4 +50,3 @@ let scene2 = new ScrollMagic.Scene({
     .on(`start`, function(e){
         changeBtn(l1btn2)
     });
-

@@ -10,6 +10,8 @@
 
   &__header
     display: flex
+    @include media ("<desktop")
+      flex-flow: column nowrap
 
   &__main-title-wrapper
     min-width: 60%
@@ -110,6 +112,9 @@
     margin-top: 165px
     padding: 24px
     width: 396px
+    @include media ("<tablet")
+      width: 100%
+      font-size: 1.2rem
 
   &__subtitle
     @include subtitle(3.6rem)
@@ -189,7 +194,7 @@
   &__promo-section
     position: relative
     z-index: 3
-    
+
     // REVIEW
     .landing-2__subtitle
       .landing-2__text-highlight
@@ -643,3 +648,7 @@
         bottom: 13px
       &-active
         @include gbackground(100%)
+
+  //.catalog-form__btn
+  //  @include media ("<tablet")
+  //    display: none

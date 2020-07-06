@@ -2237,6 +2237,12 @@ body {
       max-width: 0;
       overflow: hidden; }
 
+.submenu__section--disabled {
+  pointer-events: none;
+  opacity: 0.7;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1); }
+
 .modal {
   position: fixed;
   top: 0;
@@ -3414,6 +3420,9 @@ body {
       font-size: 3.4rem;
       letter-spacing: 0.2rem;
       font-weight: 900; }
+      @media (max-width: 1023px) {
+        .pcalculator__text h2 {
+          font-size: 2.2rem; } }
     .pcalculator__text h2 + p {
       color: #444444;
       font-size: 1.6rem;
@@ -3421,12 +3430,23 @@ body {
       letter-spacing: 0.1rem;
       margin-top: 0;
       text-transform: uppercase; }
+      @media (max-width: 1023px) {
+        .pcalculator__text h2 + p {
+          font-size: 1.4rem;
+          margin-top: 10px; } }
   .pcalculator__subtitle {
     position: relative;
     z-index: 2; }
+  .pcalculator .pcalculator__title {
+    line-height: unset;
+    padding: 10px 20px;
+    font-size: 2rem; }
   .pcalculator__imgs {
     position: relative;
     z-index: 1; }
+    @media (max-width: 1279px) {
+      .pcalculator__imgs {
+        display: none; } }
   .pcalculator__bg {
     position: absolute;
     top: 44%;
@@ -3437,6 +3457,9 @@ body {
   .pcalculator__calculator {
     z-index: 2;
     width: 50%; }
+    @media (max-width: 1279px) {
+      .pcalculator__calculator {
+        width: 100%; } }
   .pcalculator__range {
     display: flex;
     flex-flow: column nowrap;
@@ -3446,6 +3469,10 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 29px; }
+    @media (max-width: 1023px) {
+      .pcalculator__range-title {
+        font-size: 1.4rem;
+        margin-top: 10px; } }
   .pcalculator__current-value {
     display: inline-block;
     margin: 0 auto;
@@ -3461,18 +3488,32 @@ body {
     background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
     -webkit-background-clip: text;
     background-clip: text; }
+    @media (max-width: 1023px) {
+      .pcalculator__current-value {
+        font-size: 3.6rem; } }
   .pcalculator__values {
     display: flex;
     flex-flow: row wrap; }
+    @media (max-width: 1023px) {
+      .pcalculator__values {
+        justify-content: space-between; } }
   .pcalculator__info-text {
     flex-basis: 50%;
     margin-top: 52px; }
+    @media (max-width: 1023px) {
+      .pcalculator__info-text {
+        margin-top: 25px;
+        padding: 5px; } }
   .pcalculator__info-text--profit {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
     margin: 35px 0 0 -20px;
     padding: 18px 20px; }
+    @media (max-width: 1023px) {
+      .pcalculator__info-text--profit {
+        padding: 12px 15px;
+        margin-top: 17px; } }
     .pcalculator__info-text--profit .pcalculator__info-title, .pcalculator__info-text--profit .pcalculator__info-value {
       color: #FFFFFF; }
   .pcalculator__info-title {
@@ -3484,28 +3525,41 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     color: #444444; }
+    @media (max-width: 1023px) {
+      .pcalculator__info-title {
+        font-size: 1.2rem; } }
   .pcalculator__info-value {
     font-size: 3.6rem;
     font-weight: 900;
     color: #444444; }
-  .pcalculator__range .rs-scale span {
-    z-index: 1; }
-    .pcalculator__range .rs-scale span ins {
-      opacity: 0; }
-    .pcalculator__range .rs-scale span:last-child ins, .pcalculator__range .rs-scale span:first-child ins {
-      font-size: 1.4rem;
-      font-weight: 600;
-      font-family: "Montserrat", sans-serif;
-      color: #444444;
-      opacity: 1; }
-    .pcalculator__range .rs-scale span:after {
-      content: "";
-      position: absolute;
-      top: -4px;
-      display: block;
-      height: 10px;
-      width: 1px;
-      background-color: #dddddd; }
+    @media (max-width: 1023px) {
+      .pcalculator__info-value {
+        font-size: 2rem; } }
+  .pcalculator__range .rs-scale {
+    display: flex; }
+    .pcalculator__range .rs-scale span {
+      z-index: 1; }
+      .pcalculator__range .rs-scale span ins {
+        opacity: 0; }
+      .pcalculator__range .rs-scale span:last-child ins, .pcalculator__range .rs-scale span:first-child ins {
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        color: #444444;
+        opacity: 1;
+        margin-left: 0 !important; }
+      .pcalculator__range .rs-scale span:first-child ins {
+        margin-left: 0 !important; }
+      .pcalculator__range .rs-scale span:last-child ins {
+        margin-left: -58px !important; }
+      .pcalculator__range .rs-scale span:after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        display: block;
+        height: 10px;
+        width: 1px;
+        background-color: #dddddd; }
   .pcalculator__range .rs-tooltip {
     background: transparent;
     border: none; }
@@ -3540,6 +3594,14 @@ body {
   display: flex;
   align-items: flex-end;
   margin: 50px -240px 0; }
+  @media (max-width: 1279px) {
+    .landing-2__header-slider-wrapper {
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: flex-start; } }
+  @media (max-width: 1023px) {
+    .landing-2__header-slider-wrapper {
+      margin: unset; } }
 
 .landing-2__header-slider-controls {
   display: flex;
@@ -3547,6 +3609,12 @@ body {
   max-width: 50px;
   margin-bottom: 150px;
   z-index: 3; }
+  @media (max-width: 1279px) {
+    .landing-2__header-slider-controls {
+      flex-flow: row nowrap;
+      max-width: unset;
+      order: 1;
+      width: 100%; } }
 
 .landing-2__header-slider-pagination {
   font-size: 1.8rem;
@@ -3568,16 +3636,47 @@ body {
     opacity: 1; }
     .landing-2__header-slider-pagination--active svg {
       opacity: 1; }
+  @media (max-width: 1279px) {
+    .landing-2__header-slider-pagination {
+      max-width: 50px; } }
+  @media (max-width: 1023px) {
+    .landing-2__header-slider-pagination {
+      max-width: 153px; } }
+  @media (max-width: 767px) {
+    .landing-2__header-slider-pagination {
+      max-width: 50px;
+      font-size: 1.2rem; } }
 
 .landing-2__header-slider-pagination + .landing-2__header-slider-pagination {
   margin-top: 30px; }
+  @media (max-width: 1279px) {
+    .landing-2__header-slider-pagination + .landing-2__header-slider-pagination {
+      margin-top: unset;
+      margin-left: 80px; } }
+  @media (max-width: 1023px) {
+    .landing-2__header-slider-pagination + .landing-2__header-slider-pagination {
+      margin-left: 50px; } }
+  @media (max-width: 767px) {
+    .landing-2__header-slider-pagination + .landing-2__header-slider-pagination {
+      margin-left: 50px; } }
 
 .landing-2__header-slider {
   z-index: 1;
-  max-width: 1000px; }
+  max-width: 1000px;
+  width: 100%; }
+  @media (max-width: 1023px) {
+    .landing-2__header-slider {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      max-width: 100%;
+      width: 100%; } }
   .landing-2__header-slider .swiper-wrapper {
     display: flex;
     align-items: flex-end; }
+    @media (max-width: 1023px) {
+      .landing-2__header-slider .swiper-wrapper {
+        max-width: 100%;
+        width: 100%; } }
   .landing-2__header-slider .swiper-slide {
     width: 100%;
     max-width: 100%;
@@ -3585,6 +3684,10 @@ body {
     align-items: flex-end; }
     .landing-2__header-slider .swiper-slide img {
       max-width: 100%; }
+    @media (max-width: 1023px) {
+      .landing-2__header-slider .swiper-slide img {
+        width: 100%;
+        max-width: 500px; } }
 
 .l1modal {
   background-image: url("../img/cbm-bg.jpg");
@@ -4664,6 +4767,9 @@ body {
 
 .landing-2__header {
   display: flex; }
+  @media (max-width: 1023px) {
+    .landing-2__header {
+      flex-flow: column nowrap; } }
 
 .landing-2__main-title-wrapper {
   min-width: 60%; }
@@ -4775,6 +4881,10 @@ body {
   margin-top: 165px;
   padding: 24px;
   width: 396px; }
+  @media (max-width: 767px) {
+    .landing-2__header-btn {
+      width: 100%;
+      font-size: 1.2rem; } }
 
 .landing-2__subtitle {
   font-family: "Montserrat", sans-serif;
@@ -5352,7 +5462,11 @@ body {
   border: none;
   margin-bottom: 30px;
   color: #FFFFFF;
-  font-weight: 800; }
+  font-weight: 800;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0; }
   @media (max-width: 1023px) {
     .catalog-form__input {
       width: 100%;
@@ -5419,7 +5533,10 @@ body {
   width: 373px;
   padding: 15px 10px;
   border: 2px solid #82AD24;
-  transition: background-color 300ms, color 300ms, outline 300ms; }
+  transition: background-color 300ms, color 300ms, outline 300ms;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
   @media (max-width: 1023px) {
     .catalog-form__btn {
       width: 100%; } }

@@ -3,6 +3,12 @@
     display: flex
     align-items: flex-end
     margin: 50px -240px 0
+    @include media("<large")
+      flex-flow: column
+      justify-content: flex-start
+      align-items: flex-start
+    @include media("<desktop")
+      margin: unset
 
   &__header-slider-controls
     display: flex
@@ -10,6 +16,11 @@
     max-width: 50px
     margin-bottom: 150px
     z-index: 3
+    @include media("<large")
+      flex-flow: row nowrap
+      max-width: unset
+      order: 1
+      width: 100%
 
 
   &__header-slider-pagination
@@ -32,23 +43,53 @@
       opacity: 1
       svg
         opacity: 1
-
+    @include media("<large")
+      max-width: 50px
+    @include media("<desktop")
+      max-width: 153px
+    @include media("<tablet")
+      max-width: 50px
+      font-size: 1.2rem
 
   &__header-slider-pagination + &__header-slider-pagination
     margin-top: 30px
+    @include media("<large")
+      margin-top: unset
+      margin-left: 80px
+    @include media("<desktop")
+      margin-left: 50px
+    @include media("<tablet")
+      margin-left: 50px
+
 
   &__header-slider
     z-index: 1
     max-width: 1000px
+    width: 100%
+    @include media("<desktop")
+      margin-top: 50px
+      margin-bottom: 50px
+      max-width: 100%
+      width: 100%
+
+
+
     .swiper-wrapper
       display: flex
       align-items: flex-end
+      @include media("<desktop")
+        max-width: 100%
+        width: 100%
+
 
     .swiper-slide
       width: 100%
       max-width: 100%
       display: flex
       align-items: flex-end
-
       img
         max-width: 100%
+      @include media("<desktop")
+        img
+          width: 100%
+          max-width: 500px

@@ -583,7 +583,7 @@
                 </div>
             </div>
 
-            <a class="landing-2__header-btn btn" href="">
+            <a class="landing-2__header-btn btn js-scroll" href="#landing-2-presentation">
                 <span>стать представителем</span>
                 <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
                     <use xlink:href="#big-btn-arrow"></use>
@@ -619,7 +619,7 @@
                         <img src="./img/landing2-big-shelf.png" srcset="./img/landing2-big-shelf@2x.png 2x">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/landing2-small-shelf.png" srcset="./img/landing2-small-shelf@2x.png 2x">
+                        <img src="./img/landing2-med-shelf.png" srcset="./img/landing2-med-shelf@2x.png 2x">
                     </div>
                     <div class="swiper-slide">
                         <img src="./img/landing2-small-shelf.png" srcset="./img/landing2-small-shelf@2x.png 2x">
@@ -697,7 +697,7 @@
 
         </div>
 
-        <a class="landing-2__orb-list-1-btn btn" href="">
+        <a class="landing-2__orb-list-1-btn btn js-scroll" href="#landing-2-presentation">
             <span>стать представителем</span>
             <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
                 <use xlink:href="#big-btn-arrow"></use>
@@ -781,7 +781,7 @@
                              ./img/calculator-img@2x.png 2x" src="./img/calculator-img.png" alt="ароматизатор чегевара">
             </div>
             <div class="pcalculator__calculator">
-                <h3 class="landing-2__text-highlight">калькулятор прибыли:</h3>
+                <h3 class="landing-2__text-highlight pcalculator__title">калькулятор прибыли:</h3>
                 <div class="pcalculator__ui-wrap">
                     <div class="pcalculator__range">
                         <span class="pcalculator__range-title">население вашего города</span>
@@ -941,7 +941,7 @@
                 <div class="swiper-slide">
                     <div class="landing-2__swiper-img--wrapper">
                         <img class="landing-2__swiper-img" srcset="./img/big-sunglasses.jpg,
-                                     ./img/big-sunglasses-2x 2x" src="./img/big-sunglasses-2x.jpg" alt="">
+                                     ./img/big-sunglasses-2x.jpg 2x" src="./img/big-sunglasses-2x.jpg" alt="">
                         <!-- Needs to get tiny -->
                     </div>
                     <div class="landing-2__swiper-text">
@@ -953,7 +953,7 @@
                 <div class="swiper-slide">
                     <div class="landing-2__swiper-img--wrapper">
                         <img class="landing-2__swiper-img" srcset="./img/big-sunglasses.jpg,
-                                     ./img/big-sunglasses-2x 2x" src="./img/big-sunglasses-2x.jpg" alt="">
+                                     ./img/big-sunglasses-2x.jpg 2x" src="./img/big-sunglasses-2x.jpg" alt="">
                     </div>
                     <div class="landing-2__swiper-text">
                         <h3>меняет профессию</h3>
@@ -964,7 +964,7 @@
                 <div class="swiper-slide">
                     <div class="landing-2__swiper-img--wrapper">
                         <img class="landing-2__swiper-img" srcset="./img/big-sunglasses.jpg,
-                                     ./img/big-sunglasses-2x 2x" src="./img/big-sunglasses-2x.jpg" alt="">
+                                     ./img/big-sunglasses-2x.jpg 2x" src="./img/big-sunglasses-2x.jpg" alt="">
                     </div>
                     <div class="landing-2__swiper-text">
                         <h3>иван васильевич</h3>
@@ -975,7 +975,7 @@
                 <div class="swiper-slide">
                     <div class="landing-2__swiper-img--wrapper">
                         <img class="landing-2__swiper-img" srcset="./img/partner1.jpg,
-                                     ./img/partner1-2x 2x" src="./img/partner1-2x.jpg" alt="">
+                                     ./img/partner1-2x.jpg 2x" src="./img/partner1-2x.jpg" alt="">
                     </div>
                     <div class="landing-2__swiper-text">
                         <h3>иван васильевич</h3>
@@ -986,7 +986,7 @@
                 <div class="swiper-slide">
                     <div class="landing-2__swiper-img--wrapper">
                         <img class="landing-2__swiper-img" srcset="./img/partner1.jpg,
-                                     ./img/partner1-2x 2x" src="./img/partner1-2x.jpg" alt="">
+                                     ./img/partner1-2x.jpg 2x" src="./img/partner1-2x.jpg" alt="">
                     </div>
                     <div class="landing-2__swiper-text">
                         <h3>меняет профессию</h3>
@@ -997,7 +997,7 @@
                 <div class="swiper-slide">
                     <div class="landing-2__swiper-img--wrapper">
                         <img class="landing-2__swiper-img" srcset="./img/partner1.jpg,
-                                     ./img/partner1-2x 2x" src="./img/partner1-2x.jpg" alt="">
+                                     ./img/partner1-2x.jpg 2x" src="./img/partner1-2x.jpg" alt="">
                     </div>
                     <div class="landing-2__swiper-text">
                         <h3>иван васильевич</h3>
@@ -1023,7 +1023,7 @@
 
     </section>
 
-    <section class="landing-2__form-section">
+    <section class="landing-2__form-section" id="landing-2-presentation">
         <h2 class="landing-2__subtitle">получите презентацию продукта</h2>
 
         <div class="catalog-form__wrapper">
@@ -1041,9 +1041,17 @@
     </section>
 </main>
 
+<!--<a href="#landing-2-presentation" id="landing-mobile-btn" class="landingmb btn" type="button" data-modal="true">-->
+<!--    <span class="landingmb__main-text">Стать представителем</span>-->
+<!--    <span class="landingmb__sub-text"></span>-->
+<!--    <svg width="28" height="8" viewBox="0 0 28 8" class="landingmb__arrow">-->
+<!--        <use xlink:href="#btn-arrow"></use>-->
+<!--    </svg>-->
+<!--</a>-->
 
 <script src="./js/landing-1.js"></script>
 <script src="./js/landing-2.js"></script>
+<script src="./js/landing2-buttons.js"></script>
 
 
 <div class="cbmodal modal">
