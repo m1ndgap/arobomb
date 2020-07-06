@@ -3773,7 +3773,8 @@ body {
       bottom: 0;
       display: flex;
       flex-flow: column nowrap;
-      width: 100%; }
+      width: 100%;
+      z-index: 10; }
       .landingmb:hover {
         background-color: #82AD24;
         color: #FFFFFF; }
