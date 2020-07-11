@@ -2,7 +2,7 @@
 
 const docLinkCls = 'documents__item-link',
     docModalId = 'document-modal',
-    docModalCls = 'modal',
+    docModalCls = 'document-modal',
     docItemTitleCls = 'documents__item-title',
     docModalTitleCls = 'modal__name',
     docModalImgCls = 'modal__image',
@@ -14,7 +14,7 @@ let fetchDocModal = () => {
     let modal = document.querySelector('.' + docModalCls)
     let closeBtn = modal.querySelector('.' + docModalBtnCls);
     closeBtn.addEventListener('click', function(){
-        modal.classList.remove(docModalCls + '--active')
+        modal.classList.remove('modal--active')
     })
     clearFetchlisteners(docLinks, fetchDocModal)
 };
@@ -27,9 +27,10 @@ let clearFetchlisteners = (links, fn) => {
 
 let showModal = (name, src) => {
     let modal = document.querySelector('.' + docModalCls);
+    let mname = modal.querySelector('.' + docModalTitleCls)
     modal.querySelector('.' + docModalTitleCls).innerText = name;
     modal.querySelector('.' + docModalImgCls).src = src;
-    modal.classList.add(docModalCls + '--active')
+    modal.classList.add('modal--active')
 }
 
 let docLinks = document.querySelectorAll('.' + docLinkCls)

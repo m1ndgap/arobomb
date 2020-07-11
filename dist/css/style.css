@@ -910,6 +910,10 @@ body {
   .test > div > h2 {
     margin-top: 50px; }
 
+.border-line-test #border-line-2 {
+  fill: transparent;
+  stroke: transparent; }
+
 .gallery {
   display: flex;
   flex-flow: column wrap;
