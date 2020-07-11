@@ -3925,6 +3925,56 @@ body {
     transform: translateY(-50%);
     fill: #FFFFFF; }
 
+.tymodal {
+  background-image: url("../img/cbm-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  padding: 30px; }
+  .tymodal__brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    align-items: flex-start; }
+    @media (max-width: 767px) {
+      .tymodal__brand {
+        margin: 0; } }
+  .tymodal-thanks__wrapper {
+    position: absolute;
+    top: 30%;
+    text-transform: uppercase;
+    width: 640px;
+    opacity: 1; }
+    @media (max-width: 767px) {
+      .tymodal-thanks__wrapper {
+        width: 265px; } }
+  .tymodal-thanks__title span {
+    background-size: 640px 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    color: #FFFFFF;
+    font-size: 7.2rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 0 20px; }
+    @media (max-width: 767px) {
+      .tymodal-thanks__title span {
+        background-size: 265px 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+        font-size: 3rem;
+        padding: 0 10px; } }
+  .tymodal-thanks__subtitle {
+    color: #444444;
+    font-size: 1.8rem;
+    font-weight: 600; }
+    @media (max-width: 767px) {
+      .tymodal-thanks__subtitle {
+        font-size: 1.4rem;
+        color: #FFFFFF; } }
+
 .landing-1 section {
   box-sizing: border-box;
   width: 1440px;
@@ -6438,7 +6488,9 @@ body {
     font-size: 1.8rem;
     font-weight: 800;
     color: #000000;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    align-items: flex-start; }
     @media (max-width: 767px) {
       .cbmodal__brand {
         margin: 0; } }
