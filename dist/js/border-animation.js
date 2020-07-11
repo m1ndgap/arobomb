@@ -7,14 +7,12 @@ const animateCircle = document.getElementById(`test-circle`)
 const animationCircle = animateCircle.getElementById(`test-circle-to`)
 
 animateHost.addEventListener(`mouseenter`, function () {
-    animation.beginElementAt(0);
-    console.log(animation.getStartTime())
-    console.log(animation.getSimpleDuration())
+    animation.beginElement();
+    console.log(123)
 
 })
 animateHost.addEventListener(`mouseleave`, function () {
     animation.endElement();
-    console.log(animation.getCurrentTime())
 })
 
 
