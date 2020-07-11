@@ -1970,13 +1970,19 @@ body {
     text-transform: uppercase;
     z-index: 3; }
   .catalog__item-img {
-    z-index: 1; }
+    z-index: 1;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-top: auto; }
   .catalog__price-block {
     position: relative;
     align-self: stretch;
     display: flex;
     flex-flow: row wrap;
-    padding-top: 35px; }
+    padding-top: 35px;
+    margin-top: auto;
+    margin-bottom: 10px; }
     @media (max-width: 1023px) {
       .catalog__price-block {
         padding-top: 26px; } }
