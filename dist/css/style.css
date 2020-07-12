@@ -6331,7 +6331,6 @@ body {
     padding: 15px 10px;
     border: none;
     opacity: 0.9;
-    margin-bottom: 15px;
     text-transform: uppercase;
     outline-color: #669FFF; }
     .form__input::-webkit-input-placeholder {
@@ -6367,6 +6366,21 @@ body {
         color: #D62267; }
       .form__input--error::placeholder {
         color: #D62267; }
+  .form .wpcf7-not-valid {
+    outline: 1px solid #D62267;
+    color: #D62267; }
+    .form .wpcf7-not-valid::-webkit-input-placeholder {
+      color: #D62267; }
+    .form .wpcf7-not-valid::-moz-placeholder {
+      color: #D62267; }
+    .form .wpcf7-not-valid:-ms-input-placeholder {
+      color: #D62267; }
+    .form .wpcf7-not-valid::-ms-input-placeholder {
+      color: #D62267; }
+    .form .wpcf7-not-valid::placeholder {
+      color: #D62267; }
+  .form__input + .form__input {
+    margin-top: 15px; }
   .form__btn {
     -webkit-appearance: none;
        -moz-appearance: none;

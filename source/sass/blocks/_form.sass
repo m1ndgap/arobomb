@@ -2,13 +2,12 @@
   text-transform: uppercase
   display: flex
   flex-flow: column
-  
+
   &__input
     display: block
     padding: 15px 10px
     border: none
     opacity: 0.9
-    margin-bottom: 15px
     text-transform: uppercase
     outline-color: $gradient-end
     &::placeholder
@@ -20,14 +19,24 @@
       color: $main-link
       &::placeholder
         color: $main-link
-          
+
+  .wpcf7-not-valid
+    outline: 1px solid $main-link
+    color: $main-link
+    &::placeholder
+      color: $main-link
+
+  &__input + &__input
+    margin-top: 15px
+
+
   &__btn
     appearance: none
     border-radius: 0
     text-align: center
     border: 2px solid $btn
-    transition: background-color $transition, color $transition, outline $transition 
-          
+    transition: background-color $transition, color $transition, outline $transition
+
   &__cbx-label
     text-transform: uppercase
     display: flex
@@ -48,7 +57,7 @@
     outline-color: $gradient-end
     transition: outline $transition
     &:checked
-      ~ svg 
+      ~ svg
         opacity: 1
 
   &__checkmark
