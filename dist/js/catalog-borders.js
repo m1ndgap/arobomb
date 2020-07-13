@@ -18,7 +18,6 @@ let borders = document.querySelectorAll(`.catalog__item-border`);
 borders.forEach(function (border) {
     let parent = border.parentElement;
     border.innerHTML = svg;
-    console.log(border);
     let animate = border.querySelector(`animate`)
     parent.addEventListener(`mouseenter`, function(){
         if (border.animationsPaused()) {
@@ -33,17 +32,3 @@ borders.forEach(function (border) {
     })
 
 })
-//
-// circle.addEventListener(`mouseenter`, function () {
-//     console.log(circle.animationsPaused())
-//     if (circle.animationsPaused()) {
-//         circle.unpauseAnimations();
-//     } else {
-//         animationCircle.beginElement();
-//     }
-// })
-//
-// circle.addEventListener(`mouseleave`, function () {
-//     circle.pauseAnimations();
-//     console.log(circle.animationsPaused())
-// })

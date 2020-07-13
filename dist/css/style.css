@@ -1950,14 +1950,24 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
     width: 273px;
     height: 305px;
-    padding: 20px 30px;
-    margin: 10px 10px; }
+    opacity: 0; }
     .catalog__item * {
       z-index: 2; }
     .catalog__item:hover .catalog__item-border {
       opacity: 1; }
+    .catalog__item--active {
+      opacity: 1;
+      transition: opacity 300ms;
+      padding: 20px 30px;
+      margin: 10px 10px;
+      overflow: visible;
+      max-height: unset;
+      max-width: unset; }
   .catalog__item-border {
     position: absolute;
     top: 0;

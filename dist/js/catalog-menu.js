@@ -4,6 +4,7 @@ const catMenuCls = `submenu`;
 const catMenuWrapCls = `submenu__wrapper`;
 const catSectionCls = `submenu__section`;
 const subcatLinkCls = `submenu__subsection-item`;
+const catalogItemCls = `catalog__item`;
 
 const hideSections = (sections) => {
     sections.forEach((sect) => {
@@ -19,31 +20,50 @@ const hideSubcatLinks = (link) => {
     })
 }
 
-const sortProducts = (item) => {
+const sortProducts = (link, items) => {
     //sorting logic here
+    let subtype = link.dataset.subtype
     console.log(`Sorting products...`)
+    items.forEach(function (item) {
+        item.classList.remove(`${catalogItemCls}--active`)
+    });
+    items.forEach(function (item) {
+        let itemSubtype = item.dataset.subtype
+        if (itemSubtype == subtype) {
+            let timeout = window.setTimeout(function () {
+                item.classList.add(`${catalogItemCls}--active`);
+            }, 50)
+        }
+    })
 }
 
 const minimize = (submenu) => {
     submenu.classList.add(catMenuCls + `--minimized`);
 }
 
-let submenu = document.querySelector(`.` + catMenuCls);
-let submenuWrap = submenu.querySelector(`.` + catMenuWrapCls);
-let sections = submenu.querySelectorAll(`.` + catSectionCls)
-let links = submenu.querySelectorAll(`.` + subcatLinkCls)
+let submenu = document.querySelector(`.${catMenuCls}`);
+let submenuWrap = submenu.querySelector(`.${catMenuWrapCls}`);
+let sections = submenu.querySelectorAll(`.${catSectionCls}`);
+let links = submenu.querySelectorAll(`.${subcatLinkCls}`);
+let items = document.querySelectorAll(`.${catalogItemCls}`);
 
 sections.forEach((section) => {
     section.addEventListener(`click`, function () {
         hideSections(sections)
         section.classList.add(catSectionCls + `--active`)
-        sortProducts(section);
+        let activeLink = section.querySelector(`.${subcatLinkCls}--active`)
+        if (activeLink) {
+            sortProducts(activeLink, items);
+        }
     })
     section.addEventListener(`keydown`, function (evt) {
         if (evt.key === `Enter`) {
             hideSections(sections)
             section.classList.add(catSectionCls + `--active`)
-            sortProducts(section);
+            let activeLink = section.querySelector(`${subcatLinkCls}--active`)
+            if (activeLink) {
+                sortProducts(activeLink, items);
+            }
         }
     })
 })
@@ -52,7 +72,7 @@ links.forEach((link) => {
     link.addEventListener(`click`, function () {
         hideSubcatLinks(this)
         this.classList.add(subcatLinkCls + `--active`)
-        sortProducts(link);
+        sortProducts(link, items);
     })
 })
 
