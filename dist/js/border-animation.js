@@ -3,25 +3,36 @@
 const animateHost = document.getElementById(`animate-test-host`)
 const animation = animateHost.getElementById(`animate-test`)
 
-const animateCircle = document.getElementById(`test-circle`)
-const animationCircle = animateCircle.getElementById(`test-circle-to`)
+const circle = document.getElementById(`test-circle`)
+const animationCircle = circle.getElementById(`test-circle-to`)
 
 animateHost.addEventListener(`mouseenter`, function () {
-    animation.beginElement();
-    console.log(123)
+    console.log(animateHost.animationsPaused())
+    if (animateHost.animationsPaused()) {
+        animateHost.unpauseAnimations();
+    } else {
+        animation.beginElement();
+    }
 
 })
 animateHost.addEventListener(`mouseleave`, function () {
-    animation.endElement();
+    animateHost.pauseAnimations();
+    console.log(animateHost.animationsPaused())
 })
 
 
 
 
-animateCircle.addEventListener(`mouseenter`, function () {
-    animationCircle.beginElement();
-
+circle.addEventListener(`mouseenter`, function () {
+    console.log(circle.animationsPaused())
+   if (circle.animationsPaused()) {
+       circle.unpauseAnimations();
+    } else {
+        animationCircle.beginElement();
+    }
 })
-animateCircle.addEventListener(`mouseleave`, function () {
-    animationCircle.endElement();
+
+circle.addEventListener(`mouseleave`, function () {
+    circle.pauseAnimations();
+    console.log(circle.animationsPaused())
 })

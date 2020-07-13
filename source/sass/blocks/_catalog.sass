@@ -29,6 +29,9 @@
     margin: 10px 10px
     *
       z-index: 2
+    &:hover
+      .catalog__item-border
+        opacity: 1
 
   &__item-border
     position: absolute
@@ -36,6 +39,8 @@
     left: 0
     z-index: 1
     width: 100%
+    opacity: 0.3
+    transition: opacity $transition
 
   &__item-code
     position: absolute

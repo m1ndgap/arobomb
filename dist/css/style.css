@@ -1956,12 +1956,16 @@ body {
     margin: 10px 10px; }
     .catalog__item * {
       z-index: 2; }
+    .catalog__item:hover .catalog__item-border {
+      opacity: 1; }
   .catalog__item-border {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-    width: 100%; }
+    width: 100%;
+    opacity: 0.3;
+    transition: opacity 300ms; }
   .catalog__item-code {
     position: absolute;
     top: 23px;
@@ -2374,6 +2378,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
+  .document-modal .modal__name {
+    word-spacing: 5000px; }
+    @media (max-width: 1439px) {
+      .document-modal .modal__name {
+        word-spacing: initial; } }
 
 .breadcrumbs {
   padding-left: 0;
