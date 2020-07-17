@@ -5908,7 +5908,7 @@ body {
         margin-top: 0; } }
   .contact-us__after-form-motto {
     font-size: 2.4rem;
-    margin: 20px 0 30px; }
+    margin: 20px 0 15px; }
     @media (max-width: 767px) {
       .contact-us__after-form-motto {
         font-size: 1.8rem; } }
@@ -6398,7 +6398,7 @@ body {
       color: #D62267; }
     .form .wpcf7-not-valid::placeholder {
       color: #D62267; }
-  .form__input + .form__input {
+  .form .wpcf7-form-control-wrap {
     margin-top: 15px; }
   .form__btn {
     -webkit-appearance: none;
