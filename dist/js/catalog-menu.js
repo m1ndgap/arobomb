@@ -5,6 +5,7 @@ const catMenuWrapCls = `submenu__wrapper`;
 const catSectionCls = `submenu__section`;
 const subcatLinkCls = `submenu__subsection-item`;
 const catalogItemCls = `catalog__item`;
+const constructorLink = `/constructor.html`
 
 const hideSections = (sections) => {
     sections.forEach((sect) => {
@@ -48,24 +49,30 @@ let links = submenu.querySelectorAll(`.${subcatLinkCls}`);
 let items = document.querySelectorAll(`.${catalogItemCls}`);
 
 sections.forEach((section) => {
-    section.addEventListener(`click`, function () {
-        hideSections(sections)
-        section.classList.add(catSectionCls + `--active`)
-        let activeLink = section.querySelector(`.${subcatLinkCls}--active`)
-        if (activeLink) {
-            sortProducts(activeLink, items);
-        }
-    })
-    section.addEventListener(`keydown`, function (evt) {
-        if (evt.key === `Enter`) {
+    if (!section.classList.contains(`submenu__section--constructor`)) {
+        section.addEventListener(`click`, function () {
             hideSections(sections)
             section.classList.add(catSectionCls + `--active`)
-            let activeLink = section.querySelector(`${subcatLinkCls}--active`)
+            let activeLink = section.querySelector(`.${subcatLinkCls}--active`)
             if (activeLink) {
                 sortProducts(activeLink, items);
             }
-        }
-    })
+        })
+        section.addEventListener(`keydown`, function (evt) {
+            if (evt.key === `Enter`) {
+                hideSections(sections)
+                section.classList.add(catSectionCls + `--active`)
+                let activeLink = section.querySelector(`${subcatLinkCls}--active`)
+                if (activeLink) {
+                    sortProducts(activeLink, items);
+                }
+            }
+        })
+    } else {
+        section.addEventListener(`click`, function(){
+            window.location.href = constructorLink
+        })
+    }
 })
 
 links.forEach((link) => {

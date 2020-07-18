@@ -96,3 +96,37 @@
 
   &__item-link
     margin-left: auto
+
+
+
+.catalog--constructor
+
+  .catalog__item
+    cursor: pointer
+    &:hover
+      .catalog__item-border
+        opacity: 0.7
+    .catalog__item-border
+      opacity: 0.3
+
+
+  .catalog__item--selected
+    &:hover
+      .catalog__item-border
+        opacity: 1
+    .catalog__item-border
+      opacity: 1
+    .catalog__item-link
+      color: $main-link
+
+  .catalog__item-link
+    margin: 0 auto
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+.constructor
+
+  &__tabs
+    padding-left: 45px
+    @include media("<desktop")
+      padding-left: 0
+    @include media("<tablet")
+      height: 40px
+
+
+  &__tab
+    @include resetinteractive()
+    @include gbackground(100%)
+    padding: 15px 24px 18px 32px
+    font-family: "Montserrat", sans-serif
+    color: transparent
+    -webkit-background-clip: text
+    background-clip: text
+    border: 1px solid
+    border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+    border-image-slice: 1
+    transition: box-shadow $transition, color $transition
+    cursor: pointer
+    &:active, &:focus
+      outline: none
+      box-shadow: 0 0 3px 0 rgba($black ,0.5)
+    &--disabled
+      opacity: 0.5
+      pointer-events: none
+    &--active
+      padding: 16px 25px 19px 33px
+      background-clip: border-box
+      -webkit-background-clip: border-box
+      color: $white
+      border: 0
+      // safari hacks
+      .constructor__tab-sub-text, .constructor__tab-main-text
+        color: $white
+    @include media("<tablet")
+      position: absolute
+      padding: 12px 13px
+      left: 0
+      width: 100%
+      opacity: 0
+      &--active
+        opacity: 1
+
+  &__tab + &__tab
+    position: relative
+    margin-left: 53px
+    &:before
+      content: ""
+      position: absolute
+      left: -33px
+      top: 50%
+      transform: translate(0, -50%)
+      display: block
+      width: 0
+      height: 0
+      margin-right: 20px
+      border-top: 7px solid transparent
+      border-bottom: 7px solid transparent
+      border-left: 13px solid $gradient-end
+    @include media("<tablet")
+      position: absolute
+      margin-left: 0
+      &:before
+        display: none
+      &--active
+        pointer-events: none
+
+
+  &__tab-text
+    display: flex
+    flex-flow: column nowrap
+    align-items: flex-start
+    justify-content: flex-start
+    text-transform: uppercase
+    max-width: 150px
+    &--tab-1
+      max-width: 187px
+    &--tab-2
+      max-width: 250px
+    @include media('<tablet')
+      max-width: unset
+      flex-flow: row nowrap
+
+  &__tab-sub-text, &__tab-main-text
+    display: inline
+    text-align: left
+    font-weight: 400
+    // safari hacks
+    @include gbackground(100%)
+    color: transparent
+    -webkit-background-clip: text
+    background-clip: text
+
+
+  &__tab-sub-text
+    font-size: 1.8rem
+    line-height: 2.0rem
+    letter-spacing: -0.2px
+    text-align: left
+    @include media('<tablet')
+      font-size: 1.2rem
+      font-weight: 800
+      letter-spacing: 2px
+      line-height: 100%
+
+  &__tab-main-text
+    margin-left: -3px
+    font-weight: 900
+    font-size: 3rem
+    line-height: 106%
+    letter-spacing: 2.8px
+    @include media('<tablet')
+      margin-left: 10px
+      font-size: 1.2rem
+      font-weight: 800
+      letter-spacing: 2px
+      line-height: 100%
+
+  &__tab-text-mobile
+    display: none
+    @include media('<tablet')
+      margin-left: auto
+      display: block
+      font-size: 1.2rem
+      font-weight: 800
+      letter-spacing: 4px
+      line-height: 100%
+      &--thin
+        font-weight: 500
+

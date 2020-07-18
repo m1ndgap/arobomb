@@ -573,124 +573,256 @@
     </div>
 </nav>
 
-<main class="main--padded">
-    <section class="faq">
-        <div class="faq__title-wrapper-1">
-            <div class="faq__title-wrapper-2">
-              <h1 class="faq__title">ОТВЕТЫ НА ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h1>
-            </div>
+
+
+<main class="main--constructor">
+
+    <section class="catalog catalog--constructor">
+        <div class="constructor__tabs">
+            <button type="button" data-tab="1" class="constructor__tab constructor__tab--active">
+                <span class="constructor__tab-text constructor__tab-text--tab-1">
+                    <span class="constructor__tab-sub-text">Выбрать</span>
+                    <span class="constructor__tab-main-text">размер</span>
+                    <span class="constructor__tab-text-mobile">
+                        <span class="constructor__tab-text-mobile--thin">1</span>/4
+                    </span>
+                </span>
+            </button>
+            <button type="button" data-tab="2" class="constructor__tab constructor__tab--disabled">
+                <span class="constructor__tab-text  constructor__tab-text--tab-2">
+                    <span class="constructor__tab-sub-text">Выбрать</span>
+                    <span class="constructor__tab-main-text">сувенир</span>
+                    <span class="constructor__tab-text-mobile">
+                        2/4
+                    </span>
+                </span>
+            </button>
+            <button type="button" data-tab="2" class="constructor__tab constructor__tab--disabled">
+                <span class="constructor__tab-text  constructor__tab-text--tab-2">
+                    <span class="constructor__tab-sub-text">Выбрать</span>
+                    <span class="constructor__tab-main-text">аромат</span>
+                    <span class="constructor__tab-text-mobile">
+                        3/4
+                    </span>
+                </span>
+            </button>
+            <button type="button" data-tab="2" class="constructor__tab constructor__tab--disabled">
+                <span class="constructor__tab-text  constructor__tab-text--tab-2">
+                    <span class="constructor__tab-sub-text">Оформить</span>
+                    <span class="constructor__tab-main-text">Подарок</span>
+                    <span class="constructor__tab-text-mobile">
+                        3/4
+                    </span>
+                </span>
+            </button>
         </div>
+        <div class="catalog__wrapper">
+            <div class="catalog__item catalog__item--active" data-type="aroma" data-subtype="nature" data-code="124374" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1000" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
 
-        <div class="accordion">
-
-            <div class="accordion__item">
-
-                <h2 class="accordion__title-wrapper" data-active="0">
-                    <span class="accordion__title">Почему у Вас такие низкие цены?</span>
-                    <div class="accordion__btn">
-                        <span class="accordion__btn-action">открыть</span>
-                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion__arrow">
-                            <use xlink:href="#faq-down-arrow"></use>
-                        </svg>
-                    </div>
-                </h2>
-
-                <div class="accordion__content">
-                    <p>Вы можете на нас положиться.</p>
-                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/test-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
                 </div>
-
             </div>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="drawings" data-code="123133" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="100" data-name="asdasda">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
 
-            <div class="accordion__item">
-
-                <h2 class="accordion__title-wrapper" data-active="0">
-                    <span class="accordion__title">Что включено в стоимость спортивных площадок?</span>
-                    <div class="accordion__btn">
-                        <span class="accordion__btn-action">открыть</span>
-                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion__arrow">
-                            <use xlink:href="#faq-down-arrow"></use>
-                        </svg>
-                    </div>
-                </h2>
-
-                <div class="accordion__content">
-                    <ol>
-                        <li>Вы приобретаете продукцию напрямую у производителя, без посредников.</li>
-                        <li>Объемы нашего производства позволяют сотрудничать напрямую с изготовителями исходного сырья и расходных материалов (труба, заглушка, краска и т.д.), что позволяет существенно снизить себестоимость выпускаемой продукции.</li>
-                        <li>Наше предприятие специализируется на изготовлении спортивного оборудования. Технологические процессы отлажены и автоматизированы.</li>
-                        <li>Являясь основателями некоммерческой организации "МОЛОДЕЖНО-СПОРТИВНОЕ ОБЪЕДИНЕНИЕ", сами столкнулись с проблемой цены и качества спортивных снарядов. Наладив собственное производство, мы решили её.</li>
-                    </ol>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/test-2.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Очень длинноеx</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
                 </div>
-
             </div>
-
-            <div class="accordion__item">
-
-                <h2 class="accordion__title-wrapper" data-active="0">
-                    <span class="accordion__title">Можно ли менять конфигурацию комплекса, добавлять/убирать снаряды?</span>
-                    <div class="accordion__btn">
-                        <span class="accordion__btn-action">открыть</span>
-                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion__arrow">
-                            <use xlink:href="#faq-down-arrow"></use>
-                        </svg>
-                    </div>
-                </h2>
-
-                <div class="accordion__content">
-                    <p>Вы можете на нас положиться.</p>
-                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="drawings" data-code="44444" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1300" data-name="фывфывф">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/test-3.png" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Название разме</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
                 </div>
-
             </div>
-
-            <div class="accordion__item">
-
-                <h2 class="accordion__title-wrapper accordion__title-wrapper--active" data-active="1">
-                    <span class="accordion__title">ещё вопрос</span>
-                    <div class="accordion__btn">
-                        <span class="accordion__btn-action">закрыть</span>
-                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion__arrow">
-                            <use xlink:href="#faq-down-arrow"></use>
-                        </svg>
-                    </div>
-                </h2>
-
-                <div class="accordion__content">
-                    <ol>
-                        <li>Вы приобретаете продукцию напрямую у производителя, без посредников.</li>
-                        <li>Объемы нашего производства позволяют сотрудничать напрямую с изготовителями исходного сырья и расходных материалов (труба, заглушка, краска и т.д.), что позволяет существенно снизить себестоимость выпускаемой продукции.</li>
-                        <li>Наше предприятие специализируется на изготовлении спортивного оборудования. Технологические процессы отлажены и автоматизированы.</li>
-                        <li>Являясь основателями некоммерческой организации "МОЛОДЕЖНО-СПОРТИВНОЕ ОБЪЕДИНЕНИЕ", сами столкнулись с проблемой цены и качества спортивных снарядов. Наладив собственное производство, мы решили её.</li>
-                    </ol>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="55555" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="6700" data-name="фывфыв фыв вввфыыыыы">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/test-4.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
                 </div>
-
             </div>
-
-            <div class="accordion__item">
-
-                <h2 class="accordion__title-wrapper" data-active="0">
-                    <span class="accordion__title">Почему у Вас такие низкие цены?</span>
-                    <div class="accordion__btn">
-                        <span class="accordion__btn-action">открыть</span>
-                        <svg width="8" height="13" viewBox="0 0 8 13" class="accordion__arrow">
-                            <use xlink:href="#faq-down-arrow"></use>
-                        </svg>
-                    </div>
-                </h2>
-
-                <div class="accordion__content">
-                    <p>Вы можете на нас положиться.</p>
-                    <p>Ваш заказ не будет облагаться налогом, если стоимость одной посылки не превышает 200 евро, а вес составляет не более 31 кг. В случае превышения указанных норм для каждой посылки в вашем заказе предусмотрены пошлины на импорт в размере 15% от таможенной стоимости товара, превышающей лимит 200 евро.</p>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="666666" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="9888" data-name="фывфывф фывфыв фывфывфы">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">14 символов 14</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
                 </div>
-
             </div>
-
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="drawings" data-code="77777" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="5200" data-name="нфыевшфны фныевшщфнеы">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">14 символов 14</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aroma" data-subtype="perfume" data-code="3464636" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="16000" data-name="ыяваыфва ыфваыв">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара 14с.</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="765745" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1700" data-name="фывфы фывфывфы ыф">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">14 символов 14</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="drawings" data-code="435235" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1500" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара 14с.</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="nature" data-code="43223" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1300" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="nature" data-code="53252" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="2444" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="perfume" data-code="34213" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1444" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="perfume" data-code="42421" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="412111" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="nature" data-code="423231" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="31231" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="412131" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="55555" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="nature" data-code="4232131" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1444" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="perfume" data-code="333333" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1110" data-name="че гевара">
+                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
+                    <use xlink:href="#border-line"></use>
+                </svg>
+                <span class="catalog__item-code">арт.124374</span>
+                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
+                <div class="catalog__price-block">
+                    <h2 class="catalog__item-name">Че гевара</h2>
+                    <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
+                </div>
+            </div>
         </div>
     </section>
 </main>
 
-<script src="./js/accordion.js"></script>
+
+<script src="./js/constructor-catalog.js"></script>
+<script src="./js/catalog-borders.js"></script>
+
 
 
 <div class="cbmodal modal">
