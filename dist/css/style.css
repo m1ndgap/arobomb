@@ -777,7 +777,15 @@ body {
       background-position: right top; } }
 
 .main--constructor {
-  padding-top: 93px; }
+  overflow: hidden;
+  padding-top: 93px;
+  min-height: 100vh; }
+  @media (max-width: 1439px) {
+    .main--constructor {
+      padding-top: 140px; } }
+  @media (max-width: 767px) {
+    .main--constructor {
+      padding-top: 93px; } }
 
 .main-contact-us {
   background: url("../img/map.png");
@@ -4016,8 +4024,91 @@ body {
         font-size: 1.4rem;
         color: #FFFFFF; } }
 
+.constructor__index {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 1; }
+
+.constructor__box {
+  position: relative;
+  min-height: 500px;
+  overflow: visible; }
+  .constructor__box--1 {
+    flex-basis: 40%; }
+  .constructor__box--2 {
+    flex-basis: 60%; }
+
+.constructor__blob-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer; }
+  .constructor__blob-btn svg {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    fill: url(#linear-grad-3); }
+  .constructor__blob-btn span {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    color: #444444;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: 800; }
+  .constructor__blob-btn--1 {
+    left: 45%; }
+  .constructor__blob-btn--2 {
+    left: 55%; }
+
+.constructor__box-img {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+  .constructor__box-img:hover ~ .constructor__splash-img {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    transition: transform 600ms; }
+  .constructor__box-img:hover ~ .constructor__blob-btn {
+    opacity: 1;
+    transition: opacity 600ms; }
+  @media (max-width: 767px) {
+    .constructor__box-img:hover:hover ~ .constructor__splash-img, .constructor__box-img:hover:hover .constructor__blob-btn {
+      opacity: 0; } }
+
+.constructor__splash-img {
+  z-index: 1;
+  position: absolute;
+  width: 180%;
+  left: 60%;
+  top: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.3) rotate(90deg); }
+
+.constructor__box-mobile-selector {
+  display: none; }
+  @media (max-width: 767px) {
+    .constructor__box-mobile-selector {
+      display: flex;
+      flex-basis: 100%; } }
+
 .constructor__tabs {
-  padding-left: 45px; }
+  position: relative;
+  z-index: 2;
+  display: flex; }
   @media (max-width: 1023px) {
     .constructor__tabs {
       padding-left: 0; } }
@@ -4026,6 +4117,7 @@ body {
       height: 40px; } }
 
 .constructor__tab {
+  flex-grow: 1;
   text-decoration: none;
   background: none;
   border: none;
@@ -4056,6 +4148,10 @@ body {
     border: 0; }
     .constructor__tab--active .constructor__tab-sub-text, .constructor__tab--active .constructor__tab-main-text {
       color: #FFFFFF; }
+  @media (max-width: 1279px) {
+    .constructor__tab {
+      flex-grow: 0;
+      padding: 12px 15px; } }
   @media (max-width: 767px) {
     .constructor__tab {
       position: absolute;
@@ -4082,6 +4178,14 @@ body {
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
     border-left: 13px solid #669FFF; }
+  @media (max-width: 1279px) {
+    .constructor__tab + .constructor__tab {
+      margin-left: 30px; }
+      .constructor__tab + .constructor__tab:before {
+        left: -21px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 10px solid #669FFF; } }
   @media (max-width: 767px) {
     .constructor__tab + .constructor__tab {
       position: absolute;
@@ -4123,6 +4227,9 @@ body {
   line-height: 2.0rem;
   letter-spacing: -0.2px;
   text-align: left; }
+  @media (max-width: 1279px) {
+    .constructor__tab-sub-text {
+      font-size: 1.6rem; } }
   @media (max-width: 767px) {
     .constructor__tab-sub-text {
       font-size: 1.2rem;
@@ -4136,6 +4243,10 @@ body {
   font-size: 3rem;
   line-height: 106%;
   letter-spacing: 2.8px; }
+  @media (max-width: 1279px) {
+    .constructor__tab-main-text {
+      margin-left: unset;
+      font-size: 2rem; } }
   @media (max-width: 767px) {
     .constructor__tab-main-text {
       margin-left: 10px;

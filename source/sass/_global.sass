@@ -108,7 +108,13 @@ body
       background-repeat: no-repeat
       background-position: right top
   &--constructor
+    overflow: hidden
     padding-top: 93px
+    min-height: 100vh
+    @include media ("<huge")
+      padding-top: 140px
+    @include media ("<tablet")
+      padding-top: 93px
 
   &-contact-us
     background: url("../img/map.png")

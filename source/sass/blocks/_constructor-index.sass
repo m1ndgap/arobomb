@@ -1,0 +1,80 @@
+.constructor__index
+  position: relative
+  margin-top: 40px
+  display: flex
+  flex-flow: row wrap
+  z-index: 1
+
+
+.constructor__box
+  position: relative
+  min-height: 500px
+  overflow: visible
+  &--1
+    flex-basis: 40%
+  &--2
+    flex-basis: 60%
+
+.constructor__blob-btn
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  z-index: 3
+  opacity: 0
+  cursor: pointer
+  svg
+    position: absolute
+    left: 40%
+    top: 40%
+    transform: translate(-50%, -50%)
+    opacity: 0.8
+    fill: url(#linear-grad-3)
+  span
+    position: absolute
+    left: 40%
+    top: 40%
+    transform: translate(-50%, -50%)
+    @include subtitle(1.8rem)
+    color: $white
+    font-weight: 800
+
+  &--1
+    left: 45%
+  &--2
+    left: 55%
+
+.constructor__box-img
+  position: absolute
+  z-index: 2
+  width: 100%
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  &:hover
+    ~ .constructor__splash-img
+      opacity: 1
+      transform: translate(-50%, -50%) scale(1) rotate(0deg)
+      transition: transform $transition*2
+    ~ .constructor__blob-btn
+      opacity: 1
+      transition: opacity $transition*2
+    @include media("<tablet")
+      &:hover
+        ~ .constructor__splash-img, .constructor__blob-btn
+          opacity: 0
+
+.constructor__splash-img
+  z-index: 1
+  position: absolute
+  width: 180%
+  left: 60%
+  top: 50%
+  opacity: 0
+  transform: translate(-50%, -50%) scale(0.3) rotate(90deg)
+
+.constructor__box-mobile-selector
+  display: none
+  @include media("<tablet")
+    display: flex
+    flex-basis: 100%
