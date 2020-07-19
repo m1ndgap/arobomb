@@ -10,7 +10,10 @@
   position: relative
   min-height: 500px
   overflow: visible
+  z-index: 1
+  margin-bottom: -50px
   &:hover
+    z-index: -1
     .constructor__splash-img
       opacity: 1
       transform: translate(-50%, -50%) scale(1) rotate(0deg)
@@ -79,3 +82,48 @@
   @include media("<tablet")
     display: flex
     flex-basis: 100%
+
+.constructor__index-desktop-title
+  @include subtitle(2.4rem)
+  font-weight: 900
+
+.constructor__box-info--2
+  margin-left: auto
+
+.constructor__box-text
+  position: relative
+  z-index: 2
+
+.constructor__box-text
+  display: flex
+  align-items: center
+  margin-top: 35px
+  span
+    font-size: 2.4rem
+    font-family: "Montserrat", sans-serif
+    font-weight: 400
+    color: $text
+    margin-right: 10px
+
+.constructor__box-text--box
+  display: inline-block
+  margin-top: 42px
+  @include gbackground(100%)
+  padding: 3px 0 6px 10px
+  span
+    color: $white
+  img
+    margin: -15px 0 -20px
+    height: 56px
+
+.constructor__bonus
+  display: flex
+  align-items: center
+  margin-left: 15px
+  @include gbackground(100%)
+  padding: 0 10px 3px 10px
+  span
+    color: $white
+  img
+    margin: -20px 0
+    max-height: 73px

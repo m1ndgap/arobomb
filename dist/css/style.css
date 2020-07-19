@@ -4034,14 +4034,18 @@ body {
 .constructor__box {
   position: relative;
   min-height: 500px;
-  overflow: visible; }
-  .constructor__box:hover .constructor__splash-img {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    transition: transform 600ms; }
-  .constructor__box:hover .constructor__blob-btn {
-    opacity: 1;
-    transition: opacity 600ms; }
+  overflow: visible;
+  z-index: 1;
+  margin-bottom: -50px; }
+  .constructor__box:hover {
+    z-index: -1; }
+    .constructor__box:hover .constructor__splash-img {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+      transition: transform 600ms; }
+    .constructor__box:hover .constructor__blob-btn {
+      opacity: 1;
+      transition: opacity 600ms; }
   @media (max-width: 767px) {
     .constructor__box:hover .constructor__splash-img, .constructor__box:hover .constructor__blob-btn {
       opacity: 0; } }
@@ -4104,6 +4108,58 @@ body {
     .constructor__box-mobile-selector {
       display: flex;
       flex-basis: 100%; } }
+
+.constructor__index-desktop-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  color: #444444;
+  text-transform: uppercase;
+  font-weight: 900; }
+
+.constructor__box-info--2 {
+  margin-left: auto; }
+
+.constructor__box-text {
+  position: relative;
+  z-index: 2; }
+
+.constructor__box-text {
+  display: flex;
+  align-items: center;
+  margin-top: 35px; }
+  .constructor__box-text span {
+    font-size: 2.4rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #444444;
+    margin-right: 10px; }
+
+.constructor__box-text--box {
+  display: inline-block;
+  margin-top: 42px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  padding: 3px 0 6px 10px; }
+  .constructor__box-text--box span {
+    color: #FFFFFF; }
+  .constructor__box-text--box img {
+    margin: -15px 0 -20px;
+    height: 56px; }
+
+.constructor__bonus {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  padding: 0 10px 3px 10px; }
+  .constructor__bonus span {
+    color: #FFFFFF; }
+  .constructor__bonus img {
+    margin: -20px 0;
+    max-height: 73px; }
 
 .constructor__tabs {
   position: relative;
