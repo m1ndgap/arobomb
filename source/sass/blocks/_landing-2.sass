@@ -188,7 +188,7 @@
           .orb-list__svg-img
             width: 45px
 
-        &:nth-child(2), &:nth-child(3) // give names to items? item-2
+        &:nth-child(2), &:nth-child(3)
           span
             @include media ("<=tiny")
               margin-top: -15px
@@ -247,7 +247,7 @@
     top: 35px
     @include media ("<desktop")
       position: static
-      margin-top: 70px // check subtitle margin-bottom
+      margin-top: 70px
       justify-content: space-around
 
   &__promo-row--2
@@ -257,7 +257,7 @@
     margin-top: 30px
     @include media ("<desktop")
       position: static
-      margin-top: 65px // change?
+      margin-top: 65px
       margin-left: 0
     @include media ("<tablet")
       margin-top: 40px
@@ -337,7 +337,7 @@
 
   &__promo-item--3
     .landing-2__promo-item-description
-      align-self: center // not exactly it...
+      align-self: center
       max-width: 230px
 
   &__promo-item--4
@@ -375,7 +375,7 @@
     z-index: 3
 
 
-    .landing-2__subtitle // apply to all subtitles?
+    .landing-2__subtitle
       margin-bottom: 100px
       @include media ("<desktop")
         margin-bottom: 50px
@@ -402,7 +402,7 @@
       flex-wrap: wrap
       > div:nth-of-type(1)
         .orb-list__svg-img
-          margin-top: 0 // what is making this become necessary?
+          margin-top: 0
         span
           max-width: 200px
           margin-top: 15px
@@ -446,7 +446,7 @@
     position: relative
     z-index: 2
     margin-top: 70px
-    
+
     &::before
       content: " "
       display: block
@@ -482,8 +482,8 @@
       stroke: url(#linear-grad-4)
       fill: transparent
       position: absolute
-      left: 53px // REVIEW
-      top: -78px // REVIEW
+      left: 53px
+      top: -78px
       @include media ("<huge")
         display: none
 
@@ -521,7 +521,7 @@
       margin: 0 auto
 
   &__flat-form-input-clientinfo
-    @include gbackground (100%) // 94opx
+    @include gbackground (100%)
     opacity: 0.7
     display: flex
     @include media ("<large")
@@ -544,6 +544,7 @@
     @include media ("<tablet")
       background: $white
       margin-bottom: 30px
+      color: $text
     //   width: 100%
     //   opacity: 0.7
     // @include media ("<tablet")
@@ -583,7 +584,7 @@
 
 
   // 7TH SECTION
-  &__partners-section // this or section:nth-of-type(7) ?
+  &__partners-section
     position: relative
     z-index: 3
 
@@ -624,7 +625,7 @@
     .landing-2__swiper-text
       display: block
       @include media ("<tablet")
-        max-width: 500px // DOESN'T WORK ON <p>
+        max-width: 500px
         margin: 0
 
       h3
@@ -704,7 +705,7 @@
   .swiper-pagination // REVIEW
     @include media (">=desktop")
       display: none
-    width: 105% // better this than to change margin on bullets?
+    width: 105%
     bottom: auto // 15px
     left: 50%
     transform: translateX(-50%)

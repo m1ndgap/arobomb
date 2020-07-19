@@ -4035,6 +4035,16 @@ body {
   position: relative;
   min-height: 500px;
   overflow: visible; }
+  .constructor__box:hover .constructor__splash-img {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    transition: transform 600ms; }
+  .constructor__box:hover .constructor__blob-btn {
+    opacity: 1;
+    transition: opacity 600ms; }
+  @media (max-width: 767px) {
+    .constructor__box:hover .constructor__splash-img, .constructor__box:hover .constructor__blob-btn {
+      opacity: 0; } }
   .constructor__box--1 {
     flex-basis: 40%; }
   .constructor__box--2 {
@@ -4078,16 +4088,6 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
-  .constructor__box-img:hover ~ .constructor__splash-img {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
-    transition: transform 600ms; }
-  .constructor__box-img:hover ~ .constructor__blob-btn {
-    opacity: 1;
-    transition: opacity 600ms; }
-  @media (max-width: 767px) {
-    .constructor__box-img:hover:hover ~ .constructor__splash-img, .constructor__box-img:hover:hover .constructor__blob-btn {
-      opacity: 0; } }
 
 .constructor__splash-img {
   z-index: 1;
@@ -4458,12 +4458,14 @@ body {
       margin-left: -95px; } }
 
 .landing-1__pitch-button {
+  position: relative;
   display: flex;
   font-size: 1.8rem;
   width: 396px;
   padding: 20px;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  z-index: 2; }
   @media (max-width: 1023px) {
     .landing-1__pitch-button {
       font-size: 1.5rem;
@@ -4973,7 +4975,7 @@ body {
         margin: 0 auto; } }
   .landing-1__promo-item--4 .landing-1__promo-item-description {
     width: 185px;
-    margin-top: -40px;
+    margin-top: 40px;
     margin-left: -30px; }
     @media (max-width: 1023px) {
       .landing-1__promo-item--4 .landing-1__promo-item-description {
@@ -5702,7 +5704,8 @@ body {
   @media (max-width: 767px) {
     .landing-2__flat-form-input {
       background: #FFFFFF;
-      margin-bottom: 30px; } }
+      margin-bottom: 30px;
+      color: #444444; } }
   .landing-2__flat-form-input::-webkit-input-placeholder {
     color: #FFFFFF;
     text-transform: uppercase;
@@ -5997,7 +6000,7 @@ body {
     .catalog-form__input {
       background: #FFFFFF;
       opacity: 1;
-      color: #000000;
+      color: #444444;
       font-size: 1.4rem; } }
   .catalog-form__input::-webkit-input-placeholder {
     color: #FFFFFF;

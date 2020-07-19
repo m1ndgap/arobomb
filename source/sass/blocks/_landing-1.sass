@@ -2,7 +2,7 @@
 
   section
     @include container--content
-    &:nth-of-type(1), &:nth-of-type(5) // title and splash/promo sections. Name them?
+    &:nth-of-type(1), &:nth-of-type(5)
       overflow: hidden
 
   section + section
@@ -87,7 +87,7 @@
   &__title-pitch--wrapper
     width: 100%
     z-index: 1
-    @include media ("<desktop" and ">=tablet") // OK?
+    @include media ("<desktop" and ">=tablet")
       margin-bottom: 100px
 
   &__pitch-topics
@@ -132,12 +132,14 @@
       margin-left: -95px
 
   &__pitch-button
+    position: relative
     display: flex
     font-size: 1.8rem
     width: 396px
     padding: 20px // 24px
     align-items: center
     justify-content: space-evenly
+    z-index: 2
     @include media ("<desktop")
       font-size: 1.5rem
       width: 288px
@@ -210,7 +212,7 @@
             @include media ("<=tiny")
               margin-top: -10px
 
-        &:nth-child(2) // give names to items? item-2
+        &:nth-child(2)
           span
             margin-left: 30px
             max-width: 200px
@@ -341,14 +343,14 @@
   .swiper-button-prev
     left: 0
 
-  .swiper-pagination // REVIEW
-    @include media (">=desktop")
-      display: none
+  .swiper-pagination
     width: 90%
     bottom: auto
     left: 50%
     transform: translateX(-50%)
     display: flex
+    @include media (">=desktop")
+      display: none
     .swiper-pagination-bullet
       flex-grow: 1
       height: 1px
@@ -464,7 +466,7 @@
         display: block
 
   .svg-grad-big-arrow
-    right: 0 // REVIEW
+    right: 0
 
   &__promo-row--1
     justify-content: space-between
@@ -622,7 +624,7 @@
       margin-left: -28px
       margin-top: -23px
       @include media ("<desktop")
-        margin: auto 0 auto -45px // OK?
+        margin: auto 0 auto -45px
 
   &__promo-item--4
     top: -67px
@@ -641,7 +643,7 @@
         margin: 0 auto
     .landing-1__promo-item-description
       width: 185px
-      margin-top: -40px
+      margin-top: 40px
       margin-left: -30px
       @include media ("<desktop")
         // margin-left: 0
@@ -668,7 +670,7 @@
 
 
   // 6TH SECTION
-  &__partners-section // this or section:nth-of-type(6) ?
+  &__partners-section
     .partners-swiper-container
       overflow: hidden
       position: relative
@@ -698,7 +700,7 @@
       @include media ("<tablet")
         position: static
         width: 100px
-        margin: 0 20px 0 0;
+        margin: 0 20px 0 0
       @include media ("<=tiny")
         width: 58px
 
@@ -708,7 +710,7 @@
     .landing-1__swiper-text
       display: block
       @include media ("<tablet")
-        max-width: 500px // DOESN'T WORK ON <p>
+        max-width: 500px
         margin: 0
 
       h3
@@ -763,11 +765,9 @@
       left: 327px
 
     .swiper-pagination
-      width: 105% // better this than to change margin on bullets?
+      width: 105%
       margin-top: 70px
       @include media ("<tablet")
         margin-top: 40px
       @include media ("<=tiny")
         margin-top: 30px
-
-  // &__form-section // have to DELETE this class from HTML for uniform styling of sections?

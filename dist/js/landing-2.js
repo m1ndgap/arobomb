@@ -105,3 +105,16 @@ paginations.forEach(function(el){
     })
 })
 
+let landing1PartnersSwiper = new Swiper('.partners-swiper-container', {
+    speed: 400,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    }
+})
