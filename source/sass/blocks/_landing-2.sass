@@ -226,7 +226,7 @@
       .landing-2__text-highlight
         @include media ("<tablet")
           padding: 5px 10px
-        @include media ("<=tiny")
+        // @include media ("<=tiny")
           // width: min-content
     // /REVIEW
 
@@ -296,7 +296,6 @@
         display: flex
         flex-flow: column
         @include media ("<=tiny")
-          // display: block
           text-align: center
           margin: 20px auto 0
         > span
@@ -557,7 +556,7 @@
       text-transform: uppercase
       font-weight: 600
       font-size: 1.4rem
-      line-height: 1.3rem
+      line-height: 2rem
       @include media ("<tablet")
         color: $text
         opacity: 0.5
@@ -607,20 +606,21 @@
 
     .landing-2__swiper-img--wrapper
       display: block
-      width: 272px
+      max-width: 272px
       flex-shrink: 0
       margin-right: 55px
       @include media ("<desktop")
         margin-right: 30px
       @include media ("<tablet")
         position: static
-        width: 100px
+        max-width: 100px
         margin: 0 20px 0 0
       @include media ("<=tiny")
-        width: 58px
+        max-width: 58px
 
     .landing-2__swiper-img
-      width: 100%
+      max-width: 100%
+      max-height: 
 
     .landing-2__swiper-text
       display: block
