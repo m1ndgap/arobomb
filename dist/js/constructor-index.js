@@ -27,6 +27,11 @@ let info1 = document.querySelector(`.constructor__box-info--1`);
 let info2 = document.querySelector(`.constructor__box-info--2`);
 let blob1 = document.querySelector(`.constructor__blob-btn--1`);
 let blob2 = document.querySelector(`.constructor__blob-btn--2`);
+let mobileProceedBtn = document.querySelector(`.constructor__index-mobile-btn`)
+
+mobileProceedBtn.addEventListener(`click`, function () {
+    goToStep2();
+})
 
 
 mobileBtns.forEach(function(btn){
