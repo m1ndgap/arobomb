@@ -22,6 +22,7 @@
     *
       pointer-events: all
 
+
 .constructor__box
   position: relative
   min-height: 500px
@@ -55,6 +56,7 @@
     &:hover
       .constructor__splash-img, .constructor__blob-btn
         opacity: 0
+        display: none
 
 
 
@@ -106,6 +108,10 @@
     @include subtitle(1.8rem)
     color: $white
     font-weight: 800
+  @include media("<tablet")
+    pointer-events: none
+    display: none
+
 
   &--1
     left: 45%

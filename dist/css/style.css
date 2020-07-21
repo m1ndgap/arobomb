@@ -4083,7 +4083,8 @@ body {
     .constructor__box {
       position: absolute; }
       .constructor__box:hover .constructor__splash-img, .constructor__box:hover .constructor__blob-btn {
-        opacity: 0; } }
+        opacity: 0;
+        display: none; } }
 
 @media (max-width: 767px) {
   .js-box-1-mobile-active {
@@ -4134,6 +4135,10 @@ body {
     text-transform: uppercase;
     color: #FFFFFF;
     font-weight: 800; }
+  @media (max-width: 767px) {
+    .constructor__blob-btn {
+      pointer-events: none;
+      display: none; } }
   .constructor__blob-btn--1 {
     left: 45%; }
   .constructor__blob-btn--2 {
