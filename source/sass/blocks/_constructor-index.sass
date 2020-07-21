@@ -4,11 +4,23 @@
   display: flex
   flex-flow: row wrap
   z-index: 1
+  pointer-events: none
+  opacity: 0
+  max-height: 0
+  overflow: hidden
+  *
+    pointer-events: none
   @include media("<huge")
     justify-content: space-around
   @include media("<tablet")
     margin-top: 20px
-
+  &--active
+    pointer-events: all
+    opacity: 1
+    max-height: unset
+    overflow: visible
+    *
+      pointer-events: all
 
 .constructor__box
   position: relative
@@ -238,23 +250,28 @@
   span
     font-weight: 600
     color: $white
+    margin-bottom: 0
   img
     margin: -20px 0
     max-height: 73px
   @include media("<huge")
+    max-width: max-content
     padding: 0 0 3px 5px
+    margin-bottom: 0 !important
     img
       margin: -20px 0
       max-height: 53px
     .constructor__mobile-hidden
       display: none
   @include media("<large")
-    position: absolute
-    right: 100px
-    span
-      margin: 0
+    //position: absolute
+    //right: 100px
+    //span
+    //  margin: 0
   @include media("<tablet")
-    flex: 0 0 0
+
+    margin-left: 20px
+
     display: inline-block
     position: static
 

@@ -2,6 +2,9 @@
 
 const blobBtnSmallCls = `constructor__blob-btn--1`;
 const blobBtnBigCls = `constructor__blob-btn--2`;
+const tabCls = `constructor__tab`;
+const indexCls = `constructor__index`;
+const catalogCls = `catalog__wrapper`;
 
 
 const boxTypes = {
@@ -17,10 +20,24 @@ const boxTypes = {
     }
 }
 
-let currentBoxType = {};
+let currentBoxType = boxTypes.small;
 
+function goToStep1(){
+    currentBoxType = boxTypes.small;
+}
 
+function goToStep2(){
+    index.classList.remove(`${indexCls}--active`);
+    catalog.classList.add(`${catalogCls}--active`);
+}
 
+function goToStep3(){
+
+}
+
+let constTabs = document.querySelectorAll(`.${tabCls}`);
+let index = document.querySelector(`.${indexCls}`);
+let catalog = document.querySelector(`.${catalogCls}`);
 let blobBtnSmall = document.querySelector(`.${blobBtnSmallCls}`);
 let blobBtnBig = document.querySelector(`.${blobBtnBigCls}`);
 
