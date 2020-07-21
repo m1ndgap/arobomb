@@ -618,10 +618,10 @@
         </div>
         <div class="constructor__index">
             <div class="constructor__box-mobile-selector">
-                <span>На пол года</span>
-                <span>На год</span>
+                <span data-boxtype="small" class="constructor__box-mobile-selector-span constructor__box-mobile-selector-span--active">На пол года</span>
+                <span data-boxtype="big" class="constructor__box-mobile-selector-span">На год</span>
             </div>
-            <div class="constructor__box constructor__box--1">
+            <div data-boxtype="small" class="constructor__box constructor__box--1 js-box-1-mobile js-box-1-mobile-active">
                 <img class="constructor__box-img constructor__box-img--1" src="./img/constructor_box1.png" srcset="./img/constructor_box1@2x.png 2x" alt="маленькая коробка">
                 <div class="constructor__blob-btn constructor__blob-btn--1">
 
@@ -642,7 +642,7 @@
 
 
             </div>
-            <div class="constructor__box constructor__box--2">
+            <div data-boxtype="big" class="constructor__box constructor__box--2 js-box-2-mobile js-box-2-mobile-inactive">
                 <img class="constructor__box-img constructor__box-img--2" src="./img/constructor_box2.png" srcset="./img/constructor_box2@2x.png 2x" alt="маленькая коробка">
                 <div class="constructor__blob-btn constructor__blob-btn--2">
 
@@ -663,7 +663,7 @@
 
 
             </div>
-            <div class="constructor__box-info constructor__box-info--1">
+            <div class="constructor__box-info constructor__box-info--1 js-info-mobile-active">
                 <h2 class="constructor__index-desktop-title">на пол года</h2>
                 <div class="constructor__box-text constructor__box-text--souvenirs">
                     <span>2 сувенира</span>
@@ -687,13 +687,13 @@
             <div class="constructor__box-info constructor__box-info--2">
                 <h2 class="constructor__index-desktop-title">на год</h2>
                 <div class="constructor__box-text constructor__box-text--souvenirs">
-                    <span>2 сувенира</span>
+                    <span>4 сувенира</span>
                     <img src="./img/constructor-souvenir-icon.png" srcset="./img/constructor-souvenir-icon@2x.png 2x" alt="" role="presentation">
                     <img src="./img/constructor-souvenir-icon.png" srcset="./img/constructor-souvenir-icon@2x.png 2x" alt="" role="presentation">
                     <img src="./img/constructor-souvenir-icon.png" srcset="./img/constructor-souvenir-icon@2x.png 2x" alt="" role="presentation">
                     <img src="./img/constructor-souvenir-icon.png" srcset="./img/constructor-souvenir-icon@2x.png 2x" alt="" role="presentation">
                     <span class="constructor__bonus">
-                        <span>+ один в подарок</span>
+                        <span>+ <span class="constructor__mobile-hidden">один в</span> подарок</span>
                         <img src="./img/constructor-souvenir-icon-lg.png" srcset="./img/constructor-souvenir-icon-lg@2x.png 2x" alt="" role="presentation">
                     </span>
                 </div>
@@ -711,6 +711,9 @@
                     <img src="./img/constructor_box1.png" srcset="./img/constructor_box1@2x.png 2x" alt="" role="presentation">
                 </div>
             </div>
+            <button class="constructor__index-mobile-btn btn">
+                выбрать и продолжить
+            </button>
         </div>
         <div class="catalog__wrapper">
             <div class="catalog__item catalog__item--active" data-type="aroma" data-subtype="nature" data-code="124374" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1000" data-name="че гевара">
@@ -919,6 +922,7 @@
 <script src="./js/constructor-catalog.js"></script>
 <script src="./js/constructor-index.js"></script>
 <script src="./js/catalog-borders.js"></script>
+<script src="./js/constructor-steps.js"></script>
 
 
 

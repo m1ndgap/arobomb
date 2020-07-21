@@ -4,6 +4,10 @@
   display: flex
   flex-flow: row wrap
   z-index: 1
+  @include media("<huge")
+    justify-content: space-around
+  @include media("<tablet")
+    margin-top: 20px
 
 
 .constructor__box
@@ -12,6 +16,8 @@
   overflow: visible
   z-index: 1
   margin-bottom: -50px
+  margin-top: -30px
+  transition: all $transition
   &:hover
     z-index: -1
     .constructor__splash-img
@@ -21,14 +27,49 @@
     .constructor__blob-btn
       opacity: 1
       transition: opacity $transition*2
-  @include media("<tablet")
-    &:hover
-      .constructor__splash-img, .constructor__blob-btn
-        opacity: 0
   &--1
     flex-basis: 40%
   &--2
     flex-basis: 60%
+  @include media("<huge")
+    min-height: unset
+    height: 300px
+    &--1
+      flex-basis: 30%
+    &--2
+      flex-basis: 40%
+  @include media("<tablet")
+    position: absolute
+    &:hover
+      .constructor__splash-img, .constructor__blob-btn
+        opacity: 0
+
+
+
+.js-box-1-mobile-active
+  @include media("<tablet")
+    opacity: 1
+    left: 50%
+    transform: translateX(-50%)
+
+
+.js-box-1-mobile-inactive
+  @include media("<tablet")
+    opacity: 0.7
+    transform: scale(0.5)
+    left: 0
+
+.js-box-2-mobile-active
+  @include media("<tablet")
+    right: 50%
+    transform: translateX(-50%)
+
+.js-box-2-mobile-inactive
+  @include media("<tablet")
+    opacity: 0.7
+    transform: scale(0.5)
+    right: 0
+
 
 .constructor__blob-btn
   position: absolute
@@ -66,6 +107,17 @@
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+  @include media("<huge")
+    width: auto
+    &--1
+      height: 100%
+    &--2
+      height: 130%
+  @include media("<tablet")
+    &--1
+      height: 164px
+    &--2
+      height: 200px
 
 
 .constructor__splash-img
@@ -81,14 +133,53 @@
   display: none
   @include media("<tablet")
     display: flex
+    justify-content: center
     flex-basis: 100%
+    margin-bottom: 20px
+    &-span
+      font-size: 1.2rem
+      text-transform: uppercase
+      color: $text
+      opacity: 0.7
+      cursor: pointer
+      transition: opacity $transition
+      &--active
+        font-weight: 800
+        opacity: 1
+        text-decoration: underline
+    &-span + &-span
+      margin-left: 15px
+
+
 
 .constructor__index-desktop-title
   @include subtitle(2.4rem)
   font-weight: 900
+  @include media("<huge")
+    font-size: 1.8rem
+  @include media("<tablet")
+    display: none
+
+.constructor__box-info
+  @include media("<huge")
+    flex-basis: 50%
+  @include media("<tablet")
+    flex-basis: 100%
+    width: 95%
+    z-index: 5
+    position: fixed
+    bottom: 58px
+    left: 50%
+    transform: translateX(-50%)
+    opacity: 0
+
+.js-info-mobile-active
+  opacity: 1
 
 .constructor__box-info--2
   margin-left: auto
+  @include media("<huge")
+    margin-left: unset
 
 .constructor__box-text
   position: relative
@@ -96,6 +187,7 @@
 
 .constructor__box-text
   display: flex
+  flex-flow: row wrap
   align-items: center
   margin-top: 35px
   span
@@ -104,6 +196,19 @@
     font-weight: 400
     color: $text
     margin-right: 10px
+  @include media("<huge")
+    margin-top: 15px
+    span
+      font-size: 1.8rem
+  @include media("<large")
+    span
+      flex-basis: 100%
+      margin-bottom: 10px
+  @include media("<tablet")
+    margin-top: 8px
+    span
+      font-size: 1.6rem
+
 
 .constructor__box-text--box
   display: inline-block
@@ -112,9 +217,17 @@
   padding: 3px 0 6px 10px
   span
     color: $white
+    font-weight: 600
   img
     margin: -15px 0 -20px
     height: 56px
+  @include media("<huge")
+    margin-top: 17px
+    padding: 0 0 3px 5px
+    img
+      height: 46px
+  @include media("<tablet")
+    margin-top: 8px
 
 .constructor__bonus
   display: flex
@@ -123,7 +236,32 @@
   @include gbackground(100%)
   padding: 0 10px 3px 10px
   span
+    font-weight: 600
     color: $white
   img
     margin: -20px 0
     max-height: 73px
+  @include media("<huge")
+    padding: 0 0 3px 5px
+    img
+      margin: -20px 0
+      max-height: 53px
+    .constructor__mobile-hidden
+      display: none
+  @include media("<large")
+    position: absolute
+    right: 100px
+    span
+      margin: 0
+  @include media("<tablet")
+    flex: 0 0 0
+    display: inline-block
+    position: static
+
+.constructor__index-mobile-btn
+  display: none
+  @include media("<tablet")
+    display: block
+    position: fixed
+    bottom: -2px
+    width: 100%
