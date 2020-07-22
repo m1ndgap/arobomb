@@ -103,12 +103,10 @@ box2.addEventListener(`click`, function(){
 })
 
 blob1.addEventListener(`click`, function () {
-    console.log(123)
     goToStep2()
 })
 
 blob2.addEventListener(`click`, function () {
-    console.log(123)
     currentBoxType = boxTypes.big;
     goToStep2()
 })

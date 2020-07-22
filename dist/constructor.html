@@ -579,7 +579,7 @@
 
     <section class="catalog catalog--constructor">
         <div class="constructor__tabs">
-            <button type="button" data-step="1" class="constructor__tab constructor__tab--active">
+            <button type="button" data-step="1" class="constructor__tab constructor__tab--disabled">
                 <span class="constructor__tab-text constructor__tab-text--tab-1">
                     <span class="constructor__tab-sub-text">Выбрать</span>
                     <span class="constructor__tab-main-text">размер</span>
@@ -595,6 +595,10 @@
                     <span class="constructor__tab-text-mobile">
                         2/4
                     </span>
+                    <span class="constructor__tab-submenu">
+                        <span data-subtype="cars" class="constructor__tab-submenu-item">марки авто</span>
+                        <span data-subtype="drawings" class="constructor__tab-submenu-item">рисунки</span>
+                    </span>
                 </span>
             </button>
             <button type="button" data-step="3" class="constructor__tab constructor__tab--disabled">
@@ -603,6 +607,10 @@
                     <span class="constructor__tab-main-text">аромат</span>
                     <span class="constructor__tab-text-mobile">
                         3/4
+                    </span>
+                    <span class="constructor__tab-submenu">
+                        <span data-subtype="nature" class="constructor__tab-submenu-item">природа</span>
+                        <span data-subtype="perfume" class="constructor__tab-submenu-item">парфюм</span>
                     </span>
                 </span>
             </button>
@@ -722,7 +730,7 @@
             </button>
         </div>
         <div class="catalog__wrapper">
-            <div class="catalog__item catalog__item--active" data-type="aroma" data-subtype="nature" data-code="124374" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1000" data-name="че гевара">
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="nature" data-code="124374" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1000" data-name="че гевара">
                 <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
 
                 </svg>
@@ -788,7 +796,7 @@
                     <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
                 </div>
             </div>
-            <div class="catalog__item catalog__item--active" data-type="aroma" data-subtype="perfume" data-code="3464636" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="16000" data-name="ыяваыфва ыфваыв">
+            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="perfume" data-code="3464636" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="16000" data-name="ыяваыфва ыфваыв">
                 <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
                     <use xlink:href="#border-line"></use>
                 </svg>
@@ -920,6 +928,36 @@
                     <a href="./product-card.html" class="catalog__item-link link-btn">выбрать +</a>
                 </div>
             </div>
+        </div>
+        <div class="constructor__ui">
+            <div class="constructor__ui-progress">
+                <span class="constructor__ui-title">Выбрано:</span>
+                <span class="constructor__ui-text constructor__ui-text--full">
+                    <span class="constructor__ui-current-num">0</span>
+                    из
+                    <span class="constructor__ui-max-num">5</span>
+                </span>
+            </div>
+            <ul class="constructor__ui-items">
+                <li class="constructor__ui-item constructor__ui-item--full">
+                    <img src="" alt="order item">
+                </li>
+                <li class="constructor__ui-item constructor__ui-item--full">
+                    <img src="" alt="order item">
+                </li>
+                <li class="constructor__ui-item">
+                    <img src="" alt="order item">
+                </li>
+                <li class="constructor__ui-item">
+                    <img src="" alt="order item">
+                </li>
+            </ul>
+            <button class="constructor__ui-next-btn" type="button">
+                далее
+                <svg width="28" height="8" viewBox="0 0 28 8" class="">
+                    <use xlink:href="#btn-arrow"></use>
+                </svg>
+            </button>
         </div>
     </section>
 </main>
