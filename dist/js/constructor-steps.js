@@ -74,11 +74,13 @@ function updateUI() {
             }
             itemsUI.innerHTML = html.innerHTML
         } else {
-            for (const property in currentBox.souvenirs) {
-                if (currentBox.souvenirs.hasOwnProperty(property)) {
-                    console.log(123)
+            let html = document.createElement(`div`)
+            for (const souvenir in currentBox.souvenirs) {
+                if (currentBox.souvenirs.hasOwnProperty(souvenir)) {
+                    html.innerHTML += drawUIItem(currentBox.souvenirs[souvenir]);
                 }
             }
+            itemsUI.innerHTML = html.innerHTML
         }
     }
 
@@ -90,20 +92,31 @@ function updateUI() {
             }
             itemsUI.innerHTML = html.innerHTML
         } else {
-            for (const property in currentBox.aromas) {
-                if (currentBox.aromas.hasOwnProperty(property)) {
-                    console.log(123)
+            let html = document.createElement(`div`)
+            for (const aroma in currentBox.aromas) {
+                if (currentBox.aromas.hasOwnProperty(aroma)) {
+                    html.innerHTML += drawUIItem(aroma.img);
                 }
             }
         }
     }
 }
 
-function drawUIItem(img = "") {
-    const imgFull = img == "" ? `constructor__ui-item--full` : ``;
-
+function drawUIItem(obj = {}) {
+    console.log(obj)
+    let img = '';
+    let retina = '';
+    let imgFull = '';
+    let isObjEmpty = Object.keys(obj).length === 0 && obj.constructor === Object;
+    if (!isObjEmpty) {
+        img = obj.img
+        retina = obj.retina + ` 2x`
+        console.log(img)
+        imgFull = `constructor__ui-item--full`
+    }
+    console.log(img)
     return `<li class="constructor__ui-item ${imgFull}">
-                    <img src="${img}" alt="order item">
+                    <img src="${img}" srcset="${retina}" alt="order item">
                 </li>`
 }
 

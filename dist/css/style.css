@@ -4586,9 +4586,16 @@ body {
   width: 37px;
   height: 37px;
   margin: 0 5px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  overflow: hidden; }
   .constructor__ui-item img {
-    opacity: 0; }
+    position: relative;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    z-index: 2; }
   .constructor__ui-item::after {
     content: "";
     position: absolute;
@@ -4598,7 +4605,8 @@ body {
     display: block;
     height: 18px;
     width: 2px;
-    background-color: #FFFFFF; }
+    background-color: #FFFFFF;
+    z-index: 1; }
   .constructor__ui-item::before {
     content: "";
     position: absolute;
@@ -4608,7 +4616,10 @@ body {
     display: block;
     height: 2px;
     width: 18px;
-    background-color: #FFFFFF; }
+    background-color: #FFFFFF;
+    z-index: 1; }
+  .constructor__ui-item--full img {
+    opacity: 1; }
 
 .constructor__ui-next-btn {
   display: flex;

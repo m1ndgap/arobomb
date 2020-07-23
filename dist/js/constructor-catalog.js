@@ -62,7 +62,9 @@ items.forEach(function(item){
         evt.preventDefault();
         let addBtn = item.querySelector(`.${addLinkCls}`);
         let type = item.dataset.type
-        if (Object.keys(currentBox[type]).length < currentBoxType[type]){
+        let isSelected = item.classList.contains(`${itemCls}--selected`)
+        let isObjNotFull = Object.keys(currentBox[type]).length < currentBoxType[type]
+        if (isObjNotFull && !isSelected){
             addThis(item)
             updateUI()
             if (item.classList.contains(`${itemCls}--selected`)) {
@@ -71,10 +73,11 @@ items.forEach(function(item){
                 addBtn.innerText = addLinkText[1]
             }
             item.classList.toggle(`${itemCls}--selected`);
-        } else if(item.classList.contains(`${itemCls}--selected`)) {
+        } else if(isSelected) {
             addBtn.innerText = addLinkText[0]
             item.classList.remove(`${itemCls}--selected`);
             removeThis(item)
+            updateUI()
         }
     })
 })
