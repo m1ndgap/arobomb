@@ -1,0 +1,37 @@
+"use strict";
+
+function addBoxToCart(obj){
+    console.log(obj)
+    const {aromas, souvenirs, price, name, code, imgs} = obj
+    console.log(aromas)
+    console.log(souvenirs)
+
+    let ls = localStorage.getItem(`arobombBoxes`)
+    if (!ls) {
+        let newLs = {
+            box1: {aromas, souvenirs, price, name, code, imgs}
+        }
+        localStorage.setItem(`arobombBoxes`, JSON.stringify(newLs))
+    } else {
+        ls = JSON.parse(ls);
+        let currentNumberOfBoxes = Object.keys(ls).length + 1;
+        ls[`box${currentNumberOfBoxes}`] = {aromas, souvenirs, price, name, code, imgs}
+        localStorage.setItem(`arobombBoxes`, JSON.stringify(ls))
+    }
+    refreshCartBadge();
+}
+
+function removeBoxFromCart(obj){
+    console.log(obj)
+    let {lscode} = obj;
+    let ls = localStorage.getItem(`arobombBoxes`);
+    if (ls) {
+        ls = JSON.parse(ls);
+        delete ls[lscode];
+        if (Object.keys(ls).length === 0 && ls.constructor === Object) {
+            localStorage.removeItem('arobombBoxes')
+        } else {
+            localStorage.setItem(`arobombBoxes`, JSON.stringify(ls));
+        }
+    }
+}

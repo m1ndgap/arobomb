@@ -15,23 +15,32 @@ const progressTextCls = `constructor__ui-progress`;
 const itemsUICls = `constructor__ui-items`;
 const uiNextCls = `constructor__ui-next-btn`;
 
+let box1info = document.querySelector(`.constructor__box--1`)
+let box2info = document.querySelector(`.constructor__box--2`)
 
 let currentStep = 1;
 let currentBox = {
     aromas: {},
-    souvenirs: {}
+    souvenirs: {},
+    price: 0
 }
 
 const boxTypes = {
     small: {
-        souvenirs: 2,
-        aromas: 6,
-        price: 1500
+        souvenirs: box1info.dataset.maxsouvenirs,
+        aromas: box1info.dataset.maxaromas,
+        price: box1info.dataset.boxprice,
+        name: box1info.dataset.boxname,
+        code: box1info.dataset.boxcode,
+        imgs: [box1info.dataset.boximg, box1info.dataset.boximgretina]
     },
     big: {
-        souvenirs: 6,
-        aromas: 12,
-        price: 3500
+        souvenirs: box2info.dataset.maxsouvenirs,
+        aromas: box2info.dataset.maxaromas,
+        price: box2info.dataset.boxprice,
+        name: box2info.dataset.boxname,
+        code: box2info.dataset.boxcode,
+        imgs: [box2info.dataset.boximg, box2info.dataset.boximgretina]
     },
 }
 
@@ -41,7 +50,8 @@ function goToStep1(){
     currentBoxType = boxTypes.small;
     currentBox = {
         aromas: {},
-        souvenirs: {}
+        souvenirs: {},
+        price: 0,
     }
     currentStep = 1;
     index.classList.add(`${indexCls}--active`);
@@ -69,6 +79,7 @@ function goToStep3(){
 }
 
 function goToCart() {
+    addBoxToCart(currentBox)
     window.location.href = cartAddress
 }
 
@@ -226,15 +237,19 @@ let progressText = document.querySelector(`.${progressTextCls}`);
 let itemsUI = document.querySelector(`.${itemsUICls}`);
 let nextBtn = document.querySelector(`.${uiNextCls}`);
 
-let blobBtnSmall = document.querySelector(`.${blobBtnSmallCls}`);
-let blobBtnBig = document.querySelector(`.${blobBtnBigCls}`);
-
-blobBtnSmall.addEventListener(`click`, function(evt){
-    evt.preventDefault();
-    currentBoxType = boxTypes.small;
-});
-
-blobBtnBig.addEventListener(`click`, function(evt){
-    evt.preventDefault();
-    currentBoxType = boxTypes.big;
-});
+// let blobBtnSmall = document.querySelector(`.${blobBtnSmallCls}`);
+// let blobBtnBig = document.querySelector(`.${blobBtnBigCls}`);
+//
+// blobBtnSmall.addEventListener(`click`, function(evt){
+//     evt.preventDefault();
+//     currentBoxType = boxTypes.small;
+//     currentBox.price = currentBoxType.price
+//     currentBox.name = currentBoxType.name
+// });
+//
+// blobBtnBig.addEventListener(`click`, function(evt){
+//     evt.preventDefault();
+//     currentBoxType = boxTypes.big;
+//     currentBox.price = currentBoxType.price
+//     currentBox.name = currentBoxType.name
+// });

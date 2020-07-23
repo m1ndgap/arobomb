@@ -68,6 +68,16 @@ function collectData(item){
     }
 }
 
+function collectBoxData(item){
+    return {
+        lscode: item.dataset.lscode,
+        type: item.dataset.type,
+        images: [item.dataset.img, item.dataset.retinaImg],
+        price: item.dataset.price,
+        name: item.dataset.name,
+    }
+}
+
 function updateTotalPrice(int) {
     let OldTotal = parseInt(removeSpaces(totalPrice1.innerText))
     let newTotal = OldTotal + parseInt(int)
@@ -79,20 +89,61 @@ function countPrice(){
     let totalPrice = 0;
     let items = document.querySelectorAll(`.cart__item`);
     items.forEach(function(el){
-        let price = parseInt(el.dataset.price);
-        let value = parseInt(el.querySelector('input').value);
-        totalPrice += price * value;
+        if (el.dataset.type == 'box') {
+            let price = parseInt(el.dataset.price);
+            totalPrice += price;
+        } else {
+            let price = parseInt(el.dataset.price);
+            let value = parseInt(el.querySelector('input').value);
+            totalPrice += price * value;
+        }
     })
     totalPrice2.innerText = numberWithSpaces(totalPrice);
     totalPrice1.innerText = numberWithSpaces(totalPrice);
 }
 
+function createBox(obj, lscode){
+    let {aromas, souvenirs, price, name, code, imgs} = obj;
+    let newEl = document.createElement(`div`);
+    newEl.innerHTML = `<div class="cart__item" data-type="box" data-lscode="${lscode}" data-img="${imgs[0]}" data-retinaImg="${imgs[1]}" data-price="${price}" data-name="${name}">
+                        <figure class="cart__item-img-wrap">
+                            <img src="${imgs[0]}" srcset="${imgs[1]}" alt="${name}" class="cart__item-img">
+                        </figure>
+                        <div class="cart__item-text">
+                            <span class="cart__item-name">${name}</span>
+                            <span class="cart__item-price"><span class="cart__item-price-value">${price}</span> р.</span>
+                            <span class="cart__item-code">
+                                Арт.
+                                <span class="cart__item-code-value">${code}</span>
+                            </span>
+                        </div><button type="button" class="cart__item-close">
+                            <svg viewBox="0 0 30 30" width="30" height="30" class="svg-circle-close">
+                                <use xlink:href="#circle-close"></use>
+                            </svg>
+                        </button>
+                    </div>`
 
+    let close = newEl.querySelector(`.cart__item-close`)
+    let item = newEl.querySelector(`.cart__item`)
+
+
+    close.addEventListener(`click`, function (evt) {
+        let _this = this;
+        item.remove()
+        removeBoxFromCart(collectBoxData(item));
+        refreshCartBadge();
+        if (isCartEmpty()) {
+            disablePayment();
+        }
+        countPrice();
+    })
+
+    return newEl.firstChild
+}
 
 function createItem(obj, code){
     let {type, images, price, name, quantity} = obj;
     let totalPrice = parseInt(price) * quantity;
-    console.log(totalPrice)
     let newEl = document.createElement(`div`);
     newEl.innerHTML = `<div class="cart__item" data-type="${type}" data-code="${code}" data-img="${images[0]}" data-retinaImg="${images[2]}" data-price="${price}" data-name="${name}">
                         <figure class="cart__item-img-wrap">
@@ -205,8 +256,20 @@ function createItem(obj, code){
     return newEl.firstChild
 }
 
+let boxLs = JSON.parse(localStorage.getItem(`arobombBoxes`));
 let ls = JSON.parse(localStorage.getItem(`arobombCart`));
 let cartItems = document.querySelector(`.cart__items`)
+
+if (boxLs){
+    for (const property in boxLs) {
+        if (boxLs.hasOwnProperty(property)) {
+            console.log(property)
+            console.log(boxLs[property])
+            cartItems.append(createBox(boxLs[property], property));
+        }
+    }
+}
+
 if (ls) {
     for (const property in ls) {
         if (ls.hasOwnProperty(property)) {
@@ -216,6 +279,8 @@ if (ls) {
     enablePayment();
     countPrice();
 }
+
+
 
 //////////////////////////////////
 ///// enable/disable payment /////
@@ -249,6 +314,3 @@ function arrayReplace(array, elemToReplace, substitutionElem) {
     }
     return array;
 }
-
-const array = [1,2,1];
-console.log(arrayReplace(array, 1, 3));

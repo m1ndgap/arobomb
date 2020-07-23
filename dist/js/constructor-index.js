@@ -103,10 +103,18 @@ box2.addEventListener(`click`, function(){
 })
 
 blob1.addEventListener(`click`, function () {
+    currentBox.price = currentBoxType.price
+    currentBox.name = currentBoxType.name
+    currentBox.code = currentBoxType.code
+    currentBox.imgs = currentBoxType.imgs
     goToStep2()
 })
 
 blob2.addEventListener(`click`, function () {
     currentBoxType = boxTypes.big;
+    currentBox.price = currentBoxType.price
+    currentBox.name = currentBoxType.name
+    currentBox.code = currentBoxType.code
+    currentBox.imgs = currentBoxType.imgs
     goToStep2()
 })
