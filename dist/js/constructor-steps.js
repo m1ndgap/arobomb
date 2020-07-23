@@ -96,8 +96,17 @@ function updateUI() {
                     html.innerHTML += drawUIItem(currentBox.souvenirs[souvenir]);
                 }
             }
+            if (Object.keys(currentBox.souvenirs).length < currentBoxType.souvenirs) {
+                let extraEls = currentBoxType.souvenirs - Object.keys(currentBox.souvenirs).length
+                for (let i = 0; i < extraEls; i++) {
+                    html.innerHTML += drawUIItem();
+                }
+            }
         }
+
+
         itemsUI.innerHTML = html.innerHTML
+
         currItemNum.innerText = Object.keys(currentBox.souvenirs).length
         if (Object.keys(currentBox.souvenirs).length == currentBoxType.souvenirs) {
             progressText.classList.add(`${progressTextCls}--active`)
@@ -112,21 +121,27 @@ function updateUI() {
     }
 
     if (currentStep == 3) {
+        let html = document.createElement(`div`)
         if (aromasEmpty) {
-            let html = document.createElement(`div`)
+
             for (let i = 0; i < currentBoxType.aromas; i++) {
                 html.innerHTML += drawUIItem();
             }
             itemsUI.innerHTML = html.innerHTML
         } else {
-            let html = document.createElement(`div`)
             for (const aroma in currentBox.aromas) {
                 if (currentBox.aromas.hasOwnProperty(aroma)) {
                     html.innerHTML += drawUIItem(currentBox.aromas[aroma]);
                 }
             }
-            itemsUI.innerHTML = html.innerHTML
+            if (Object.keys(currentBox.aromas).length < currentBoxType.aromas) {
+                let extraEls = currentBoxType.aromas - Object.keys(currentBox.aromas).length
+                for (let i = 0; i < extraEls; i++) {
+                    html.innerHTML += drawUIItem();
+                }
+            }
         }
+        itemsUI.innerHTML = html.innerHTML
         currItemNum.innerText = Object.keys(currentBox.aromas).length
         if (Object.keys(currentBox.aromas).length == currentBoxType.aromas) {
             progressText.classList.add(`${progressTextCls}--active`)
@@ -149,7 +164,6 @@ function drawUIItem(obj = {}) {
     if (!isObjEmpty) {
         img = obj.img
         retina = obj.retina + ` 2x`
-        console.log(img)
         imgFull = `constructor__ui-item--full`
     }
     return `<li class="constructor__ui-item ${imgFull}">
