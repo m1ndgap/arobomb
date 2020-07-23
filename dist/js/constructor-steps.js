@@ -1,5 +1,7 @@
 "use strict";
 
+const cartAddress = `./cart.html`
+
 const blobBtnSmallCls = `constructor__blob-btn--1`;
 const blobBtnBigCls = `constructor__blob-btn--2`;
 const tabCls = `constructor__tab`;
@@ -37,6 +39,14 @@ let currentBoxType = boxTypes.small;
 
 function goToStep1(){
     currentBoxType = boxTypes.small;
+    currentBox = {
+        aromas: {},
+        souvenirs: {}
+    }
+    currentStep = 1;
+    index.classList.add(`${indexCls}--active`);
+    catalog.classList.remove(`${catalogCls}--active`);
+    ui.classList.remove(`${uiCls}--active`);
 }
 
 function goToStep2(){
@@ -58,6 +68,10 @@ function goToStep3(){
     filter();
 }
 
+function goToCart() {
+    window.location.href = cartAddress
+}
+
 function setupUI() {
     if (currentStep == 2) {
         maxItemNum.innerText = currentBoxType.souvenirs;
@@ -70,26 +84,30 @@ function updateUI() {
     let aromasEmpty = Object.keys(currentBox.aromas).length === 0 && currentBox.aromas.constructor === Object
     let souvenirsEmpty = Object.keys(currentBox.souvenirs).length === 0 && currentBox.souvenirs.constructor === Object
     if (currentStep == 2) {
+        let html = document.createElement(`div`)
         if (souvenirsEmpty) {
-            let html = document.createElement(`div`)
             for (let i = 0; i < currentBoxType.souvenirs; i ++) {
                 html.innerHTML += drawUIItem();
             }
             itemsUI.innerHTML = html.innerHTML
         } else {
-            let html = document.createElement(`div`)
             for (const souvenir in currentBox.souvenirs) {
                 if (currentBox.souvenirs.hasOwnProperty(souvenir)) {
                     html.innerHTML += drawUIItem(currentBox.souvenirs[souvenir]);
                 }
             }
-            itemsUI.innerHTML = html.innerHTML
         }
+        itemsUI.innerHTML = html.innerHTML
         currItemNum.innerText = Object.keys(currentBox.souvenirs).length
         if (Object.keys(currentBox.souvenirs).length == currentBoxType.souvenirs) {
             progressText.classList.add(`${progressTextCls}--active`)
+            nextBtn.classList.add(`${uiNextCls}--active`)
+            nextBtn.addEventListener(`click`, goToStep3)
+
         } else {
             progressText.classList.remove(`${progressTextCls}--active`)
+            nextBtn.classList.remove(`${uiNextCls}--active`)
+            nextBtn.removeEventListener(`click`, goToStep3)
         }
     }
 
@@ -104,15 +122,26 @@ function updateUI() {
             let html = document.createElement(`div`)
             for (const aroma in currentBox.aromas) {
                 if (currentBox.aromas.hasOwnProperty(aroma)) {
-                    html.innerHTML += drawUIItem(aroma.img);
+                    html.innerHTML += drawUIItem(currentBox.aromas[aroma]);
                 }
             }
+            itemsUI.innerHTML = html.innerHTML
+        }
+        currItemNum.innerText = Object.keys(currentBox.aromas).length
+        if (Object.keys(currentBox.aromas).length == currentBoxType.aromas) {
+            progressText.classList.add(`${progressTextCls}--active`)
+            nextBtn.classList.add(`${uiNextCls}--active`)
+            nextBtn.addEventListener(`click`, goToCart)
+
+        } else {
+            progressText.classList.remove(`${progressTextCls}--active`)
+            nextBtn.classList.remove(`${uiNextCls}--active`)
+            nextBtn.removeEventListener(`click`, goToCart)
         }
     }
 }
 
 function drawUIItem(obj = {}) {
-    console.log(obj)
     let img = '';
     let retina = '';
     let imgFull = '';
@@ -123,7 +152,6 @@ function drawUIItem(obj = {}) {
         console.log(img)
         imgFull = `constructor__ui-item--full`
     }
-    console.log(img)
     return `<li class="constructor__ui-item ${imgFull}">
                     <img src="${img}" srcset="${retina}" alt="order item">
                 </li>`
@@ -168,14 +196,21 @@ function switchTabs(){
 let constructorTabs = document.querySelectorAll(`.${tabCls}`);
 switchTabs();
 
+let secondTab = document.querySelector(`.${tabCls}[data-step="2"]`)
+let firstTab = document.querySelector(`.${tabCls}[data-step="1"]`)
+
+secondTab.addEventListener(`click`, goToStep2);
+firstTab.addEventListener(`click`, goToStep1);
+
 let index = document.querySelector(`.${indexCls}`);
 let catalog = document.querySelector(`.${catalogCls}`);
 let ui = document.querySelector(`.${uiCls}`);
 
-let currItemNum = document.querySelector(`.${currItemNumCls}`)
-let maxItemNum = document.querySelector(`.${maxItemNumCls}`)
-let progressText = document.querySelector(`.${progressTextCls}`)
-let itemsUI = document.querySelector(`.${itemsUICls}`)
+let currItemNum = document.querySelector(`.${currItemNumCls}`);
+let maxItemNum = document.querySelector(`.${maxItemNumCls}`);
+let progressText = document.querySelector(`.${progressTextCls}`);
+let itemsUI = document.querySelector(`.${itemsUICls}`);
+let nextBtn = document.querySelector(`.${uiNextCls}`);
 
 let blobBtnSmall = document.querySelector(`.${blobBtnSmallCls}`);
 let blobBtnBig = document.querySelector(`.${blobBtnBigCls}`);

@@ -102,6 +102,7 @@
   opacity: 0.5
   pointer-events: none
   cursor: pointer
+  transition: opacity $transition, color $transition
   svg
     position: relative
     left: 0
@@ -110,8 +111,12 @@
     transition: left $transition
   &--active
     color: $btn
+    pointer-events: all
+    opacity: 1
     svg
       fill: $btn
     &:hover
       svg
         left: 10px
+    &:active, &:focus
+      outline: none
