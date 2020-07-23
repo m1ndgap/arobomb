@@ -50,9 +50,6 @@ function filter(){
     }
 }
 
-function filterSubtype(item){
-
-}
 
 let items = document.querySelectorAll(`.${itemCls}`)
 let submenuBtns = document.querySelectorAll(`.${subMenuCls}`)
@@ -85,6 +82,10 @@ items.forEach(function(item){
 submenuBtns.forEach(function(item){
     item.addEventListener(`click`, function(){
         let subType = item.dataset.subtype
+        submenuBtns.forEach(function (sbmbtn) {
+            sbmbtn.classList.remove(`${subMenuCls}--active`)
+        })
+        item.classList.add(`${subMenuCls}--active`)
         items.forEach(function (item) {
             let itemType = item.dataset.subtype
             item.classList.remove(`${itemCls}--active`)

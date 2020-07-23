@@ -4556,6 +4556,17 @@ body {
     opacity: 1;
     transition: opacity 300ms; }
 
+.constructor__ui-progress--active .constructor__ui-text {
+  opacity: 1;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  font-family: "Montserrat", sans-serif;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  border: 1px solid; }
+
 .constructor__ui-title {
   font-family: "Montserrat", sans-serif;
   font-size: 1.8rem;

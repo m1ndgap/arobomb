@@ -9,7 +9,10 @@ const catalogCls = `catalog__wrapper`;
 const uiCls = `constructor__ui`;
 const currItemNumCls = `constructor__ui-current-num`;
 const maxItemNumCls = `constructor__ui-max-num`;
+const progressTextCls = `constructor__ui-progress`;
 const itemsUICls = `constructor__ui-items`;
+const uiNextCls = `constructor__ui-next-btn`;
+
 
 let currentStep = 1;
 let currentBox = {
@@ -81,6 +84,12 @@ function updateUI() {
                 }
             }
             itemsUI.innerHTML = html.innerHTML
+        }
+        currItemNum.innerText = Object.keys(currentBox.souvenirs).length
+        if (Object.keys(currentBox.souvenirs).length == currentBoxType.souvenirs) {
+            progressText.classList.add(`${progressTextCls}--active`)
+        } else {
+            progressText.classList.remove(`${progressTextCls}--active`)
         }
     }
 
@@ -165,6 +174,7 @@ let ui = document.querySelector(`.${uiCls}`);
 
 let currItemNum = document.querySelector(`.${currItemNumCls}`)
 let maxItemNum = document.querySelector(`.${maxItemNumCls}`)
+let progressText = document.querySelector(`.${progressTextCls}`)
 let itemsUI = document.querySelector(`.${itemsUICls}`)
 
 let blobBtnSmall = document.querySelector(`.${blobBtnSmallCls}`);

@@ -17,6 +17,15 @@
     transition: opacity $transition
 
 .constructor__ui-progress
+  &--active
+    .constructor__ui-text
+      opacity: 1
+      @include gbackground(100%)
+      font-family: "Montserrat", sans-serif
+      color: transparent
+      -webkit-background-clip: text
+      background-clip: text
+      border: 1px solid
 
 .constructor__ui-title
   @include subtitle(1.8rem)
