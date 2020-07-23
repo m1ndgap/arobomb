@@ -2712,6 +2712,18 @@ body {
   .cart__item {
     position: relative;
     display: flex; }
+  .cart__item--box {
+    flex-flow: row wrap; }
+    .cart__item--box .cart__item-close {
+      margin-left: auto; }
+    .cart__item--box .cart__item-list {
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+      margin-left: auto;
+      flex-basis: 60%; }
+    .cart__item--box .cart__item-list-item img {
+      max-height: 25px; }
   .cart__item + .cart__item {
     margin-top: 37px; }
     .cart__item + .cart__item:before {

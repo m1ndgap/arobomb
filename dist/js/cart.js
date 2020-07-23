@@ -102,10 +102,32 @@ function countPrice(){
     totalPrice1.innerText = numberWithSpaces(totalPrice);
 }
 
+function createBoxEl(obj){
+    const {id, img, retina, name} = obj
+    return `<li class="cart__item-list-item">
+                <img src="${img}" srcset="${retina}" alt="">
+                <span>${name}</span>
+                <span>Артикул ${id}</span>
+            </li>`
+}
+
 function createBox(obj, lscode){
     let {aromas, souvenirs, price, name, code, imgs} = obj;
     let newEl = document.createElement(`div`);
-    newEl.innerHTML = `<div class="cart__item" data-type="box" data-lscode="${lscode}" data-img="${imgs[0]}" data-retinaImg="${imgs[1]}" data-price="${price}" data-name="${name}">
+    let aromasMarkup = ``;
+    let souvenirsMarkup = ``;
+    for (const souvenir in souvenirs) {
+        if (souvenirs.hasOwnProperty(souvenir)) {
+            souvenirsMarkup += createBoxEl(souvenirs[souvenir]);
+        }
+    }
+    for (const aroma in aromas) {
+        if (aromas.hasOwnProperty(aroma)) {
+            aromasMarkup += createBoxEl(aromas[aroma]);
+        }
+    }
+
+    newEl.innerHTML = `<div class="cart__item cart__item--box" data-type="box" data-lscode="${lscode}" data-img="${imgs[0]}" data-retinaImg="${imgs[1]}" data-price="${price}" data-name="${name}">
                         <figure class="cart__item-img-wrap">
                             <img src="${imgs[0]}" srcset="${imgs[1]}" alt="${name}" class="cart__item-img">
                         </figure>
@@ -121,6 +143,10 @@ function createBox(obj, lscode){
                                 <use xlink:href="#circle-close"></use>
                             </svg>
                         </button>
+                        <ul class="cart__item-list">
+                        ${souvenirsMarkup}
+                        ${aromasMarkup}
+                        </ul>
                     </div>`
 
     let close = newEl.querySelector(`.cart__item-close`)
@@ -263,11 +289,11 @@ let cartItems = document.querySelector(`.cart__items`)
 if (boxLs){
     for (const property in boxLs) {
         if (boxLs.hasOwnProperty(property)) {
-            console.log(property)
-            console.log(boxLs[property])
             cartItems.append(createBox(boxLs[property], property));
         }
     }
+    enablePayment();
+    countPrice();
 }
 
 if (ls) {

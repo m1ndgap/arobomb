@@ -56,6 +56,19 @@
     position: relative
     display: flex
 
+  &__item--box
+    flex-flow: row wrap
+    .cart__item-close
+      margin-left: auto
+
+    .cart__item-list
+      @include resetlist()
+      margin-left: auto
+      flex-basis: 60%
+
+    .cart__item-list-item
+      img
+        max-height: 25px
 
   &__item + &__item
     margin-top: 37px

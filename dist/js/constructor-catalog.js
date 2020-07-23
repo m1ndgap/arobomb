@@ -12,10 +12,12 @@ function addThis(item){
     let img = item.dataset.img
     let retina = item.dataset.retinaimg
     let type = item.dataset.type
+    let name = item.dataset.name
     currentBox[type][id] = {
         id: id,
         img: img,
         retina: retina,
+        name: name,
     }
 }
 
