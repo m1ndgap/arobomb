@@ -144,13 +144,13 @@
       font-size: 1.5rem
       width: 288px
       padding: 14px
-  //   @include media ("<tablet")
-  //     // margin: 300px auto
-  //     margin: 0 auto
-  //     max-width: 396px
-  //   @include media ("<=tiny")
-  //     width: 100%
-  //     font-size: 1.3rem
+    &:hover
+      .btn-arrow
+        transform: translateX(10px)
+
+    .btn-arrow
+      transform: translateX(0)
+      transition: transform $transition, fill $transition
   // // end of title-pitch children
 
   .btn
@@ -665,8 +665,13 @@
       margin-right: 10px
     @include media ("<desktop")
       font-size: 1.5rem
-    // @include media ("<=tiny")
-    //   font-size: 1.3rem
+    &:hover
+      .btn-arrow
+        transform: translateX(10px)
+
+    .btn-arrow
+      transform: translateX(0)
+      transition: transform $transition, fill $transition
 
 
   // 6TH SECTION
@@ -689,23 +694,27 @@
 
     .swiper-slide
       display: flex
-
+    
     .landing-1__swiper-img--wrapper
       display: block
-      width: 272px
       flex-shrink: 0
       margin-right: 55px
       @include media ("<desktop")
         margin-right: 30px
       @include media ("<tablet")
         position: static
-        width: 100px
         margin: 0 20px 0 0
-      @include media ("<=tiny")
-        width: 58px
 
     .landing-1__swiper-img
-      width: 100%
+      object-fit: cover
+      width: 272px
+      height: 279px
+      @include media ("<tablet")
+        width: 100px
+        height: 103px
+      @include media ("<=tiny")
+        width: 58px
+        height: 60px
 
     .landing-1__swiper-text
       display: block
