@@ -75,6 +75,18 @@
     flex-flow: column nowrap
     max-height: 1000px
     padding: 0 10px 35px
+    overflow: visible
+    z-index: -1
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      height: 100px
+      width: 100%
+      top: -100px
+      left: 0
+      background-color: $white
+
 
   &__get-gift-btn
     margin-top: 2px
@@ -86,7 +98,7 @@
       @include mobilemaw(400px)
       display: block
       padding: 10px
-      margin-top: 25px
+      margin-top: 15px
       order: 2
       font-size: 1.8rem
       text-align: center
@@ -173,7 +185,7 @@
     @include media("<tablet")
       @include mobilemaw(400px)
       position: static
-      margin: 30px auto 28px
+      margin: 10px auto 18px
       order: 3
 
 

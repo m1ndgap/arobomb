@@ -21,6 +21,7 @@ let menuWrapMob = mainMenu.querySelector('.' + menuWrapCls)
 navIcon.addEventListener('click', function(){
     this.classList.toggle('open')
     menuWrapMob.classList.toggle(menuWrapCls + '--mob-active')
+
 })
 
 let giftbtn = mainMenu.querySelector('.' + giftBtnCls)

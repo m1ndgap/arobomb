@@ -157,3 +157,7 @@ let titleEl = document.querySelector('.' + textTitleCls)
 initText(sliderEl, titleEl, subTitleEl);
 
 let indexSwiper = new Swiper(sliderEl, swiperParams);
+
+(function x(){
+    document.querySelector(".main-menu").classList.add('fixed-menu-transparent-bg')
+})();

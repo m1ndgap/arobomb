@@ -7,6 +7,20 @@ const investId = `pcalc-invest`;
 const moSalesId = `pcalc-mosales`;
 const profitId = `pcalc-profit`;
 
+let mainMenuL2 = document.querySelector(`.main-menu`)
+mainMenuL2.classList.add(`fixed-menu-transparent-bg`)
+
+document.addEventListener(`scroll`, function () {
+
+    let offset = window.pageYOffset
+    if (offset > 150) {
+        mainMenuL2.classList.remove(`fixed-menu-transparent-bg`)
+    } else {
+        mainMenuL2.classList.add(`fixed-menu-transparent-bg`)
+    }
+})
+
+
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

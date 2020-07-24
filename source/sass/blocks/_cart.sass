@@ -58,6 +58,8 @@
 
   &__item--box
     flex-flow: row wrap
+    @include media("<tablet")
+      align-items: flex-start
     .cart__item-close
       margin-left: auto
 
@@ -76,6 +78,13 @@
         overflow: visible
         padding-bottom: 15px
         transition: max-height $transition, opacity $transition $transition
+      @include media("<desktop")
+        margin-top: 20px
+        flex-basis: 70%
+      @include media("<tablet")
+        flex-basis: 90%
+      @include media("<tiny")
+        flex-basis: 80%
 
     .cart__item-list-collapse
       width: 0
@@ -290,12 +299,13 @@
 
   &__cart-empty
     display: block
-    margin-top: 50px
+    margin-top: 0
     font-size: 2.4rem
     text-transform: uppercase
     color: lighten($text, 40%)
     opacity: 0
     &--active
+      margin-top: 50px
       opacity: 1
       transition: opacity $transition
 

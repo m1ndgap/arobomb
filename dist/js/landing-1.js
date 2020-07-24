@@ -1,5 +1,19 @@
 "use strict";
 
+let mainMenuL1 = document.querySelector(`.main-menu`)
+mainMenuL1.classList.add(`fixed-menu-transparent-bg`)
+
+document.addEventListener(`scroll`, function () {
+
+	let offset = window.pageYOffset
+	if (offset > 150) {
+		mainMenuL1.classList.remove(`fixed-menu-transparent-bg`)
+	} else {
+		mainMenuL1.classList.add(`fixed-menu-transparent-bg`)
+	}
+})
+
+
 let landing1TabsSwiper = new Swiper('.tabs-swiper-container', {
 	speed: 400,
 	slidesPerView: 2,
@@ -78,7 +92,6 @@ l1Btn.addEventListener(`click`, function(e){
 })
 
 l1MobBtn.addEventListener(`click`, function(e){
-	console.log(this.dataset.modal)
 	if (this.dataset.modal == `true`) {
 		e.preventDefault();
 		l1modal.classList.add(`modal--active`)
@@ -97,3 +110,5 @@ l1Close.addEventListener(`click`, function(e){
 	l1modalForm.classList.add(`modal-wrapper--active`)
 	l1modalThanks.classList.remove(`modal-wrapper--active`)
 })
+
+

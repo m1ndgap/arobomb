@@ -84,20 +84,23 @@ items.forEach(function(item){
 submenuBtns.forEach(function(item){
     item.addEventListener(`click`, function(){
         let subType = item.dataset.subtype
+        console.log(subType)
         submenuBtns.forEach(function (sbmbtn) {
             sbmbtn.classList.remove(`${subMenuCls}--active`)
         })
         item.classList.add(`${subMenuCls}--active`)
-        items.forEach(function (item) {
-            let itemType = item.dataset.subtype
-            item.classList.remove(`${itemCls}--active`)
+        items.forEach(function (itemIn) {
+            let itemType = itemIn.dataset.subtype
+            console.log(itemType)
+            itemIn.classList.remove(`${itemCls}--active`)
             if (itemType == subType) {
+                console.log(itemIn)
                 let timeout = window.setTimeout(function () {
-                    item.classList.add(`${itemCls}--active`);
+                    itemIn.classList.add(`${itemCls}--active`);
                 }, 50)
             }
         })
-    })
+    }, true)
 
 })
 

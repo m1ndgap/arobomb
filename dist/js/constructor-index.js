@@ -30,6 +30,10 @@ let blob2 = document.querySelector(`.constructor__blob-btn--2`);
 let mobileProceedBtn = document.querySelector(`.constructor__index-mobile-btn`)
 
 mobileProceedBtn.addEventListener(`click`, function () {
+    currentBox.price = currentBoxType.price
+    currentBox.name = currentBoxType.name
+    currentBox.code = currentBoxType.code
+    currentBox.imgs = currentBoxType.imgs
     goToStep2();
 })
 

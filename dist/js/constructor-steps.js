@@ -64,6 +64,7 @@ function goToStep2(){
     catalog.classList.add(`${catalogCls}--active`);
     ui.classList.add(`${uiCls}--active`);
     currentStep = 2;
+    secondTab.removeEventListener(`click`, goToStep2)
     switchTabs();
     setupUI();
     updateUI();
@@ -72,6 +73,7 @@ function goToStep2(){
 
 function goToStep3(){
     currentStep = 3;
+    secondTab.addEventListener(`click`, goToStep2)
     switchTabs();
     setupUI();
     updateUI();
@@ -224,7 +226,6 @@ switchTabs();
 let secondTab = document.querySelector(`.${tabCls}[data-step="2"]`)
 let firstTab = document.querySelector(`.${tabCls}[data-step="1"]`)
 
-secondTab.addEventListener(`click`, goToStep2);
 firstTab.addEventListener(`click`, goToStep1);
 
 let index = document.querySelector(`.${indexCls}`);

@@ -22,6 +22,10 @@
     @include media("<tablet")
       flex-basis: 100%
       max-width: 300px
+    &:hover
+      .documents__item-svg
+        opacity: 1
+
 
 
   &__item-svg
@@ -31,6 +35,8 @@
     width: 100%
     stroke: url(#linear-grad)
     pointer-events: none
+    opacity: 0.3
+    transition: opacity $transition
 
   &__item-title
     @include subtitle()

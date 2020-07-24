@@ -48,6 +48,7 @@
       left: 0
       width: 100%
       opacity: 0
+      pointer-events: none
       &--active
         opacity: 1
 
@@ -77,6 +78,7 @@
     @include media("<tablet")
       position: absolute
       margin-left: 0
+      pointer-events: none
       &:before
         display: none
       &--active
@@ -167,6 +169,7 @@
     border-image-slice: 1
     color: $text
     transition: height $transition*5, opacity $transition
+    pointer-events: all
 
   &__tab-submenu-item
     position: relative
