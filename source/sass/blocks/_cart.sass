@@ -64,11 +64,66 @@
     .cart__item-list
       @include resetlist()
       margin-left: auto
-      flex-basis: 60%
+      flex-basis: 50%
+      padding: 0
+      max-height: 0
+      opacity: 0
+      overflow: hidden
+      transition: max-height $transition $transition, opacity $transition, padding $transition $transition
+      &--active
+        opacity: 1
+        max-height: 1000px
+        overflow: visible
+        padding-bottom: 15px
+        transition: max-height $transition, opacity $transition $transition
+
+    .cart__item-list-collapse
+      width: 0
+      height: 0
+      margin-right: 20px
+      border-top: 13px solid $gradient-end
+      border-right: 7px solid transparent
+      border-left: 7px solid transparent
+      transform: scaleY(1)
+      transition: transform $transition
+      &--active
+        transform: scaleY(-1)
+
+    .cart__item-list-item + .cart__item-list-item
+      margin-top: 10px
 
     .cart__item-list-item
+      display: flex
+      align-items: center
+      figure
+        margin: 0
+        width: 35px
+        height: 35px
+        border-radius: 50%
+        overflow: hidden
+        display: flex
+        justify-content: center
       img
-        max-height: 25px
+        height: 100%
+        object-fit: cover
+
+    .cart__item-list-text
+      margin-left: 10px
+      display: flex
+      flex-flow: column nowrap
+
+    .cart__item-list-title
+      font-family: "Montserrat", sans-serif
+      text-transform: uppercase
+      font-weight: 800
+      font-size: 1.4rem
+
+    .cart__item-list-code
+      font-family: "Montserrat", sans-serif
+      text-transform: uppercase
+      font-size: 1.2rem
+
+
 
   &__item + &__item
     margin-top: 37px

@@ -105,9 +105,13 @@ function countPrice(){
 function createBoxEl(obj){
     const {id, img, retina, name} = obj
     return `<li class="cart__item-list-item">
-                <img src="${img}" srcset="${retina}" alt="">
-                <span>${name}</span>
-                <span>Артикул ${id}</span>
+                <figure>
+                    <img src="${img}" srcset="${retina} 2x" alt="">
+                </figure>
+                <div class="cart__item-list-text">
+                    <span class="cart__item-list-title">${name}</span>
+                    <span class="cart__item-list-code">Арт. ${id}</span>
+                </div>
             </li>`
 }
 
@@ -147,11 +151,18 @@ function createBox(obj, lscode){
                         ${souvenirsMarkup}
                         ${aromasMarkup}
                         </ul>
+                        <div class="cart__item-list-collapse"></div>
                     </div>`
 
-    let close = newEl.querySelector(`.cart__item-close`)
-    let item = newEl.querySelector(`.cart__item`)
+    let close = newEl.querySelector(`.cart__item-close`);
+    let item = newEl.querySelector(`.cart__item`);
+    let collapse = newEl.querySelector(`.cart__item-list-collapse`);
+    let list = newEl.querySelector(`.cart__item-list`);
 
+    collapse.addEventListener(`click`, function (evt) {
+        list.classList.toggle(`cart__item-list--active`)
+        collapse.classList.toggle(`cart__item-list-collapse--active`)
+    })
 
     close.addEventListener(`click`, function (evt) {
         let _this = this;
