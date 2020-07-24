@@ -1172,6 +1172,8 @@ body {
       transform-origin: left; }
     .main-menu__link--no-decor::after, .main-menu__submenu-link--no-decor::after {
       display: none; }
+    .main-menu__link--active::after, .main-menu__submenu-link--active::after {
+      transform: scaleX(1); }
     @media (max-width: 767px) {
       .main-menu__link:after, .main-menu__submenu-link:after {
         display: none; } }

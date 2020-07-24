@@ -197,9 +197,13 @@
     &--no-decor
       &::after
         display: none
+    &--active
+      &::after
+        transform: scaleX(1)
     @include media("<tablet")
       &:after
         display: none
+
 
   &__link-text
     font-size: 1.8rem
