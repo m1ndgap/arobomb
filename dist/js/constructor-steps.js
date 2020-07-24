@@ -180,7 +180,7 @@ function drawUIItem(obj = {}) {
         imgFull = `constructor__ui-item--full`
     }
     return `<li class="constructor__ui-item ${imgFull}">
-                    <img src="${img}" srcset="${retina} 2x" alt="order item">
+                    <img src="${img}" srcset="${img},${retina} 2x" alt="order item">
                 </li>`
 }
 

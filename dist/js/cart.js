@@ -106,7 +106,7 @@ function createBoxEl(obj){
     const {id, img, retina, name} = obj
     return `<li class="cart__item-list-item">
                 <figure>
-                    <img src="${img}" srcset="${retina} 2x" alt="">
+                    <img src="${img}" srcset="${img}, ${retina} 2x" alt="">
                 </figure>
                 <div class="cart__item-list-text">
                     <span class="cart__item-list-title">${name}</span>
@@ -133,7 +133,10 @@ function createBox(obj, lscode){
 
     newEl.innerHTML = `<div class="cart__item cart__item--box" data-type="box" data-lscode="${lscode}" data-img="${imgs[0]}" data-retinaImg="${imgs[1]}" data-price="${price}" data-name="${name}">
                         <figure class="cart__item-img-wrap">
-                            <img src="${imgs[0]}" srcset="${imgs[1]}" alt="${name}" class="cart__item-img">
+                            <img  
+                                srcset="${imgs[0]}, ${imgs[1]} 2x" 
+                                src="${imgs[0]}" alt="${name}" 
+                                class="cart__item-img">
                         </figure>
                         <div class="cart__item-text">
                             <span class="cart__item-name">${name}</span>
@@ -184,7 +187,7 @@ function createItem(obj, code){
     let newEl = document.createElement(`div`);
     newEl.innerHTML = `<div class="cart__item" data-type="${type}" data-code="${code}" data-img="${images[0]}" data-retinaImg="${images[2]}" data-price="${price}" data-name="${name}">
                         <figure class="cart__item-img-wrap">
-                            <img src="${images[0]}" alt="${name}" class="cart__item-img">
+                            <img srcset="${images[0]}, ${images[1]} 2x" src="${images[0]}" alt="${name}" class="cart__item-img">
                         </figure>
                         <div class="cart__item-text">
                             <span class="cart__item-name">${name}</span>
