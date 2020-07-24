@@ -22,7 +22,6 @@ function addBoxToCart(obj){
 }
 
 function removeBoxFromCart(obj){
-    console.log(obj)
     let {lscode} = obj;
     let ls = localStorage.getItem(`arobombBoxes`);
     if (ls) {

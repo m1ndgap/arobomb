@@ -176,11 +176,11 @@ function drawUIItem(obj = {}) {
     let isObjEmpty = Object.keys(obj).length === 0 && obj.constructor === Object;
     if (!isObjEmpty) {
         img = obj.img
-        retina = obj.retina + ` 2x`
+        retina = obj.retina
         imgFull = `constructor__ui-item--full`
     }
     return `<li class="constructor__ui-item ${imgFull}">
-                    <img src="${img}" srcset="${retina}" alt="order item">
+                    <img src="${img}" srcset="${retina} 2x" alt="order item">
                 </li>`
 }
 
