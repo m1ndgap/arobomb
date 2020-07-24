@@ -6637,7 +6637,8 @@ body {
     font-size: 1.4rem;
     max-width: 454px; }
     .contact-us .form__input {
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      margin-top: 15px; }
       .contact-us .form__input::-webkit-input-placeholder {
         font-size: 1.4rem; }
       .contact-us .form__input::-moz-placeholder {
@@ -6654,7 +6655,8 @@ body {
         order: 1;
         margin-top: 50px; } }
     .contact-us .form__cbx-label {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      margin-top: 15px; }
       @media (max-width: 767px) {
         .contact-us .form__cbx-label {
           font-size: 1.0rem; } }
