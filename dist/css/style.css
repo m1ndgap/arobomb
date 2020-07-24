@@ -2020,12 +2020,22 @@ body {
     font-size: 2rem;
     color: #444444;
     text-transform: uppercase;
+    font-weight: 900;
     position: absolute;
+    text-decoration: none;
     bottom: 22px;
     width: 100%;
     flex-basis: 100%;
     text-align: center;
     margin-bottom: 10px; }
+    .catalog__item-name:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: -200px; }
     @media (max-width: 1023px) {
       .catalog__item-name {
         font-size: 1.6rem; } }
@@ -2034,7 +2044,15 @@ body {
     .catalog__item-price:after {
       content: " p."; }
   .catalog__item-link {
-    margin-left: auto; }
+    position: relative;
+    margin-left: auto;
+    transition: color 300ms; }
+    .catalog__item-link:hover {
+      color: #62831b; }
+    .catalog__item-link:active {
+      color: #526e17;
+      top: -1px;
+      transition: none; }
 
 .catalog--constructor .catalog__item {
   cursor: pointer; }
