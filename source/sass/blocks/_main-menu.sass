@@ -215,6 +215,10 @@
     @include media("<tablet")
       &:after
         display: none
+      &--no-decor
+        display: none
+        &::after
+          display: none
 
 
   &__link-text
