@@ -6715,7 +6715,8 @@ body {
           margin-bottom: 30px; } }
   .contact-us__form--wrapper {
     flex-basis: 1;
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
     margin-top: 70px;
     padding-bottom: 45px; }
     @media (max-width: 767px) {
