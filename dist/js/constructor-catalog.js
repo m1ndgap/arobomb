@@ -5,7 +5,15 @@ const addLinkCls = `catalog__item-link`;
 const subMenuCls = `constructor__tab-submenu-item`;
 
 
-const addLinkText = [`выбрать +`, `убрать –`]
+const addLinkText = [`выбрать +`, `добавить +`]
+
+function countItems(type){
+    let currentProductCount = 0;
+    for (const id in currentBox[type]) {
+        currentProductCount += currentBox[type][id].quantity
+    }
+    return currentProductCount;
+}
 
 function addThis(item){
     let id = item.dataset.code
@@ -13,18 +21,27 @@ function addThis(item){
     let retina = item.dataset.retinaimg
     let type = item.dataset.type
     let name = item.dataset.name
-    currentBox[type][id] = {
-        id: id,
-        img: img,
-        retina: retina,
-        name: name,
+    if (currentBox[type][id]) {
+        currentBox[type][id].quantity += 1;
+    } else {
+        currentBox[type][id] = {
+            id: id,
+            img: img,
+            retina: retina,
+            name: name,
+            quantity: 1,
+        }
     }
 }
 
 function removeThis(item){
     let id = item.dataset.code
     let type = item.dataset.type
-    delete currentBox[type][id]
+    if (currentBox[type][id].quantity > 1) {
+        currentBox[type][id].quantity -= 1
+    } else {
+        delete currentBox[type][id]
+    }
 }
 
 function filter(){
@@ -57,26 +74,32 @@ let items = document.querySelectorAll(`.${itemCls}`)
 let submenuBtns = document.querySelectorAll(`.${subMenuCls}`)
 
 items.forEach(function(item){
-    item.addEventListener(`click`, function(evt){
+    item.querySelector(`.catalog__item-link--add`).addEventListener(`click`, function(evt){
         evt.preventDefault();
         let addBtn = item.querySelector(`.${addLinkCls}`);
         let type = item.dataset.type
-        let isSelected = item.classList.contains(`${itemCls}--selected`)
-        let isObjNotFull = Object.keys(currentBox[type]).length < currentBoxType[type]
-        if (isObjNotFull && !isSelected){
+        let id = item.dataset.code;
+        // let isSelected = item.classList.contains(`${itemCls}--selected`)
+        let currentProductCount = countItems(type);
+        let isObjNotFull = currentProductCount < currentBoxType[type]
+        if (isObjNotFull){
             addThis(item)
             updateUI()
-            if (item.classList.contains(`${itemCls}--selected`)) {
-                addBtn.innerText = addLinkText[0]
-            } else {
-                addBtn.innerText = addLinkText[1]
-            }
-            item.classList.toggle(`${itemCls}--selected`);
-        } else if(isSelected) {
+            addBtn.innerText = addLinkText[1]
+            item.classList.add(`${itemCls}--selected`);
+        }
+    })
+    item.querySelector(`.catalog__item-link--remove`).addEventListener(`click`, function(evt){
+        evt.preventDefault();
+        let type = item.dataset.type;
+        let id = item.dataset.code;
+        let currentProductCount = countItems(type);
+        let addBtn = item.querySelector(`.${addLinkCls}`);
+        removeThis(item)
+        updateUI()
+        if (!currentBox[type][id]) {
             addBtn.innerText = addLinkText[0]
             item.classList.remove(`${itemCls}--selected`);
-            removeThis(item)
-            updateUI()
         }
     })
 })

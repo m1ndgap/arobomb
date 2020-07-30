@@ -98,6 +98,8 @@ function updateUI() {
     let souvenirsEmpty = Object.keys(currentBox.souvenirs).length === 0 && currentBox.souvenirs.constructor === Object
     if (currentStep == 2) {
         let html = document.createElement(`div`)
+        let type = `souvenirs`;
+        let currentProducts = countItems(type);
         if (souvenirsEmpty) {
             for (let i = 0; i < currentBoxType.souvenirs; i ++) {
                 html.innerHTML += drawUIItem();
@@ -106,11 +108,14 @@ function updateUI() {
         } else {
             for (const souvenir in currentBox.souvenirs) {
                 if (currentBox.souvenirs.hasOwnProperty(souvenir)) {
-                    html.innerHTML += drawUIItem(currentBox.souvenirs[souvenir]);
+                    let qty = currentBox.souvenirs[souvenir].quantity
+                    for ( let i = 0; i < qty; i ++) {
+                        html.innerHTML += drawUIItem(currentBox.souvenirs[souvenir]);
+                    }
                 }
             }
-            if (Object.keys(currentBox.souvenirs).length < currentBoxType.souvenirs) {
-                let extraEls = currentBoxType.souvenirs - Object.keys(currentBox.souvenirs).length
+            if (currentProducts < currentBoxType.souvenirs) {
+                let extraEls = currentBoxType.souvenirs - currentProducts
                 for (let i = 0; i < extraEls; i++) {
                     html.innerHTML += drawUIItem();
                 }
@@ -120,12 +125,11 @@ function updateUI() {
 
         itemsUI.innerHTML = html.innerHTML
 
-        currItemNum.innerText = Object.keys(currentBox.souvenirs).length
-        if (Object.keys(currentBox.souvenirs).length == currentBoxType.souvenirs) {
+        currItemNum.innerText = currentProducts
+        if (currentProducts == currentBoxType.souvenirs) {
             progressText.classList.add(`${progressTextCls}--active`)
             nextBtn.classList.add(`${uiNextCls}--active`)
             nextBtn.addEventListener(`click`, goToStep3)
-
         } else {
             progressText.classList.remove(`${progressTextCls}--active`)
             nextBtn.classList.remove(`${uiNextCls}--active`)
@@ -134,9 +138,10 @@ function updateUI() {
     }
 
     if (currentStep == 3) {
+        let type = `aromas`;
+        let currentProducts = countItems(type);
         let html = document.createElement(`div`)
         if (aromasEmpty) {
-
             for (let i = 0; i < currentBoxType.aromas; i++) {
                 html.innerHTML += drawUIItem();
             }
@@ -144,19 +149,22 @@ function updateUI() {
         } else {
             for (const aroma in currentBox.aromas) {
                 if (currentBox.aromas.hasOwnProperty(aroma)) {
-                    html.innerHTML += drawUIItem(currentBox.aromas[aroma]);
+                    let qty = currentBox.aromas[aroma].quantity
+                    for ( let i = 0; i < qty; i ++) {
+                        html.innerHTML += drawUIItem(currentBox.aromas[aroma]);
+                    }
                 }
             }
-            if (Object.keys(currentBox.aromas).length < currentBoxType.aromas) {
-                let extraEls = currentBoxType.aromas - Object.keys(currentBox.aromas).length
+            if (currentProducts < currentBoxType.aromas) {
+                let extraEls = currentBoxType.aromas - currentProducts
                 for (let i = 0; i < extraEls; i++) {
                     html.innerHTML += drawUIItem();
                 }
             }
         }
         itemsUI.innerHTML = html.innerHTML
-        currItemNum.innerText = Object.keys(currentBox.aromas).length
-        if (Object.keys(currentBox.aromas).length == currentBoxType.aromas) {
+        currItemNum.innerText = currentProducts
+        if (currentProducts == currentBoxType.aromas) {
             progressText.classList.add(`${progressTextCls}--active`)
             nextBtn.classList.add(`${uiNextCls}--active`)
             nextBtn.addEventListener(`click`, goToCart)
@@ -176,11 +184,11 @@ function drawUIItem(obj = {}) {
     let isObjEmpty = Object.keys(obj).length === 0 && obj.constructor === Object;
     if (!isObjEmpty) {
         img = obj.img
-        retina = obj.retina
+        retina = `${obj.retina} 2x`
         imgFull = `constructor__ui-item--full`
     }
     return `<li class="constructor__ui-item ${imgFull}">
-                    <img src="${img}" srcset="${img},${retina} 2x" alt="order item">
+                    <img src="${img}" srcset="${img},${retina}" alt="order item">
                 </li>`
 }
 

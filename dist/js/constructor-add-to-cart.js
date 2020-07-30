@@ -1,10 +1,7 @@
 "use strict";
 
 function addBoxToCart(obj){
-    console.log(obj)
     const {aromas, souvenirs, price, name, code, imgs} = obj
-    console.log(aromas)
-    console.log(souvenirs)
 
     let ls = localStorage.getItem(`arobombBoxes`)
     if (!ls) {

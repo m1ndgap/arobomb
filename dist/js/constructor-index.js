@@ -42,7 +42,6 @@ mobileBtns.forEach(function(btn){
     btn.addEventListener(`click`, function(evt){
         evt.preventDefault();
         let type = this.dataset.boxtype;
-
         let isActive = this.classList.contains(`${mobBtnCls}--active`);
         if (type == "small" && !isActive) {
             box1.classList.add(`js-box-1-mobile-active`)
@@ -78,6 +77,7 @@ box1.addEventListener(`click`, function(){
         box2.classList.add(`js-box-2-mobile-inactive`)
         info1.classList.add(`js-info-mobile-active`)
         info2.classList.remove(`js-info-mobile-active`)
+        currentBoxType = boxTypes.small;
         mobileBtns.forEach(function (mbBtn) {
             if (mbBtn.dataset.boxtype !== "small") {
                 mbBtn.classList.remove(`${mobBtnCls}--active`)
@@ -96,6 +96,7 @@ box2.addEventListener(`click`, function(){
         box1.classList.add(`js-box-1-mobile-inactive`)
         info2.classList.add(`js-info-mobile-active`)
         info1.classList.remove(`js-info-mobile-active`)
+        currentBoxType = boxTypes.big;
         mobileBtns.forEach(function (mbBtn) {
             if (mbBtn.dataset.boxtype !== "big") {
                 mbBtn.classList.remove(`${mobBtnCls}--active`)

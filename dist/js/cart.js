@@ -103,13 +103,15 @@ function countPrice(){
 }
 
 function createBoxEl(obj){
-    const {id, img, retina, name} = obj
+    console.log(obj)
+    const {id, img, retina, name, quantity} = obj
+    const quantityMarkup = quantity > 1 ? `${quantity} x ` : ``
     return `<li class="cart__item-list-item">
                 <figure>
                     <img src="${img}" srcset="${img}, ${retina} 2x" alt="">
                 </figure>
                 <div class="cart__item-list-text">
-                    <span class="cart__item-list-title">${name}</span>
+                    <span class="cart__item-list-title">${quantityMarkup}${name}</span>
                     <span class="cart__item-list-code">Арт. ${id}</span>
                 </div>
             </li>`
@@ -133,9 +135,9 @@ function createBox(obj, lscode){
 
     newEl.innerHTML = `<div class="cart__item cart__item--box" data-type="box" data-lscode="${lscode}" data-img="${imgs[0]}" data-retinaImg="${imgs[1]}" data-price="${price}" data-name="${name}">
                         <figure class="cart__item-img-wrap">
-                            <img  
-                                srcset="${imgs[0]}, ${imgs[1]} 2x" 
-                                src="${imgs[0]}" alt="${name}" 
+                            <img srcset="${imgs[0]}, ${imgs[1]}" 
+                                src="${imgs[0]}" 
+                                alt="${name}" 
                                 class="cart__item-img">
                         </figure>
                         <div class="cart__item-text">
