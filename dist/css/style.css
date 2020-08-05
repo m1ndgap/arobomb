@@ -7700,6 +7700,7 @@ body {
   top: 0;
   padding: 40px;
   opacity: 0;
+  max-height: 0;
   pointer-events: none;
   transition: opacity 300ms; }
   .tabs__text-wrap p {
@@ -7708,7 +7709,8 @@ body {
   .tabs__text-wrap--active {
     position: static;
     opacity: 1;
-    pointer-events: all; }
+    pointer-events: all;
+    max-height: unset; }
   @media (max-width: 767px) {
     .tabs__text-wrap {
       position: static;
@@ -7775,10 +7777,12 @@ body {
         font-size: 1.4rem; } }
   .similar-items__img-wrap {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    margin-top: auto; }
     .similar-items__img-wrap img {
       max-width: 100%; }
   .similar-items__link {
+    margin-top: auto;
     text-decoration: none; }
     .similar-items__link:after {
       content: "";
