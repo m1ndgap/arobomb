@@ -7783,7 +7783,8 @@ body {
       max-width: 100%; }
   .similar-items__link {
     margin-top: auto;
-    text-decoration: none; }
+    text-decoration: none;
+    text-align: center; }
     .similar-items__link:after {
       content: "";
       position: absolute;
