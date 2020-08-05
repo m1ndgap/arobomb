@@ -7693,7 +7693,8 @@ body {
     transform: scaleY(-1); }
 
 .tabs__text-area {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .tabs__text-wrap {
   position: absolute;
