@@ -737,6 +737,8 @@
   &__form-section
     position: relative
     z-index: 1
+    &:focus, &:active
+      outline: none
 
     &::before
       @include media ("<tablet")

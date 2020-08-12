@@ -24,9 +24,9 @@ cbBtn.addEventListener(`click`, function(e){
 })
 
 cbSubmit.addEventListener(`click`, function (e) {
-    e.preventDefault();
-    cbcbModalForm.classList.remove(`modal-wrapper--active`)
-    cbModalThanks.classList.add(`modal-wrapper--active`)
+    // e.preventDefault();
+    // cbcbModalForm.classList.remove(`modal-wrapper--active`)
+    // cbModalThanks.classList.add(`modal-wrapper--active`)
 })
 
 cbClose.addEventListener(`click`, function(e){
