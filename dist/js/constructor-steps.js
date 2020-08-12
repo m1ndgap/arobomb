@@ -57,6 +57,7 @@ function goToStep1(){
     index.classList.add(`${indexCls}--active`);
     catalog.classList.remove(`${catalogCls}--active`);
     ui.classList.remove(`${uiCls}--active`);
+    switchTabs()
 }
 
 function goToStep2(){
