@@ -4271,6 +4271,11 @@ form .wpcf7-not-valid {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); }
+  .constructor__box-img--1 {
+    max-width: 400px; }
+  .constructor__box-img--2 {
+    max-width: 500px;
+    left: 58%; }
   @media (max-width: 1439px) {
     .constructor__box-img {
       width: auto; }
@@ -4328,20 +4333,21 @@ form .wpcf7-not-valid {
     .constructor__index-desktop-title {
       display: none; } }
 
-@media (max-width: 1439px) {
-  .constructor__box-info {
-    flex-basis: 50%; } }
-
-@media (max-width: 767px) {
-  .constructor__box-info {
-    flex-basis: 100%;
-    width: 95%;
-    z-index: 5;
-    position: fixed;
-    bottom: 58px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0; } }
+.constructor__box-info {
+  z-index: 5; }
+  @media (max-width: 1439px) {
+    .constructor__box-info {
+      flex-basis: 50%; } }
+  @media (max-width: 767px) {
+    .constructor__box-info {
+      flex-basis: 100%;
+      width: 95%;
+      z-index: 5;
+      position: fixed;
+      bottom: 58px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0; } }
 
 .js-info-mobile-active {
   opacity: 1; }
