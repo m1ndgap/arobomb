@@ -5694,18 +5694,6 @@ form .wpcf7-not-valid {
     .landing-1__partners-section .swiper-pagination {
       margin-top: 30px; } }
 
-.landing-1__form-section .wpcf7-form-control-wrap {
-  display: flex;
-  flex-flow: row wrap; }
-
-.landing-1__form-section .catalog-form__input {
-  margin-top: 30px;
-  margin-bottom: 0; }
-
-.landing-1__form-section .wpcf7-not-valid-tip {
-  flex-basis: 100%;
-  margin-top: 10px; }
-
 .landing-2 section:not(.landing-2__flat-form-section) {
   box-sizing: border-box;
   width: 1440px;
@@ -6541,19 +6529,6 @@ form .wpcf7-not-valid {
   @media (max-width: 400px) {
     .landing-2__form-section .catalog-form__wrapper {
       margin-top: 0; } }
-
-.landing-2 .wpcf7-form-control-wrap {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: -webkit-min-content;
-  max-width: -moz-min-content;
-  max-width: min-content; }
-  .landing-2 .wpcf7-form-control-wrap .catalog-form__input {
-    margin-top: 30px;
-    margin-bottom: 0; }
-  .landing-2 .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
-    flex-basis: 100%;
-    margin-top: 10px; }
 
 .catalog-form__wrapper {
   display: flex;
