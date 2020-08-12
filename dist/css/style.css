@@ -5673,6 +5673,15 @@ body {
     .landing-1__partners-section .swiper-pagination {
       margin-top: 30px; } }
 
+.landing-1__form-section .wpcf7-form-control-wrap {
+  display: flex; }
+  .landing-1__form-section .wpcf7-form-control-wrap .catalog-form__input {
+    margin-top: 30px;
+    margin-bottom: 0; }
+  .landing-1__form-section .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+    flex-basis: 100%;
+    margin-top: 10px; }
+
 .landing-2 section:not(.landing-2__flat-form-section) {
   box-sizing: border-box;
   width: 1440px;
