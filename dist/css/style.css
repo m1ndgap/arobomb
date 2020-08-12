@@ -6544,7 +6544,10 @@ form .wpcf7-not-valid {
 
 .landing-2 .wpcf7-form-control-wrap {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content; }
   .landing-2 .wpcf7-form-control-wrap .catalog-form__input {
     margin-top: 30px;
     margin-bottom: 0; }
