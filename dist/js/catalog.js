@@ -7,7 +7,7 @@ function collectDataCatalog(item){
     return {
         code: item.dataset.code,
         type: item.dataset.type,
-        images: [item.dataset.img, item.dataset.retinaImg],
+        images: [item.dataset.img, item.dataset.retinaimg],
         price: item.dataset.price,
         name: item.dataset.name,
     }
