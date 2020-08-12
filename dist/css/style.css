@@ -6581,6 +6581,18 @@ form .wpcf7-not-valid {
     .catalog-form__form {
       width: 100%;
       max-width: 500px; } }
+  .catalog-form__form .wpcf7-form-control-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content; }
+    .catalog-form__form .wpcf7-form-control-wrap .catalog-form__input {
+      margin-top: 30px;
+      margin-bottom: 0; }
+    .catalog-form__form .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+      flex-basis: 100%;
+      margin-top: 10px; }
 
 .catalog-form__input {
   background-size: 100% 100%;
@@ -6671,19 +6683,6 @@ form .wpcf7-not-valid {
   @media (max-width: 1023px) {
     .catalog-form__btn {
       width: 100%; } }
-
-.catalog-form .wpcf7-form-control-wrap {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: -webkit-min-content;
-  max-width: -moz-min-content;
-  max-width: min-content; }
-  .catalog-form .wpcf7-form-control-wrap .catalog-form__input {
-    margin-top: 30px;
-    margin-bottom: 0; }
-  .catalog-form .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
-    flex-basis: 100%;
-    margin-top: 10px; }
 
 .contact-us {
   box-sizing: border-box;
