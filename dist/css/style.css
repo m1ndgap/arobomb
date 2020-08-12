@@ -6542,6 +6542,16 @@ form .wpcf7-not-valid {
     .landing-2__form-section .catalog-form__wrapper {
       margin-top: 0; } }
 
+.landing-2 .wpcf7-form-control-wrap {
+  display: flex;
+  flex-flow: row wrap; }
+  .landing-2 .wpcf7-form-control-wrap .catalog-form__input {
+    margin-top: 30px;
+    margin-bottom: 0; }
+  .landing-2 .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+    flex-basis: 100%;
+    margin-top: 10px; }
+
 .catalog-form__wrapper {
   display: flex;
   margin-top: 75px;
