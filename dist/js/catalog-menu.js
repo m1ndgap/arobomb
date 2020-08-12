@@ -5,7 +5,7 @@ const catMenuWrapCls = `submenu__wrapper`;
 const catSectionCls = `submenu__section`;
 const subcatLinkCls = `submenu__subsection-item`;
 const catalogItemCls = `catalog__item`;
-const constructorLink = `/constructor.html`
+const constructorLink = `./constructor`
 
 const hideSections = (sections) => {
     sections.forEach((sect) => {
@@ -69,9 +69,9 @@ sections.forEach((section) => {
             }
         })
     } else {
-        section.addEventListener(`click`, function(){
-            window.location.href = constructorLink
-        })
+        // section.addEventListener(`click`, function(){
+        //     window.location.href = constructorLink
+        // })
     }
 })
 
