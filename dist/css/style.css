@@ -7795,7 +7795,8 @@ form .wpcf7-not-valid {
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center; }
+    align-items: center;
+    max-width: 230px; }
   .similar-items__main-title {
     font-family: "Montserrat", sans-serif;
     font-size: 3.6rem;
