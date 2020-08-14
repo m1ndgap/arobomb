@@ -484,6 +484,7 @@
       position: absolute
       left: 53px
       top: -78px
+      pointer-events: none
       @include media ("<huge")
         display: none
 
@@ -513,12 +514,19 @@
 
   &__flat-form-input--wrap
     display: flex
+    max-height: 56px
     @include media ("<large")
       flex-basis: 50%
     @include media ("<tablet")
       display: block
       max-width: 500px
       margin: 0 auto
+
+    .wpcf7-not-valid
+      outline: 1px solid $main-link
+      color: $main-link
+      &::placeholder
+        color: $main-link
 
   &__flat-form-input-clientinfo
     @include gbackground (100%)
@@ -531,6 +539,9 @@
       margin-bottom: 20px
       opacity: 1
       background: none
+
+    p
+      margin: 0
 
   &__flat-form-input
     background-color: transparent
