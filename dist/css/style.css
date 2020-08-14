@@ -6251,6 +6251,8 @@ form .wpcf7-not-valid {
 
 .landing-2__flat-form {
   margin-top: 57px; }
+  .landing-2__flat-form .form__btn {
+    height: 56px; }
 
 .landing-2__flat-form-input--wrap {
   display: flex;
@@ -6276,6 +6278,8 @@ form .wpcf7-not-valid {
       color: #D62267; }
     .landing-2__flat-form-input--wrap .wpcf7-not-valid::placeholder {
       color: #D62267; }
+  .landing-2__flat-form-input--wrap p {
+    margin: 0; }
 
 .landing-2__flat-form-input-clientinfo {
   background-size: 100% 100%;
