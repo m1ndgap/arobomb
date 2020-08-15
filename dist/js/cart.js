@@ -6,6 +6,8 @@ let proceedBtnCls = `cart__total-price-proceed-btn`;
 let emptyCartCls = `cart__cart-empty`;
 let totalPrice1Cls = `cart__total-price-number`;
 let totalPrice2Cls = `cart-form__price-amount-number`;
+let hiddenInputCartCls = `cart-hidden-input--cart`;
+let hiddenInputBoxCls = `cart-hidden-input--boxes`;
 
 const showTabContent = (tab) => {
     const contentTabs = document.querySelectorAll('.' + cartTabContentCls);
@@ -58,6 +60,45 @@ function removeSpaces(x) {
     return x.toString().replace(/\s/g, '');
 }
 
+function generateCartHiddenText(obj){
+    let text = ``;
+    for (const item in obj){
+        if (obj.hasOwnProperty(item)) {
+            text += `${item}: ${obj[item].quantity}; `
+        }
+    }
+    hiddenInputCart.value = text;
+    console.log(hiddenInputCart.value)
+}
+
+function generateBoxesHiddenText(obj){
+    let text = ``;
+    for (const box in obj){
+        if (obj.hasOwnProperty(box)) {
+            text += `${box}: Souvenirs: `
+            const aromas = obj[box].aromas
+            const souvenirs = obj[box].souvenirs
+
+            for (const souv in souvenirs) {
+                if (souvenirs.hasOwnProperty(souv)) {
+                    text += `${souv}: ${souvenirs[souv].quantity}; `
+                }
+            }
+
+            text += `Aromas: `
+            for (const aroma in aromas) {
+                if (aromas.hasOwnProperty(aroma)) {
+                    text += `${aroma}: ${aromas[aroma].quantity}; `
+                }
+            }
+
+        }
+    }
+
+    hiddenInputBoxes.value = text;
+    console.log(hiddenInputBoxes.value)
+}
+
 function collectData(item){
     return {
         code: item.dataset.code,
@@ -103,7 +144,6 @@ function countPrice(){
 }
 
 function createBoxEl(obj){
-    console.log(obj)
     const {id, img, retina, name, quantity} = obj
     const quantityMarkup = quantity > 1 ? `${quantity} x ` : ``
     return `<li class="cart__item-list-item">
@@ -178,6 +218,8 @@ function createBox(obj, lscode){
             disablePayment();
         }
         countPrice();
+        let boxLs = JSON.parse(localStorage.getItem(`arobombBoxes`));
+        generateBoxesHiddenText(boxLs)
     })
 
     return newEl.firstChild
@@ -243,6 +285,8 @@ function createItem(obj, code){
         if (isCartEmpty()) {
             disablePayment();
         }
+        let cartLs = JSON.parse(localStorage.getItem(`arobombCart`));
+        generateCartHiddenText(cartLs)
         countPrice();
     })
 
@@ -268,7 +312,8 @@ function createItem(obj, code){
         // }
         initValue = value;
         setCartQty(collectData(item), value)
-        console.log(initValue)
+        let cartLs = JSON.parse(localStorage.getItem(`arobombCart`));
+        generateCartHiddenText(cartLs)
     })
 
     add.addEventListener(`click`, function(evt){
@@ -281,6 +326,8 @@ function createItem(obj, code){
         }
         countPrice();
         updateQty(collectData(item), true)
+        let cartLs = JSON.parse(localStorage.getItem(`arobombCart`));
+        generateCartHiddenText(cartLs)
     })
 
     remove.addEventListener(`click`, function(evt){
@@ -293,6 +340,8 @@ function createItem(obj, code){
         }
         countPrice();
         updateQty(collectData(item), false)
+        let cartLs = JSON.parse(localStorage.getItem(`arobombCart`));
+        generateCartHiddenText(cartLs)
     })
 
     return newEl.firstChild
@@ -300,9 +349,12 @@ function createItem(obj, code){
 
 let boxLs = JSON.parse(localStorage.getItem(`arobombBoxes`));
 let ls = JSON.parse(localStorage.getItem(`arobombCart`));
-let cartItems = document.querySelector(`.cart__items`)
+let cartItems = document.querySelector(`.cart__items`);
+let hiddenInputCart = document.querySelector(`.${hiddenInputCartCls}`);
+let hiddenInputBoxes = document.querySelector(`.${hiddenInputBoxCls}`);
 
 if (boxLs){
+    generateBoxesHiddenText(boxLs)
     for (const property in boxLs) {
         if (boxLs.hasOwnProperty(property)) {
             cartItems.append(createBox(boxLs[property], property));
@@ -313,6 +365,7 @@ if (boxLs){
 }
 
 if (ls) {
+    generateCartHiddenText(ls)
     for (const property in ls) {
         if (ls.hasOwnProperty(property)) {
             cartItems.append(createItem(ls[property], property));
