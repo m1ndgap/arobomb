@@ -415,6 +415,12 @@ function arrayReplace(array, elemToReplace, substitutionElem) {
 ///// form validation ///////
 /////////////////////////////
 
+const cartFileUploadWrapCls = `cart-form__upload-wrap`;
+const cartFileUploadInputCls = `cart-form__upload`;
+const cartFormCls = `cart__form`;
+const cartFormNameId = ``;
+const cartFormTelId = ``;
+const cartFormEmailId = ``;
 
 function validatePhone(phoneEl) {
     let phone = phoneEl.value,
@@ -425,4 +431,20 @@ function validatePhone(phoneEl) {
         return false
     }
 }
+
+let cartForm = document.querySelector(`.${cartFormCls}`)
+let cartFormUpload = cartForm.querySelector(`.${cartFileUploadInputCls}`)
+let cartFormUploadWrap = cartForm.querySelector(`.${cartFileUploadWrapCls}`)
+
+cartFormUpload.addEventListener(`change`, function(){
+    cartFormUploadWrap.classList.add(`${cartFileUploadWrapCls}--active`)
+})
+
+let inputs = cartForm.querySelectorAll(`[required]`)
+let buttons = cartForm.querySelectorAll(`button`)
+cartForm.addEventListener(`change`, function(){
+    console.log(inputs)
+    console.log(buttons)
+})
+
 

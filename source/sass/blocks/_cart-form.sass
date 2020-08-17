@@ -134,9 +134,16 @@
         svg
           fill: $btn
     &:disabled
-      opacity: 0.8
-      pointer-events: none
+      opacity: 0.5
+      cursor: not-allowed
       background-color: lighten($text, 30%)
+      &:hover
+        .cart-form__submit-btn-text
+          span:nth-child(1), span:nth-child(2)
+            color: $white
+        .cart-form__submit-btn-icons
+          svg
+            fill: $white
 
     @include media("<large")
       flex-basis: 45%
@@ -230,6 +237,19 @@
       background: $btn
       span:nth-child(1), span:nth-child(2), span:nth-child(3)
         color: $white
+    &:disabled
+      opacity: 0.5
+      cursor: not-allowed
+      background-color: lighten($text, 30%)
+      span:nth-child(1), span:nth-child(2), span:nth-child(3)
+        color: $white
+      &:hover
+        border: 1px solid $btn
+        background-color: lighten($text, 30%)
+        span:nth-child(1), span:nth-child(2), span:nth-child(3)
+          color: $white
+
+
     span
       transition: color $transition
     span:nth-child(1)
@@ -280,6 +300,17 @@
       display: block
       z-index: 1
       pointer-events: none
+    &--active
+      border: 10px solid $btn
+      .cart-form__upload-before-text, .cart-form__upload-plus
+        display: none !important
+      .cart-form__upload-after-text
+        display: block !important
+
+
+    @include media("<desktop")
+      display: none
+
     input
       position: absolute
       display: block
@@ -292,10 +323,12 @@
       opacity: 0
       z-index: 3
       cursor: pointer
+
     span
       position: relative
       z-index: 2
-    span:nth-of-type(1)
+
+    .cart-form__upload-before-text, .cart-form__upload-after-text
       display: block
       margin: 3px 0 0 -2px
       @include subtitle(1.8rem)
@@ -303,7 +336,11 @@
       font-weight: 300
       text-align: left
       letter-spacing: 0
-    span:nth-of-type(2)
+
+    .cart-form__upload-after-text
+      display: none
+
+    .cart-form__upload-plus
       position: absolute
       right: 16px
       top: 50%
@@ -312,6 +349,6 @@
       @include subtitle(3.5rem)
       color: $btn
       font-weight: 300
-    @include media("<desktop")
-      display: none
+
+
 
