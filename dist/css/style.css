@@ -6586,9 +6586,9 @@ form .wpcf7-not-valid {
   .catalog-form__form .wpcf7-form-control-wrap {
     display: flex;
     flex-flow: row wrap;
-    max-width: -webkit-min-content;
-    max-width: -moz-min-content;
-    max-width: min-content; }
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content; }
     .catalog-form__form .wpcf7-form-control-wrap .catalog-form__input {
       margin-top: 30px;
       margin-bottom: 0; }

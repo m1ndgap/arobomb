@@ -409,3 +409,20 @@ function arrayReplace(array, elemToReplace, substitutionElem) {
     }
     return array;
 }
+
+
+/////////////////////////////
+///// form validation ///////
+/////////////////////////////
+
+
+function validatePhone(phoneEl) {
+    let phone = phoneEl.value,
+        numbers = /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/gm;
+    if(phone.match(numbers)) {
+        return phone
+    } else {
+        return false
+    }
+}
+
