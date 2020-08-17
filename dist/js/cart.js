@@ -418,9 +418,11 @@ function arrayReplace(array, elemToReplace, substitutionElem) {
 const cartFileUploadWrapCls = `cart-form__upload-wrap`;
 const cartFileUploadInputCls = `cart-form__upload`;
 const cartFormCls = `cart__form`;
-const cartFormNameId = ``;
-const cartFormTelId = ``;
-const cartFormEmailId = ``;
+const cartFormNameId = `cart-form-name`;
+const cartFormTelId = `cart-form-tel`;
+const cartFormEmailId = `cart-form-email`;
+const cartFormAddressId = `cart-form-address`;
+const cartFormCheckboxId = `cart-form-checkbox`;
 
 function validatePhone(phoneEl) {
     let phone = phoneEl.value,
@@ -432,19 +434,119 @@ function validatePhone(phoneEl) {
     }
 }
 
-let cartForm = document.querySelector(`.${cartFormCls}`)
-let cartFormUpload = cartForm.querySelector(`.${cartFileUploadInputCls}`)
-let cartFormUploadWrap = cartForm.querySelector(`.${cartFileUploadWrapCls}`)
+function validateEmail(emailEl) {
+    let email = emailEl.value,
+        numbers = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+    if(email.match(numbers)) {
+        return email
+    } else {
+        return false
+    }
+}
+
+
+let cartForm = document.querySelector(`.${cartFormCls}`);
+let cartFormUpload = cartForm.querySelector(`.${cartFileUploadInputCls}`);
+let cartFormUploadWrap = cartForm.querySelector(`.${cartFileUploadWrapCls}`);
+let validator = [];
+
+let cartFormName = cartForm.querySelector(`#${cartFormNameId}`);
+let cartFormTel = cartForm.querySelector(`#${cartFormTelId}`);
+let cartFormEmail = cartForm.querySelector(`#${cartFormEmailId}`);
+let cartFormAddress = cartForm.querySelector(`#${cartFormAddressId}`);
+let cartFormCheckbox = cartForm.querySelector(`#${cartFormCheckboxId}`);
+
+let buttons = cartForm.querySelectorAll(`button`)
+
+let inputs = cartForm.querySelectorAll(`[required]`)
 
 cartFormUpload.addEventListener(`change`, function(){
     cartFormUploadWrap.classList.add(`${cartFileUploadWrapCls}--active`)
 })
 
-let inputs = cartForm.querySelectorAll(`[required]`)
-let buttons = cartForm.querySelectorAll(`button`)
-cartForm.addEventListener(`change`, function(){
-    console.log(inputs)
-    console.log(buttons)
+
+inputs.forEach(function (input) {
+    let value = (input.dataset.validity == "true");
+    validator.push(value);
 })
 
+cartForm.addEventListener(`change`, function(){
+    console.log(validator)
+    if (!validator.includes(false)) {
+        buttons.forEach(function(btn){
+            btn.disabled = false;
+        })
+    } else {
+        buttons.forEach(function(btn){
+            btn.disabled = true;
+        })
+    }
+})
 
+cartFormName.addEventListener(`change`, function(){
+    let wrapper = this.parentNode;
+    if (this.value.length < 2) {
+        wrapper.classList.add(`cart-form__input-wrap--error`)
+        this.value = ``
+        this.placeholder = `заполните это поле`
+        validator[0] = false
+        this.dataset.validity = "false"
+    } else {
+        wrapper.classList.remove(`cart-form__input-wrap--error`)
+        validator[0] = true
+        this.dataset.validity = "true"
+    }
+})
+
+cartFormTel.addEventListener(`change`, function(){
+    let wrapper = this.parentNode;
+    if (!validatePhone(this)) {
+        wrapper.classList.add(`cart-form__input-wrap--error`)
+        this.value = ``
+        this.placeholder = `введите правильный телефон`
+        validator[1] = false
+        this.dataset.validity = "false"
+    } else {
+        wrapper.classList.remove(`cart-form__input-wrap--error`)
+        validator[1] = true
+        this.dataset.validity = "true"
+    }
+})
+
+cartFormEmail.addEventListener(`change`, function(){
+    let wrapper = this.parentNode;
+    if (!validateEmail(this)) {
+        wrapper.classList.add(`cart-form__input-wrap--error`)
+        this.value = ``
+        this.placeholder = `введите правильный email`
+        validator[2] = false
+        this.dataset.validity = "false"
+    } else {
+        wrapper.classList.remove(`cart-form__input-wrap--error`)
+        validator[2] = true
+        this.dataset.validity = "true"
+    }
+})
+
+cartFormAddress.addEventListener(`change`, function(){
+    let wrapper = this.parentNode;
+    if (this.value.length < 10) {
+        wrapper.classList.add(`cart-form__input-wrap--error`)
+        this.value = ``
+        this.placeholder = `введите адрес`
+        validator[3] = false
+        this.dataset.validity = "false"
+    } else {
+        wrapper.classList.remove(`cart-form__input-wrap--error`)
+        validator[3] = true
+        this.dataset.validity = "true"
+    }
+})
+
+cartFormCheckbox.addEventListener(`change`, function(e){
+    if (this.checked === false) {
+        validator[4] = false
+    } else {
+        validator[4] = true
+    }
+})

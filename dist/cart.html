@@ -677,7 +677,7 @@
         <section data-tabcontent="2" class="cart__tab-content cart__tab-content--2 cart__tab-content--active">
             <div class="cart__wrapper--tab-2">
 
-                    <form action="" id="cart-form" class="cart__form cart-form">
+                    <form data-valid="false" action="" id="cart-form" class="cart__form cart-form">
                         <label for="cart-hidden-input1" style="display: none">hidden input
                             <input type="text" id="cart-hidden-input1" style="display: none" value="" class="cart-hidden-input--cart">
                         </label>
@@ -689,26 +689,26 @@
                                 <legend class="cart-form__legend">личные данные</legend>
                                 <div class="cart-form__input-wrap">
                                     <label for="cart-form-name">name</label>
-                                    <input type="text" id="cart-form-name" placeholder="Имя" required="">
+                                    <input type="text" data-validity="false" id="cart-form-name" placeholder="Имя" required="">
                                 </div>
                                 <div class="cart-form__input-wrap">
                                     <label for="cart-form-tel">tel</label>
-                                    <input type="tel" id="cart-form-tel" placeholder="телефон" required="">
+                                    <input type="tel" data-validity="false" id="cart-form-tel" placeholder="телефон" required="">
                                 </div>
-                                <div class="cart-form__input-wrap cart-form__input-wrap--error">
+                                <div class="cart-form__input-wrap">
                                     <label for="cart-form-email">email</label>
-                                    <input type="email" id="cart-form-email" placeholder="заполните это поле" required="">
+                                    <input type="email" data-validity="false" id="cart-form-email" placeholder="email" required="">
                                 </div>
                             </fieldset>
                             <fieldset class="cart-form__fieldset">
                                 <legend class="cart-form__legend">ДОСТАВКА</legend>
                                 <div class="cart-form__input-wrap">
                                     <label for="cart-form-address">address</label>
-                                    <input type="text" id="cart-form-address" placeholder="Адрес" required="">
+                                    <input type="text" data-validity="false" id="cart-form-address" placeholder="Адрес" required="">
                                 </div>
                                 <div class="cart-form__input-wrap cart-form__input-wrap--checkbox">
                                     <label for="cart-form-checkbox" class="cart-form__custom-checkbox-label custom-checkbox">
-                                        <input type="checkbox" checked="" id="cart-form-checkbox" class="custom-checkbox__input" required="">
+                                        <input type="checkbox" data-validity="true" checked="" id="cart-form-checkbox" class="custom-checkbox__input" required="">
                                         <svg width="18" height="14" viewBox="0 0 18 14" class="custom-checkbox__checkmark">
                                             <use xlink:href="#icon-checkmark"></use>
                                         </svg>

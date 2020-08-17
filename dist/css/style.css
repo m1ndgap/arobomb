@@ -3270,7 +3270,8 @@ form .wpcf7-not-valid {
   .cart-form__submit-btn-text {
     margin: 15px 15px 4px; }
     .cart-form__submit-btn-text span {
-      transition: color 300ms; }
+      transition: color 300ms;
+      text-decoration: none; }
     .cart-form__submit-btn-text span:nth-child(1) {
       display: block;
       font-family: "Montserrat", sans-serif;
@@ -3280,7 +3281,8 @@ form .wpcf7-not-valid {
       color: #FFFFFF;
       font-weight: 900;
       text-align: left;
-      letter-spacing: 0.3rem; }
+      letter-spacing: 0.3rem;
+      text-decoration: none; }
     .cart-form__submit-btn-text span:nth-child(2) {
       display: block;
       margin: 3px 0 0 -2px;
@@ -3291,7 +3293,8 @@ form .wpcf7-not-valid {
       color: #FFFFFF;
       font-weight: 300;
       text-align: left;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      text-decoration: none; }
     @media (max-width: 1023px) {
       .cart-form__submit-btn-text {
         margin: 0 0 0 20px; }
