@@ -20,6 +20,18 @@ constructorBlobs.forEach(function (blob) {
     })
 })
 
+let mainMenuL2 = document.querySelector(`.main-menu`)
+mainMenuL2.classList.add(`fixed-menu-transparent-bg`)
+
+document.addEventListener(`scroll`, function () {
+    let offset = window.pageYOffset
+    if (offset > 150) {
+        mainMenuL2.classList.remove(`fixed-menu-transparent-bg`)
+    } else {
+        mainMenuL2.classList.add(`fixed-menu-transparent-bg`)
+    }
+})
+
 let mobileBtns = document.querySelectorAll(`.${mobBtnCls}`);
 let box1 = document.querySelector(`.js-box-1-mobile`);
 let box2 = document.querySelector(`.js-box-2-mobile`);

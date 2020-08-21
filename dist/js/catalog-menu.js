@@ -22,7 +22,6 @@ const hideSubcatLinks = (link) => {
 }
 
 const sortProducts = (link, items) => {
-    //sorting logic here
     let subtype = link.dataset.subtype
     console.log(`Sorting products...`)
     items.forEach(function (item) {

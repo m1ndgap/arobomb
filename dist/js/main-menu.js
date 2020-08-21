@@ -28,3 +28,7 @@ let giftbtn = mainMenu.querySelector('.' + giftBtnCls)
 giftbtn.addEventListener('click', function(){
     mainMenu.classList.toggle('fixed-menu-trailing-gradient')
 })
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);

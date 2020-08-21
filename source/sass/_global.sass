@@ -94,6 +94,7 @@ body
     background-position: right top, left bottom
     text-transform: uppercase
     padding-bottom: 30px
+    padding-top: 100px
     @include media ("<tablet")
       padding-bottom: 60px
   &--landing-2
@@ -120,12 +121,14 @@ body
     background: url("../img/map.png")
     background-position: bottom right
     background-repeat: no-repeat
+    height: 100vh
     // @media screen and (max-width: 680px)
     //   background-size: contain
     //   padding-bottom: 300px
     // @media screen and ( max-width: 560px )
     @include media ("<desktop")
       // background-size: contain
+      height: auto
       background-size: 135%
       padding-bottom: 300px
     // @include media ("<tiny")

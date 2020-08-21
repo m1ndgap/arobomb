@@ -758,7 +758,8 @@ body {
   background-repeat: no-repeat;
   background-position: right top, left bottom;
   text-transform: uppercase;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  padding-top: 100px; }
   @media (max-width: 767px) {
     .main--landing-1 {
       padding-bottom: 60px; } }
@@ -790,9 +791,11 @@ body {
 .main-contact-us {
   background: url("../img/map.png");
   background-position: bottom right;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100vh; }
   @media (max-width: 1023px) {
     .main-contact-us {
+      height: auto;
       background-size: 135%;
       padding-bottom: 300px; } }
 
@@ -981,16 +984,18 @@ form .wpcf7-not-valid {
   width: 100%;
   transition: background-color 300ms;
   z-index: 11;
-  background-color: #FFFFFF;
+  background-color: #F5F8FF;
   padding-bottom: 10px; }
   .main-menu:after {
+    opacity: 1;
     content: "";
     position: absolute;
     top: 100%;
     display: block;
     width: 100%;
     height: 20px;
-    background-image: linear-gradient(180deg, #FFFFFF, rgba(255, 255, 255, 0.001)); }
+    background-image: linear-gradient(180deg, #F5F8FF, rgba(255, 255, 255, 0.001));
+    transition: opacity 300ms; }
   .main-menu--no-after:after {
     content: none; }
   .main-menu__container {
@@ -1066,6 +1071,8 @@ form .wpcf7-not-valid {
     display: flex;
     flex-flow: column nowrap;
     max-height: 1000px;
+    height: 100vh;
+    height: calc((var(--vh, 1vh) * 100) - 54px);
     padding: 0 10px 35px;
     overflow: visible;
     z-index: -1; }
@@ -1095,7 +1102,8 @@ form .wpcf7-not-valid {
         margin-top: 15px;
         order: 2;
         font-size: 1.8rem;
-        text-align: center; } }
+        text-align: center;
+        box-shadow: 0 0 0 0; } }
   .main-menu__list {
     padding-left: 0;
     margin: 0;
@@ -1118,7 +1126,9 @@ form .wpcf7-not-valid {
         margin: 0 auto 0;
         width: 100%;
         max-width: 400px;
+        margin-top: 20px;
         flex-flow: column nowrap;
+        justify-content: flex-start;
         order: 1;
         padding: 10px; } }
   .main-menu__list-item {
@@ -1331,7 +1341,7 @@ form .wpcf7-not-valid {
     display: block;
     width: 23px;
     height: 23px;
-    padding: 5px;
+    padding: 6px 2px;
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 100%;
@@ -1342,7 +1352,8 @@ form .wpcf7-not-valid {
     opacity: 0; }
     .main-menu__basket-items--active {
       opacity: 1;
-      transition: opacity 300ms; }
+      transition: opacity 300ms;
+      box-shadow: 0 4px 15px rgba(177, 149, 239, 0.7); }
   .main-menu #nav-icon {
     display: none; }
     @media (max-width: 767px) {
@@ -1352,7 +1363,7 @@ form .wpcf7-not-valid {
 .fixed-menu-transparent-bg {
   background: transparent; }
   .fixed-menu-transparent-bg:after {
-    display: none; }
+    opacity: 0; }
 
 .index {
   height: 100vh; }
@@ -1479,8 +1490,7 @@ form .wpcf7-not-valid {
     text-transform: uppercase;
     font-weight: 600;
     padding: 7px 10px;
-    color: #FFFFFF;
-    transition: color 300ms; }
+    color: #FFFFFF; }
     .index__all-products-btn br {
       display: none; }
     @media (max-width: 767px) {
@@ -2099,11 +2109,12 @@ form .wpcf7-not-valid {
 .submenu {
   position: fixed;
   width: 100%;
+  max-width: 100%;
   top: 0;
   padding-top: 95px;
   padding-bottom: 10px;
   z-index: 4;
-  background-color: #FFFFFF; }
+  background-color: #F5F8FF; }
   .submenu:after {
     content: "";
     position: absolute;
@@ -2111,7 +2122,7 @@ form .wpcf7-not-valid {
     display: block;
     width: 100%;
     height: 20px;
-    background-image: linear-gradient(180deg, #FFFFFF, rgba(255, 255, 255, 0.001)); }
+    background-image: linear-gradient(180deg, #F5F8FF, rgba(255, 255, 255, 0.001)); }
   @media (max-width: 1439px) {
     .submenu {
       padding-top: 140px; } }
@@ -2244,7 +2255,7 @@ form .wpcf7-not-valid {
     pointer-events: none; }
 
 .submenu__section + .submenu__section {
-  margin-left: 70px; }
+  margin-left: 68px; }
   @media (max-width: 1279px) {
     .submenu__section + .submenu__section {
       margin-left: 10px; } }
@@ -2466,6 +2477,18 @@ form .wpcf7-not-valid {
     @media (max-width: 1439px) {
       .document-modal .modal__name {
         word-spacing: initial; } }
+  .document-modal .modal__image {
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    -o-object-fit: contain;
+       object-fit: contain; }
+    @media (max-width: 1439px) {
+      .document-modal .modal__image {
+        margin-top: 10px;
+        max-width: 500px;
+        max-height: unset;
+        width: 100%; } }
 
 .breadcrumbs {
   padding-left: 0;
@@ -3731,7 +3754,7 @@ form .wpcf7-not-valid {
       color: #FFFFFF; }
   .pcalculator__info-title {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     min-height: 60px;
     max-width: 70%;
     font-size: 1.6rem;
@@ -5022,7 +5045,7 @@ form .wpcf7-not-valid {
       margin-bottom: 100px; } }
 
 .landing-1__pitch-topics {
-  margin-bottom: 87px; }
+  margin-bottom: 69px; }
   @media (max-width: 1023px) {
     .landing-1__pitch-topics {
       margin-bottom: 30px; } }
@@ -5049,7 +5072,7 @@ form .wpcf7-not-valid {
 .landing-1__pitch-img {
   position: absolute;
   right: 0;
-  top: 142px; }
+  top: 114px; }
   @media (max-width: 1439px) {
     .landing-1__pitch-img {
       width: 795px;
@@ -5635,6 +5658,7 @@ form .wpcf7-not-valid {
 .landing-1__partners-section .landing-1__swiper-img--wrapper {
   display: block;
   width: 272px;
+  height: 272px;
   flex-shrink: 0;
   margin-right: 55px; }
   @media (max-width: 1023px) {
@@ -5644,10 +5668,12 @@ form .wpcf7-not-valid {
     .landing-1__partners-section .landing-1__swiper-img--wrapper {
       position: static;
       width: 100px;
+      height: auto;
       margin: 0 20px 0 0; } }
   @media (max-width: 400px) {
     .landing-1__partners-section .landing-1__swiper-img--wrapper {
-      width: 58px; } }
+      width: 58px;
+      height: auto; } }
 
 .landing-1__partners-section .landing-1__swiper-img {
   width: 100%; }
@@ -6739,6 +6765,8 @@ form .wpcf7-not-valid {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    margin-top: 0;
+    margin-bottom: 30px;
     display: inline-block;
     color: #FFFFFF;
     font-size: 7.2rem;
@@ -6760,7 +6788,7 @@ form .wpcf7-not-valid {
     line-height: 3.0rem; }
   .contact-us__address-subtitle {
     font-family: "Montserrat", sans-serif;
-    font-size: 3.6rem;
+    font-size: 1.8rem;
     color: #444444;
     text-transform: uppercase;
     font-weight: 800;
@@ -6770,7 +6798,7 @@ form .wpcf7-not-valid {
         font-size: 1.8rem; } }
   .contact-us__phone-email-subtitle {
     font-family: "Montserrat", sans-serif;
-    font-size: 3.6rem;
+    font-size: 1.8rem;
     color: #444444;
     text-transform: uppercase;
     font-weight: 800;
@@ -6822,13 +6850,14 @@ form .wpcf7-not-valid {
     flex-basis: 1;
     max-width: 540px;
     width: 100%;
-    margin-top: 70px;
+    margin-top: 50px;
     padding-bottom: 45px; }
     @media (max-width: 767px) {
       .contact-us__form--wrapper {
         margin-top: 50px;
         padding: 0; } }
   .contact-us__form-motto {
+    margin-top: 0;
     text-transform: uppercase;
     font-size: 3.0rem;
     font-weight: 800;

@@ -9,6 +9,8 @@
 
   &__title
     @include gbackground(100%)
+    margin-top: 0
+    margin-bottom: 30px
     display: inline-block
     color: $white
     font-size: 7.2rem
@@ -28,14 +30,14 @@
     line-height: 3.0rem
 
   &__address-subtitle
-    @include subtitle(3.6rem)
+    @include subtitle(1.8rem)
     font-weight: 800
     margin: 20px 0
     @include media ("<tablet")
       font-size: 1.8rem
 
   &__phone-email-subtitle
-    @include subtitle(3.6rem)
+    @include subtitle(1.8rem)
     font-weight: 800
     margin: 20px 0
     @include media ("<tablet")
@@ -82,13 +84,14 @@
     flex-basis: 1
     max-width: 540px
     width: 100%
-    margin-top: 70px
+    margin-top: 50px
     padding-bottom: 45px
     @include media ("<tablet")
       margin-top: 50px
       padding: 0
 
   &__form-motto
+    margin-top: 0
     text-transform: uppercase
     font-size: 3.0rem
     font-weight: 800

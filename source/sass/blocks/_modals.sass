@@ -111,3 +111,14 @@
     word-spacing: 5000px
     @include media("<huge")
       word-spacing: initial
+
+  .modal__image
+    width: 100%
+    max-width: 600px
+    max-height: 90vh
+    object-fit: contain
+    @include media("<huge")
+      margin-top: 10px
+      max-width: 500px
+      max-height: unset
+      width: 100%
