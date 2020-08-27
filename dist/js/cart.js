@@ -8,6 +8,7 @@ let totalPrice1Cls = `cart__total-price-number`;
 let totalPrice2Cls = `cart-form__price-amount-number`;
 let hiddenInputCartCls = `cart-hidden-input--cart`;
 let hiddenInputBoxCls = `cart-hidden-input--boxes`;
+let hiddenInputPriceCls = `cart-hidden-input--price`;
 
 const showTabContent = (tab) => {
     const contentTabs = document.querySelectorAll('.' + cartTabContentCls);
@@ -68,7 +69,6 @@ function generateCartHiddenText(obj){
         }
     }
     hiddenInputCart.value = text;
-    console.log(hiddenInputCart.value)
 }
 
 function generateBoxesHiddenText(obj){
@@ -96,7 +96,6 @@ function generateBoxesHiddenText(obj){
     }
 
     hiddenInputBoxes.value = text;
-    console.log(hiddenInputBoxes.value)
 }
 
 function collectData(item){
@@ -141,6 +140,7 @@ function countPrice(){
     })
     totalPrice2.innerText = numberWithSpaces(totalPrice);
     totalPrice1.innerText = numberWithSpaces(totalPrice);
+    hiddenInputPrice.value = totalPrice;
 }
 
 function createBoxEl(obj){
@@ -352,6 +352,7 @@ let ls = JSON.parse(localStorage.getItem(`arobombCart`));
 let cartItems = document.querySelector(`.cart__items`);
 let hiddenInputCart = document.querySelector(`.${hiddenInputCartCls}`);
 let hiddenInputBoxes = document.querySelector(`.${hiddenInputBoxCls}`);
+let hiddenInputPrice = document.querySelector(`.${hiddenInputPriceCls}`);
 
 if (boxLs){
     generateBoxesHiddenText(boxLs)
