@@ -678,15 +678,17 @@
             <div class="cart__wrapper--tab-2">
 
                     <form data-valid="false" action="" id="cart-form" class="cart__form cart-form">
-                        <label for="cart-hidden-input1" style="display: none">hidden input
-                            <input type="text" id="cart-hidden-input1" style="display: none" value="" class="cart-hidden-input--cart">
-                        </label>
-                        <label for="cart-hidden-input2" style="display: none">hidden input
-                            <input type="text" id="cart-hidden-input2" style="display: none" value="" class="cart-hidden-input--boxes">
-                        </label>
-                        <label for="cart-hidden-input-price" style="display: none">hidden input
-                            <input type="text" id="cart-hidden-input-price" style="display: none" value="" class="cart-hidden-input--price">
-                        </label>
+                        <div style="display: none">
+                            <label for="cart-hidden-input1" style="display: none">hidden input
+                                <input type="text" id="cart-hidden-input1" style="display: none" value="" class="cart-hidden-input--cart">
+                            </label>
+                            <label for="cart-hidden-input2" style="display: none">hidden input
+                                <input type="text" id="cart-hidden-input2" style="display: none" value="" class="cart-hidden-input--boxes">
+                            </label>
+                            <label for="cart-hidden-input-price" style="display: none">hidden input
+                                <input type="text" id="cart-hidden-input-price" style="display: none" value="" class="cart-hidden-input--price">
+                            </label>
+                        </div>
                         <div class="cart-form__wrapper">
                             <fieldset class="cart-form__fieldset">
                                 <legend class="cart-form__legend">личные данные</legend>
@@ -769,6 +771,32 @@
         </section>
     </section>
 </main>
+<div class="cart-modal modal">
+
+    <h1 class="cart-modal__brand">#AroBomb <span class="main-menu__logo-sup">®</span></h1>
+
+    <!-- 1st modal -->
+    <div class="cart-modal-form__wrapper modal-wrapper modal-wrapper--active">
+
+        <h2 class="cart-modal-form__title">Спасибо за заявку</h2>
+        <p class="cart-modal-form__subtitle">Теперь вы можете ее оплатить</p>
+
+        <form action="" class="cart-modal-form__form">
+
+                <div class="cart-modal-form__input-wrap cart-modal-form__btn-wrap">
+                    <input type="submit" class="btn cart-modal-form__submit-btn" value="Оплатить">
+                </div>
+        </form>
+    </div>
+
+
+    <!-- X -->
+    <button type="button" class="modal__close">
+        <svg viewBox="0 0 25 25" width="25" height="25" class="icon-close">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button>
+</div>
 
 <script src="./js/cart-add.js"></script>
 <script src="./js/constructor-add-to-cart.js"></script>

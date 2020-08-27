@@ -3644,6 +3644,187 @@ form .wpcf7-not-valid {
       .cart__tab-text-mobile--thin {
         font-weight: 500; } }
 
+.cart-modal {
+  background-image: url("../img/cbm-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  padding: 30px; }
+  .cart-modal__brand {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    align-items: flex-start; }
+    @media (max-width: 767px) {
+      .cart-modal__brand {
+        margin: 0; } }
+  .cart-modal-form__wrapper {
+    max-width: 454px;
+    width: 95%;
+    color: #444444;
+    position: absolute;
+    top: 30%; }
+    @media (max-width: 399px) {
+      .cart-modal-form__wrapper {
+        max-width: 276px; } }
+  .cart-modal-form__title {
+    font-size: 3.0rem;
+    text-transform: uppercase;
+    margin: 0; }
+    @media (max-width: 399px) {
+      .cart-modal-form__title {
+        color: #FFFFFF;
+        font-size: 2.2rem; } }
+  .cart-modal-form__subtitle {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin: 0 0 30px; }
+    @media (max-width: 399px) {
+      .cart-modal-form__subtitle {
+        color: #FFFFFF;
+        font-size: 2rem; } }
+  .cart-modal-form__form {
+    width: 100%; }
+    .cart-modal-form__form label:not(.cbmodal-form__cbx-label) {
+      display: none; }
+  .cart-modal-form__input-wrap {
+    margin-bottom: 15px; }
+    .cart-modal-form__input-wrap .btn {
+      width: 100%;
+      padding: 15px; }
+  .cart-modal-form__input {
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    color: #FFFFFF;
+    outline-color: #669FFF;
+    opacity: 0.7;
+    padding: 15px 10px;
+    border: none;
+    font-weight: 600;
+    font-size: 1.8rem; }
+    @media (max-width: 399px) {
+      .cart-modal-form__input {
+        background: #FFFFFF;
+        opacity: 1;
+        color: #444444; } }
+    .cart-modal-form__input::-webkit-input-placeholder {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.4rem; }
+    .cart-modal-form__input::-moz-placeholder {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.4rem; }
+    .cart-modal-form__input:-ms-input-placeholder {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.4rem; }
+    .cart-modal-form__input::-ms-input-placeholder {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.4rem; }
+    .cart-modal-form__input::placeholder {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.4rem; }
+      @media (max-width: 399px) {
+        .cart-modal-form__input::-webkit-input-placeholder {
+          color: #444444;
+          opacity: 0.5; }
+        .cart-modal-form__input::-moz-placeholder {
+          color: #444444;
+          opacity: 0.5; }
+        .cart-modal-form__input:-ms-input-placeholder {
+          color: #444444;
+          opacity: 0.5; }
+        .cart-modal-form__input::-ms-input-placeholder {
+          color: #444444;
+          opacity: 0.5; }
+        .cart-modal-form__input::placeholder {
+          color: #444444;
+          opacity: 0.5; } }
+    .cart-modal-form__input--error {
+      outline: 1px solid #D62267;
+      color: #D62267; }
+      .cart-modal-form__input--error::-webkit-input-placeholder {
+        color: #D62267; }
+      .cart-modal-form__input--error::-moz-placeholder {
+        color: #D62267; }
+      .cart-modal-form__input--error:-ms-input-placeholder {
+        color: #D62267; }
+      .cart-modal-form__input--error::-ms-input-placeholder {
+        color: #D62267; }
+      .cart-modal-form__input--error::placeholder {
+        color: #D62267; }
+  .cart-modal-form__input-wrap--cbx {
+    margin: 35px 0;
+    font-size: 1.2rem; }
+    @media (max-width: 399px) {
+      .cart-modal-form__input-wrap--cbx {
+        display: none; } }
+  .cart-modal-form__btn-wrap {
+    font-size: 1.4rem; }
+    @media (max-width: 399px) {
+      .cart-modal-form__btn-wrap {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        letter-spacing: 0.2rem; } }
+  .cart-modal-thanks__wrapper {
+    position: absolute;
+    top: 30%;
+    text-transform: uppercase;
+    width: 640px; }
+    @media (max-width: 767px) {
+      .cart-modal-thanks__wrapper {
+        width: 265px; } }
+  .cart-modal-thanks__title span {
+    background-size: 640px 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    color: #FFFFFF;
+    font-size: 7.2rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 0 20px; }
+    @media (max-width: 767px) {
+      .cart-modal-thanks__title span {
+        background-size: 265px 100%;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+        font-size: 3rem;
+        padding: 0 10px; } }
+  .cart-modal-thanks__subtitle {
+    color: #444444;
+    font-size: 1.8rem;
+    font-weight: 600; }
+    @media (max-width: 767px) {
+      .cart-modal-thanks__subtitle {
+        font-size: 1.4rem;
+        color: #FFFFFF; } }
+
+.modal-wrapper {
+  opacity: 0;
+  pointer-events: none; }
+  .modal-wrapper * {
+    pointer-events: none; }
+  .modal-wrapper--active {
+    opacity: 1;
+    pointer-events: all; }
+    .modal-wrapper--active * {
+      pointer-events: all; }
+
 .pcalculator {
   position: relative;
   display: flex;

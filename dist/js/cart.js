@@ -9,6 +9,8 @@ let totalPrice2Cls = `cart-form__price-amount-number`;
 let hiddenInputCartCls = `cart-hidden-input--cart`;
 let hiddenInputBoxCls = `cart-hidden-input--boxes`;
 let hiddenInputPriceCls = `cart-hidden-input--price`;
+let paywithcardcls = `cart-form__submit-btn-wrap`;
+let cartmodalCls = `cart-modal`
 
 const showTabContent = (tab) => {
     const contentTabs = document.querySelectorAll('.' + cartTabContentCls);
@@ -353,6 +355,9 @@ let cartItems = document.querySelector(`.cart__items`);
 let hiddenInputCart = document.querySelector(`.${hiddenInputCartCls}`);
 let hiddenInputBoxes = document.querySelector(`.${hiddenInputBoxCls}`);
 let hiddenInputPrice = document.querySelector(`.${hiddenInputPriceCls}`);
+let payWithCardBtn = document.querySelector(`.${paywithcardcls}`);
+let cartModal = document.querySelector(`.${cartmodalCls}`);
+let cartModalClose = cartModal.querySelector(`.modal__close`)
 
 if (boxLs){
     generateBoxesHiddenText(boxLs)
@@ -376,7 +381,13 @@ if (ls) {
     countPrice();
 }
 
+payWithCardBtn.addEventListener(`click`, function (evt) {
+    cartModal.classList.toggle(`modal--active`)
+})
 
+cartModalClose.addEventListener(`click`, function (evt) {
+    cartModal.classList.remove(`modal--active`)
+})
 
 //////////////////////////////////
 ///// enable/disable payment /////
