@@ -45,12 +45,14 @@
       svg
         opacity: 1
     @include media("<large")
+
       max-width: 50px
     @include media("<desktop")
       max-width: 153px
     @include media("<tablet")
       max-width: 50px
       font-size: 1.2rem
+    @include media("<tablet")
 
   &__header-slider-pagination + &__header-slider-pagination
     margin-top: 30px
@@ -91,6 +93,10 @@
       img
         max-width: 100%
       @include media("<desktop")
+        justify-content: center
         img
           width: 100%
           max-width: 500px
+
+    .slide-small
+      margin-bottom: 50px

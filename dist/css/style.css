@@ -775,7 +775,8 @@ body {
     .main--landing-2 {
       background-image: url("../img/splash-bg-3.jpg");
       background-repeat: no-repeat;
-      background-position: right top; } }
+      background-position: right top;
+      background-size: 200%; } }
 
 .main--constructor {
   overflow: hidden;
@@ -4103,9 +4104,13 @@ form .wpcf7-not-valid {
     .landing-2__header-slider .swiper-slide img {
       max-width: 100%; }
     @media (max-width: 1023px) {
-      .landing-2__header-slider .swiper-slide img {
-        width: 100%;
-        max-width: 500px; } }
+      .landing-2__header-slider .swiper-slide {
+        justify-content: center; }
+        .landing-2__header-slider .swiper-slide img {
+          width: 100%;
+          max-width: 500px; } }
+  .landing-2__header-slider .slide-small {
+    margin-bottom: 50px; }
 
 .l1modal {
   background-image: url("../img/cbm-bg.jpg");
