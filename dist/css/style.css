@@ -6497,6 +6497,7 @@ form .wpcf7-not-valid {
     .landing-2__flat-form-input--wrap {
       display: block;
       max-width: 500px;
+      max-height: unset;
       margin: 0 auto; } }
   .landing-2__flat-form-input--wrap .wpcf7-not-valid {
     outline: 1px solid #D62267;
