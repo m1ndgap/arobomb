@@ -8036,7 +8036,9 @@ form .wpcf7-not-valid {
         border-right: 0;
         border-image-source: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
         border-image-slice: 1;
-        transition: opacity 300ms, max-height 1500ms; } }
+        transition: opacity 300ms, max-height 1500ms; }
+      .tabs__text-wrap iframe {
+        width: 100%; } }
 
 .similar-items {
   margin-bottom: 50px; }
