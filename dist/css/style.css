@@ -6497,7 +6497,8 @@ form .wpcf7-not-valid {
   max-height: 56px; }
   @media (max-width: 1279px) {
     .landing-2__flat-form-input--wrap {
-      flex-basis: 50%; } }
+      flex-basis: 50%;
+      max-height: unset; } }
   @media (max-width: 767px) {
     .landing-2__flat-form-input--wrap {
       display: block;
@@ -6652,7 +6653,8 @@ form .wpcf7-not-valid {
   .landing-2__partners-section .landing-2__swiper-img {
     width: 100%; }
   .landing-2__partners-section .landing-2__swiper-text {
-    display: block; }
+    display: block;
+    text-transform: uppercase; }
     @media (max-width: 767px) {
       .landing-2__partners-section .landing-2__swiper-text {
         max-width: 500px;
