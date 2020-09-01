@@ -7,6 +7,10 @@ const subcatLinkCls = `submenu__subsection-item`;
 const catalogItemCls = `catalog__item`;
 const constructorLink = `./constructor`
 
+let viewport = document.body.clientWidth;
+
+
+
 const hideSections = (sections) => {
     sections.forEach((sect) => {
         sect.classList.remove(catSectionCls + `--active`)
@@ -47,6 +51,10 @@ let sections = submenu.querySelectorAll(`.${catSectionCls}`);
 let links = submenu.querySelectorAll(`.${subcatLinkCls}`);
 let items = document.querySelectorAll(`.${catalogItemCls}`);
 
+if (viewport < 768) {
+    submenu.classList.remove(catMenuCls + `--minified`)
+}
+
 sections.forEach((section) => {
     if (!section.classList.contains(`submenu__section--constructor`)) {
         section.addEventListener(`click`, function () {
@@ -83,7 +91,6 @@ links.forEach((link) => {
 })
 
 document.addEventListener(`scroll`, function () {
-    let viewport = document.body.clientWidth;
     let offset = window.pageYOffset
     if (viewport > 1280) {
         if (offset > 250) {
