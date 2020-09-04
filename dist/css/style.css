@@ -6801,11 +6801,11 @@ form .wpcf7-not-valid {
 .catalog-form__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center; }
 
 .catalog-form__img {
-  margin-right: 15px;
+  margin-right: -15px;
   margin-top: 30px;
   width: 60%; }
   @media (max-width: 1279px) {
