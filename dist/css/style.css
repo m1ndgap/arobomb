@@ -1641,7 +1641,7 @@ form .wpcf7-not-valid {
     z-index: 2; }
   @media (max-width: 1799px) {
     .slider__animation-1-img {
-      max-width: 350px;
+      max-width: 240px;
       left: 60%; } }
   @media (max-width: 767px) {
     .slider__animation-1-img {
