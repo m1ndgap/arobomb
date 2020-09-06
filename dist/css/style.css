@@ -4105,7 +4105,8 @@ form .wpcf7-not-valid {
     width: 100%;
     max-width: 100%;
     display: flex;
-    align-items: flex-end; }
+    align-items: flex-end;
+    padding-left: 50px; }
     .landing-2__header-slider .swiper-slide img {
       max-width: 100%; }
     @media (max-width: 1439px) {
@@ -4120,7 +4121,8 @@ form .wpcf7-not-valid {
         max-width: 600px; } }
     @media (max-width: 1023px) {
       .landing-2__header-slider .swiper-slide {
-        justify-content: center; }
+        justify-content: center;
+        padding-left: 0; }
         .landing-2__header-slider .swiper-slide img {
           width: 100%;
           max-width: 500px; } }
