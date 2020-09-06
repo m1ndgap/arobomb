@@ -4103,6 +4103,16 @@ form .wpcf7-not-valid {
     align-items: flex-end; }
     .landing-2__header-slider .swiper-slide img {
       max-width: 100%; }
+    @media (max-width: 1439px) {
+      .landing-2__header-slider .swiper-slide {
+        padding-left: 30px; }
+        .landing-2__header-slider .swiper-slide img {
+          width: 100%;
+          max-width: 700px; } }
+    @media (max-width: 1279px) {
+      .landing-2__header-slider .swiper-slide img {
+        width: 100%;
+        max-width: 600px; } }
     @media (max-width: 1023px) {
       .landing-2__header-slider .swiper-slide {
         justify-content: center; }
