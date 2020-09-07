@@ -26,11 +26,17 @@
     &__title
       @include subtitle(1.8rem)
       font-weight: 800
+      max-width: 900px
 
     &__btn
       font-size: 1.6rem
       font-weight: normal
       width: 120px
+      flex-shrink: 0
+      align-self: flex-end
+      max-height: 48px
+      @include media ("<tablet")
+        width: 25px
 
     &__content
       max-width: 726px

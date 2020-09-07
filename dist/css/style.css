@@ -7506,11 +7506,18 @@ form .wpcf7-not-valid {
     font-size: 1.8rem;
     color: #444444;
     text-transform: uppercase;
-    font-weight: 800; }
+    font-weight: 800;
+    max-width: 900px; }
   .faq .accordion__btn {
     font-size: 1.6rem;
     font-weight: normal;
-    width: 120px; }
+    width: 120px;
+    flex-shrink: 0;
+    align-self: flex-end;
+    max-height: 48px; }
+    @media (max-width: 767px) {
+      .faq .accordion__btn {
+        width: 25px; } }
   .faq .accordion__content {
     max-width: 726px;
     line-height: 3.0rem; }
