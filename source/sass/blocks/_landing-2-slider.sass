@@ -90,10 +90,21 @@
       max-width: 100%
       display: flex
       align-items: flex-end
+      padding-left: 50px
       img
         max-width: 100%
+      @include media("<huge")
+        padding-left: 30px
+        img
+          width: 100%
+          max-width: 700px
+      @include media("<large")
+        img
+          width: 100%
+          max-width: 600px
       @include media("<desktop")
         justify-content: center
+        padding-left: 0
         img
           width: 100%
           max-width: 500px

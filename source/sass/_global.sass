@@ -101,9 +101,14 @@ body
     background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-5.jpg") // both need to get tiny
     background-repeat: no-repeat
     background-position: right top, left bottom
+    background-size: auto, contain
     padding-bottom: 30px
     background-color: $bg-color // won't work while I have jpg's on bg
+
     overflow: hidden
+    @include media ("retina2x")
+      background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg") // both need to get tiny
+      background-size: 63%, contain
     @include media ("<tablet")
       background-image: url("../img/splash-bg-3.jpg")
       background-repeat: no-repeat

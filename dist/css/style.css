@@ -768,9 +768,14 @@ body {
   background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-5.jpg");
   background-repeat: no-repeat;
   background-position: right top, left bottom;
+  background-size: auto, contain;
   padding-bottom: 30px;
   background-color: #F5F8FF;
   overflow: hidden; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .main--landing-2 {
+      background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg");
+      background-size: 63%, contain; } }
   @media (max-width: 767px) {
     .main--landing-2 {
       background-image: url("../img/splash-bg-3.jpg");
@@ -4100,12 +4105,24 @@ form .wpcf7-not-valid {
     width: 100%;
     max-width: 100%;
     display: flex;
-    align-items: flex-end; }
+    align-items: flex-end;
+    padding-left: 50px; }
     .landing-2__header-slider .swiper-slide img {
       max-width: 100%; }
+    @media (max-width: 1439px) {
+      .landing-2__header-slider .swiper-slide {
+        padding-left: 30px; }
+        .landing-2__header-slider .swiper-slide img {
+          width: 100%;
+          max-width: 700px; } }
+    @media (max-width: 1279px) {
+      .landing-2__header-slider .swiper-slide img {
+        width: 100%;
+        max-width: 600px; } }
     @media (max-width: 1023px) {
       .landing-2__header-slider .swiper-slide {
-        justify-content: center; }
+        justify-content: center;
+        padding-left: 0; }
         .landing-2__header-slider .swiper-slide img {
           width: 100%;
           max-width: 500px; } }
@@ -7486,11 +7503,18 @@ form .wpcf7-not-valid {
     font-size: 1.8rem;
     color: #444444;
     text-transform: uppercase;
-    font-weight: 800; }
+    font-weight: 800;
+    max-width: 900px; }
   .faq .accordion__btn {
     font-size: 1.6rem;
     font-weight: normal;
-    width: 120px; }
+    width: 120px;
+    flex-shrink: 0;
+    align-self: flex-end;
+    max-height: 48px; }
+    @media (max-width: 767px) {
+      .faq .accordion__btn {
+        width: 25px; } }
   .faq .accordion__content {
     max-width: 726px;
     line-height: 3.0rem; }
