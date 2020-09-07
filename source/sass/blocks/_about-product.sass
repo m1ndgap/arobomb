@@ -160,9 +160,11 @@
 
   &__sticker
     &-wrapper
+      position: relative
+      top: -45px
       align-self: center
       display: flex
-      width: 320px
+      width: 340px
       @include media ("<large")
         width: 390px
       @include media ("<tablet")
@@ -171,8 +173,6 @@
         align-items: center
         margin-bottom: 60px
     &-arrow-caption-wrapper
-      margin-top: -85px //-55px
-      margin-right: 10px
       @include media ("<tablet")
         order: 2
         margin: 0
@@ -195,8 +195,8 @@
       @include media ("<tablet")
         display: none
     &-circle
-      height: 170px
-      width: 170px
+      height: 200px
+      width: 200px
       border-radius: 50%
       background-color: $white
       box-shadow: 0 9px 20px #CCC
@@ -209,29 +209,27 @@
       justify-content: center
       text-align: center
       padding: 10px
+      font-size: 1.1rem
       @include media ("<tablet")
         order: 1
         margin-bottom: 35px
         flex-basis: auto
-    &-phrase
+    &-text
       display: inline-block
-      width: 83px //min-content
+      width: 115px
       color: $black
-      font-size: 0.8rem
-    &-link
-      display: inline-block
-      color: $black
-      font-size: 1.1rem
-      margin: 15px 0 30px
-    &-arobomb
-      font-weight: 600
-    &-words-wrapper
-      width: 55px
-      font-size: 0.8rem
+    &-hashtag
+      font-weight: 900
+      font-size: 1.4rem
+      margin: 10px 0        
+    &-tag
+      font-size: 1rem
       color: $white
-      span
-        background-color: $black
-        padding: 1px 2px 2px 3px
+      background-color: $black
+      padding: 0 3px
+    &-smaller-text
+      font-size: 1rem
+      margin-bottom: 5px
 
   //start of 2nd row of products
   &__products-2
