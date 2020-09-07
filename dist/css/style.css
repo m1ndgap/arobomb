@@ -7273,9 +7273,11 @@ form .wpcf7-not-valid {
   .about-product__che-arrow-2 {
     margin-left: -20px; }
   .about-product__sticker-wrapper {
+    position: relative;
+    top: -45px;
     align-self: center;
     display: flex;
-    width: 320px; }
+    width: 340px; }
     @media (max-width: 1279px) {
       .about-product__sticker-wrapper {
         width: 390px; } }
@@ -7285,13 +7287,10 @@ form .wpcf7-not-valid {
         flex-flow: column;
         align-items: center;
         margin-bottom: 60px; } }
-  .about-product__sticker-arrow-caption-wrapper {
-    margin-top: -85px;
-    margin-right: 10px; }
-    @media (max-width: 767px) {
-      .about-product__sticker-arrow-caption-wrapper {
-        order: 2;
-        margin: 0; } }
+  @media (max-width: 767px) {
+    .about-product__sticker-arrow-caption-wrapper {
+      order: 2;
+      margin: 0; } }
   .about-product__sticker-caption {
     display: inline-block;
     width: 135px;
@@ -7315,8 +7314,8 @@ form .wpcf7-not-valid {
     .about-product__sticker-arrow {
       display: none; } }
   .about-product__sticker-circle {
-    height: 170px;
-    width: 170px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     background-color: #FFFFFF;
     box-shadow: 0 9px 20px #CCC;
@@ -7326,31 +7325,29 @@ form .wpcf7-not-valid {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 10px; }
+    padding: 10px;
+    font-size: 1.1rem; }
     @media (max-width: 767px) {
       .about-product__sticker-circle {
         order: 1;
         margin-bottom: 35px;
         flex-basis: auto; } }
-  .about-product__sticker-phrase {
+  .about-product__sticker-text {
     display: inline-block;
-    width: 83px;
-    color: #000000;
-    font-size: 0.8rem; }
-  .about-product__sticker-link {
-    display: inline-block;
-    color: #000000;
-    font-size: 1.1rem;
-    margin: 15px 0 30px; }
-  .about-product__sticker-arobomb {
-    font-weight: 600; }
-  .about-product__sticker-words-wrapper {
-    width: 55px;
-    font-size: 0.8rem;
-    color: #FFFFFF; }
-    .about-product__sticker-words-wrapper span {
-      background-color: #000000;
-      padding: 1px 2px 2px 3px; }
+    width: 115px;
+    color: #000000; }
+  .about-product__sticker-hashtag {
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin: 10px 0; }
+  .about-product__sticker-tag {
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 0 3px; }
+  .about-product__sticker-smaller-text {
+    font-size: 1rem;
+    margin-bottom: 5px; }
   .about-product__products-2 {
     display: flex;
     justify-content: space-between;
