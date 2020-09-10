@@ -37,7 +37,7 @@ function updateCalculations(valueStr, obj) {
     let sales = partners * 25
     let profit = sales * 60
     partnersEl.innerText = partners;
-    investEl.innerText = `${numberWithCommas(investment)} р.`
+    //investEl.innerText = `${numberWithCommas(investment)} р.`
     moSalesEl.innerText = sales;
     profitEl.innerText = `${numberWithCommas(profit)} р.`
 }

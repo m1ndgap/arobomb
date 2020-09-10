@@ -40,7 +40,7 @@
       .constructor__tab-sub-text, .constructor__tab-main-text
         color: $white
     @include media("<large")
-      flex-grow: 0
+      flex-grow: 1
       padding: 12px 15px
     @include media("<tablet")
       position: absolute
@@ -170,6 +170,9 @@
     color: $text
     transition: height $transition*5, opacity $transition
     pointer-events: all
+    @include media("<tablet")
+      top: 150%
+      border: none
 
   &__tab-submenu-item
     position: relative

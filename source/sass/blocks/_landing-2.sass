@@ -33,6 +33,7 @@
     @media screen and (max-width: 500px)
       font-size: 2.5rem
       line-height: 3.2rem
+      margin-top: 0
     @include media ("<=tiny")
       font-size: 2rem
       line-height: 2.7rem
@@ -60,6 +61,7 @@
       font-weight: 800
     @include media ("<tablet")
       font-size: 1.6rem
+      margin-top: 22px
     @include media ("<=tiny")
       font-size: 1rem
       line-height: 1.4rem
@@ -137,6 +139,7 @@
       margin: 40px auto 0
     @include media ("<tablet")
       font-size: 1.6rem
+      margin-top: 25px
     @include media ("<tiny")
       width: 100%
       font-size: 1.2rem
@@ -757,6 +760,8 @@
   &__form-section
     position: relative
     z-index: 1
+    padding-bottom: 30px !important
+    overflow: hidden
     &:focus, &:active
       outline: none
 

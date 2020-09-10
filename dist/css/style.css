@@ -769,9 +769,11 @@ body {
   background-repeat: no-repeat;
   background-position: right top, left bottom;
   background-size: auto, contain;
-  padding-bottom: 30px;
   background-color: #F5F8FF;
   overflow: hidden; }
+  @media (max-width: 767px) {
+    .main--landing-2 {
+      padding-top: 75px; } }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .main--landing-2 {
       background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg");
@@ -1942,7 +1944,7 @@ form .wpcf7-not-valid {
     margin-top: 60px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; }
+    justify-content: flex-start; }
     @media (max-width: 767px) {
       .documents__wrapper {
         justify-content: center; } }
@@ -2199,7 +2201,10 @@ form .wpcf7-not-valid {
       padding: 12px;
       flex-basis: 33%;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center; }
+      .submenu__section:active, .submenu__section:focus {
+        outline: none;
+        box-shadow: none; } }
   .submenu__section .submenu__title {
     display: block;
     line-height: 220%; }
@@ -3931,12 +3936,13 @@ form .wpcf7-not-valid {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
-    margin: 35px 0 0 -20px;
+    margin: 35px 20px 0 auto;
     padding: 18px 20px; }
     @media (max-width: 1023px) {
       .pcalculator__info-text--profit {
         padding: 12px 15px;
-        margin-top: 17px; } }
+        margin-top: 17px;
+        margin-right: 10px; } }
     .pcalculator__info-text--profit .pcalculator__info-title, .pcalculator__info-text--profit .pcalculator__info-value {
       color: #FFFFFF; }
   .pcalculator__info-title {
@@ -4012,6 +4018,28 @@ form .wpcf7-not-valid {
     box-shadow: none; }
     .pcalculator__range .rs-pointer:before, .pcalculator__range .rs-pointer:after {
       display: none; }
+  .pcalculator__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.3rem;
+    margin-top: 35px;
+    padding: 24px;
+    max-width: calc(100% - 20px); }
+    @media (max-width: 1023px) {
+      .pcalculator__btn {
+        margin: 40px auto 0; } }
+    @media (max-width: 767px) {
+      .pcalculator__btn {
+        font-size: 1.6rem;
+        margin-top: 25px; } }
+    @media (max-width: 399px) {
+      .pcalculator__btn {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 15px; } }
 
 .landing-2__header-slider-wrapper {
   display: flex;
@@ -4060,8 +4088,9 @@ form .wpcf7-not-valid {
     opacity: 1; }
     .landing-2__header-slider-pagination--active svg {
       opacity: 1; }
-  @media (max-width: 1279px) {
+  @media (max-width: 1023px) {
     .landing-2__header-slider-pagination {
+      text-shadow: 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF;
       max-width: 50px; } }
   @media (max-width: 1023px) {
     .landing-2__header-slider-pagination {
@@ -4090,10 +4119,11 @@ form .wpcf7-not-valid {
   width: 100%; }
   @media (max-width: 1023px) {
     .landing-2__header-slider {
-      margin-top: 50px;
-      margin-bottom: 50px;
+      margin-top: 26px;
+      margin-bottom: 9px;
       max-width: 100%;
-      width: 100%; } }
+      width: 100%;
+      height: 200px; } }
   .landing-2__header-slider .swiper-wrapper {
     display: flex;
     align-items: flex-end; }
@@ -4124,10 +4154,12 @@ form .wpcf7-not-valid {
         justify-content: center;
         padding-left: 0; }
         .landing-2__header-slider .swiper-slide img {
-          width: 100%;
+          -o-object-fit: contain;
+             object-fit: contain;
+          max-height: 100%;
           max-width: 500px; } }
   .landing-2__header-slider .slide-small {
-    margin-bottom: 50px; }
+    margin-bottom: 0; }
 
 .l1modal {
   background-image: url("../img/cbm-bg.jpg");
@@ -4749,7 +4781,7 @@ form .wpcf7-not-valid {
       color: #FFFFFF; }
   @media (max-width: 1279px) {
     .constructor__tab {
-      flex-grow: 0;
+      flex-grow: 1;
       padding: 12px 15px; } }
   @media (max-width: 767px) {
     .constructor__tab {
@@ -4887,6 +4919,10 @@ form .wpcf7-not-valid {
   color: #444444;
   transition: height 1500ms, opacity 300ms;
   pointer-events: all; }
+  @media (max-width: 767px) {
+    .constructor__tab-submenu {
+      top: 150%;
+      border: none; } }
 
 .constructor__tab-submenu-item {
   position: relative;
@@ -5081,7 +5117,7 @@ form .wpcf7-not-valid {
     overflow: visible; }
     @media (max-width: 1279px) {
       .catalog--constructor .catalog__wrapper--active {
-        margin-top: 20px; } }
+        margin-top: 30px; } }
 
 .catalog--constructor .catalog__item:hover .catalog__item-border {
   opacity: 0.7; }
@@ -6006,7 +6042,8 @@ form .wpcf7-not-valid {
   @media screen and (max-width: 500px) {
     .landing-2__main-title {
       font-size: 2.5rem;
-      line-height: 3.2rem; } }
+      line-height: 3.2rem;
+      margin-top: 0; } }
   @media (max-width: 400px) {
     .landing-2__main-title {
       font-size: 2rem;
@@ -6043,7 +6080,8 @@ form .wpcf7-not-valid {
     font-weight: 800; }
   @media (max-width: 767px) {
     .landing-2__after-title-text {
-      font-size: 1.6rem; } }
+      font-size: 1.6rem;
+      margin-top: 22px; } }
   @media (max-width: 400px) {
     .landing-2__after-title-text {
       font-size: 1rem;
@@ -6129,7 +6167,8 @@ form .wpcf7-not-valid {
       margin: 40px auto 0; } }
   @media (max-width: 767px) {
     .landing-2__header-btn {
-      font-size: 1.6rem; } }
+      font-size: 1.6rem;
+      margin-top: 25px; } }
   @media (max-width: 399px) {
     .landing-2__header-btn {
       width: 100%;
@@ -6795,7 +6834,9 @@ form .wpcf7-not-valid {
 
 .landing-2__form-section {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  padding-bottom: 30px !important;
+  overflow: hidden; }
   .landing-2__form-section:focus, .landing-2__form-section:active {
     outline: none; }
   @media (max-width: 767px) {

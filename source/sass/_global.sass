@@ -102,8 +102,10 @@ body
     background-repeat: no-repeat
     background-position: right top, left bottom
     background-size: auto, contain
-    padding-bottom: 30px
     background-color: $bg-color // won't work while I have jpg's on bg
+    @include media ("<tablet")
+      padding-top: 75px
+
 
     overflow: hidden
     @include media ("retina2x")
