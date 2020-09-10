@@ -50,6 +50,7 @@ tabs.forEach(function(tab){
     let buttonsMob = tab.querySelectorAll(`.` + tabBtnMobileCls);
     buttons.forEach(function(btn){
         btn.addEventListener('click', function(){
+            btn.blur();
             if (this.dataset.active == 'false') {
                 resetTabs(this)
                 this.classList.add(tabBtnCls + `--active`)
