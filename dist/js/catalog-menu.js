@@ -58,6 +58,8 @@ if (viewport < 768) {
 sections.forEach((section) => {
     if (!section.classList.contains(`submenu__section--constructor`)) {
         section.addEventListener(`click`, function () {
+            //document.querySelector(`.catalog`).style.marginLeft = `-5px`
+            section.blur();
             hideSections(sections)
             section.classList.add(catSectionCls + `--active`)
             let activeLink = section.querySelector(`.${subcatLinkCls}--active`)
