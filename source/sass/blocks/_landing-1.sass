@@ -675,9 +675,12 @@
       overflow: hidden
       position: relative
       margin: 100px 0
+      margin-left: -100px
+      padding-left: 100px
       @include media ("<desktop")
         margin: 0
         padding-bottom: 90px
+        padding-left: unset
       @include media ("<tablet")
         margin-top: 60px
       @include media ("<=tiny")
@@ -741,7 +744,7 @@
           line-height: 1.5rem
 
       p
-        padding: 50px 140px 0 80px
+        padding: 50px 140px 0 0px
         margin: 0
         font-size: 1.8rem
         line-height: 3.0rem
@@ -765,7 +768,7 @@
           line-height: 2rem
 
     .swiper-button-prev
-      left: 327px
+      left: 25px
 
     .swiper-pagination
       width: 105%
