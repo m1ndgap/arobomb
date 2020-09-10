@@ -800,7 +800,8 @@ body {
   background: url("../img/map.png");
   background-position: bottom right;
   background-repeat: no-repeat;
-  height: 100vh; }
+  height: 100vh;
+  padding-top: 118px; }
   @media (max-width: 1023px) {
     .main-contact-us {
       height: auto;
@@ -912,6 +913,9 @@ form .wpcf7-not-valid {
 
 input[type='text']:active, input[type='text']:focus, input[type='tel']:active, input[type='tel']:focus, [type='email']:active, [type='email']:focus, [type='submit']:active, [type='submit']:focus {
   outline: none; }
+
+input[type='checkbox']:active, input[type='checkbox']:focus {
+  outline: 1px solid #A9A9A9; }
 
 @font-face {
   font-family: 'Montserrat';
@@ -7043,14 +7047,14 @@ input[type='text']:active, input[type='text']:focus, input[type='tel']:active, i
     border: none;
     display: block;
     color: #444444;
-    line-height: 3.0rem; }
+    line-height: 2.3rem; }
   .contact-us__address-subtitle {
     font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     color: #444444;
     text-transform: uppercase;
     font-weight: 800;
-    margin: 20px 0; }
+    margin: 20px 0 15px; }
     @media (max-width: 767px) {
       .contact-us__address-subtitle {
         font-size: 1.8rem; } }
@@ -7060,7 +7064,7 @@ input[type='text']:active, input[type='text']:focus, input[type='tel']:active, i
     color: #444444;
     text-transform: uppercase;
     font-weight: 800;
-    margin: 20px 0; }
+    margin: 20px 0 15px; }
     @media (max-width: 767px) {
       .contact-us__phone-email-subtitle {
         max-height: 0;
@@ -7108,8 +7112,7 @@ input[type='text']:active, input[type='text']:focus, input[type='tel']:active, i
     flex-basis: 1;
     max-width: 540px;
     width: 100%;
-    margin-top: 50px;
-    padding-bottom: 45px; }
+    margin-top: 60px; }
     @media (max-width: 767px) {
       .contact-us__form--wrapper {
         margin-top: 50px;
@@ -7118,19 +7121,19 @@ input[type='text']:active, input[type='text']:focus, input[type='tel']:active, i
     margin-top: 0;
     text-transform: uppercase;
     font-size: 3.0rem;
-    font-weight: 800;
+    font-weight: 900;
     background: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
-    margin-bottom: 20px; }
+    margin-bottom: 0; }
     @media (max-width: 767px) {
       .contact-us__form-motto {
         font-size: 2.4rem;
         margin-top: 0; } }
   .contact-us__after-form-motto {
     font-size: 2.4rem;
-    margin: 20px 0 15px; }
+    margin: 0 0 15px; }
     @media (max-width: 767px) {
       .contact-us__after-form-motto {
         font-size: 1.8rem; } }
@@ -7140,7 +7143,8 @@ input[type='text']:active, input[type='text']:focus, input[type='tel']:active, i
     .contact-us .form__input {
       font-size: 1.8rem;
       margin-top: 15px;
-      max-width: 100%; }
+      max-width: 100%;
+      padding: 11px 10px; }
       .contact-us .form__input::-webkit-input-placeholder {
         font-size: 1.4rem; }
       .contact-us .form__input::-moz-placeholder {
