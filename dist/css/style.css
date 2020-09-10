@@ -910,6 +910,9 @@ form .wpcf7-not-valid {
 .wpcf7 .wpcf7-not-valid-tip {
   color: #D62267; }
 
+input[type='text']:active, input[type='text']:focus, input[type='tel']:active, input[type='tel']:focus, [type='email']:active, [type='email']:focus, [type='submit']:active, [type='submit']:focus {
+  outline: none; }
+
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
