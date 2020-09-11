@@ -1417,7 +1417,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         padding-bottom: 52px; } }
     @media (max-width: 767px) {
       .index__static {
-        padding-top: 65px; } }
+        padding-top: 65px;
+        min-height: 100vh; } }
   .index__hash-title {
     font-family: "Montserrat", sans-serif;
     font-size: 7.2rem;
@@ -1588,7 +1589,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       opacity: 0;
       transform: translate(0, -10px);
       display: block;
-      min-width: 15px; }
+      min-width: 15px;
+      text-align: center; }
     @media (max-width: 767px) {
       .index__product-name {
         font-size: 1.8rem; } }
@@ -1626,7 +1628,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     z-index: 1; }
     @media (max-width: 1023px) {
       .index__slider {
-        width: 100%; } }
+        width: 100%;
+        height: 100vh; } }
 
 @-webkit-keyframes progress-bar {
   from {
@@ -1655,10 +1658,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     z-index: 2; }
   @media (max-width: 1799px) {
     .slider__animation-1-img {
-      max-width: 240px;
+      max-width: 340px;
       left: 60%; } }
   @media (max-width: 767px) {
     .slider__animation-1-img {
+      max-width: 240px;
       width: 225px;
       top: 55%; } }
   .slider__animation-1-img img {
