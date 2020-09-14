@@ -1593,7 +1593,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       text-align: center; }
     @media (max-width: 767px) {
       .index__product-name {
-        font-size: 1.8rem; } }
+        font-size: 1.8rem; }
+        .index__product-name span {
+          min-width: 8px; } }
   .index__more-info-btn {
     display: block;
     margin-top: 40px;
@@ -3847,6 +3849,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     pointer-events: all; }
     .modal-wrapper--active * {
       pointer-events: all; }
+
+.cart-modal-form__submit-btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
 
 .pcalculator {
   position: relative;
