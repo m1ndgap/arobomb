@@ -51,9 +51,6 @@ let sections = submenu.querySelectorAll(`.${catSectionCls}`);
 let links = submenu.querySelectorAll(`.${subcatLinkCls}`);
 let items = document.querySelectorAll(`.${catalogItemCls}`);
 
-if (viewport < 768) {
-    submenu.classList.remove(catMenuCls + `--minified`)
-}
 
 sections.forEach((section) => {
     if (!section.classList.contains(`submenu__section--constructor`)) {
