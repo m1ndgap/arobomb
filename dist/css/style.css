@@ -6112,7 +6112,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
 
 .landing-2__header-info-tags {
   display: flex;
-  max-width: 545px;
+  justify-content: space-between;
+  max-width: 575px;
   color: #444444;
   margin-top: 90px; }
   @media (max-width: 1023px) {
@@ -6120,7 +6121,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       margin-top: 20px;
       max-width: 100%; } }
   .landing-2__header-info-tags > div {
-    flex-basis: 50%; }
+    flex-basis: 49%; }
   .landing-2__header-info-tags .landing-2__text-highlight {
     font-weight: 800;
     font-size: 3.6rem;
