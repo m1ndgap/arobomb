@@ -7760,7 +7760,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   background-image: url("../img/cbm-bg.jpg");
   background-repeat: no-repeat;
   background-position: left;
-  background-size: cover;
+  background-size: auto;
   padding: 30px; }
   .cbmodal__brand {
     font-size: 1.8rem;
