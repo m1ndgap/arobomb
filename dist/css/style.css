@@ -674,7 +674,11 @@ body {
   color: #FFFFFF;
   background-color: #82AD24;
   border: 2px solid #82AD24;
+  border-radius: 0;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   transition: background-color 300ms, color 300ms, outline 300ms; }
   .btn:hover {
     color: #82AD24;
@@ -911,8 +915,10 @@ form .wpcf7-not-valid {
 .wpcf7 .wpcf7-not-valid-tip {
   color: #D62267; }
 
-input[type='text']:active, input[type='text']:focus, input[type='tel']:active, input[type='tel']:focus, [type='email']:active, [type='email']:focus, [type='submit']:active, [type='submit']:focus {
-  outline: none; }
+input[type='text'], input[type='tel'], [type='email'], [type='submit'] {
+  border-radius: 0; }
+  input[type='text']:active, input[type='text']:focus, input[type='tel']:active, input[type='tel']:focus, [type='email']:active, [type='email']:focus, [type='submit']:active, [type='submit']:focus {
+    outline: none; }
 
 input[type='checkbox']:active, input[type='checkbox']:focus {
   outline: 1px solid #A9A9A9; }
@@ -7762,6 +7768,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   background-position: top left;
   background-size: 100%;
   padding: 30px; }
+  @media (max-width: 767px) {
+    .cbmodal {
+      background-size: cover; } }
   .cbmodal__brand {
     font-size: 1.8rem;
     font-weight: 800;

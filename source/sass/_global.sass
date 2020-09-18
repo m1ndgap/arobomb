@@ -20,7 +20,9 @@ body
   color: $white
   background-color: $btn
   border: 2px solid $btn
+  border-radius: 0
   cursor: pointer
+  appearance: none
   transition: background-color $transition, color $transition, outline $transition
   &:hover
     color: $btn
@@ -242,6 +244,7 @@ form .wpcf7-not-valid
   color: #D62267
 
 input[type='text'], input[type='tel'], [type='email'], [type='submit']
+  border-radius: 0
   &:active, &:focus
     outline: none
 
