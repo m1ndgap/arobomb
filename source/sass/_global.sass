@@ -99,6 +99,9 @@ body
     padding-top: 100px
     @include media ("<tablet")
       padding-bottom: 60px
+    @include media ("retina2x")
+      background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-4@2x.jpg") // both need to get tiny
+      background-size: 75%, contain
   &--landing-2
     background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-5.jpg") // both need to get tiny
     background-repeat: no-repeat
@@ -112,7 +115,7 @@ body
     overflow: hidden
     @include media ("retina2x")
       background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg") // both need to get tiny
-      background-size: 63%, contain
+      background-size: 75%, contain
     @include media ("<tablet")
       background-image: url("../img/splash-bg-3.jpg")
       background-repeat: no-repeat

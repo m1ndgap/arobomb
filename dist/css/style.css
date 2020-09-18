@@ -767,6 +767,10 @@ body {
   @media (max-width: 767px) {
     .main--landing-1 {
       padding-bottom: 60px; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .main--landing-1 {
+      background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-4@2x.jpg");
+      background-size: 75%, contain; } }
 
 .main--landing-2 {
   background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-5.jpg");
@@ -781,7 +785,7 @@ body {
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .main--landing-2 {
       background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg");
-      background-size: 63%, contain; } }
+      background-size: 75%, contain; } }
   @media (max-width: 767px) {
     .main--landing-2 {
       background-image: url("../img/splash-bg-3.jpg");
@@ -7889,9 +7893,6 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   .cbmodal-form__input-wrap--cbx {
     margin: 35px 0;
     font-size: 1.2rem; }
-    @media (max-width: 399px) {
-      .cbmodal-form__input-wrap--cbx {
-        display: none; } }
   .cbmodal-form__btn-wrap {
     font-size: 1.4rem; }
     @media (max-width: 399px) {
