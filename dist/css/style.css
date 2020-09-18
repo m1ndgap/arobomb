@@ -2080,7 +2080,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     -o-object-fit: contain;
        object-fit: contain;
     margin-top: auto;
-    max-height: 213px;
+    max-height: 190px;
     margin-bottom: -10px; }
   .catalog__price-block {
     position: relative;
