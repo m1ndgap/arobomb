@@ -2241,6 +2241,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         line-height: 100%; } }
   .submenu__section .submenu__title-extra {
     display: block;
+    white-space: nowrap;
     font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
     color: #444444;
@@ -2283,6 +2284,14 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     @media (max-width: 767px) {
       .submenu__section .submenu__title-main {
         font-size: 1.2rem; } }
+  @media (max-width: 1023px) {
+    .submenu__section .submenu__title-main--desktop {
+      display: none; } }
+  .submenu__section .submenu__title-main--mobile {
+    display: none; }
+    @media (max-width: 1023px) {
+      .submenu__section .submenu__title-main--mobile {
+        display: block; } }
   .submenu__section .submenu__subsections {
     display: none;
     max-width: 0;
@@ -2382,6 +2391,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     align-items: center; }
     .submenu--minified .submenu__wrapper .submenu__section .submenu__title-extra {
       max-height: 0;
+      max-width: 0;
       overflow: hidden; }
     .submenu--minified .submenu__wrapper .submenu__section .submenu__subsections {
       max-height: 0;

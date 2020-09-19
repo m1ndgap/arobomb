@@ -51,6 +51,14 @@ let sections = submenu.querySelectorAll(`.${catSectionCls}`);
 let links = submenu.querySelectorAll(`.${subcatLinkCls}`);
 let items = document.querySelectorAll(`.${catalogItemCls}`);
 
+// initial sorting
+items.forEach(function(item){
+    let type = item.dataset.type
+    console.log(type)
+    if (type != "souvenirs"){
+        item.classList.remove(`${catalogItemCls}--active`)
+    }
+})
 
 sections.forEach((section) => {
     if (!section.classList.contains(`submenu__section--constructor`)) {

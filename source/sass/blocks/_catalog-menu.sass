@@ -83,6 +83,7 @@
 
   .submenu__title-extra
     display: block
+    white-space: nowrap
     @include subtitle(1.8rem)
     color: transparent
     font-weight: 400
@@ -113,6 +114,15 @@
       font-size: 2.4rem
     @include media("<tablet")
       font-size: 1.2rem
+
+  .submenu__title-main--desktop
+    @include media("<desktop")
+      display: none
+  .submenu__title-main--mobile
+    display: none
+    @include media("<desktop")
+      display: block
+
 
   .submenu__subsections
     display: none
@@ -210,6 +220,7 @@
       align-items: center
       .submenu__title-extra
         max-height: 0
+        max-width: 0
         overflow: hidden
       .submenu__subsections
         max-height: 0
