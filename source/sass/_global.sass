@@ -102,6 +102,8 @@ body
     @include media ("retina2x")
       background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-4@2x.jpg") // both need to get tiny
       background-size: 75%, contain
+      @include media ("<tablet")
+        background-size: 250%, contain
   &--landing-2
     background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-5.jpg") // both need to get tiny
     background-repeat: no-repeat
@@ -116,6 +118,8 @@ body
     @include media ("retina2x")
       background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg") // both need to get tiny
       background-size: 75%, contain
+      @include media ("<tablet")
+        background-size: 250%, contain
     @include media ("<tablet")
       background-image: url("../img/splash-bg-3.jpg")
       background-repeat: no-repeat
