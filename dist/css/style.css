@@ -7325,10 +7325,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         align-items: center;
         margin-bottom: 60px; } }
   .about-product__gum-img {
-    width: 165px;
+    width: auto;
     height: 354px;
     margin-right: -15px;
-    margin-left: -40px; }
+    margin-left: -40px;
+    flex: none; }
     @media (max-width: 767px) {
       .about-product__gum-img {
         margin: 0; } }
@@ -7356,7 +7357,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     align-self: baseline;
     display: flex;
     width: 490px;
-    margin-top: 65px; }
+    margin-top: 65px;
+    flex: none; }
     @media (max-width: 1279px) {
       .about-product__che-wrapper {
         order: 1;
@@ -7507,8 +7509,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     display: inline-block; }
   .about-product__box-img {
     width: 341px;
-    height: 141px;
-    margin-top: -10px; }
+    height: auto;
+    margin-top: -10px;
+    flex: none; }
     @media (max-width: 767px) {
       .about-product__box-img {
         order: 1;
@@ -7528,7 +7531,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         width: 191px; } }
   .about-product__clips-img {
     width: 191px;
-    height: 171px; }
+    flex: none; }
     @media (max-width: 767px) {
       .about-product__clips-img {
         margin-bottom: 25px; } }
