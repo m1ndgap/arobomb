@@ -1,6 +1,6 @@
 "use strict";
 
-const cartAddress = `./cart.html`
+const cartAddress = `./cart/`
 
 const blobBtnSmallCls = `constructor__blob-btn--1`;
 const blobBtnBigCls = `constructor__blob-btn--2`;
