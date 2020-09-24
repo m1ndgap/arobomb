@@ -7375,9 +7375,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     margin-left: -50px; }
   .about-product__che-img {
     width: 248px;
-    height: 360px;
     z-index: -1;
-    margin-left: -95px; }
+    margin-left: -95px;
+    flex: none; }
   .about-product__che-arrow-caption-2 {
     margin-top: 130px; }
   .about-product__che-caption-2 {
