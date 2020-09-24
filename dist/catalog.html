@@ -581,7 +581,7 @@
 </nav>
 <div class="submenu fixed-menu-trailing-gradient">
     <div class="submenu__wrapper">
-        <div tabindex="0" class="submenu__section submenu__section--active">
+        <div tabindex="0" data-type="souvenirs" class="submenu__section submenu__section--active">
             <span class="submenu__title">
                 <span class="submenu__title-extra">Выбрать</span>
                 <span class="submenu__title-main">Сувенир</span>
@@ -591,13 +591,13 @@
                 <a href="javascript:void(0)" data-subtype="drawings" class="submenu__subsection-item">рисунки</a>
             </div>
         </div>
-        <div tabindex="0" class="submenu__section" data-active="">
+        <div tabindex="0" data-type="aromas" class="submenu__section" data-active="">
             <span class="submenu__title">
                 <span class="submenu__title-extra">Выбрать</span>
                 <span class="submenu__title-main">Аромат</span>
             </span>
             <div class="submenu__subsections">
-                <a href="javascript:void(0)" data-subtype="nature" class="submenu__subsection-item submenu__subsection-item--active">Природа</a>
+                <a href="javascript:void(0)" data-subtype="nature" class="submenu__subsection-item">Природа</a>
                 <a href="javascript:void(0)" data-subtype="perfume" class="submenu__subsection-item">Парфюм</a>
             </div>
         </div>
@@ -645,54 +645,7 @@
                     <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
                 </div>
             </div>
-            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="drawings" data-code="44444" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1300" data-name="фывфывф">
-                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                    <use xlink:href="#border-line"></use>
-                </svg>
-                <span class="catalog__item-code">арт.124374</span>
-                <img class="catalog__item-img" src="./img/test-3.png" srcset="./img/testtest.jpg 2x" alt="ароматизатор с чегеварой">
-                <div class="catalog__price-block">
-                    <a href="./product-card.html" class="catalog__item-name">Название разме</a>
-                    <span class="catalog__item-price">1400</span>
-                    <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-                </div>
-            </div>
-            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="55555" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="6700" data-name="фывфыв фыв вввфыыыыы">
-                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                    <use xlink:href="#border-line"></use>
-                </svg>
-                <span class="catalog__item-code">арт.124374</span>
-                <img class="catalog__item-img" src="./img/test-4.jpg" srcset="./img/testtest.jpg 2x" alt="ароматизатор с чегеварой">
-                <div class="catalog__price-block">
-                    <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                    <span class="catalog__item-price">1400</span>
-                    <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-                </div>
-            </div>
-            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="666666" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="9888" data-name="фывфывф фывфыв фывфывфы">
-                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                    <use xlink:href="#border-line"></use>
-                </svg>
-                <span class="catalog__item-code">арт.124374</span>
-                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" srcset="./img/testtest.jpg 2x" alt="ароматизатор с чегеварой">
-                <div class="catalog__price-block">
-                    <a href="./product-card.html" class="catalog__item-name">14 символов 14</a>
-                    <span class="catalog__item-price">1400</span>
-                    <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-                </div>
-            </div>
-            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="drawings" data-code="77777" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="5200" data-name="нфыевшфны фныевшщфнеы">
-                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                    <use xlink:href="#border-line"></use>
-                </svg>
-                <span class="catalog__item-code">арт.124374</span>
-                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" srcset="./img/testtest.jpg 2x" alt="ароматизатор с чегеварой">
-                <div class="catalog__price-block">
-                    <a href="./product-card.html" class="catalog__item-name">14 символов 14</a>
-                    <span class="catalog__item-price">1400</span>
-                    <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-                </div>
-            </div>
+
             <div class="catalog__item catalog__item--active" data-type="aroma" data-subtype="perfume" data-code="3464636" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="16000" data-name="ыяваыфва ыфваыв">
                 <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
                     <use xlink:href="#border-line"></use>
@@ -834,229 +787,6 @@
                 <span class="catalog__item-price">1400</span>
                 <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
             </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div><div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="42132123" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="442111" data-name="че гевара">
-            <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                <use xlink:href="#border-line"></use>
-            </svg>
-            <span class="catalog__item-code">арт.124374</span>
-            <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-            <div class="catalog__price-block">
-                <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                <span class="catalog__item-price">1400</span>
-                <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-            </div>
-        </div>
-            <div class="catalog__item catalog__item--active" data-type="souvenirs" data-subtype="cars" data-code="412131" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="55555" data-name="че гевара">
-                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                    <use xlink:href="#border-line"></use>
-                </svg>
-                <span class="catalog__item-code">арт.124374</span>
-                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-                <div class="catalog__price-block">
-                    <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                    <span class="catalog__item-price">1400</span>
-                    <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-                </div>
-            </div>
-            <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="nature" data-code="4232131" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1444" data-name="че гевара">
-                <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
-                    <use xlink:href="#border-line"></use>
-                </svg>
-                <span class="catalog__item-code">арт.124374</span>
-                <img class="catalog__item-img" src="./img/catalog-item-1.jpg" alt="ароматизатор с чегеварой">
-                <div class="catalog__price-block">
-                    <a href="./product-card.html" class="catalog__item-name">Че гевара</a>
-                    <span class="catalog__item-price">1400</span>
-                    <a href="./product-card.html" class="catalog__item-link link-btn">в корзину +</a>
-                </div>
-            </div>
             <div class="catalog__item catalog__item--active" data-type="aromas" data-subtype="perfume" data-code="333333" data-img="./img/catalog-item-1.jpg" data-retinaImg="./img/catalog-item-1@2x.jpg" data-price="1110" data-name="че гевара">
                 <svg viewBox="0 0 277 315" fill="none" class="svg-gradient-line catalog__item-border">
                     <use xlink:href="#border-line"></use>
@@ -1070,7 +800,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div></section>
 </main>
 
 <script src="./js/catalog-menu.js"></script>
