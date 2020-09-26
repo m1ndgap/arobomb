@@ -125,11 +125,13 @@
       right: -50px
     @include media ("<tablet")
       position: static
-      width: 425px
+      width: 100%
+      max-width: 425px
       display: block
       margin: 0 auto
     @include media ("<=tiny")
-      margin-left: -95px
+      width: 120%
+      margin-left: -55px
 
   &__pitch-button
     position: relative

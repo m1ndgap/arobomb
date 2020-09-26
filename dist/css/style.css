@@ -5369,12 +5369,14 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   @media (max-width: 767px) {
     .landing-1__pitch-img {
       position: static;
-      width: 425px;
+      width: 100%;
+      max-width: 425px;
       display: block;
       margin: 0 auto; } }
   @media (max-width: 400px) {
     .landing-1__pitch-img {
-      margin-left: -95px; } }
+      width: 120%;
+      margin-left: -55px; } }
 
 .landing-1__pitch-button {
   position: relative;
