@@ -3512,7 +3512,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     @media (max-width: 1023px) {
       .cart-form__upload-wrap {
         display: none; } }
-    .cart-form__upload-wrap input {
+    .cart-form__upload-wrap input, .cart-form__upload-wrap .wpcf7-form-control-wrap {
       position: absolute;
       display: block;
       width: 100%;
