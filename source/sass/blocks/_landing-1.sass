@@ -155,7 +155,7 @@
   //     font-size: 1.3rem
   // // end of title-pitch children
 
-  .btn
+  .btn:not(.catalog-form__btn)
     @include media ("<tablet")
       display: none
 
@@ -768,6 +768,10 @@
           margin-top: 40px
           margin-left: -78px
           line-height: 2rem
+
+    &__form-section
+      @include media("<tablet")
+        margin-bottom: 50px
 
     .swiper-button-prev
       left: 25px

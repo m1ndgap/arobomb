@@ -29,24 +29,34 @@ let l1btn1 = document.querySelector(`#${l1button1Id}`);
 let l1btn2 = document.querySelector(`#${l1button2Id}`);
 
 
-changeBtn(l1btn1)
+//changeBtn(l1btn1)
 
+
+// let scene1 = new ScrollMagic.Scene({
+//     triggerElement: '.landing-1__title-pitch' // point of execution
+// })
+//     .addTo(controller)
+//     .reverse(true)
+//     .offset(500)
+//     .on(`start`, function(e){
+//         changeBtn(l1btn1)
+//     });
+//
+// let scene2 = new ScrollMagic.Scene({
+//     triggerElement: '.landing-1__slider-section' // point of execution
+// })
+//     .addTo(controller)
+//     .reverse(true)
+//     .on(`start`, function(e){
+//         changeBtn(l1btn2)
+//     });
 
 let scene1 = new ScrollMagic.Scene({
-    triggerElement: '.landing-1__title-pitch' // point of execution
+    triggerElement: '.landing-1__partners-section' // point of execution
 })
     .addTo(controller)
     .reverse(true)
     .offset(500)
     .on(`start`, function(e){
-        changeBtn(l1btn1)
-    });
-
-let scene2 = new ScrollMagic.Scene({
-    triggerElement: '.landing-1__slider-section' // point of execution
-})
-    .addTo(controller)
-    .reverse(true)
-    .on(`start`, function(e){
-        changeBtn(l1btn2)
+        fixBtn.classList.add(`${fixBtnCls}--hidden`)
     });
