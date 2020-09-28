@@ -309,13 +309,20 @@
         display: none !important
       .cart-form__upload-after-text
         display: block !important
-
-
-
-
-
     @include media("<desktop")
-      display: none
+      border: 5px dashed $btn
+      &::after
+        top: -4px
+        bottom: -4px
+        left: -4px
+        right: -4px
+
+
+
+
+
+    //@include media("<desktop")
+    //  display: none
 
     input, .wpcf7-form-control-wrap
       position: absolute
@@ -342,6 +349,8 @@
       font-weight: 300
       text-align: left
       letter-spacing: 0
+      @include media("<desktop")
+        font-size: 1.2rem
 
     .cart-form__upload-after-text
       display: none
