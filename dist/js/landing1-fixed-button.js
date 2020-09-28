@@ -56,7 +56,7 @@ let scene1 = new ScrollMagic.Scene({
 })
     .addTo(controller)
     .reverse(true)
-    .offset(500)
+    .offset(0)
     .on(`start`, function(e){
         fixBtn.classList.add(`${fixBtnCls}--hidden`)
     });
