@@ -1,0 +1,377 @@
+.constructor-landing
+  @include container--content()
+  &__main-title
+    color: $white
+    font-size: 4.8rem
+    line-height: 5.5rem
+    font-weight: 900
+    text-transform: uppercase
+    @include media ("<large")
+      font-size: 3.5rem // 3.6rem
+      line-height: 4rem
+    @include media ("<desktop")
+      font-size: 3.1rem
+      line-height: 3.8rem
+    @include media ("<tablet")
+      font-size: 2.5rem
+      line-height: 3rem
+    @media screen and (max-width: 614px)
+      font-size: 2rem
+      line-height: 2.3rem
+    @media screen and (max-width: 500px)
+      font-size: 2.5rem
+      line-height: 3.2rem
+    @include media ("<=tiny")
+      font-size: 2rem
+      line-height: 2.7rem
+
+    span
+      @media screen and (max-width: 500px)
+        @include gbackground (350px)
+        span
+          &::after
+            white-space: break-spaces
+            content: "\A"
+      @include media ("<tiny")
+        @include gbackground (250px)
+
+    > span
+      &:first-child
+        padding-top: 12px
+        padding-bottom: 0
+        z-index: 2
+      &:nth-child(2)
+        padding: 10px
+        z-index: 1
+        @include media ("<desktop")
+          z-index: 3
+      &:last-child
+        padding-bottom: 12px
+        padding-top: 0
+        z-index: 2
+      &:first-child, &:nth-child(2), &:last-child
+        position: relative
+        @include media ("<large")
+          padding: 5px
+        @include media ("<tablet")
+          padding: 0
+          span
+            padding: 5px
+
+  &__subtitle
+    position: relative
+    color: $white
+    font-size: 4.8rem
+    line-height: 5.5rem
+    font-weight: 900
+    text-transform: uppercase
+    z-index: 3
+    margin-bottom: 150px
+    @include media ("<large")
+      font-size: 3.5rem // 3.6rem
+      line-height: 4rem
+    @include media ("<desktop")
+      font-size: 3.1rem
+      line-height: 3.8rem
+    @include media ("<tablet")
+      font-size: 2.5rem
+      line-height: 3rem
+    @media screen and (max-width: 614px)
+      font-size: 2rem
+      line-height: 2.3rem
+    @media screen and (max-width: 500px)
+      font-size: 2.5rem
+      line-height: 3.2rem
+    @include media ("<=tiny")
+      font-size: 2rem
+      line-height: 2.7rem
+
+    span
+      @media screen and (max-width: 500px)
+        @include gbackground (350px)
+        span
+          &::after
+            white-space: break-spaces
+            content: "\A"
+      @include media ("<tiny")
+        @include gbackground (250px)
+
+  &__title-line
+    @include gbackground (1130px)
+    padding: 0 15px
+    &::after
+      white-space: break-spaces
+      content: "\A"
+      @media screen and (max-width: 500px)
+        display: none
+
+    @include media ("<desktop")
+      @include gbackground (900px)
+    @include media ("<tablet")
+      @include gbackground (600px)
+      padding: 5px
+    @media screen and (max-width: 614px)
+      @include gbackground (500px)
+    @media screen and (max-width: 500px)
+      padding: 0
+      span
+        padding: 5px
+
+  &__text
+    @include subtitle(3.6rem)
+    line-height: 4.3rem
+    font-weight: 900
+    letter-spacing: 3.6px
+    @include media("<large")
+      font-size: 3.0rem
+      letter-spacing: 2px
+      line-height: initial
+    @include media ("<tablet")
+      font-size: 2.2rem
+      letter-spacing: 0.5px
+      line-height: initial
+
+  &__slider-text
+    max-width: 84%
+    @include media("<large")
+      br
+        display: none
+
+  &__price-span
+    @include gbackground (100%)
+    display: inline-block
+    padding: 3px 7px
+    margin-left: -5px
+    color: $white
+    text-transform: uppercase
+    font-weight: 900
+
+
+  &__slider
+    overflow: hidden
+    padding-bottom: 30px
+
+  &-swiper-container
+    position: relative
+    width: 100%
+    margin: 100px 0
+    padding: 0 30px
+    @include media ("<desktop")
+      margin: 0
+      padding: 0
+
+    .constructor-landing__swiper-img
+      display: block
+      height: 175px
+
+    .swiper-wrapper
+      align-items: stretch
+
+    .swiper-slide
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .swiper-button-next, .swiper-button-prev
+      border: 1px solid
+      border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+      border-image-slice: 1
+      width: 33px
+      height: 86px
+      margin-top: -43px
+      background: $bg-color
+      z-index: 1
+      @include media ("<desktop")
+        display: none
+      &:hover
+        background: #e5edff
+        transition: 400ms
+      svg
+        fill: url(#linear-grad-4)
+      &::after
+        display: none
+
+    .swiper-button-next
+      transform: rotate(180deg)
+      right: 1px
+
+    .swiper-button-prev
+      left: 0
+
+    .swiper-pagination
+      width: 90%
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+      display: flex
+      @include media (">=desktop")
+        display: none
+      .swiper-pagination-bullet
+        flex-grow: 1
+        height: 1px
+        margin: 0 8px
+        background-color: $text
+        border-radius: unset
+        &:focus
+          outline: none
+        &::after
+          content: " "
+          padding: 15px
+          display: block
+          position: relative
+          bottom: 13px
+        &-active
+          @include gbackground(100%)
+
+  &__filler-1
+    display: flex
+    position: relative
+    z-index: 3
+    @include media("<desktop")
+      flex-flow: column nowrap
+
+    .constructor-landing__text
+      margin-top: 237px
+      @include media("<desktop")
+        margin-top: 30px
+
+  &__promo-img
+    display: block
+    margin-right: calc((1176px - 100vw)/2)
+    width: 831px
+    @include media("<huge")
+      margin-right: calc((1250px - 100vw)/2)
+    @include media("<large")
+      margin-right: calc((994px - 100vw)/2)
+    @include media("<desktop")
+      height: auto
+      margin-right: -15px
+      width: 100%
+      max-width: 700px
+      align-self: flex-end
+      img
+        display: block
+        width: 100%
+        max-width: 700px
+
+
+  &__filler-2
+    display: flex
+    position: relative
+    z-index: 1
+    @include media("<desktop")
+      flex-flow: column nowrap
+      align-items: center
+
+
+  &__filler-2-title
+    position: absolute
+    right: -52px
+    top: 56px
+    z-index: 2
+    width:  566px
+    @include media("<desktop")
+      position: static
+    @include media("<tablet")
+      width: 100%
+
+
+  &__images
+    position: relative
+    display: flex
+    align-items: center
+    z-index: 1
+    margin-left: -80px
+    @include media("<large")
+      margin-left: -40px
+    @include media("<desktop")
+      flex-flow: column nowrap
+      margin-left: unset
+
+  &__box-img
+    position: relative
+    display: block
+    width: 764px
+    z-index: 3
+    img
+      display: block
+      width: 100%
+    @include media("<large")
+      width: 550px
+    @include media("<tablet")
+      width: 100%
+      max-width: 500px
+
+
+  &__bgsplash-img
+    display: block
+    width: 1835px
+    position: absolute
+    left: 31%
+    top: 36%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    @include media("<desktop")
+      left: 50%
+      top: 30%
+    @include media("<tablet")
+      max-width: 500px
+      img
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        display: block
+        max-width: 700px
+
+
+  &__box-tag
+    @include gbackground(700px)
+    position: relative
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-left: -128px
+    padding-left: 66px
+    z-index: 2
+    width: 629px
+    height: 118px
+    @include media("<large")
+      width: 429px
+      height: 78px
+
+    @include media("<desktop")
+      padding-left: unset
+      margin-top: -30px
+      margin-left: unset
+    @include media("<tablet")
+      width: 100%
+      height: 32px
+
+.price, .constructor-landing__box-text
+  @include subtitle(3.6rem)
+  font-weight: 900
+  color: $white
+  @include media("<large")
+    font-size: 3.0rem
+  @include media("<desktop")
+    font-size: 2.4rem
+  @include media("<tablet")
+    font-size: 2.0rem
+
+.price--crossed
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(-13deg)
+    display: block
+    height: 2px
+    width: 105%
+    background-color: $text
+
+.constructor-landing__box-text
+  text-transform: none
+

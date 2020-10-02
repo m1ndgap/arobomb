@@ -14,21 +14,23 @@
     justify-content: space-around
   @include media("<tablet")
     margin-top: 20px
+    height: 500px
   &--active
     pointer-events: all
     opacity: 1
     max-height: unset
     overflow: visible
+    padding-bottom: 20px
     *
       pointer-events: all
 
 
 .constructor__box
   position: relative
-  min-height: 500px
+  min-height: 485px
   overflow: visible
   z-index: 1
-  margin-bottom: -50px
+  margin-bottom: -10px
   margin-top: -30px
   transition: all $transition
   &:hover
@@ -126,10 +128,11 @@
   top: 50%
   transform: translate(-50%, -50%)
   &--1
-    max-width: 400px
+    max-width: 330px
   &--2
-    max-width: 500px
+    max-width: 480px
     left: 58%
+    top: 45%
   @include media("<huge")
     width: auto
     &--1
@@ -159,6 +162,7 @@
     justify-content: center
     flex-basis: 100%
     margin-bottom: 20px
+    max-height: 50px
     &-span
       font-size: 1.2rem
       text-transform: uppercase
@@ -175,9 +179,30 @@
 
 
 
+.constructor__box-title-block
+  display: flex
+  align-items: center
+
+.constructor__box-price-tag
+  @include gbackground(500px)
+  padding: 5px 15px
+  margin-left: 25px
+  .price
+    font-size: 2.4rem
+  .price + .price
+    margin-left: 25px
+  @include media("<tablet")
+    margin-left: 0
+    .price
+      font-size: 20px
+    .price + .price
+      margin-left: 10px
+
+
 .constructor__index-desktop-title
   @include subtitle(2.4rem)
   font-weight: 900
+  margin: 0
   @include media("<huge")
     font-size: 1.8rem
   @include media("<tablet")
@@ -189,9 +214,10 @@
     flex-basis: 50%
   @include media("<tablet")
     flex-basis: 100%
+    height: 200px
     width: 95%
     z-index: 5
-    position: fixed
+    position: absolute
     bottom: 58px
     left: 50%
     transform: translateX(-50%)
@@ -205,15 +231,16 @@
   @include media("<huge")
     margin-left: unset
 
+
+
+
 .constructor__box-text
   position: relative
   z-index: 2
-
-.constructor__box-text
   display: flex
   flex-flow: row wrap
   align-items: center
-  margin-top: 35px
+  margin-top: 21px
   span
     font-size: 2.4rem
     font-family: "Montserrat", sans-serif
@@ -233,23 +260,45 @@
     span
       font-size: 1.6rem
 
+.constructor__box-text--aromas
+  @include media("<tablet")
+    img
+      margin-left: -4px
 
 .constructor__box-text--box
-  display: inline-block
-  margin-top: 42px
+  display: flex
+  flex-flow: row nowrap
+  width: max-content
+  margin-top: 23px
   @include gbackground(100%)
   padding: 3px 0 6px 10px
+  span:nth-child(1)
+    font-weight: 900
+    margin-left: 20px
+  span:nth-child(2)
+    margin-left: 50px
+    margin-right: 50px
   span
+    display: block
     color: $white
-    font-weight: 600
+    font-weight: 500
+    line-height: 2.4rem
   img
-    margin: -15px 0 -20px
-    height: 56px
+    margin: -15px -30px -20px 0
+    height: 80px
   @include media("<huge")
     margin-top: 17px
     padding: 0 0 3px 5px
     img
       height: 46px
+      margin-right: -20px
+    span:nth-child(1)
+      margin-bottom: 0
+    span:nth-child(2)
+      min-width: 120px
+      margin-left: 20px
+      margin-right: 20px
+      margin-bottom: 0
   @include media("<tablet")
     margin-top: 8px
 
@@ -281,9 +330,7 @@
     //span
     //  margin: 0
   @include media("<tablet")
-
-    margin-left: 20px
-
+    margin-left: 5px
     display: inline-block
     position: static
 
@@ -291,6 +338,6 @@
   display: none
   @include media("<tablet")
     display: block
-    position: fixed
-    bottom: -2px
+    position: absolute
+    bottom: 10px
     width: 100%
