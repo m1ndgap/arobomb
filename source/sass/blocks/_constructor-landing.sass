@@ -396,6 +396,8 @@
     flex-flow: row wrap
     padding-top: 10px
     justify-content: space-around
+    @include media("<tablet")
+      justify-content: center
 
 
   &__list-item
@@ -404,43 +406,106 @@
     flex-flow: column nowrap
     align-items: center
     margin: 0 24px 15px
+    @include media("<large")
+      margin: 0 20px 15px
+    @include media("<desktop")
+      margin: 0 10px 15px
+    @include media("<tablet")
+      flex-basis: 50%
+      margin: 10px 0
     &--birthday
       transform: translate(-18px, -1px)
+      @include media("<tablet")
+        order: 1
+        transform: translate(-17px, 15px)
+
     &--love-m
       transform: translate(-39px, 17px)
+      @include media("<tablet")
+        order: 4
+        transform: translate(24px, -25px)
     &--friend-m
       transform: translate(-37px, -23px)
+      @include media("<tablet")
+        order: 2
+        transform: translate(-44px, -5px)
     &--23feb
       transform: translate(-8px, -11px)
       .constructor-landing__list-svg-img
         margin-top: -10px
+      @include media("<tablet")
+        order: 6
+        transform: translate(7px, -12px)
     &--love-f
       transform: translate(15px, -5px)
+      @include media("<tablet")
+        order: 5
+        transform: translate(-35px, -2px)
     &--dad
       transform: translate(16px, 41px)
+      @include media("<tablet")
+        order: 3
+        transform: translate(59px, 33px)
     &--just
       transform: translate(11px, -9px)
       .constructor-landing__list-svg-img
         margin-top: -15px
+      @include media("<large")
+        transform: translate(0px, 15px)
+      @include media("<tablet")
+        order: 11
+        transform: translate(0px, 19px)
     &--car
       transform: translate(83px, 10px)
       .constructor-landing__list-svg-wrap
         height: 100px
         width: 100px
+      .constructor-landing__list-svg-bg
+        height: 100px
+        width: 100px
+      @include media("<large")
+        transform: translate(13px, 10px)
+      @include media("<tablet")
+        order: 9
+        transform: translate(32px, 1px)
     &--newyear
       transform: translate(18px, -56px)
+      @include media("<large")
+        transform: translate(13px, 10px)
+      @include media("<tablet")
+        order: 12
+        transform: translate(17px, -18px)
     &--mom
       transform: translate(33px, 9px)
+      @include media("<large")
+        transform: translate(0px, 10px)
+      @include media("<tablet")
+        order: 8
+        transform: translate(-57px, -14px)
     &--8march
       transform: translate(-13px, -30px)
+      @include media("<desktop")
+        transform: translate(0px, 0px)
+      @include media("<tablet")
+        order: 7
+        transform: translate(-17px, 15px)
     &--friend-f
       transform: translate(-45px, -2px)
+      @include media("<large")
+        transform: translate(0px, 10px)
+      @include media("<tablet")
+        order: 10
+        transform: translate(20px, -32px)
 
 
   &__list-text
     margin-top: 7px
     @include subtitle(1.8rem)
     font-weight: 600
+    @include media("<desktop")
+      font-size: 1.6rem
+    @include media("<tablet")
+      font-size: 1.2rem
 
   &__list-svg-wrap
     position: relative
@@ -456,6 +521,16 @@
         fill: url(#linear-grad-4)
       .constructor-landing__list-svg-img
         fill: $white
+      @include media("<tablet")
+        width: 92px
+        height: 92px
+        .constructor-landing__list-svg-bg
+          width: 92px
+          height: 92px
+        .constructor-landing__list-svg-img
+          width: 52px
+          height: 52px
+
 
   &__list-svg-bg
     fill: transparent
