@@ -5209,6 +5209,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     text-transform: uppercase;
     font-weight: 900; }
   .constructor-landing__slider {
+    overflow: hidden;
     padding-bottom: 30px;
     margin-bottom: 100px; }
     .constructor-landing__slider .constructor-landing__btn {
@@ -5218,6 +5219,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         margin: 50px 0 0 -15px; } }
     @media (max-width: 767px) {
       .constructor-landing__slider {
+        overflow: visible;
         margin-bottom: 30px; } }
   .constructor-landing-swiper-container {
     position: relative;
