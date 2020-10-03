@@ -197,7 +197,8 @@
         margin-right: 0
         margin-left: 35px
     @include media("<desktop")
-      width: 100%
+      width: calc(100% + 30px)
+      margin-left: -15px
       max-width: 500px
       justify-content: space-around
       span
@@ -299,14 +300,13 @@
 
 
   &__slider
-    overflow: hidden
     padding-bottom: 30px
     margin-bottom: 100px
     .constructor-landing__btn
       margin: 0 auto
     @include media ("<desktop")
       .constructor-landing__btn
-        margin: 50px auto 0 auto
+        margin: 50px 0 0 -15px
     @include media ("<tablet")
       margin-bottom: 30px
 
