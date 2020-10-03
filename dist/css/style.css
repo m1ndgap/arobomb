@@ -5211,9 +5211,14 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   .constructor-landing__slider {
     overflow: hidden;
     padding-bottom: 30px;
-    margin-bottom: 100px; }
+    margin-bottom: 77px; }
     .constructor-landing__slider .constructor-landing__btn {
-      margin: 0 auto; }
+      margin: 0 auto;
+      width: 584px;
+      height: 45px;
+      justify-content: center; }
+      .constructor-landing__slider .constructor-landing__btn svg {
+        margin-left: 170px; }
     @media (max-width: 1023px) {
       .constructor-landing__slider .constructor-landing__btn {
         margin: 50px 0 0 -15px; } }
@@ -5290,12 +5295,89 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
           background-size: 100% 100%;
           background-repeat: no-repeat;
           background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); }
+  .constructor-landing__list {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 10px;
+    justify-content: space-around; }
+  .constructor-landing__list-item {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 24px 15px; }
+    .constructor-landing__list-item--birthday {
+      transform: translate(-18px, -1px); }
+    .constructor-landing__list-item--love-m {
+      transform: translate(-39px, 17px); }
+    .constructor-landing__list-item--friend-m {
+      transform: translate(-37px, -23px); }
+    .constructor-landing__list-item--23feb {
+      transform: translate(-8px, -11px); }
+      .constructor-landing__list-item--23feb .constructor-landing__list-svg-img {
+        margin-top: -10px; }
+    .constructor-landing__list-item--love-f {
+      transform: translate(15px, -5px); }
+    .constructor-landing__list-item--dad {
+      transform: translate(16px, 41px); }
+    .constructor-landing__list-item--just {
+      transform: translate(11px, -9px); }
+      .constructor-landing__list-item--just .constructor-landing__list-svg-img {
+        margin-top: -15px; }
+    .constructor-landing__list-item--car {
+      transform: translate(83px, 10px); }
+      .constructor-landing__list-item--car .constructor-landing__list-svg-wrap {
+        height: 100px;
+        width: 100px; }
+    .constructor-landing__list-item--newyear {
+      transform: translate(18px, -56px); }
+    .constructor-landing__list-item--mom {
+      transform: translate(33px, 9px); }
+    .constructor-landing__list-item--8march {
+      transform: translate(-13px, -30px); }
+    .constructor-landing__list-item--friend-f {
+      transform: translate(-45px, -2px); }
+  .constructor-landing__list-text {
+    margin-top: 7px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    color: #444444;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .constructor-landing__list-svg-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 83px; }
+    .constructor-landing__list-svg-wrap--big-orb {
+      width: 135px;
+      height: 144px; }
+      .constructor-landing__list-svg-wrap--big-orb .constructor-landing__list-svg-bg {
+        fill: url(#linear-grad-4); }
+      .constructor-landing__list-svg-wrap--big-orb .constructor-landing__list-svg-img {
+        fill: #FFFFFF; }
+  .constructor-landing__list-svg-bg {
+    fill: transparent;
+    stroke: url(#linear-grad-4);
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .constructor-landing__list-svg-img {
+    position: relative;
+    fill: url(#linear-grad-4); }
   .constructor-landing__filler-1 {
     display: flex;
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    margin-top: -45px; }
     @media (max-width: 1023px) {
       .constructor-landing__filler-1 {
+        margin-top: unset;
         flex-flow: column nowrap; } }
     .constructor-landing__filler-1 .constructor-landing__text {
       margin-top: 237px; }
