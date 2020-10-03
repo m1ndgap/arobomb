@@ -597,16 +597,27 @@
                     <span>#AroBomb</span>
                 </span>
             </h1>
-            <span class="constructor-landing__landing-price">
-                <span class="price price--crossed">3,390₽</span>
-                <span class="price">1,990₽</span>
-            </span>
-            <a class="constructor-landing__btn btn">
-                <span>получить каталог</span>
-                <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
-                    <use xlink:href="#big-btn-arrow"></use>
-                </svg>
-            </a>
+            <div class="constructor-landing__landing-wrapper">
+                <span class="constructor-landing__landing-price">
+                    <span class="price price--crossed">3,390₽</span>
+                    <span class="price">1,990₽</span>
+                </span>
+                <div class="constructor-landing__landing-images">
+                    <img class="constructor-landing__landing-img constructor-landing__landing-img--1" srcset="./img/constructor-landing-small-box.png,
+                                ./img/constructor-landing-small-box@2x.png 2x" src="./img/constructor-landing-small-box@2x.png" alt="">
+                    <img class="constructor-landing__landing-img constructor-landing__landing-img--2" srcset="./img/constructor-landing-box.png,
+                                ./img/constructor-landing-box@2x.png 2x" src="./img/constructor-landing-box@2x.png" alt="">
+                </div>
+                <div class="constructor-landing__landing-mob-slider">
+
+                </div>
+                <a href="#constructor" class="constructor-landing__btn btn">
+                    <span>собрать подарок</span>
+                    <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
+                        <use xlink:href="#big-btn-arrow"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
         <div class="constructor-landing__slider">
             <p class="constructor-landing__text constructor-landing__slider-text">
@@ -714,7 +725,7 @@
 
 
     </section>
-    <section class="catalog catalog--constructor">
+    <section id="constructor" class="catalog catalog--constructor">
         <div class="constructor__tabs">
             <button type="button" data-step="1" class="constructor__tab constructor__tab--disabled">
                 <span class="constructor__tab-text constructor__tab-text--tab-1">

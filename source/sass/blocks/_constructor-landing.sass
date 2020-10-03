@@ -119,6 +119,61 @@
       span
         padding: 5px
 
+
+  &__header
+    margin-bottom: 130px
+
+  &__landing-price
+    @include gbackground(400px)
+    display: inline-block
+    padding: 10px
+    margin-top: 20px
+    padding-right: 29px
+    .price--crossed
+      margin-left: 20px
+    .price + .price
+      margin-left: 54px
+
+  &__landing-images
+    display: flex
+    align-items: center
+    margin: -127px 0 -168px -65px
+    @include media("<large")
+      margin: -90px 0 -138px -35px
+    @include media("<desktop")
+      margin: -30px 0 -60px -5px
+      justify-content: space-around
+
+  &__landing-img--1
+    @include media("<large")
+      width: 500px
+    @include media("<desktop")
+      width: 350px
+
+  &__landing-img--2
+    margin-left: -20px
+    margin-top: 15px
+    @include media("<large")
+      width: 600px
+    @include media("<desktop")
+      width: 450px
+
+  &__btn
+    width: 396px
+    height: 62px
+    font-size: 1.8rem
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    span
+      letter-spacing: 1px
+      margin-left: 42px
+    svg
+      margin-left: 55px
+    svg
+      margin-right: 15px
+
+
   &__text
     @include subtitle(3.6rem)
     line-height: 4.3rem

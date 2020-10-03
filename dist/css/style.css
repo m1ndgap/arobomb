@@ -5017,6 +5017,60 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         padding: 0; }
         .constructor-landing__title-line span {
           padding: 5px; } }
+  .constructor-landing__header {
+    margin-bottom: 130px; }
+  .constructor-landing__landing-price {
+    background-size: 400px 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    padding-right: 29px; }
+    .constructor-landing__landing-price .price--crossed {
+      margin-left: 20px; }
+    .constructor-landing__landing-price .price + .price {
+      margin-left: 54px; }
+  .constructor-landing__landing-images {
+    display: flex;
+    align-items: center;
+    margin: -127px 0 -168px -65px; }
+    @media (max-width: 1279px) {
+      .constructor-landing__landing-images {
+        margin: -90px 0 -138px -35px; } }
+    @media (max-width: 1023px) {
+      .constructor-landing__landing-images {
+        margin: -30px 0 -60px -5px;
+        justify-content: space-around; } }
+  @media (max-width: 1279px) {
+    .constructor-landing__landing-img--1 {
+      width: 500px; } }
+  @media (max-width: 1023px) {
+    .constructor-landing__landing-img--1 {
+      width: 350px; } }
+  .constructor-landing__landing-img--2 {
+    margin-left: -20px;
+    margin-top: 15px; }
+    @media (max-width: 1279px) {
+      .constructor-landing__landing-img--2 {
+        width: 600px; } }
+    @media (max-width: 1023px) {
+      .constructor-landing__landing-img--2 {
+        width: 450px; } }
+  .constructor-landing__btn {
+    width: 396px;
+    height: 62px;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .constructor-landing__btn span {
+      letter-spacing: 1px;
+      margin-left: 42px; }
+    .constructor-landing__btn svg {
+      margin-left: 55px; }
+    .constructor-landing__btn svg {
+      margin-right: 15px; }
   .constructor-landing__text {
     font-family: "Montserrat", sans-serif;
     font-size: 3.6rem;
