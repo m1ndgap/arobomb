@@ -113,7 +113,6 @@ body
     @include media ("<tablet")
       padding-top: 75px
 
-
     overflow: hidden
     @include media ("retina2x")
       background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg") // both need to get tiny
@@ -139,6 +138,10 @@ body
       padding-top: 140px
     @include media ("<tablet")
       padding-top: 82px
+      background-image: url("../img/constructor-landing-bg-sm.jpg")
+      @include media ("retina2x")
+        background-image: url("../img/constructor-landing-bg-sm@2x.jpg")
+        background-size: 723px
 
   &-contact-us
     background: url("../img/map.png")

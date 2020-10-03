@@ -31,3 +31,13 @@ let landing1TabsSwiper = new Swiper('.constructor-landing-swiper-container', {
         }
     }
 });
+
+
+let constructorLandingSwiper = new Swiper('.constructor-landing__landing-mob-slider', {
+    speed: 400,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    }
+});

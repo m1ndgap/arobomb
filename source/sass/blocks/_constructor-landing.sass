@@ -15,6 +15,7 @@
       font-size: 3.1rem
       line-height: 3.8rem
     @include media ("<tablet")
+      margin-top: 0
       font-size: 2.5rem
       line-height: 3rem
     @media screen and (max-width: 614px)
@@ -122,6 +123,8 @@
 
   &__header
     margin-bottom: 130px
+    @include media ("<tablet")
+      margin-bottom: 50px
 
   &__landing-price
     @include gbackground(400px)
@@ -134,6 +137,14 @@
     .price + .price
       margin-left: 54px
 
+    @include media ("<tablet")
+      margin-top: 0
+      padding: 5px 15px
+      .price--crossed
+        margin-left: 0
+      .price + .price
+        margin-left: 15px
+
   &__landing-images
     display: flex
     align-items: center
@@ -143,6 +154,9 @@
     @include media("<desktop")
       margin: -30px 0 -60px -5px
       justify-content: space-around
+    @include media("<tablet")
+      display: none
+
 
   &__landing-img--1
     @include media("<large")
@@ -161,17 +175,97 @@
   &__btn
     width: 396px
     height: 62px
-    font-size: 1.8rem
     display: flex
     justify-content: flex-start
     align-items: center
     span
+      font-size: 1.8rem
       letter-spacing: 1px
       margin-left: 42px
     svg
       margin-left: 55px
     svg
       margin-right: 15px
+    @include media("<large")
+      width: 350px
+      height: 50px
+      span
+        font-size: 1.6rem
+        letter-spacing: 0.7px
+        margin-left: 32px
+      svg
+        margin-right: 0
+        margin-left: 35px
+    @include media("<desktop")
+      width: 100%
+      max-width: 500px
+      justify-content: space-around
+      span
+        font-size: 1.6rem
+        letter-spacing: 0.7px
+        margin-left: 15px
+        white-space: nowrap
+      svg
+        margin-right: 10px
+
+
+  .constructor-landing__landing-mob-slider
+    @include media (">=tablet")
+      display: none
+    .swiper-container
+      width: 100%
+      margin-top: 60px
+      @include media (">=tablet")
+        display: none
+    .swiper-wrapper
+      display: flex
+      align-items: center
+
+    .swiper-slide
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 20px
+      width: 100%
+      &:nth-child(2)
+        position: relative
+        top: 20px
+        @include media ("<phone")
+          top: 40px
+      p
+        text-align: center
+        margin: 40px 0
+
+    .swiper-img-slide-1
+      width: 100%
+
+
+    .swiper-img-slide-2
+      max-height: 210px
+      margin-top: -28px
+      margin-bottom: 20px
+
+
+    .swiper-pagination
+      bottom: 25px
+
+      .swiper-pagination-bullet
+        width: 30%
+        height: 1px
+        margin: 0 5%
+        background-color: $text
+        border-radius: unset
+        &:focus
+          outline: none
+        &::after
+          content: " "
+          padding: 15px
+          display: block
+          position: relative
+          bottom: 13px
+        &-active
+          @include gbackground(100%)
 
 
   &__text
@@ -207,6 +301,14 @@
   &__slider
     overflow: hidden
     padding-bottom: 30px
+    margin-bottom: 100px
+    .constructor-landing__btn
+      margin: 0 auto
+    @include media ("<desktop")
+      .constructor-landing__btn
+        margin: 50px auto 0 auto
+    @include media ("<tablet")
+      margin-bottom: 30px
 
   &-swiper-container
     position: relative
