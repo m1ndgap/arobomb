@@ -802,7 +802,14 @@ body {
 .main--constructor {
   overflow: hidden;
   padding-top: 93px;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-image: url("../img/constructor-landing-bg.jpg");
+  background-position: top right;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .main--constructor {
+      background-image: url("../img/constructor-landing-bg@2x.jpg");
+      background-size: 1088px; } }
   @media (max-width: 1439px) {
     .main--constructor {
       padding-top: 140px; } }
