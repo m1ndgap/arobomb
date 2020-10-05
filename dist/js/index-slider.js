@@ -159,3 +159,15 @@ let indexSwiper = new Swiper(sliderEl, swiperParams);
 (function x(){
     document.querySelector(".main-menu").classList.add('fixed-menu-transparent-bg')
 })();
+
+let mainMenuIndex = document.querySelector(`.main-menu`)
+mainMenuIndex.classList.add(`fixed-menu-transparent-bg`)
+
+document.addEventListener(`scroll`, function () {
+    let offset = window.pageYOffset
+    if (offset > 50) {
+        mainMenuIndex.classList.remove(`fixed-menu-transparent-bg`)
+    } else {
+        mainMenuIndex.classList.add(`fixed-menu-transparent-bg`)
+    }
+})

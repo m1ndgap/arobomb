@@ -1446,7 +1446,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     @media (max-width: 767px) {
       .index__static {
         padding-top: 65px;
-        min-height: 100vh; } }
+        height: 100vh; } }
   .index__hash-title {
     font-family: "Montserrat", sans-serif;
     font-size: 7.2rem;
@@ -4644,9 +4644,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         height: 130%; } }
   @media (max-width: 767px) {
     .constructor__box-img--1 {
-      height: 164px; }
+      height: 158px; }
     .constructor__box-img--2 {
-      height: 200px; } }
+      height: 180px; } }
 
 .constructor__splash-img {
   z-index: 1;
@@ -4888,7 +4888,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     font-size: 4.8rem;
     line-height: 5.5rem;
     font-weight: 900;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 10px 0; }
     @media (max-width: 1279px) {
       .constructor-landing__main-title {
         font-size: 3.5rem;
@@ -4958,8 +4959,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     line-height: 5.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    z-index: 3;
-    margin-bottom: 150px; }
+    z-index: 3; }
     @media (max-width: 1279px) {
       .constructor-landing__subtitle {
         font-size: 3.5rem;
@@ -5068,15 +5068,18 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     @media (max-width: 767px) {
       .constructor-landing__landing-images {
         display: none; } }
-  @media (max-width: 1279px) {
-    .constructor-landing__landing-img--1 {
-      width: 500px; } }
-  @media (max-width: 1023px) {
-    .constructor-landing__landing-img--1 {
-      width: 350px; } }
+  .constructor-landing__landing-img--1 {
+    width: 550px; }
+    @media (max-width: 1279px) {
+      .constructor-landing__landing-img--1 {
+        width: 500px; } }
+    @media (max-width: 1023px) {
+      .constructor-landing__landing-img--1 {
+        width: 350px; } }
   .constructor-landing__landing-img--2 {
     margin-left: -20px;
-    margin-top: 15px; }
+    margin-top: 15px;
+    width: 700px; }
     @media (max-width: 1279px) {
       .constructor-landing__landing-img--2 {
         width: 600px; } }
