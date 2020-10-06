@@ -165,7 +165,7 @@ mainMenuIndex.classList.add(`fixed-menu-transparent-bg`)
 
 document.addEventListener(`scroll`, function () {
     let offset = window.pageYOffset
-    if (offset > 50) {
+    if (offset > 20) {
         mainMenuIndex.classList.remove(`fixed-menu-transparent-bg`)
     } else {
         mainMenuIndex.classList.add(`fixed-menu-transparent-bg`)
