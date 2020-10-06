@@ -2288,6 +2288,15 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       .submenu__wrapper {
         justify-content: space-between; } }
 
+.submenu__section + .submenu__section {
+  margin-left: 20px; }
+  @media (max-width: 1279px) {
+    .submenu__section + .submenu__section {
+      margin-left: 10px; } }
+  @media (max-width: 1023px) {
+    .submenu__section + .submenu__section {
+      margin-left: 0; } }
+
 .submenu__section {
   display: flex;
   align-items: flex-start;
@@ -2390,14 +2399,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     padding: 0;
     pointer-events: none; }
 
-.submenu__section + .submenu__section {
-  margin-left: 68px; }
-  @media (max-width: 1279px) {
-    .submenu__section + .submenu__section {
-      margin-left: 10px; } }
-  @media (max-width: 1023px) {
-    .submenu__section + .submenu__section {
-      margin-left: 0; } }
+.submenu__section--constructor.submenu__section--active {
+  padding: 16px 20px; }
 
 .submenu__section--active {
   padding: 16px 35px;

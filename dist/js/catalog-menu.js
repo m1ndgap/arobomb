@@ -80,7 +80,7 @@ items.forEach(function(item){
 })
 
 sections.forEach((section) => {
-    if (!section.classList.contains(`submenu__section--constructor`)) {
+    // if (!section.classList.contains(`submenu__section--constructor`)) {
         section.addEventListener(`click`, function () {
             //document.querySelector(`.catalog`).style.marginLeft = `-5px`
             section.blur();
@@ -103,11 +103,11 @@ sections.forEach((section) => {
                 // }
             }
         })
-    } else {
+    // } else {
         // section.addEventListener(`click`, function(){
         //     window.location.href = constructorLink
         // })
-    }
+    // }
 })
 
 links.forEach((link) => {
