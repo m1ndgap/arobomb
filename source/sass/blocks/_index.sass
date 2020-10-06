@@ -92,6 +92,10 @@
     @media screen and (max-height: 750px)
       height: 150px
       width: 150px
+    @include media("<tablet")
+      display: none
+
+
 
   &__video-play-btn
     z-index: 2
@@ -101,6 +105,28 @@
     transform: scale(1)
     &:hover
       transform: scale(1.05)
+
+  &__video-mobile-btn
+    display: none
+    @include media("<tablet")
+      position: fixed
+      bottom: 0
+      left: 0
+      appearance: none
+      border: none
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 46px
+      width: 100%
+      z-index: 10
+      @include subtitle(1.2rem)
+      letter-spacing: 2px
+      @include gbackground (100%)
+      color: $white
+      padding: 3px 7px
+      text-transform: uppercase
+      font-weight: 600
 
 
 
@@ -198,7 +224,8 @@
     display: flex
     margin-top: auto
     align-items: center
-
+    @include media("<tablet")
+      margin-bottom: 40px
 
 
   &__all-products-btn
