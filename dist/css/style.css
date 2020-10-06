@@ -5033,7 +5033,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     line-height: 5.5rem;
     font-weight: 900;
     text-transform: uppercase;
-    z-index: 3; }
+    z-index: 4; }
     @media (max-width: 1279px) {
       .constructor-landing__subtitle {
         font-size: 3.5rem;
