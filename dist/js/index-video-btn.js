@@ -10,13 +10,9 @@ const videoLink = videoModal.querySelector(`iframe`).getAttribute(`src`);
 
 
 const videoClose = function(){
-    let viewport = document.body.clientWidth
-    if (viewport > 1024) {
-        videoModal.classList.remove(`index__video-modal--active`)
-        indexSwiper.autoplay.start();
-        video.remove();
-    } else {
-    }
+    videoModal.classList.remove(`index__video-modal--active`)
+    indexSwiper.autoplay.start();
+    video.remove();
 };
 
 videoBtn.addEventListener(`click`, function () {
