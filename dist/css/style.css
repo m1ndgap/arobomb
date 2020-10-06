@@ -1487,11 +1487,23 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         line-height: 2rem; } }
   .index__video-block {
     position: relative;
-    display: none;
     justify-content: center;
     margin: auto 0 20px;
-    padding: 54px 0 50px;
-    width: 179px; }
+    padding: 54px 0 50px; }
+  .index__video-mask {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -100;
+    position: absolute; }
+  .index__video-wrap {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    -webkit-clip-path: url(#my-clip);
+            clip-path: url(#my-clip); }
+    .index__video-wrap img {
+      width: 100%;
+      display: none; }
   .index__video-svg {
     position: absolute;
     top: 0;

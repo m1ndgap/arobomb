@@ -49,11 +49,25 @@
 
   &__video-block
     position: relative
-    display: none
     justify-content: center
     margin: auto 0 20px
     padding: 54px 0 50px
-    width: 179px
+
+  &__video-mask
+    opacity: 0
+    pointer-events: none
+    z-index: -100
+    position: absolute
+
+  &__video-wrap
+    height: 250px
+    width: 250px
+    background-color: red
+    clip-path: url(#my-clip)
+    img
+      width: 100%
+      display: none
+
 
   &__video-svg
     position: absolute
