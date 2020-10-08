@@ -9,6 +9,9 @@
     font-weight: 900
     text-transform: uppercase
     margin: 10px 0
+    @include media ("<huge")
+      font-size: 4.0rem // 3.6rem
+      line-height: 4rem
     @include media ("<large")
       font-size: 3.5rem // 3.6rem
       line-height: 4rem
@@ -47,6 +50,9 @@
       &:nth-child(2)
         padding: 10px
         z-index: 1
+        @include media ("<huge")
+          padding: 0 15px
+          z-index: 3
         @include media ("<desktop")
           z-index: 3
       &:last-child
@@ -55,6 +61,8 @@
         z-index: 2
       &:first-child, &:nth-child(2), &:last-child
         position: relative
+        @include media ("<huge")
+
         @include media ("<large")
           padding: 5px
         @include media ("<tablet")
@@ -70,6 +78,7 @@
     font-weight: 900
     text-transform: uppercase
     z-index: 4
+
     @include media ("<large")
       font-size: 3.5rem // 3.6rem
       line-height: 4rem
@@ -148,7 +157,7 @@
   &__landing-images
     display: flex
     align-items: center
-    margin: -127px 0 -168px -65px
+    margin: -80px 0 -168px -65px
     @include media("<large")
       margin: -90px 0 -138px -35px
     @include media("<desktop")
@@ -160,15 +169,17 @@
 
   &__landing-img--1
     width: 550px
+    margin-top: -40px
     @include media("<large")
+      margin-top: unset
       width: 500px
     @include media("<desktop")
       width: 350px
 
   &__landing-img--2
     margin-left: -20px
-    margin-top: 15px
-    width: 700px
+    margin-top: 25px
+    width: 650px
     @include media("<large")
       width: 600px
     @include media("<desktop")
@@ -284,6 +295,36 @@
       font-size: 2.2rem
       letter-spacing: 0.5px
       line-height: initial
+
+    &--list
+      @include resetlist()
+      li
+        position: relative
+        padding-left: 40px
+        &:after
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: 7px
+          background-image: url('../img/checkmark_icon.svg')
+          background-repeat: no-repeat
+          background-size: contain
+          height: 30px
+          width: 31px
+        @include media("<large")
+          padding-left: 30px
+          &:after
+            top: 5px
+            height: 25px
+            width: 25px
+        @include media("<tablet")
+          padding-left: 25px
+          &:after
+            top: 3px
+            height: 20px
+            width: 20px
+
 
   &__slider-text
     max-width: 84%
@@ -568,9 +609,13 @@
     margin-right: calc((1176px - 100vw)/2)
     width: 831px
     @include media("<huge")
-      margin-right: calc((1250px - 100vw)/2)
+      margin-right: calc((1450px - 100vw)/2)
+      margin-left: -100px
+      width: 700px
     @include media("<large")
-      margin-right: calc((994px - 100vw)/2)
+      width: 600px
+
+      margin-right: calc((1194px - 100vw)/2)
     @include media("<desktop")
       height: auto
       margin-right: -15px

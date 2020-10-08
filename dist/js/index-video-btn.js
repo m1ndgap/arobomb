@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 const videoBtn = document.querySelector(`.index__video-play-btn`);
 const videoMobileBtn = document.querySelector(`.index__video-mobile-btn`);
 const videoModal = document.querySelector(`.index__video-modal`);
@@ -24,9 +26,32 @@ videoBtn.addEventListener(`click`, function () {
 })
 
 videoMobileBtn.addEventListener(`click`, function () {
-    window.location.href =  videoLink;
+    videoModal.classList.add(`index__video-modal--active`)
+    indexSwiper.autoplay.stop();
+    if (!videoModal.contains(video)) {
+        videoModal.appendChild(video);
+    }
+    // window.location.href =  videoLink;
 })
 
 videoBackdrop.addEventListener(`click`, videoClose);
 
 videoCloseBtn.addEventListener(`click`, videoClose);
+
+
+// safari hacks
+
+const svg = document.querySelector(`#my-clip`)
+const path = svg.querySelector(`path`)
+const el = document.querySelector(`.index__video-wrap`)
+
+function timeout() {
+    setTimeout(function () {
+        el.style.clipPath = "none"
+        el.offsetWidth;
+        el.style.clipPath = "url(#my-clip)"
+        console.log(`test`)
+        timeout();
+    }, 10);
+}
+timeout()

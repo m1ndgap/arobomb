@@ -1,7 +1,8 @@
 .index
   height: 100vh
   @include media("<tablet")
-    height: 85vh
+    height: calc((var(--vh, 1vh) * 100) - 54px)
+    overflow: hidden
 
   &__static
     @include container--content()
@@ -18,8 +19,8 @@
       padding-bottom: 52px
     @include media("<tablet")
       padding-top: 65px
-      height: 100vh
-    @media screen and (max-height: 750px)
+      height: calc((var(--vh, 1vh) * 100) - 54px)
+    @media screen and (max-height: 750px) and (min-width: 1440px)
       padding-top: 140px
 
   &__hash-title
@@ -50,18 +51,18 @@
       max-width: 70%
       font-size: 1.2rem
       line-height: 2rem
-    @media screen and (max-height: 750px)
+    @media screen and (max-height: 750px) and (min-width: 1440px)
       margin-bottom: 5px
 
   &__video-block
     position: relative
     justify-content: center
     margin: auto 0 20px
-    padding: 54px 0 50px
+    padding: 15px 0 0
     @include media("<huge")
       padding-top: 0
       margin-top: 10px
-    @media screen and (max-height: 750px)
+    @media screen and (max-height: 750px) and (min-width: 1440px)
       margin-top: 5px
 
   &__video-mask
@@ -89,20 +90,25 @@
     @include media("<huge")
       height: 200px
       width: 200px
-    @media screen and (max-height: 750px)
-      height: 150px
-      width: 150px
+    @media screen and (max-height: 800px)
+      height: 250px
+      width: 250px
     @include media("<tablet")
       display: none
 
 
 
   &__video-play-btn
+    @include subtitle(2.8rem)
+    font-weight: 900
     z-index: 2
     fill: $white
     cursor: pointer
     transition: transform $transition
     transform: scale(1)
+    color: $white
+    text-shadow: 0 0 3px $black
+    text-align: center
     &:hover
       transform: scale(1.05)
 
@@ -177,6 +183,8 @@
       width: 100%
       height: 85vh
       pointer-events: none
+      @include media("<tablet")
+        height: 70vh
     &--active
       opacity: 1
       pointer-events: all
@@ -208,6 +216,7 @@
     svg
       height: 30px
       width: 30px
+      fill: url(#linear-grad)
     &:focus
       outline: 0
       svg
@@ -225,7 +234,7 @@
     margin-top: auto
     align-items: center
     @include media("<tablet")
-      margin-bottom: 40px
+      margin-bottom: 0
 
 
   &__all-products-btn
