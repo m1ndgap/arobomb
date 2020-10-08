@@ -45,13 +45,13 @@ const svg = document.querySelector(`#my-clip`)
 const path = svg.querySelector(`path`)
 const el = document.querySelector(`.index__video-wrap`)
 
-// function timeout() {
-//     setTimeout(function () {
-//         el.style.clipPath = "none"
-//         el.offsetWidth;
-//         el.style.clipPath = "url(#my-clip)"
-//         console.log(`test`)
-//         timeout();
-//     }, 10);
-// }
-// timeout()
+function timeout() {
+    setTimeout(function () {
+        el.style.clipPath = "none"
+        el.offsetWidth;
+        el.style.clipPath = "url(#my-clip)"
+        console.log(`test`)
+        timeout();
+    }, 10);
+}
+timeout()
