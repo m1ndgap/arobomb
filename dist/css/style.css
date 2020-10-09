@@ -1516,7 +1516,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 350px;
+    height: 345px;
     width: 350px;
     background-image: url("../img/index-vid-bg.jpg");
     background-position: cover;
@@ -1531,11 +1531,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       z-index: 1; }
     @media (max-width: 1439px) {
       .index__video-wrap {
-        height: 200px;
+        height: 195px;
         width: 200px; } }
     @media screen and (max-height: 800px) {
       .index__video-wrap {
-        height: 250px;
+        height: 240px;
         width: 250px; } }
     @media (max-width: 767px) {
       .index__video-wrap {
