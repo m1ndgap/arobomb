@@ -50,7 +50,6 @@ function timeout() {
         el.style.clipPath = "none"
         el.offsetWidth;
         el.style.clipPath = "url(#my-clip)"
-        console.log(`test`)
         timeout();
     }, 10);
 }
