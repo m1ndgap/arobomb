@@ -794,10 +794,10 @@ body {
       background-size: 250%, contain; } }
   @media (max-width: 767px) {
     .main--landing-2 {
-      background-image: url("../img/splash-bg-3.jpg");
+      background-image: url("../img/splash-bg-3@2x.jpg");
       background-repeat: no-repeat;
       background-position: right top;
-      background-size: 200%; } }
+      background-size: 700px; } }
 
 .main--constructor {
   overflow: hidden;
@@ -7600,7 +7600,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         height: 965px; } }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .landing-2__flat-form-section::before {
-        background-image: url("../img/flat-form-desktop-bg@2x.jpg"); } }
+        background-image: url("../img/flat-form-desktop-bg@2x.jpg");
+        background-size: cover; } }
   .landing-2__flat-form-section > svg {
     stroke: url(#linear-grad-4);
     fill: transparent;
@@ -7943,6 +7944,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       background-image: url("../img/landing-mobile-form-bg.jpg");
       background-repeat: no-repeat;
       background-position: top center;
+      background-size: 750px;
       left: 0;
       height: 1200px; } }
   @media (max-width: 400px) {
