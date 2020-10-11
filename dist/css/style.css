@@ -823,7 +823,7 @@ body {
       background-size: 723px; } }
 
 .main-contact-us {
-  background: url("../img/map.png");
+  background-image: url("../img/map.svg");
   background-position: bottom right;
   background-repeat: no-repeat;
   height: 100vh;
@@ -1516,11 +1516,12 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 345px;
+    height: 340px;
     width: 350px;
     background-image: url("../img/index-vid-bg.jpg");
-    background-position: cover;
+    background-position: bottom;
     background-repeat: no-repeat;
+    background-size: 120%;
     -webkit-clip-path: url(#my-clip);
             clip-path: url(#my-clip); }
     .index__video-wrap img {
@@ -1531,12 +1532,12 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       z-index: 1; }
     @media (max-width: 1439px) {
       .index__video-wrap {
-        height: 195px;
+        height: 180px;
         width: 200px; } }
-    @media screen and (max-height: 800px) {
+    @media screen and (max-height: 800px) and (min-width: 1440px) {
       .index__video-wrap {
         height: 240px;
-        width: 250px; } }
+        width: 260px; } }
     @media (max-width: 767px) {
       .index__video-wrap {
         display: none; } }
@@ -8257,7 +8258,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   margin: 0 auto 0;
   padding: 0 132px 0;
   font-size: 1.8rem;
-  color: #444444; }
+  color: #444444;
+  margin-top: -50px; }
   @media (max-width: 1439px) {
     .about-product {
       width: 1280px;
@@ -8284,7 +8286,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     font-size: 7.2rem;
     font-weight: 900;
     padding: 0 20px;
-    margin-top: 0; }
+    margin-top: 0;
+    margin-bottom: 30px; }
     @media (max-width: 767px) {
       .about-product__title {
         font-size: 3.0rem;
@@ -8293,8 +8296,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: -30px;
     flex-wrap: wrap; }
+    @media (max-width: 1023px) {
+      .about-product__products-1 {
+        margin-bottom: 20px; } }
     @media (max-width: 767px) {
       .about-product__products-1 {
         flex-flow: column;
@@ -8475,7 +8481,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     background-color: #FFFFFF;
     box-shadow: 0 9px 20px #CCC;
     display: flex;
-    flex-basis: 100%;
+    flex-shrink: 0;
     flex-flow: column;
     align-items: center;
     justify-content: center;
