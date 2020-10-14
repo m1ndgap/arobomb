@@ -91,7 +91,7 @@ body
     @include media("<tablet")
       padding-top: 90px
   &--landing-1
-    background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-4.jpg")
+    background-image: url("../img/splash-bg-3.jpg"), url("../img/splash-bg-5.jpg")
     background-repeat: no-repeat
     background-position: right top, left bottom
     text-transform: uppercase
@@ -100,8 +100,8 @@ body
     @include media ("<tablet")
       padding-bottom: 60px
     @include media ("retina2x")
-      background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-4@2x.jpg") // both need to get tiny
-      background-size: 1097px, 1440px
+      background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg") // both need to get tiny
+      background-size: 1097px, 100%
       @include media ("<tablet")
         background-size: 250%, contain
   &--landing-2
@@ -110,13 +110,12 @@ body
     background-position: right top, left bottom
     background-size: auto, contain
     background-color: $bg-color // won't work while I have jpg's on bg
+    overflow: hidden
     @include media ("<tablet")
       padding-top: 75px
-
-    overflow: hidden
     @include media ("retina2x")
       background-image: url("../img/splash-bg-3@2x.jpg"), url("../img/splash-bg-5@2x.jpg") // both need to get tiny
-      background-size: 1097px, 1440px
+      background-size: 1097px, 100%
       @include media ("<tablet")
         background-size: 250%, contain
     @include media ("<tablet")
