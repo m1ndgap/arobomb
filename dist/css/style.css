@@ -1550,13 +1550,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     z-index: 2;
     fill: #FFFFFF;
     cursor: pointer;
-    transition: transform 300ms;
-    transform: scale(1);
     color: #FFFFFF;
     text-shadow: 0 0 3px #000000;
     text-align: center; }
-    .index__video-play-btn:hover {
-      transform: scale(1.05); }
   .index__video-mobile-btn {
     display: none; }
     @media (max-width: 767px) {
