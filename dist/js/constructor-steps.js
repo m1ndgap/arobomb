@@ -5,6 +5,7 @@ const cartAddress = `./cart/`
 const blobBtnSmallCls = `constructor__blob-btn--1`;
 const blobBtnBigCls = `constructor__blob-btn--2`;
 const tabCls = `constructor__tab`;
+const tabsCls = `constructor__tabs`;
 const indexCls = `constructor__index`;
 const catalogCls = `catalog__wrapper`;
 
@@ -66,6 +67,7 @@ function goToStep2(){
     ui.classList.add(`${uiCls}--active`);
     currentStep = 2;
     secondTab.removeEventListener(`click`, goToStep2)
+    scrollWindow();
     switchTabs();
     setupUI();
     updateUI();
@@ -75,6 +77,7 @@ function goToStep2(){
 function goToStep3(){
     currentStep = 3;
     secondTab.addEventListener(`click`, goToStep2)
+    scrollWindow();
     switchTabs();
     setupUI();
     updateUI();
@@ -84,6 +87,13 @@ function goToStep3(){
 function goToCart() {
     addBoxToCart(currentBox)
     window.location.href = cartAddress
+}
+
+function scrollWindow() {
+    console.log(constructorMenu)
+    console.log(window.location)
+    constructorMenu[0].scrollIntoView();
+
 }
 
 function setupUI() {
@@ -228,7 +238,7 @@ function switchTabs(){
     }
 }
 
-
+let constructorMenu = document.querySelectorAll(`.${tabsCls}`);
 let constructorTabs = document.querySelectorAll(`.${tabCls}`);
 switchTabs();
 

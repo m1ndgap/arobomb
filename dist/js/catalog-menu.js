@@ -5,11 +5,16 @@ const catMenuWrapCls = `submenu__wrapper`;
 const catSectionCls = `submenu__section`;
 const subcatLinkCls = `submenu__subsection-item`;
 const catalogItemCls = `catalog__item`;
+const catalogCls = `html`
 const constructorLink = `./constructor`
 
 let viewport = document.body.clientWidth;
 
-
+const scrollCatalog = () => {
+    catalog[0].scrollTop = 0
+    console.log(catalog)
+    //catalog[0].scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+}
 
 const hideSections = (sections) => {
     sections.forEach((sect) => {
@@ -42,23 +47,25 @@ const sortProducts = (link, items) => {
             }, 50)
         }
     })
+    scrollCatalog()
 }
 
 const sortProductsSection = (section, items) => {
     let type = section.dataset.type
-    console.log(`Sorting products section...`)
+    // console.log(`Sorting products section...`)
     items.forEach(function (item) {
         item.classList.remove(`${catalogItemCls}--active`)
     });
     items.forEach(function (item) {
         let itemType = item.dataset.type
-        console.log(type + " " + itemType)
+        // console.log(type + " " + itemType)
         if (itemType == type) {
             let timeout = window.setTimeout(function () {
                 item.classList.add(`${catalogItemCls}--active`);
             }, 50)
         }
     })
+    scrollCatalog()
 }
 
 const minimize = (submenu) => {
@@ -70,6 +77,7 @@ let submenuWrap = submenu.querySelector(`.${catMenuWrapCls}`);
 let sections = submenu.querySelectorAll(`.${catSectionCls}`);
 let links = submenu.querySelectorAll(`.${subcatLinkCls}`);
 let items = document.querySelectorAll(`.${catalogItemCls}`);
+let catalog = document.querySelectorAll(`${catalogCls}`);
 
 // initial sorting
 items.forEach(function(item){

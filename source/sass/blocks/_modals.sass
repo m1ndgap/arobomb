@@ -98,9 +98,13 @@
 
 
 
+
 .product-modal
   background-image: url('../img/splash-bg-2.jpg')
   background-size: cover
+  @include media("retina2x")
+    background-image: url('../img/splash-bg-2@2x.jpg')
+    max-width: 1920px
 
 .document-modal
   background-image: url('../img/splash-bg-1.jpg')
