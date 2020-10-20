@@ -1,0 +1,58 @@
+.basket-popup
+  position: absolute
+  right: 6px
+  top: calc(100% + 15px)
+  display: block
+  width: 287px
+  min-height: 66px
+  padding: 17px 20px
+  background-color: $white
+  opacity: 0
+  transition: opacity $transition
+  pointer-events: none
+  max-height: 90vh
+  &::after
+    content: ""
+    position: absolute
+    right: 3px
+    top: -6px
+    display: block
+    height: 13px
+    width: 13px
+    background-color: $white
+    transform: scaleY(1.5) rotate(45deg)
+
+  &--active
+    opacity: 1
+
+  &__item
+    display: flex
+  &__item + &__item
+    margin-top: 11px
+
+  &__text
+    display: flex
+    flex-flow: column
+    justify-content: center
+    margin-left: 17px
+
+  &__img
+    height: 44px
+    width: 44px
+    object-fit: contain
+
+  &__title, &__code
+    display: block
+    @include subtitle(1.2rem)
+    color: $text
+
+  &__title
+    font-weight: 900
+    white-space: nowrap
+    max-width: 180px
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__code
+    font-size: 1rem
+

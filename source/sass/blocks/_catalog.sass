@@ -68,6 +68,27 @@
     margin-top: auto
     max-height: 190px
     margin-bottom: -10px
+    opacity: 1
+    transition: opacity $transition
+    &--hidden
+      opacity: 0
+
+  &__item-toast
+    position: absolute
+    top: 30%
+    @include subtitle(2.0rem)
+    font-weight: 900
+    text-align: center
+    color: transparent
+    letter-spacing: 2px
+    @include gbackground(100%)
+    -webkit-background-clip: text
+    background-clip: text
+    background-position: 100% 0
+    opacity: 0
+    transition: opacity $transition
+    &--active
+      opacity: 1
 
   &__price-block
     position: relative

@@ -13,6 +13,17 @@ function collectDataCatalog(item){
     }
 }
 
+function animateAdding(item){
+    let toast = item.querySelector(`.catalog__item-toast`);
+    let img = item.querySelector(`.catalog__item-img`);
+    toast.classList.add(`catalog__item-toast--active`);
+    img.classList.add(`catalog__item-img--hidden`);
+    let timeout = window.setTimeout(function(){
+        toast.classList.remove(`catalog__item-toast--active`);
+        img.classList.remove(`catalog__item-img--hidden`);
+    }, 2000)
+
+}
 
 let addToCartLinks = document.querySelectorAll(`.${addToCartLinkCls}`)
 
@@ -20,6 +31,7 @@ addToCartLinks.forEach(function(el){
     el.addEventListener(`click`, function(evt){
         evt.preventDefault();
         let item = el.closest(`.${itemCls}`);
-        addToCart(collectDataCatalog(item))
+        animateAdding(item);
+        addToCart(collectDataCatalog(item));
     })
 })
