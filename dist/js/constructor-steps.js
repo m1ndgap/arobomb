@@ -92,7 +92,7 @@ function goToCart() {
 function scrollWindow() {
     console.log(constructorMenu)
     console.log(window.location)
-    constructorMenu[0].scrollIntoView();
+    window.location.hash = `#constructor`
 
 }
 
