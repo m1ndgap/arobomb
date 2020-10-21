@@ -3,6 +3,12 @@
 let basket = document.querySelector(`.main-menu__basket`)
 let basketpopup = basket.querySelector(`.basket-popup`)
 
+const emptyBasket = () => {
+    let boxLs = JSON.parse(localStorage.getItem(`arobombBoxes`));
+    let ls = JSON.parse(localStorage.getItem(`arobombCart`));
+    return (boxLs || ls)
+}
+
 const generatePopupEl = (obj, code) => {
     let {images, name, quantity} = obj;
     let newEl = document.createElement(`div`);
@@ -42,7 +48,7 @@ const populatePopup = () => {
 }
 
 basket.addEventListener(`mouseenter`, function(){
-    if (document.body.clientWidth > 768) {
+    if (document.body.clientWidth > 768 && emptyBasket()) {
         basketpopup.classList.add(`basket-popup--active`);
         populatePopup();
     }

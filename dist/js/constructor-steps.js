@@ -90,10 +90,7 @@ function goToCart() {
 }
 
 function scrollWindow() {
-    console.log(constructorMenu)
-    console.log(window.location)
-    window.location.hash = `#constructor`
-
+    window.location.hash = `#constructor-text`
 }
 
 function setupUI() {
