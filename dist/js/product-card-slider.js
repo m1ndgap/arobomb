@@ -14,6 +14,9 @@ const swiperParamsMobile = {
     }
 }
 
+let slidesNumber = document.querySelector(`.product__mobile-slider > .swiper-wrapper`).children.length
+console.log(slidesNumber)
+
 /* Which media query
 **************************************************************/
 function swiperMode() {
@@ -23,8 +26,7 @@ function swiperMode() {
 
     // Enable (for mobile)
     if(mobile.matches) {
-        if (!init) {
-            console.log(12312)
+        if (!init && slidesNumber > 2) {
             init = true;
             swiper = new Swiper('.product__mobile-slider', swiperParamsMobile);
         }
