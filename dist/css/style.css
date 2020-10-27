@@ -1712,6 +1712,10 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     @media (max-width: 767px) {
       .index__name-block {
         position: static; } }
+    @media screen and (max-height: 820px) and (max-width: 1440px) {
+      .index__name-block {
+        left: 350px;
+        top: 55vh; } }
   .index__product-type {
     display: flex;
     font-size: 1.8rem;

@@ -292,12 +292,18 @@
     top: 50%
     position: absolute
     left: 650px
+
     @include media("<huge")
       top: unset
       left: 15px
       bottom: 86px
     @include media("<tablet")
       position: static
+
+    @media screen and (max-height: 820px) and (max-width: 1440px)
+      left: 350px
+      top: 55vh
+
 
   &__product-type
     display: flex
