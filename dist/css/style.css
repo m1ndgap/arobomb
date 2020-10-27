@@ -6293,7 +6293,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       padding-bottom: 100px;
       opacity: 1;
       max-height: unset;
-      min-height: 1000px; }
+      min-height: 1000px;
+      align-content: flex-start; }
       @media (max-width: 1279px) {
         .catalog--constructor .catalog__wrapper--active {
           margin-top: 30px; } }
