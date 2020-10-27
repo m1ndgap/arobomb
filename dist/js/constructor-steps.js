@@ -92,9 +92,14 @@ function goToCart() {
 function scrollWindow() {
     //window.location.hash = `#constructor-text`
 
-    let uiOffset = document.querySelector(`#constructor`).offsetTop;
-    console.log(`menu offset is ` + uiOffset)
-    window.scroll(0, uiOffset-70);
+    // let uiOffset = document.querySelector(`#constructor`).offsetTop + 1000;
+    // let uiOffset2 = document.querySelector(`#constructor`).getBoundingClientRect().top;
+    // console.log(`menu BoundingClientRect is ` + uiOffset2)
+    // console.log(`menu offset is ` + uiOffset)
+    // window.scroll(0, uiOffset);
+
+    //document.querySelector(`#constructor`).scrollIntoView(true);
+    location.href = `#constructor-anchor`
 }
 
 

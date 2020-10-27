@@ -4739,6 +4739,13 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     .constructor__index--active * {
       pointer-events: all; }
 
+#constructor-anchor {
+  position: absolute;
+  top: 85vh;
+  width: 10px;
+  height: 10px;
+  pointer-events: none; }
+
 .constructor__box {
   position: relative;
   min-height: 485px;
