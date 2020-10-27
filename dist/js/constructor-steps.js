@@ -91,8 +91,9 @@ function goToCart() {
 
 function scrollWindow() {
     //window.location.hash = `#constructor-text`
-    console.log(ui.offset)
+
     let uiOffset = document.querySelector(`#constructor`).offsetTop;
+    console.log(`menu offset is ` + uiOffset)
     window.scroll(0, uiOffset-70);
 }
 
