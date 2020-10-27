@@ -91,7 +91,12 @@ function goToCart() {
 
 function scrollWindow() {
     window.location.hash = `#constructor-text`
+    console.log(ui.offset)
+    console.log()
+    let uiOffset = document.querySelector(`#constructor`).offsetTop
+    window.scrollTop(uiOffset)
 }
+
 
 function setupUI() {
     if (currentStep == 2) {
