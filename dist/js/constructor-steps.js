@@ -90,16 +90,14 @@ function goToCart() {
 }
 
 function scrollWindow() {
-    history.pushState("", document.title, window.location.pathname + window.location.search)
+    //history.pushState("", document.title, window.location.pathname + window.location.search)
 
     let uiOffset = document.querySelector(`#constructor`).offsetTop - 150;
     // let uiOffset2 = document.querySelector(`#constructor`).getBoundingClientRect().top;
     // console.log(`menu BoundingClientRect is ` + uiOffset2)
     // console.log(`menu offset is ` + uiOffset)
     console.log(uiOffset)
-    let timeout = window.setTimeout(function (){
-        window.scrollTo(0, uiOffset);
-    }, 1500)
+    window.scrollTo(0, uiOffset);
 
 
     //document.querySelector(`#constructor`).scrollIntoView(true);
