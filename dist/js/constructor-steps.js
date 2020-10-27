@@ -92,7 +92,7 @@ function goToCart() {
 function scrollWindow() {
     //history.pushState("", document.title, window.location.pathname + window.location.search)
 
-    let uiOffset = document.querySelector(`#constructor`).offsetTop - 150;
+    let uiOffset = document.querySelector(`#constructor`).offsetTop - 95;
     // let uiOffset2 = document.querySelector(`#constructor`).getBoundingClientRect().top;
     // console.log(`menu BoundingClientRect is ` + uiOffset2)
     // console.log(`menu offset is ` + uiOffset)
