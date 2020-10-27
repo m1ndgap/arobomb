@@ -54,7 +54,7 @@ function filter(){
             if (itemType == `souvenirs`) {
                 let timeout = window.setTimeout(function () {
                     item.classList.add(`${itemCls}--active`);
-                }, 50)
+                }, 10)
             }
         })
     } else if(currentStep == 3){
@@ -63,7 +63,7 @@ function filter(){
             if (itemType == `aromas`) {
                 let timeout = window.setTimeout(function () {
                     item.classList.add(`${itemCls}--active`);
-                }, 50)
+                }, 10)
             }
         })
     }

@@ -77,11 +77,11 @@ function goToStep2(){
 function goToStep3(){
     currentStep = 3;
     secondTab.addEventListener(`click`, goToStep2)
-    scrollWindow();
     switchTabs();
     setupUI();
     updateUI();
     filter();
+    scrollWindow();
 }
 
 function goToCart() {
@@ -92,12 +92,15 @@ function goToCart() {
 function scrollWindow() {
     history.pushState("", document.title, window.location.pathname + window.location.search)
 
-    let uiOffset = document.querySelector(`#constructor`).offsetTop;
+    let uiOffset = document.querySelector(`#constructor`).offsetTop - 150;
     // let uiOffset2 = document.querySelector(`#constructor`).getBoundingClientRect().top;
     // console.log(`menu BoundingClientRect is ` + uiOffset2)
     // console.log(`menu offset is ` + uiOffset)
     console.log(uiOffset)
-    window.scrollTo(0, uiOffset);
+    let timeout = window.setTimeout(function (){
+        window.scrollTo(0, uiOffset);
+    }, 1500)
+
 
     //document.querySelector(`#constructor`).scrollIntoView(true);
     // location.href = `#constructor-anchor`
