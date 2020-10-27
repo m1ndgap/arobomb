@@ -67,11 +67,11 @@ function goToStep2(){
     ui.classList.add(`${uiCls}--active`);
     currentStep = 2;
     secondTab.removeEventListener(`click`, goToStep2)
-    scrollWindow();
     switchTabs();
     setupUI();
     updateUI();
     filter();
+    scrollWindow();
 }
 
 function goToStep3(){
@@ -92,14 +92,18 @@ function goToCart() {
 function scrollWindow() {
     //window.location.hash = `#constructor-text`
 
-    // let uiOffset = document.querySelector(`#constructor`).offsetTop + 1000;
+    let uiOffset = document.querySelector(`#constructor`).offsetTop - 120;
     // let uiOffset2 = document.querySelector(`#constructor`).getBoundingClientRect().top;
     // console.log(`menu BoundingClientRect is ` + uiOffset2)
     // console.log(`menu offset is ` + uiOffset)
-    // window.scroll(0, uiOffset);
+    console.log(uiOffset)
+    window.scrollTo(0, uiOffset);
 
     //document.querySelector(`#constructor`).scrollIntoView(true);
-    location.href = `#constructor-anchor`
+    // location.href = `#constructor-anchor`
+    // let uiOffset = document.querySelector(`#constructor-anchor`)
+    // uiOffset.querySelector(`#constructor`).scrollIntoView(false);
+
 }
 
 
