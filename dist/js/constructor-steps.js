@@ -90,14 +90,14 @@ function goToCart() {
 }
 
 function scrollWindow() {
-    //window.location.hash = `#constructor-text`
+    window.location.hash = ``
 
     let uiOffset = document.querySelector(`#constructor`).offsetTop - 120;
     // let uiOffset2 = document.querySelector(`#constructor`).getBoundingClientRect().top;
     // console.log(`menu BoundingClientRect is ` + uiOffset2)
     // console.log(`menu offset is ` + uiOffset)
     console.log(uiOffset)
-    window.scrollTo(0, uiOffset);
+    window.scrollTo(uiOffset, uiOffset);
 
     //document.querySelector(`#constructor`).scrollIntoView(true);
     // location.href = `#constructor-anchor`
