@@ -4345,9 +4345,13 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     .landing-2__header-slider-controls {
       flex-flow: row nowrap;
       order: 1;
-      width: 100%;
-      max-width: 60%;
+      width: 60%;
+      max-width: unset;
       margin-bottom: 0; } }
+  @media (max-width: 1023px) {
+    .landing-2__header-slider-controls {
+      width: 100%;
+      max-width: unset; } }
 
 .landing-2__header-slider-pagination {
   font-size: 1.8rem;
@@ -4369,10 +4373,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     opacity: 1; }
     .landing-2__header-slider-pagination--active svg {
       opacity: 1; }
-  @media (max-width: 1023px) {
+  @media (max-width: 1279px) {
     .landing-2__header-slider-pagination {
-      text-shadow: 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF;
-      max-width: 50px; } }
+      text-shadow: 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF, 0 0 3px #FFFFFF; } }
   @media (max-width: 1023px) {
     .landing-2__header-slider-pagination {
       max-width: 153px; } }

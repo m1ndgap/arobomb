@@ -19,10 +19,12 @@
     @include media("<large")
       flex-flow: row nowrap
       order: 1
-      width: 100%
-      max-width: 60%
+      width: 60%
+      max-width: unset
       margin-bottom: 0
-
+    @include media("<desktop")
+      width: 100%
+      max-width: unset
 
   &__header-slider-pagination
     font-size: 1.8rem
@@ -44,11 +46,8 @@
       opacity: 1
       svg
         opacity: 1
-    @include media("<desktop")
+    @include media("<large")
       text-shadow: 0 0 3px $white, 0 0 3px $white, 0 0 3px $white, 0 0 3px $white, 0 0 3px $white, 0 0 3px $white
-
-
-      max-width: 50px
     @include media("<desktop")
       max-width: 153px
     @include media("<tablet")
