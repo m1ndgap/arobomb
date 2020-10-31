@@ -6447,7 +6447,10 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       color: #FFFFFF;
       line-height: 1.4rem; }
       .landing-1__title-pitch p {
-        margin: 0 35px 0 0; } }
+        margin: 0 35px 0 0; }
+      .landing-1__title-pitch .landing-1__crossed-text:after {
+        height: 1px;
+        background-color: #FFFFFF; } }
 
 .landing-1__title-pitch--wrapper {
   width: 100%;
@@ -6461,6 +6464,20 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   @media (max-width: 1023px) {
     .landing-1__pitch-topics {
       margin-bottom: 30px; } }
+
+.landing-1__crossed-text {
+  display: inline-block;
+  position: relative; }
+  .landing-1__crossed-text:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 2px;
+    width: 105%;
+    background-color: #444444; }
 
 .landing-1__pitch-price {
   margin-bottom: 108px; }
@@ -6477,6 +6494,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     @media (max-width: 1279px) {
       .landing-1__pitch-price span {
         font-size: 2.6rem; } }
+  .landing-1__pitch-price .landing-1__crossed-text {
+    font-size: 1.8rem;
+    margin-right: 15px; }
   @media (max-width: 767px) {
     .landing-1__pitch-price {
       display: none; } }
@@ -8294,6 +8314,12 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       .contact-us__form--wrapper {
         margin-top: 50px;
         padding: 0; } }
+  .contact-us__checkbox-wrap {
+    display: flex;
+    align-items: flex-end; }
+    .contact-us__checkbox-wrap a {
+      margin-left: 15px;
+      color: #444444; }
   .contact-us__form-motto {
     margin-top: 0;
     text-transform: uppercase;

@@ -82,6 +82,10 @@
       line-height: 1.4rem
       p
         margin: 0 35px 0 0
+      .landing-1__crossed-text
+        &:after
+          height: 1px
+          background-color: $white
 
   // title-pitch children
   &__title-pitch--wrapper
@@ -94,6 +98,21 @@
     margin-bottom: 69px
     @include media ("<desktop")
       margin-bottom: 30px
+
+  &__crossed-text
+    display: inline-block
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      display: block
+      height: 2px
+      width: 105%
+      background-color: $text
+
 
   &__pitch-price
     margin-bottom: 108px
@@ -110,6 +129,9 @@
         font-size: 2.6rem
       // @include media ("<tablet")
       //   font-size: 1.9rem
+    .landing-1__crossed-text
+      font-size: 1.8rem
+      margin-right: 15px
     @include media ("<tablet")
       display: none
 

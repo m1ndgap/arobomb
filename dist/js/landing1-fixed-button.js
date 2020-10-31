@@ -17,7 +17,6 @@ function changeBtn(btnTarget){
     } else {
         fixBtnSubText.innerText = ''
     }
-
 }
 
 
