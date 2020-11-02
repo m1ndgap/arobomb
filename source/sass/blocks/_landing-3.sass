@@ -1,0 +1,597 @@
+.landing3__slider, .landing3__info, .landing3__delivery, .landing3__orb-list
+  @include container--content()
+
+.landing3
+
+  &__header
+    padding-top: 133px
+    background-image: url('../img/landing3_header-bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    &-wrapper
+      @include container--content()
+      padding-bottom: 163px
+      @include media("<large")
+        padding-bottom: 163px
+
+  &__header-title
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    margin-top: 0
+    span
+      padding: 3px 15px
+      @include gbackground(550px)
+      display: inline-block
+      @include subtitle(4.8rem)
+      color: $white
+      font-weight: 900
+      &:nth-child(2)
+        padding-top: 0
+        padding-bottom: 0
+  &__header-text
+    margin-top: 36px
+    max-width: 460px
+    @include subtitle(1.8rem)
+    line-height: 30px
+    color: $white
+    font-weight: 600
+
+  &__header-interactives
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin-top: 101px
+
+  &__header-btn
+    margin-top: auto
+
+  &__header-svg-btn
+    position: relative
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+    background: none
+    border: none
+    appearance: none
+    width: 170px
+    height: 191px
+    cursor: pointer
+    &:focus, &:active
+      outline: none
+    .landing3__header-svg-btn-bg
+      position: absolute
+      top: 0
+      left: 0
+      fill: $white
+      z-index: 1
+    span
+      @include subtitle(1.8rem)
+      position: relative
+      z-index: 2
+      margin: 10px 0 5px
+      @include gbackground(200%, 50%)
+      padding: 10px 55px
+      font-size: 1.7rem
+      font-weight: 700
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: transparent
+      border: none
+      background-position: 100% 0
+      background-clip: text
+      -webkit-background-clip: text
+      transition: background-position $transition
+      //&:hover
+      //  background-position: 0 0
+      //&:active, &:focus
+      //  outline: none
+      //  box-shadow: 0 0 3px 0 rgba($black ,0.5)
+    .landing3__header-svg-btn-play
+      position: relative
+      stroke-width: 2px
+      fill: url(#linear-grad-4)
+      z-index: 2
+
+
+  &__pitch
+    position: relative
+    padding: 300px 0 0 0
+    background-color: $bg-color
+    background-image: url('../img/landing3-pitch-bg-1.jpg'), url('../img/landing3-pitch-bg-2.jpg')
+    background-repeat: no-repeat
+    background-position: top left, top -300px right
+    background-size: 414px , 868px
+    .landing3__list-wrapper
+      @include container--content()
+      position: relative
+    .landing3__list-img-wrapper
+
+
+  &__pitch-list
+    max-width: 570px
+
+  &__pitch-img
+    position: absolute
+    &--bottle-1
+      left: calc(100% - 290px)
+      top: 96px
+    &--souvenir-1
+      width: 175px
+      left: 71px
+      top: -255.4px
+    &--souvenir-2
+      width: 186px
+      left: 406px
+      top: -204.4px
+    &--souvenir-3
+      width: 322px
+      right: 250px
+      top: -252.4px
+    &--souvenir-4
+      width: 287px
+      right: calc(100% - 190px)
+      top: 466px
+    &--souvenir-5
+      width: 211px
+      left: 304px
+      top: 222px
+    &--souvenir-6
+      width: 280px
+      right: 430px
+      top: 102px
+
+  &__bindings
+    @include container--content()
+
+  &__bindings-wrapper
+    display: flex
+    justify-content: space-between
+
+  &__binding
+    @include subtitle(1.8rem)
+    font-weight: 900
+    letter-spacing: 1px
+    &--def
+      p
+        display: inline-block
+        margin-left: 80px
+
+  &__binding-img--mirror
+    margin-left: -50px
+
+
+  &__delivery
+    position: relative
+    margin: 100px auto 100px
+
+  &__delivery-img
+    width: 767px
+    position: absolute
+    right: 50px
+    top: 70px
+
+  &__delivery-text
+    margin-bottom: 50px
+
+  &__slider
+    @include container--content()
+    overflow: hidden
+    padding-bottom: 30px
+    margin-bottom: 109px
+    .constructor-landing__btn
+      margin: 0 auto
+      width: 584px
+      height: 45px
+      justify-content: center
+      svg
+        margin-left: 170px
+    @include media ("<desktop")
+      .constructor-landing__btn
+        margin: 50px 0 0 -15px
+    @include media ("<tablet")
+      overflow: visible
+      margin-bottom: 30px
+
+  &-swiper-container
+    position: relative
+    width: 100%
+    margin: 100px 0
+    padding: 0 30px
+    overflow: hidden
+    @include media ("<desktop")
+      margin: 0
+      padding: 0
+
+    .constructor-landing__swiper-img
+      display: block
+      height: 175px
+
+    .swiper-wrapper
+      align-items: stretch
+
+    .swiper-slide
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .swiper-button-next, .swiper-button-prev
+      border: 1px solid
+      border-image-source: linear-gradient(90deg, $gradient-start 0%, $gradient-end 100%)
+      border-image-slice: 1
+      width: 33px
+      height: 86px
+      margin-top: -43px
+      background: $bg-color
+      z-index: 1
+      @include media ("<desktop")
+        display: none
+      &:hover
+        background: #e5edff
+        transition: 400ms
+      svg
+        fill: url(#linear-grad-4)
+      &::after
+        display: none
+
+    .swiper-button-next
+      transform: rotate(180deg)
+      right: 1px
+
+    .swiper-button-prev
+      left: 0
+
+    .swiper-pagination
+      width: 90%
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+      display: flex
+      @include media (">=desktop")
+        display: none
+      .swiper-pagination-bullet
+        flex-grow: 1
+        height: 1px
+        margin: 0 8px
+        background-color: $text
+        border-radius: unset
+        &:focus
+          outline: none
+        &::after
+          content: " "
+          padding: 15px
+          display: block
+          position: relative
+          bottom: 13px
+        &-active
+          @include gbackground(100%)
+
+
+
+  &__info
+    position: relative
+    display: flex
+    flex-flow: row wrap
+
+  &__info-title
+    position: absolute
+    top: 0
+    left: 410px
+    h2
+      max-width: 555px
+      margin-bottom: 20px
+
+  &__img-block
+    display: flex
+    flex-basis: 50%
+    p
+      margin: auto 50px 113px 40px
+      @include subtitle(1.6rem)
+      text-transform: none
+      line-height: 2rem
+
+  &__duration
+    max-width: 352px
+    margin: auto 50px -180px auto
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: stretch
+  &__duration-title
+    @include subtitle(1.8rem)
+    font-weight: 900
+    width: 80%
+    align-self: center
+  &__duration-text
+    width: 80%
+    @include subtitle(1.6rem)
+    text-transform: none
+    line-height: 2rem
+    align-self: center
+  &__info-gradient-span
+    padding: 2px 5px
+    @include gbackground(100%)
+    display: inline-block
+    @include subtitle(1.6rem)
+    text-transform: none
+    color: $white
+    font-weight: 900
+
+  &__info-price
+    margin: 59px 0 60px
+    flex-basis: 100%
+    .landing3__info-gradient-span
+      font-size: 3.6rem
+
+  &__info-gradient-text
+    span
+      padding: 2px 5px
+      @include gbackground(350px)
+      display: inline-block
+      @include subtitle(1.8rem)
+      color: $white
+      font-weight: 900
+
+
+  &__package
+    @include container--content()
+    padding-top: 150px
+
+  &__package-title
+    .landing3__info-gradient-span
+      font-size: 3.6rem
+      text-transform: uppercase
+
+
+
+  &__text
+    @include subtitle(3.6rem)
+    line-height: 4.3rem
+    font-weight: 900
+    letter-spacing: 3.6px
+    @include media("<large")
+      font-size: 3.0rem
+      letter-spacing: 2px
+      line-height: initial
+    @include media ("<tablet")
+      font-size: 2.2rem
+      letter-spacing: 0.5px
+      line-height: initial
+    &--smaller
+      font-size: 1.8rem
+      font-weight: 900
+
+    &--list
+      @include resetlist()
+      margin-bottom: 300px
+      margin-left: 13px
+      li
+        position: relative
+        padding-left: 40px
+        &:after
+          content: ""
+          display: block
+          position: absolute
+          left: 0
+          top: 7px
+          background-image: url('../img/checkmark_icon.svg')
+          background-repeat: no-repeat
+          background-size: contain
+          height: 30px
+          width: 31px
+        @include media("<large")
+          padding-left: 30px
+          &:after
+            top: 5px
+            height: 25px
+            width: 25px
+        @include media("<tablet")
+          padding-left: 25px
+          &:after
+            top: 3px
+            height: 20px
+            width: 20px
+      li + li
+        margin-top: 22px
+
+  &__plain-title
+    @include subtitle(3.6rem)
+    line-height: 4.3rem
+    font-weight: 900
+    letter-spacing: 3.6px
+    @include media("<large")
+      font-size: 3.0rem
+      letter-spacing: 2px
+      line-height: initial
+    @include media ("<tablet")
+      font-size: 2.2rem
+      letter-spacing: 0.5px
+      line-height: initial
+
+  &__list
+    @include resetlist
+    display: flex
+    flex-flow: row wrap
+    padding-top: 10px
+    justify-content: space-around
+    @include media("<tablet")
+      justify-content: center
+
+
+  &__list-item
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    margin: 0 24px 15px
+    @include media("<large")
+      margin: 0 20px 15px
+    @include media("<desktop")
+      margin: 0 10px 15px
+    @include media("<tablet")
+      flex-basis: 50%
+      margin: 10px 0
+    &--birthday
+      transform: translate(-18px, -1px)
+      @include media("<tablet")
+        order: 1
+        transform: translate(-17px, 15px)
+
+    &--love-m
+      transform: translate(-39px, 17px)
+      @include media("<tablet")
+        order: 4
+        transform: translate(24px, -25px)
+    &--friend-m
+      transform: translate(-37px, -23px)
+      @include media("<tablet")
+        order: 2
+        transform: translate(-44px, -5px)
+    &--23feb
+      transform: translate(-8px, -11px)
+      .constructor-landing__list-svg-img
+        margin-top: -10px
+      @include media("<tablet")
+        order: 6
+        transform: translate(7px, -12px)
+    &--love-f
+      transform: translate(15px, -5px)
+      @include media("<tablet")
+        order: 5
+        transform: translate(-35px, -2px)
+    &--dad
+      transform: translate(16px, 41px)
+      @include media("<tablet")
+        order: 3
+        transform: translate(59px, 33px)
+    &--just
+      transform: translate(11px, -9px)
+      .constructor-landing__list-svg-img
+        margin-top: -15px
+      @include media("<large")
+        transform: translate(0px, 15px)
+      @include media("<tablet")
+        order: 11
+        transform: translate(0px, 19px)
+    &--car
+      transform: translate(83px, 10px)
+      .constructor-landing__list-svg-wrap
+        height: 100px
+        width: 100px
+      .constructor-landing__list-svg-bg
+        height: 100px
+        width: 100px
+      @include media("<large")
+        transform: translate(13px, 10px)
+      @include media("<tablet")
+        order: 9
+        transform: translate(32px, 1px)
+    &--newyear
+      transform: translate(18px, -56px)
+      @include media("<large")
+        transform: translate(13px, 10px)
+      @include media("<tablet")
+        order: 12
+        transform: translate(17px, -18px)
+    &--mom
+      transform: translate(33px, 9px)
+      @include media("<large")
+        transform: translate(0px, 10px)
+      @include media("<tablet")
+        order: 8
+        transform: translate(-57px, -14px)
+    &--8march
+      transform: translate(-13px, -30px)
+      @include media("<desktop")
+        transform: translate(0px, 0px)
+      @include media("<tablet")
+        order: 7
+        transform: translate(-17px, 15px)
+    &--friend-f
+      transform: translate(-45px, -2px)
+      @include media("<large")
+        transform: translate(0px, 10px)
+      @include media("<tablet")
+        order: 10
+        transform: translate(20px, -32px)
+
+
+  &__list-text
+    margin-top: 7px
+    @include subtitle(1.8rem)
+    font-weight: 600
+    @include media("<desktop")
+      font-size: 1.6rem
+    @include media("<tablet")
+      font-size: 1.2rem
+
+  &__list-svg-wrap
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 80px
+    height: 83px
+    &--big-orb
+      width: 135px
+      height: 144px
+      .constructor-landing__list-svg-bg
+        fill: url(#linear-grad-4)
+      .constructor-landing__list-svg-img
+        fill: $white
+      @include media("<tablet")
+        width: 92px
+        height: 92px
+        .constructor-landing__list-svg-bg
+          width: 92px
+          height: 92px
+        .constructor-landing__list-svg-img
+          width: 52px
+          height: 52px
+
+
+  &__list-svg-bg
+    fill: transparent
+    stroke: url(#linear-grad-4)
+    position: absolute
+    top: 0
+    left: 0
+
+  &__list-svg-img
+    position: relative
+    fill: url(#linear-grad-4)
+
+.round-btn
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  width: max-content
+  padding: 27px 35px 27px 28px
+  text-decoration: none
+  background-image: linear-gradient(90deg, #B434A3 0%, #40196F 100%)
+  border-radius: 45px
+  border: 2px solid $white
+  span
+    @include subtitle(1.8rem)
+    color: $white
+    font-weight: 500
+    letter-spacing: 0.7px
+    text-transform: uppercase
+  svg
+    margin-left: 30px
+    fill: $white
+    transform: translateX(0)
+    transition: transform $transition
+  &:hover
+    svg
+      transform: translateX(15px)
+
+
+.landing3__gradient-highlight
+  padding: 3px 15px
+  @include gbackground(100%)
+  display: inline-block
+  @include subtitle(3.6rem)
+  color: $white
+  font-weight: 900

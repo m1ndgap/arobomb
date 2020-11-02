@@ -41,6 +41,7 @@
     font-size: 1.8rem
     color: $black
     display: flex
+    transition: color $transition
     @include media("<huge")
       order: 1
       margin-left: 5px
@@ -168,6 +169,7 @@
     font-size: 1.5rem
     font-weight: 500
     color: $text
+    transition: color $transition
     @include media("<tablet")
       display: inline-block
       font-size: 1.6rem
@@ -365,3 +367,15 @@
   &:after
     opacity: 0
 
+.main-menu--white-text
+  .main-menu__logo
+    color: $white
+  .main-menu__link
+    color: $white
+  .main-menu__list-item--submenu
+    &:hover
+      .main-menu__link
+        color: $text
+  .main-menu__basket
+    svg
+      fill: $white
