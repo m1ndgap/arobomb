@@ -19,7 +19,7 @@
                         <use xlink:href="#big-btn-arrow"></use>
                     </svg>
                 </a>
-                <button class="landing3__header-svg-btn">
+                <button class="landing3__header-svg-btn  landing3__video-play-btn ">
                     <svg width="170" height="180" viewBox="0 0 135 120" class="landing3__header-svg-btn-bg">
                         <path d="M66.4139 129.86C55.1973 129.49 32.9977 128.758 16.3363 111.149C-0.146781 93.7296 -0.0984333 71.5328 0.0182666 66.9247C0.718466 39.3992 19.7322 15.6418 43.344 5.69158C47.7102 3.85207 77.7938 -8.22657 105.237 9.66124C135.492 29.3818 134.138 67.0138 133.933 70.8944C133.645 76.3256 132.301 101.721 111.989 117.954C95.8756 130.831 77.482 130.224 66.4139 129.86Z">
                             <animate dur="5s" begin="0" repeatCount="indefinite" attributeName="d" values="M66.4139 129.86C55.1973 129.49 32.9977 128.758 16.3363 111.149C-0.146781 93.7296 -0.0984333 71.5328 0.0182666 66.9247C0.718466 39.3992 19.7322 15.6418 43.344 5.69158C47.7102 3.85207 77.7938 -8.22657 105.237 9.66124C135.492 29.3818 134.138 67.0138 133.933 70.8944C133.645 76.3256 132.301 101.721 111.989 117.954C95.8756 130.831 77.482 130.224 66.4139 129.86Z; M66.414,129.859c-11.217-0.369-27.919-1.916-44.581-19.525C6.333,89.667,7.383,70.775,7.5,66.167 C8.2,38.642,19.732,15.642,43.344,5.691c4.366-1.839,34.45-13.918,61.892,3.97C131.834,31,128.205,66.786,128,70.667	c-0.289,5.432,0.275,31.333-16.012,47.287C95.875,130.831,77.482,130.225,66.414,129.859z; M66.4139 129.86C55.1973 129.49 32.9977 128.758 16.3363 111.149C-0.146781 93.7296 -0.0984333 71.5328 0.0182666 66.9247C0.718466 39.3992 19.7322 15.6418 43.344 5.69158C47.7102 3.85207 77.7938 -8.22657 105.237 9.66124C135.492 29.3818 134.138 67.0138 133.933 70.8944C133.645 76.3256 132.301 101.721 111.989 117.954C95.8756 130.831 77.482 130.224 66.4139 129.86Z"/>
@@ -397,8 +397,17 @@
         </a>
     </div>
 </main>
+<div class="landing3__video-modal">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/s-TeSglkUDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <button type="button" class="landing3__video-close">
+        <svg viewBox="0 0 25 25" width="25" height="25" class="icon-close">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button>
+</div>
+<div class="landing3__video-backdrop"></div>
 
-<script src="./js/thankyou-modal.js"></script>
+<!--<script src="./js/thankyou-modal.js"></script>-->
 <script src="./js/landing-3.js"></script>
 
 //= ./html-components/_footer.html

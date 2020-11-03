@@ -48,3 +48,37 @@ let landing3TabsSwiper = new Swiper('.landing3-swiper-container', {
         }
     }
 });
+
+
+const videoBtn = document.querySelector(`.landing3__video-play-btn`);
+const videoModal = document.querySelector(`.landing3__video-modal`);
+const video = videoModal.querySelector(`iframe`);
+const videoBackdrop = document.querySelector(`.landing3__video-backdrop`);
+const videoCloseBtn = document.querySelector(`.landing3__video-close`);
+const videoLink = videoModal.querySelector(`iframe`).getAttribute(`src`);
+
+
+const videoClose = function(){
+    videoModal.classList.remove(`landing3__video-modal--active`)
+    video.remove();
+};
+
+videoBtn.addEventListener(`click`, function () {
+    videoModal.classList.add(`landing3__video-modal--active`)
+    if (!videoModal.contains(video)) {
+        videoModal.appendChild(video);
+    }
+})
+
+// videoMobileBtn.addEventListener(`click`, function () {
+//     videoModal.classList.add(`landing3__video-modal--active`)
+//     indexSwiper.autoplay.stop();
+//     if (!videoModal.contains(video)) {
+//         videoModal.appendChild(video);
+//     }
+//     // window.location.href =  videoLink;
+// })
+
+videoBackdrop.addEventListener(`click`, videoClose);
+
+videoCloseBtn.addEventListener(`click`, videoClose);

@@ -23,6 +23,12 @@
   background-repeat: no-repeat
   background-position: bottom right
   background-size: 873px 1871px
+  @include media("<huge")
+    background-position: bottom -200px right
+  @include media("<desktop")
+    background-position: bottom -200px right
+    background-size: 436px 935px
+
 
   &__header
     padding-top: 133px
@@ -32,8 +38,17 @@
     &-wrapper
       @include container--content()
       padding-bottom: 163px
-      @include media("<large")
-        padding-bottom: 163px
+    @include media("<huge")
+      padding-top: 163px
+      &-wrapper
+        padding-bottom: 80px
+    @include media("<tablet")
+      padding-top: 75px
+      &-wrapper
+        padding-bottom: 20px
+
+
+
 
   &__header-title
     display: flex
@@ -50,6 +65,13 @@
       &:nth-child(2)
         padding-top: 0
         padding-bottom: 0
+      @include media("<large")
+        font-size: 3.6rem
+        padding: 2px 10px
+      @include media("<tablet")
+        font-size: 2rem
+        padding: 2px 7px
+
   &__header-text
     margin-top: 36px
     max-width: 460px
@@ -57,12 +79,22 @@
     line-height: 30px
     color: $white
     font-weight: 600
+    @include media("<large")
+      font-size: 1.6rem
+    @include media("<tablet")
+      font-size: 1.4rem
 
   &__header-interactives
     display: flex
     justify-content: space-between
     align-items: flex-start
     margin-top: 101px
+    @include media("<huge")
+      justify-content: flex-start
+      margin-top: 0
+    @include media("<tablet")
+      flex-flow: column-reverse nowrap
+      align-items: center
 
   &__header-btn
     margin-top: auto
@@ -114,15 +146,18 @@
       stroke-width: 2px
       fill: url(#linear-grad-4)
       z-index: 2
+    @include media("<huge")
+      margin-left: 250px
+    @include media("<desktop")
+      margin-left: auto
+    @include media("<tablet")
+      margin-left: 0
+      margin-bottom: 30px
 
 
   &__pitch
     position: relative
     padding: 300px 0 0 0
-    //background-image: url('../img/landing3-pitch-bg-1.jpg'), url('../img/landing3-pitch-bg-2.jpg')
-    background-repeat: no-repeat
-    background-position: top left, top -300px right
-    background-size: 414px , 868px
     &::after, &::before
       content: ""
       display: block
@@ -143,56 +178,103 @@
       height: 1217px
       transform: rotate(-162deg)
       z-index: 1
-
-
     .landing3__list-wrapper
       @include container--content()
       position: relative
       z-index: 3
-
-
+    @include media("<large")
+      &::before
+        background-size: cover
+        left: -530.2px
+        top: 40px
+        width: 717px
+        height: 478px
+        transform: rotate(170deg)
+      &::after
+        display: none
+    @include media("<desktop")
+      padding-top: 140px
 
 
   &__pitch-list
     max-width: 570px
+    @include media("<desktop")
+      padding-right: 150px
 
   &__pitch-img
     position: absolute
     z-index: 3
     &--bottle-1
+      width: 531px
       left: calc(100% - 290px)
       top: 96px
+      @include media("<large")
+        width: 300px
+      @include media("<desktop")
+        width: 150px
+        right: 10px
+        left: unset
+        top: 146px
+
     &--souvenir-1
       width: 175px
       left: 71px
       top: -255.4px
+      @include media("<desktop")
+        width: 50px
+        left: 41px
+        top: -115.4px
     &--souvenir-2
       width: 186px
       left: 406px
       top: -204.4px
+      @include media("<desktop")
+        width: 66px
+        left: 40%
+        top: -84.4px
     &--souvenir-3
       width: 322px
       right: 250px
       top: -252.4px
+      @include media("<large")
+        width: 150px
+      @include media("<desktop")
+        width: 108px
+        left: 70%
+        top: -131.4px
     &--souvenir-4
       width: 287px
       right: calc(100% - 190px)
       top: 466px
+      @include media("<large")
+        display: none
     &--souvenir-5
       width: 211px
       left: 304px
       top: 222px
+      @include media("<large")
+        display: none
     &--souvenir-6
       width: 280px
       right: 430px
       top: 102px
+      @include media("<large")
+        display: none
 
   &__bindings
     @include container--content()
+    @include media("<large")
+      width: 100%
+    @include media("<desktop")
+      .landing3__text
+        margin-bottom: 20px
+
 
   &__bindings-wrapper
     display: flex
     justify-content: space-between
+    @include media("<desktop")
+      flex-flow: column nowrap
 
   &__binding
     @include subtitle(1.8rem)
@@ -202,23 +284,53 @@
       p
         display: inline-block
         margin-left: 80px
+    @include media("<large")
+      flex-basis: 50%
+      img
+        width: 100%
+      &--def
+        p
+          display: block
+          margin-left: unset
+    @include media("<desktop")
+      img
+        max-width: 500px
 
   &__binding-img--mirror
     margin-left: -50px
+    @include media("<large")
+      margin-left: unset
 
 
   &__delivery
     position: relative
     margin: 100px auto 100px
+    @include media("<desktop")
+      margin: 60px auto 100px
+      .landing3__text
+        margin-bottom: 30px
 
   &__delivery-img
     width: 767px
     position: absolute
     right: 50px
     top: 70px
+    @include media("<large")
+      width: 467px
+    @include media("<desktop")
+      position: static
+      width: 100%
+      max-width: 500px
+      margin: 20px 0
+
 
   &__delivery-text
     margin-bottom: 50px
+    color: $text
+    @include media("<desktop")
+      margin-bottom: 20px
+
+
 
   &__slider
     position: relative
@@ -244,6 +356,25 @@
       width: 1824px
       height: 1217px
       transform: rotate(-208deg)
+    @include media("<huge")
+      margin-bottom: 100px
+    @include media("<tablet")
+      margin-bottom: 50px
+      &:before
+        background-size: cover
+        left: -419px
+        top: -400px
+        width: 705px
+        height: 470px
+      &:after
+        background-size: cover
+        right: -540px
+        top: 60px
+        width: 921px
+        height: 608px
+        transform: rotate(-45deg)
+      .landing3__text
+        margin-bottom: 30px
 
     &-text
       position: relative
@@ -275,7 +406,8 @@
     z-index: 2
     @include media ("<desktop")
       margin: 0
-      padding: 0
+      padding: 0 0 80px 0
+
 
     .constructor-landing__swiper-img
       display: block
@@ -317,7 +449,7 @@
 
     .swiper-pagination
       width: 90%
-      bottom: -20px
+      bottom: 40px
       left: 50%
       transform: translateX(-50%)
       display: flex
@@ -346,6 +478,10 @@
     position: relative
     display: flex
     flex-flow: row wrap
+    @include media ("<tablet")
+      flex-flow: column nowrap
+      align-items: flex-start
+      margin-bottom: 90px
 
   &__info-title
     position: absolute
@@ -354,6 +490,11 @@
     h2
       max-width: 555px
       margin-bottom: 20px
+    @include media ("<desktop")
+      position: static
+      margin-bottom: 20px
+      h2
+        max-width: 80%
 
   &__img-block
     display: flex
@@ -363,6 +504,12 @@
       @include subtitle(1.6rem)
       text-transform: none
       line-height: 2rem
+    @include media ("<desktop")
+      img
+        width: 112px
+        align-self: flex-start
+      p
+        margin-bottom: 40px
 
   &__duration
     max-width: 352px
@@ -371,17 +518,29 @@
     flex-flow: column nowrap
     justify-content: flex-start
     align-items: stretch
+    @include media ("<tablet")
+      margin: unset
+      img
+        width: 100%
+        max-width: 500px
+
   &__duration-title
     @include subtitle(1.8rem)
     font-weight: 900
     width: 80%
     align-self: center
+
   &__duration-text
     width: 80%
     @include subtitle(1.6rem)
     text-transform: none
     line-height: 2rem
     align-self: center
+    @include media ("<tablet")
+      width: 100%
+      padding: 0 10px
+      text-align: center
+
   &__info-gradient-span
     padding: 2px 5px
     @include gbackground(100%)
@@ -391,11 +550,19 @@
     color: $white
     font-weight: 900
 
+
+
   &__info-price
     margin: 59px 0 60px
     flex-basis: 100%
     .landing3__info-gradient-span
       font-size: 3.6rem
+      @include media("<large")
+        font-size: 3rem
+      @include media("<tablet")
+        font-size: 2.2rem
+    @include media ("<tablet")
+      margin-bottom: 40px !important
 
   &__info-gradient-text
     span
@@ -408,8 +575,16 @@
 
 
   &__package
+    z-index: 2
+    position: relative
     @include container--content()
     padding-top: 150px
+    @include media ("<huge")
+      margin: 100px auto 100px
+    @include media ("<large")
+      margin: 70px auto 70px
+      .landing3__text
+        margin-bottom: 0
 
   &__package-title
     margin-top: 0
@@ -420,6 +595,13 @@
   &__package-img
     width: 818px
     margin: 47px 0 75px -146px
+    @include media ("<huge")
+      margin: 30px 0 45px -146px
+    @include media ("<large")
+      margin: 30px 0 25px -126px
+    @include media ("<tablet")
+      margin: 40px 0 20px
+      width: 100%
 
 
   &__orb-list
@@ -475,6 +657,8 @@
             width: 20px
       li + li
         margin-top: 22px
+    @include media("<large")
+      margin-bottom: 100px
 
   &__plain-title
     @include subtitle(3.6rem)
@@ -498,6 +682,7 @@
     justify-content: space-around
     @include media("<tablet")
       justify-content: center
+      margin-bottom: 40px
 
 
   &__list-item
@@ -509,7 +694,7 @@
     @include media("<large")
       margin: 0 20px 15px
     @include media("<desktop")
-      margin: 0 10px 15px
+      margin: 0 10px 45px
     @include media("<tablet")
       flex-basis: 50%
       margin: 10px 0
@@ -643,6 +828,62 @@
     position: relative
     fill: url(#linear-grad-4)
 
+  &__video-modal
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 30
+    width: 100%
+    opacity: 0
+    transition: opacity $transition
+    pointer-events: none
+    iframe
+      width: 100%
+      height: 85vh
+      pointer-events: none
+      @include media("<tablet")
+        height: 70vh
+    &--active
+      opacity: 1
+      pointer-events: all
+      iframe
+        pointer-events: all
+      ~ .landing3__video-backdrop
+        opacity: 0.7
+        pointer-events: all
+
+  &__video-backdrop
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: 20
+    opacity: 0
+    background-color: $black
+    transition: opacity $transition
+    pointer-events: none
+
+  &__video-close
+    background: none
+    border: none
+    appearance: none
+    position: absolute
+    top: -38px
+    right: 10px
+    svg
+      height: 30px
+      width: 30px
+      fill: url(#linear-grad)
+    &:focus
+      outline: 0
+      svg
+        stroke: url(#linear-grad-2)
+    &:active
+      svg
+        transform: translateY(-2px)
+
 .round-btn
   display: flex
   align-items: center
@@ -667,6 +908,13 @@
   &:hover
     svg
       transform: translateX(15px)
+  @include media("<large")
+    span
+      font-size: 1.6rem
+  @include media("<tablet")
+    padding: 20px 25px 20px 21px
+    span
+      font-size: 1.2rem
 
 
 .landing3__gradient-highlight
@@ -676,3 +924,8 @@
   @include subtitle(3.6rem)
   color: $white
   font-weight: 900
+  @include media("<large")
+    font-size: 3rem
+  @include media("<tablet")
+    width: min-content
+    font-size: 2.2rem

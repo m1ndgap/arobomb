@@ -370,12 +370,35 @@
 .main-menu--white-text
   .main-menu__logo
     color: $white
-  .main-menu__link
-    color: $white
-  .main-menu__list-item--submenu
-    &:hover
-      .main-menu__link
-        color: $text
   .main-menu__basket
     svg
       fill: $white
+  #nav-icon
+    span
+      background-color: $white
+      &:nth-child(2)
+        div
+          background-color: $white
+          &:nth-child(2)
+            background-color: $white
+  #nav-icon.open
+    span
+      background-color: $black
+      &:nth-child(2)
+        div
+          background-color: $black
+          &:nth-child(2)
+            background-color: $black
+    ~ .main-menu__logo
+      color: $black
+    ~ .main-menu__basket
+      svg
+        fill: $black
+  @include media(">tablet")
+    .main-menu__link
+      color: $white
+    .main-menu__list-item--submenu
+      &:hover
+        .main-menu__link
+          color: $text
+
