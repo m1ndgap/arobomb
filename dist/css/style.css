@@ -8156,6 +8156,10 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 873px 1871px; }
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 769px), (min-resolution: 192dpi) and (min-width: 769px), (min-resolution: 2dppx) and (min-width: 769px) {
+  .landing3 {
+    background-image: url("../img/landing3-bg-3@2x.jpg"); } }
   @media (max-width: 1439px) {
     .landing3 {
       background-position: bottom -200px right; } }
@@ -8358,6 +8362,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       @media (max-width: 1023px) {
         .landing3__pitch .landing3__list-wrapper {
           width: 100%; } }
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 769px), (min-resolution: 192dpi) and (min-width: 769px), (min-resolution: 2dppx) and (min-width: 769px) {
+  .landing3__pitch::after, .landing3__pitch::before {
+    background-size: cover;
+    background-image: url("../img/landing3-repeating-bg@2x.jpg"); } }
     @media (max-width: 1279px) {
       .landing3__pitch::before {
         background-size: cover;
@@ -8567,6 +8576,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       width: 1824px;
       height: 1217px;
       transform: rotate(-208deg); }
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 769px), (min-resolution: 192dpi) and (min-width: 769px), (min-resolution: 2dppx) and (min-width: 769px) {
+  .landing3__slider::after, .landing3__slider::before {
+    background-size: cover;
+    background-image: url("../img/landing3-repeating-bg@2x.jpg"); } }
     @media (max-width: 1439px) {
       .landing3__slider {
         margin-bottom: 100px; } }

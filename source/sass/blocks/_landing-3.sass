@@ -23,6 +23,8 @@
   background-repeat: no-repeat
   background-position: bottom right
   background-size: 873px 1871px
+  @include media("retina2x", ">tablet")
+    background-image: url('../img/landing3-bg-3@2x.jpg')
   @include media("<huge")
     background-position: bottom -200px right
   @include media("<desktop")
@@ -182,6 +184,10 @@
       @include container--content()
       position: relative
       z-index: 3
+    @include media("retina2x", ">tablet")
+      &::after, &::before
+        background-size: cover
+        background-image: url('../img/landing3-repeating-bg@2x.jpg')
     @include media("<large")
       &::before
         background-size: cover
@@ -356,8 +362,13 @@
       width: 1824px
       height: 1217px
       transform: rotate(-208deg)
+    @include media("retina2x", ">tablet")
+      &::after, &::before
+        background-size: cover
+        background-image: url('../img/landing3-repeating-bg@2x.jpg')
     @include media("<huge")
       margin-bottom: 100px
+
     @include media("<tablet")
       margin-bottom: 50px
       &:before
