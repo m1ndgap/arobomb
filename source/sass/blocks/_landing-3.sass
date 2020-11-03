@@ -1,7 +1,28 @@
 .landing3__slider, .landing3__info, .landing3__delivery, .landing3__orb-list
   @include container--content()
 
+.landing3__header
+  position: relative
+  z-index: 3
+.landing3__pitch
+  z-index: 2
+.landing3__bindings
+  position: relative
+  z-index: 2
+.landing3__delivery
+  position: relative
+  z-index: 2
+.landing3__slider
+  z-index: 1
+.landing3__info
+  position: relative
+  z-index: 2
+
 .landing3
+  background-image: url('../img/landing3-bg-3.jpg')
+  background-repeat: no-repeat
+  background-position: bottom right
+  background-size: 873px 1871px
 
   &__header
     padding-top: 133px
@@ -98,15 +119,38 @@
   &__pitch
     position: relative
     padding: 300px 0 0 0
-    background-color: $bg-color
-    background-image: url('../img/landing3-pitch-bg-1.jpg'), url('../img/landing3-pitch-bg-2.jpg')
+    //background-image: url('../img/landing3-pitch-bg-1.jpg'), url('../img/landing3-pitch-bg-2.jpg')
     background-repeat: no-repeat
     background-position: top left, top -300px right
     background-size: 414px , 868px
+    &::after, &::before
+      content: ""
+      display: block
+      position: absolute
+      background-image: url('../img/landing3-repeating-bg.jpg')
+      background-repeat: no-repeat
+    &::before
+      left: -1050px
+      top: 140px
+      width: 1643px
+      height: 1095px
+      transform: rotate(149deg)
+      z-index: 1
+    &::after
+      right: -890px
+      top: 0
+      width: 1824px
+      height: 1217px
+      transform: rotate(-162deg)
+      z-index: 1
+
+
     .landing3__list-wrapper
       @include container--content()
       position: relative
-    .landing3__list-img-wrapper
+      z-index: 3
+
+
 
 
   &__pitch-list
@@ -114,6 +158,7 @@
 
   &__pitch-img
     position: absolute
+    z-index: 3
     &--bottle-1
       left: calc(100% - 290px)
       top: 96px
@@ -176,10 +221,37 @@
     margin-bottom: 50px
 
   &__slider
+    position: relative
     @include container--content()
-    overflow: hidden
     padding-bottom: 30px
     margin-bottom: 109px
+    &::after, &::before
+      content: ""
+      display: block
+      position: absolute
+      background-image: url('../img/landing3-repeating-bg.jpg')
+      background-repeat: no-repeat
+    &::before
+      left: -1049px
+      top: -400px
+      width: 1643px
+      height: 1095px
+      transform: rotate(163deg)
+      z-index: 1
+    &::after
+      right: -1180px
+      top: 0
+      width: 1824px
+      height: 1217px
+      transform: rotate(-208deg)
+
+    &-text
+      position: relative
+      z-index: 2
+    .round-btn
+      position: relative
+      z-index: 2
+
     .constructor-landing__btn
       margin: 0 auto
       width: 584px
@@ -200,6 +272,7 @@
     margin: 100px 0
     padding: 0 30px
     overflow: hidden
+    z-index: 2
     @include media ("<desktop")
       margin: 0
       padding: 0
@@ -339,10 +412,18 @@
     padding-top: 150px
 
   &__package-title
+    margin-top: 0
     .landing3__info-gradient-span
       font-size: 3.6rem
       text-transform: uppercase
 
+  &__package-img
+    width: 818px
+    margin: 47px 0 75px -146px
+
+
+  &__orb-list
+    padding-bottom: 100px
 
 
   &__text
@@ -536,17 +617,17 @@
     &--big-orb
       width: 135px
       height: 144px
-      .constructor-landing__list-svg-bg
+      .landing3__list-svg-bg
         fill: url(#linear-grad-4)
-      .constructor-landing__list-svg-img
+      .landing3__list-svg-img
         fill: $white
       @include media("<tablet")
         width: 92px
         height: 92px
-        .constructor-landing__list-svg-bg
+        .landing3__list-svg-bg
           width: 92px
           height: 92px
-        .constructor-landing__list-svg-img
+        .landing3__list-svg-img
           width: 52px
           height: 52px
 
