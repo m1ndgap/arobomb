@@ -8198,7 +8198,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
           padding-bottom: 80px; } }
     @media (max-width: 767px) {
       .landing3__header {
-        padding-top: 75px; }
+        padding-top: 75px;
+        background-image: url("../img/landing3_header-bg@2x.jpg");
+        background-position: center; }
         .landing3__header-wrapper {
           padding-bottom: 20px; } }
   .landing3__header-title {
