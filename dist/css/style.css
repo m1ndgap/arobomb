@@ -6260,6 +6260,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       width: 100%;
       padding: 15px; } }
   .constructor__ui--active {
+    z-index: 10;
     pointer-events: all;
     opacity: 1;
     transition: opacity 300ms; }
