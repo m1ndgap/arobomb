@@ -180,6 +180,7 @@
       font-size: 1.2rem
 
   &__item-price
+    position: relative
     margin-top: 2px
     @include subtitle(2.4rem)
     font-weight: 400
@@ -188,6 +189,24 @@
       font-size: 1.4rem
       order: 1
       margin: auto 0 7px 0
+
+    &--discount
+      margin-left: 15px
+
+    &--crossed
+      &:after
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(12deg)
+        display: block
+        height: 2px
+        width: 105%
+        background-color: $text
+      @include media("<tablet")
+        &:after
+          height: 1px
 
   &__item-code
     margin-top: 10px
@@ -312,18 +331,17 @@
 
   &__total-price
     position: relative
+    display: flex
+    flex-flow: column nowrap
     margin-left: auto
     width: 400px
     height: 227px
-    padding: 39px 59px 45px 69px
+    padding: 27px 59px 35px 69px
     @include media("<desktop")
       width: 100%
       height: unset
       margin-left: unset
     @include media("<tablet")
-      display: flex
-      flex-flow: row wrap
-      align-items: flex-start
       margin-top: 50px
       padding: 0
 
@@ -341,15 +359,70 @@
     font-weight: 900
     @include media("<tablet")
 
+  &__total-price-wrapper
+    display: flex
+    justify-content: space-between
+
+  &__total-price-gain
+    position: relative
+    display: flex
+    justify-content: space-between
+    margin-top: 15px
+    @include subtitle(1.6rem)
+    font-weight: 900
+    opacity: 0
+    pointer-events: none
+    &:after
+      content: ""
+      @include gbackground (100%)
+      position: absolute
+      bottom: -7px
+      display: block
+      height: 2px
+      width: 100%
+      background-color: $text
+    @include media("<tablet")
+      font-size: 1.2rem
+
+    &--active
+      opacity: 1
+      pointer-events: all
+
 
   &__total-price-value
-    display: block
+    display: inline-block
     margin-top: 3px
+    position: relative
     @include subtitle(2.4rem)
     text-transform: none
     @include media("<tablet")
       margin-top: unset
-      margin-left: auto
+    &--discount
+      &:after
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(12deg)
+        display: block
+        height: 2px
+        width: 105%
+        background-color: $text
+
+  &__total-price-discount
+    opacity: 0
+    pointer-events: none
+    @include gbackground (100%)
+    @include subtitle(2.4rem)
+    display: inline-block
+    padding: 3px 7px
+    margin-left: auto
+    color: $white
+    text-transform: uppercase
+    font-weight: 900
+    &--active
+      opacity: 1
+      pointer-events: all
 
   &__total-price-proceed-btn
     position: relative
@@ -357,7 +430,7 @@
     justify-content: space-between
     align-items: center
     width: 100%
-    margin-top: 43px
+    margin-top: 23px
     padding: 7px 17px 7px 32px
     &:hover
       svg

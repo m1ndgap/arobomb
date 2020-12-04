@@ -43,6 +43,7 @@ let mobileProceedBtn = document.querySelector(`.constructor__index-mobile-btn`)
 
 mobileProceedBtn.addEventListener(`click`, function () {
     currentBox.price = currentBoxType.price
+    currentBox.discount = currentBoxType.discount
     currentBox.name = currentBoxType.name
     currentBox.code = currentBoxType.code
     currentBox.imgs = currentBoxType.imgs
@@ -121,6 +122,7 @@ box2.addEventListener(`click`, function(){
 
 blob1.addEventListener(`click`, function () {
     currentBox.price = currentBoxType.price
+    currentBox.discount = currentBoxType.discount
     currentBox.name = currentBoxType.name
     currentBox.code = currentBoxType.code
     currentBox.imgs = currentBoxType.imgs
@@ -130,6 +132,7 @@ blob1.addEventListener(`click`, function () {
 blob2.addEventListener(`click`, function () {
     currentBoxType = boxTypes.big;
     currentBox.price = currentBoxType.price
+    currentBox.discount = currentBoxType.discount
     currentBox.name = currentBoxType.name
     currentBox.code = currentBoxType.code
     currentBox.imgs = currentBoxType.imgs

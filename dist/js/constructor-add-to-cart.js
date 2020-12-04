@@ -1,18 +1,18 @@
 "use strict";
 
 function addBoxToCart(obj){
-    const {aromas, souvenirs, price, name, code, imgs} = obj
+    const {aromas, souvenirs, price, discount, name, code, imgs} = obj
 
     let ls = localStorage.getItem(`arobombBoxes`)
     if (!ls) {
         let newLs = {
-            box1: {aromas, souvenirs, price, name, code, imgs}
+            box1: {aromas, souvenirs, price, discount, name, code, imgs}
         }
         localStorage.setItem(`arobombBoxes`, JSON.stringify(newLs))
     } else {
         ls = JSON.parse(ls);
         let currentNumberOfBoxes = Object.keys(ls).length + 1;
-        ls[`box${currentNumberOfBoxes}`] = {aromas, souvenirs, price, name, code, imgs}
+        ls[`box${currentNumberOfBoxes}`] = {aromas, souvenirs, price, discount, name, code, imgs}
         localStorage.setItem(`arobombBoxes`, JSON.stringify(ls))
     }
     refreshCartBadge();

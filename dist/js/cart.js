@@ -4,7 +4,12 @@ let cartTabsCls = 'cart__tab' ;
 let cartTabContentCls = 'cart__tab-content';
 let proceedBtnCls = `cart__total-price-proceed-btn`;
 let emptyCartCls = `cart__cart-empty`;
+let totalPrice1ElCls = `cart__total-price-value`;
 let totalPrice1Cls = `cart__total-price-number`;
+let totalPrice1DiscountedValueCls = `cart__total-price-discount-number`;
+let totalPrice1DiscountedCls = `cart__total-price-discount`;
+let totalPrice1GainValueCls = `cart__total-price-gain-number`;
+let totalPrice1GainCls = `cart__total-price-gain`;
 let totalPrice2Cls = `cart-form__price-amount-number`;
 let hiddenInputCartCls = `cart-hidden-input--cart`;
 let hiddenInputBoxCls = `cart-hidden-input--boxes`;
@@ -38,6 +43,12 @@ let proceedBtn = document.querySelector(`.${proceedBtnCls}`)
 let emptyCartWarning = document.querySelector(`.${emptyCartCls}`)
 let totalPrice1 = document.querySelector(`.${totalPrice1Cls}`)
 let totalPrice2 = document.querySelector(`.${totalPrice2Cls}`)
+let totalPrice1El = document.querySelector(`.${totalPrice1ElCls}`)
+let totalPrice1DiscountedValue= document.querySelector(`.${totalPrice1DiscountedValueCls}`)
+let totalPrice1Discounted= document.querySelector(`.${totalPrice1DiscountedCls}`)
+let totalPrice1GainValue = document.querySelector(`.${totalPrice1GainValueCls}`)
+let totalPrice1Gain = document.querySelector(`.${totalPrice1GainCls}`)
+
 showTabContent(tabSwitches[0])
 
 tabSwitches.forEach((tabSwitch) => {
@@ -120,29 +131,42 @@ function collectBoxData(item){
     }
 }
 
-function updateTotalPrice(int) {
-    let OldTotal = parseInt(removeSpaces(totalPrice1.innerText))
-    let newTotal = OldTotal + parseInt(int)
-    totalPrice2.innerText = numberWithSpaces(newTotal);
-    totalPrice1.innerText = numberWithSpaces(newTotal);
-}
 
 function countPrice(){
     let totalPrice = 0;
+    let totalDiscount = 0;
     let items = document.querySelectorAll(`.cart__item`);
+    hideDiscountPrice()
     items.forEach(function(el){
         if (el.dataset.type == 'box') {
             let price = parseInt(el.dataset.price);
+            let discount = parseInt(el.dataset.discount);
             totalPrice += price;
+            totalDiscount += discount;
+            showDiscountPrice();
         } else {
             let price = parseInt(el.dataset.price);
             let value = parseInt(el.querySelector('input').value);
             totalPrice += price * value;
         }
     })
-    totalPrice2.innerText = numberWithSpaces(totalPrice);
+    totalPrice2.innerText = numberWithSpaces(totalPrice - totalDiscount);
     totalPrice1.innerText = numberWithSpaces(totalPrice);
-    hiddenInputPrice.value = totalPrice;
+    totalPrice1DiscountedValue.innerText = numberWithSpaces(totalPrice - totalDiscount);
+    totalPrice1GainValue.innerText = numberWithSpaces(totalDiscount);
+    hiddenInputPrice.value = totalPrice - totalDiscount;
+}
+
+function showDiscountPrice(){
+    totalPrice1El.classList.add(`${totalPrice1ElCls}--discount`)
+    totalPrice1Gain.classList.add(`${totalPrice1GainCls}--active`)
+    totalPrice1Discounted.classList.add(`${totalPrice1DiscountedCls}--active`)
+}
+
+function hideDiscountPrice(){
+    totalPrice1El.classList.remove(`${totalPrice1ElCls}--discount`)
+    totalPrice1Gain.classList.remove(`${totalPrice1GainCls}--active`)
+    totalPrice1Discounted.classList.remove(`${totalPrice1DiscountedCls}--active`)
 }
 
 function createBoxEl(obj){
@@ -160,7 +184,7 @@ function createBoxEl(obj){
 }
 
 function createBox(obj, lscode){
-    let {aromas, souvenirs, price, name, code, imgs} = obj;
+    let {aromas, souvenirs, price, discount, name, code, imgs} = obj;
     let newEl = document.createElement(`div`);
     let aromasMarkup = ``;
     let souvenirsMarkup = ``;
@@ -175,7 +199,7 @@ function createBox(obj, lscode){
         }
     }
 
-    newEl.innerHTML = `<div class="cart__item cart__item--box" data-type="box" data-lscode="${lscode}" data-img="${imgs[0]}" data-retinaImg="${imgs[1]}" data-price="${price}" data-name="${name}">
+    newEl.innerHTML = `<div class="cart__item cart__item--box" data-type="box" data-lscode="${lscode}" data-img="${imgs[0]}" data-retinaImg="${imgs[1]}" data-price="${price}" data-discount="${discount}" data-name="${name}">
                         <figure class="cart__item-img-wrap">
                             <img srcset="${imgs[0]}, ${imgs[1]}" 
                                 src="${imgs[0]}" 
@@ -184,7 +208,10 @@ function createBox(obj, lscode){
                         </figure>
                         <div class="cart__item-text">
                             <span class="cart__item-name">${name}</span>
-                            <span class="cart__item-price"><span class="cart__item-price-value">${price}</span> р.</span>
+                            <span class="cart__item-price-block">
+                                <span class="cart__item-price cart__item-price--crossed"><span class="cart__item-price-value">${price}</span> р.</span>
+                                <span class="cart__item-price cart__item-price--discount"><span class="cart__item-price-value">${price - discount}</span> р.</span>
+                            </span>
                             <span class="cart__item-code">
                                 Арт.
                                 <span class="cart__item-code-value">${code}</span>
@@ -307,11 +334,6 @@ function createItem(obj, code){
         }
         evt.target.value = value
         countPrice();
-        // if (initValue > value) {
-        //     updateTotalPrice(-(initValue-value)*parseInt(price))
-        // } else if (initValue < value) {
-        //     updateTotalPrice((value-initValue)*parseInt(price))
-        // }
         initValue = value;
         setCartQty(collectData(item), value)
         let cartLs = JSON.parse(localStorage.getItem(`arobombCart`));

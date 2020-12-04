@@ -3220,6 +3220,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       .cart__item-name {
         font-size: 1.2rem; } }
   .cart__item-price {
+    position: relative;
     margin-top: 2px;
     font-family: "Montserrat", sans-serif;
     font-size: 2.4rem;
@@ -3232,6 +3233,21 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         font-size: 1.4rem;
         order: 1;
         margin: auto 0 7px 0; } }
+    .cart__item-price--discount {
+      margin-left: 15px; }
+    .cart__item-price--crossed:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(12deg);
+      display: block;
+      height: 2px;
+      width: 105%;
+      background-color: #444444; }
+    @media (max-width: 767px) {
+      .cart__item-price--crossed:after {
+        height: 1px; } }
   .cart__item-code {
     margin-top: 10px;
     font-family: "Montserrat", sans-serif;
@@ -3361,10 +3377,12 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       transition: opacity 300ms; }
   .cart__total-price {
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
     margin-left: auto;
     width: 400px;
     height: 227px;
-    padding: 39px 59px 45px 69px; }
+    padding: 27px 59px 35px 69px; }
     @media (max-width: 1023px) {
       .cart__total-price {
         width: 100%;
@@ -3372,9 +3390,6 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
         margin-left: unset; } }
     @media (max-width: 767px) {
       .cart__total-price {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
         margin-top: 50px;
         padding: 0; } }
   .cart__price-border {
@@ -3392,9 +3407,42 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     color: #444444;
     text-transform: uppercase;
     font-weight: 900; }
+  .cart__total-price-wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .cart__total-price-gain {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    color: #444444;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0;
+    pointer-events: none; }
+    .cart__total-price-gain:after {
+      content: "";
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+      position: absolute;
+      bottom: -7px;
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #444444; }
+    @media (max-width: 767px) {
+      .cart__total-price-gain {
+        font-size: 1.2rem; } }
+    .cart__total-price-gain--active {
+      opacity: 1;
+      pointer-events: all; }
   .cart__total-price-value {
-    display: block;
+    display: inline-block;
     margin-top: 3px;
+    position: relative;
     font-family: "Montserrat", sans-serif;
     font-size: 2.4rem;
     color: #444444;
@@ -3402,15 +3450,43 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     text-transform: none; }
     @media (max-width: 767px) {
       .cart__total-price-value {
-        margin-top: unset;
-        margin-left: auto; } }
+        margin-top: unset; } }
+    .cart__total-price-value--discount:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(12deg);
+      display: block;
+      height: 2px;
+      width: 105%;
+      background-color: #444444; }
+  .cart__total-price-discount {
+    opacity: 0;
+    pointer-events: none;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    color: #444444;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: auto;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 900; }
+    .cart__total-price-discount--active {
+      opacity: 1;
+      pointer-events: all; }
   .cart__total-price-proceed-btn {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 43px;
+    margin-top: 23px;
     padding: 7px 17px 7px 32px; }
     .cart__total-price-proceed-btn:hover svg {
       transform: translateX(7px); }

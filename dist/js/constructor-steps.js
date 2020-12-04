@@ -23,7 +23,8 @@ let currentStep = 1;
 let currentBox = {
     aromas: {},
     souvenirs: {},
-    price: 0
+    price: 0,
+    discount: 0,
 }
 
 const boxTypes = {
@@ -31,6 +32,7 @@ const boxTypes = {
         souvenirs: box1info.dataset.maxsouvenirs,
         aromas: box1info.dataset.maxaromas,
         price: box1info.dataset.boxprice,
+        discount: box1info.dataset.boxdiscount,
         name: box1info.dataset.boxname,
         code: box1info.dataset.boxcode,
         imgs: [box1info.dataset.boximg, box1info.dataset.boximgretina]
@@ -39,6 +41,7 @@ const boxTypes = {
         souvenirs: box2info.dataset.maxsouvenirs,
         aromas: box2info.dataset.maxaromas,
         price: box2info.dataset.boxprice,
+        discount: box2info.dataset.boxdiscount,
         name: box2info.dataset.boxname,
         code: box2info.dataset.boxcode,
         imgs: [box2info.dataset.boximg, box2info.dataset.boximgretina]
@@ -53,6 +56,7 @@ function goToStep1(){
         aromas: {},
         souvenirs: {},
         price: 0,
+        discount: 0,
     }
     currentStep = 1;
     index.classList.add(`${indexCls}--active`);
