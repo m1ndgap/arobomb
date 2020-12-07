@@ -8,5 +8,5 @@ let clipboardTextBlock = document.querySelector(`.${textCls}`)
 
 clipboardBtn.addEventListener(`click`, function (){
     let text = clipboardTextBlock.innerText
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(text).then(function(){}, function(){});
 })
