@@ -1,0 +1,262 @@
+.landing-lottery
+
+  &__section-title
+    position: relative
+    z-index: 2
+    padding: 5px 19px
+    @include gbackground(100%)
+    display: inline-block
+    @include subtitle(4.8rem)
+    color: $white
+    font-weight: 900
+    margin-bottom: 30px
+    @include media ("<large")
+      font-size: 3.5rem // 3.6rem
+      line-height: 4rem
+    @include media ("<desktop")
+      font-size: 3.1rem
+      line-height: 3.8rem
+    @include media ("<tablet")
+      font-size: 2.5rem
+      line-height: 3rem
+    @media screen and (max-width: 614px)
+      font-size: 2rem
+      line-height: 2.3rem
+    @media screen and (max-width: 500px)
+      font-size: 2.5rem
+      line-height: 3.2rem
+    @include media ("<=tiny")
+      font-size: 2rem
+      line-height: 2.7rem
+
+
+  &__section-subtitle
+    position: relative
+    z-index: 2
+    @include subtitle(3.6rem)
+    letter-spacing: 3.3px
+    @include media ("<large")
+      font-size: 3rem // 3.6rem
+      margin-top: 0
+    @include media ("<desktop")
+      font-size: 2.8rem
+    @include media ("<tablet")
+      font-size: 2.5rem
+    @media screen and (max-width: 614px)
+      font-size: 2rem
+    @media screen and (max-width: 500px)
+      font-size: 2.5rem
+    @include media ("<=tiny")
+      font-size: 2rem
+
+  &__steps
+    @include container--lottery()
+
+
+
+  &__steps-wrapper
+    position: relative
+    z-index: 1
+    @include resetlist()
+    height: 1083px
+    @include media ("<desktop")
+      height: unset
+
+  &__step--1
+    top: 26px
+    left: 22px
+    &::after
+      content: ""
+      position: absolute
+      z-index: 3
+      left: 74%
+      top: 48px
+      display: block
+      width: 372px
+      height: 226px
+      background-image: url('../img/landing-lottery_steps-arrow-1.svg')
+      background-repeat: no-repeat
+    .landing-lottery__step-bg-img
+      top: 63%
+      left: 169px
+      transform: translate(-50%, -50%)
+
+    @include media ("<desktop")
+      flex-flow: column nowrap
+      .landing-lottery__step-text-block
+        order: 0
+        margin: 0
+      .landing-lottery__step-img
+        order: 1
+      .landing-lottery__step-bg-img
+        top: 63%
+        left: 50%
+      .landing-lottery__step-text
+        margin-left: 10px
+        max-width: 210px
+
+  &__step--2
+    top: -96px
+    right: -28px
+    flex-flow: column nowrap
+    &::after
+      content: ""
+      position: absolute
+      z-index: 3
+      right: 113%
+      bottom: -32px
+      display: block
+      width: 552px
+      height: 230px
+      background-image: url('../img/landing-lottery_steps-arrow-2.svg')
+      background-repeat: no-repeat
+    .landing-lottery__step-text-block
+      order: 0
+    .landing-lottery__step-img
+      order: 1
+    .landing-lottery__step-bg-img
+      top: 79%
+      left: 227px
+      transform: translate(-50%, -50%)
+    .landing-lottery__step-text
+      max-width: 300px
+
+    @include media ("<large")
+      top: 296px
+    @include media ("<desktop")
+      .landing-lottery__step-img
+        display: block
+        img
+          max-width: 100%
+      .landing-lottery__step-bg-img
+        display: none
+      .landing-lottery__step-number
+        order: 1
+      .landing-lottery__step-text
+        order: 0
+        margin-right: 10px
+        max-width: 195px
+        text-align: right
+
+  &__step--3
+    top: 523px
+    left: -28px
+    flex-flow: column nowrap
+
+    .landing-lottery__step-number
+      //margin-bottom: -54px
+    .landing-lottery__step-text
+      max-width: 300px
+    @include media ("<desktop")
+      flex-flow: column nowrap
+      .landing-lottery__step-text
+        max-width: 210px
+
+  &__step
+    position: absolute
+    display: flex
+    list-style: none
+    @include media ("<large")
+      &:after
+        display: none
+    @include media ("<desktop")
+      position: relative
+      left: unset
+      right: unset
+      top: unset
+      bottom: unset
+      align-items: center
+      width: 100%
+
+  &__step-img
+    position: relative
+    z-index: 2
+
+  &__step-bg-img
+    position: absolute
+    z-index: 1
+
+
+  &__step-text-block
+    margin-left: 37px
+    margin-top: 92px
+    @include media ("<desktop")
+      display: flex
+      align-items: center
+      width: max-content
+
+  &__step-number
+    position: relative
+    z-index: 2
+    display: block
+    margin-bottom: -74px
+    @include subtitle(25rem)
+    font-weight: 900
+    color: $white
+    text-shadow: 0 4px 45px #B195EF
+    @include media ("<desktop")
+      font-size: 12rem
+      margin-bottom: unset
+
+  &__step-text
+    position: relative
+    z-index: 2
+    @include subtitle(1.8rem)
+    font-weight: 900
+    line-height: 121%
+    max-width: 250px
+    @include media ("<desktop")
+      font-size: 1.4rem
+
+  &__text-highlight
+    padding: 2px 5px
+    @include gbackground(100%)
+    color: $white
+    @include media ("<desktop")
+      padding: 1px 2px
+
+  &__step-text-gradient
+    max-width: 450px
+    br
+      display: none
+    span
+      display: inline-block
+      padding: 1px 5px
+      @include subtitle(1.8rem)
+      line-height: 20px
+      color: $white
+      @include gbackground(450px)
+      &:nth-child(1)
+        padding-top: 5px
+      &:nth-child(6)
+        padding-bottom: 5px
+    @include media ("<tablet")
+      @include gbackground(100%)
+      br
+        display: inline
+      span
+        font-size: 1.4rem
+        display: inline
+        background: none
+
+  &__btn
+    width: 396px
+    height: 45px
+    display: flex
+    padding: 29px
+    margin-left: 9px
+    align-items: center
+    justify-content: space-between
+    span
+      font-size: 1.8rem
+      letter-spacing: 2px
+    svg
+      transform: rotate(180deg)
+    &:active, &:focus
+      outline: none
+    @include media ("<desktop")
+      width: 100%
+      margin: 0 auto
+      max-width: 500px
+
+

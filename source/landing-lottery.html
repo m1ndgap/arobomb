@@ -1,0 +1,93 @@
+//= ./html-components/_header.html
+
+<main class="main--padded main--landing-lottery landing-lottery">
+    <section class="landing-lottery__steps">
+        <h1 class="landing-lottery__section-title">Конкурс #AroBomb</h1>
+        <h2 class="landing-lottery__section-subtitle">правила участия</h2>
+        <ul class="landing-lottery__steps-wrapper">
+            <li class="landing-lottery__step landing-lottery__step--1">
+                <picture class="landing-lottery__step-img">
+                    <source media="(min-width: 500px)"
+                            srcset="./img/landing-lottery_steps-1.png,
+                                ./img/landing-lottery_steps-1@2x.png 2x"/>
+                    <source media="(max-width: 499px)"
+                            srcset="./img/landing-lottery_steps-1-sm.png,
+                                ./img/landing-lottery_steps-1-sm@2x.png 2x"/>
+                    <img src="./img/landing-lottery_steps-1@2x.png" alt="">
+                </picture>
+                <picture class="landing-lottery__step-bg-img">
+                    <source media="(min-width: 500px)"
+                            srcset="./img/landing-lottery_steps-repeating-bg.jpg,
+                                ./img/landing-lottery_steps-repeating-bg@2x.jpg 2x"/>
+                    <source media="(max-width: 499px)"
+                            srcset="./img/landing-lottery_steps-repeating-bg-sm.jpg,
+                                ./img/landing-lottery_steps-repeating-bg-sm@2x.jpg 2x"/>
+                    <img src="./img/landing-lottery_steps-1@2x.png" alt="">
+                </picture>
+                <div class="landing-lottery__step-text-block">
+                    <span class="landing-lottery__step-number">1</span>
+                    <p class="landing-lottery__step-text">
+                        Быть подписанным на аккаунт
+                        <span class="landing-lottery__text-highlight">@AroBomb.ru</span>
+                    </p>
+                </div>
+            </li>
+            <li class="landing-lottery__step landing-lottery__step--2">
+                <picture class="landing-lottery__step-img">
+                    <source
+                            srcset="./img/landing-lottery_steps-2.png,
+                                ./img/landing-lottery_steps-2@2x.png 2x"/>
+                    <img src="./img/landing-lottery_steps-2@2x.png" alt="">
+                </picture>
+                <picture class="landing-lottery__step-bg-img">
+                    <source media="(min-width: 500px)"
+                            srcset="./img/landing-lottery_steps-repeating-bg.jpg,
+                                ./img/landing-lottery_steps-repeating-bg@2x.jpg 2x"/>
+                    <source media="(max-width: 499px)"
+                            srcset="./img/landing-lottery_steps-repeating-bg-sm.jpg,
+                                ./img/landing-lottery_steps-repeating-bg-sm@2x.jpg 2x"/>
+                    <img src="./img/landing-lottery_steps-1@2x.png" alt="">
+                </picture>
+                <div class="landing-lottery__step-text-block">
+                    <span class="landing-lottery__step-number">2</span>
+                    <p class="landing-lottery__step-text">
+                        Выложить фото сувенира AroBomb на фоне/внутри своего автомобиля
+                    </p>
+                </div>
+            </li>
+            <li class="landing-lottery__step landing-lottery__step--3">
+                <div class="landing-lottery__step-text-block">
+                    <span class="landing-lottery__step-number">3</span>
+                    <p class="landing-lottery__step-text">
+                        В комментарии к посту добавить текст
+                    </p>
+                </div>
+                <p class="landing-lottery__step-text-gradient js-clipboard-text">
+                    <span>🎁 Прокачаи свои авто! Конкурс</span>
+                    <span>#МояМашинаМоиАроБомб</span>
+                    <br>
+                    <span>😍Участвуи в ЕЖЕДНЕВНОМ розыгрыше</span>
+                    <span>набора ароматов на 3 месяца</span>
+                    <span>#AroBomb с бесплатной доставкой!</span>
+                    <br>
+                    <span>😉Подробнее @arobomb.ru</span>
+                </p>
+            </li>
+        </ul>
+        <button type="button" class="landing-lottery__btn btn">
+            <span>собрать подарок</span>
+            <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
+                <use xlink:href="#big-btn-arrow"></use>
+            </svg>
+        </button>
+
+    </section>
+
+
+
+</main>
+
+<!--<script src="./js/thankyou-modal.js"></script>-->
+<script src="./js/landing-lottery.js"></script>
+
+//= ./html-components/_footer.html
