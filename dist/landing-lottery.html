@@ -894,20 +894,124 @@
                 </p>
             </li>
         </ul>
-        <button type="button" class="landing-lottery__btn btn">
-            <span>собрать подарок</span>
+        <button type="button" class="landing-lottery__btn btn" data-clipboard-target=".js-clipboard-text">
+            <span>скопировать текст</span>
             <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
                 <use xlink:href="#big-btn-arrow"></use>
             </svg>
         </button>
 
     </section>
-
-
+    <section class="landing-lottery__info">
+        <h2 class="landing-lottery__section-title landing-lottery__section-title--two-line">УЧАВСТВУЙТЕ И ПОБЕЖДАЙТЕ!</h2>
+        <div class="landing-lottery__info-wrapper">
+            <h3 class="landing-lottery__section-subtitle">
+                <span class="landing-lottery__text-highlight">“ВАЖНО!”</span> <br>
+                у опубликованного фото нет срока давности, если вы не выиграли сегодня, ваша фотография всегда участвует в ежедневном розыгрыше
+            </h3>
+            <picture class="landing-lottery__info-img">
+                <source srcset="./img/landing-lottery_steps-2.png,
+                                    ./img/landing-lottery_steps-2@2x.png 2x">
+                <img src="./img/landing-lottery_steps-2@2x.png" alt="">
+            </picture>
+        </div>
+    </section>
+    <section class="landing-lottery__winner">
+        <h2 class="landing-lottery__section-title">выбор победителя</h2>
+        <ul class="landing-lottery__winner-wrapper">
+            <li class="landing-lottery__winner-item landing-lottery__winner-item--1">
+                <picture class="landing-lottery__winner-img">
+                    <source media="(min-width: 500px)" srcset="./img/landing-lottery_steps-1.png,
+                                ./img/landing-lottery_steps-1@2x.png 2x">
+                    <source media="(max-width: 499px)" srcset="./img/landing-lottery_steps-1-sm.png,
+                                ./img/landing-lottery_steps-1-sm@2x.png 2x">
+                    <img src="./img/landing-lottery_steps-1@2x.png" alt="">
+                </picture>
+                <div class="landing-lottery__winner-text-block">
+                    <span class="landing-lottery__winner-number">1</span>
+                    <p class="landing-lottery__winner-text">
+                        <span class="landing-lottery__text-highlight">Ежедневный</span> конкурс, разыгрывается рандомно, все фиксируется на видео, победитель объявляется в официальном аккаунте инстаграм <span class="landing-lottery__text-highlight">@arobomb.ru</span> в одной большой Истории (актуальное), с поздравлением и ссылкой на аккаунт победителя
+                    </p>
+                </div>
+            </li>
+            <li class="landing-lottery__winner-item landing-lottery__winner-item--2">
+                <picture class="landing-lottery__winner-img">
+                    <source media="(min-width: 500px)" srcset="./img/landing-lottery_steps-1.png,
+                                ./img/landing-lottery_steps-1@2x.png 2x">
+                    <source media="(max-width: 499px)" srcset="./img/landing-lottery_steps-1-sm.png,
+                                ./img/landing-lottery_steps-1-sm@2x.png 2x">
+                    <img src="./img/landing-lottery_steps-1@2x.png" alt="">
+                </picture>
+                <div class="landing-lottery__winner-text-block">
+                    <span class="landing-lottery__winner-number">2</span>
+                    <p class="landing-lottery__winner-text">
+                        <span class="landing-lottery__text-highlight">Еженедельный</span> конкурс, победителя определяет команда #AroBomb за лучшее фото, все фиксируется на видео, победитель объявляется в официальном аккаунте инстаграм <span class="landing-lottery__text-highlight">@arobomb.ru</span> в одной большой Истории (актуальное), с поздравлением и ссылкой на аккаунт победителя
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="landing-lottery__prizes">
+        <h2 class="landing-lottery__section-subtitle">
+            Призы:
+        </h2>
+        <h3 class="landing-lottery__segmented-title landing-lottery__prizes-subtitle">
+            <span class="landing-lottery__segmented-title-line">
+                <span>Победитель на свой вкус</span>
+                <span>выбирает комплект из</span>
+            </span>
+            <span class="landing-lottery__segmented-title-line">
+                <span>3 ароматов, упакованных в</span>
+                <span>фирменную коробочку</span>
+            </span>
+        </h3>
+        <div class="landing-lottery__prizes-img-wrapper">
+            <picture class="landing-lottery__package-img">
+                <source media="(min-width: 500px)" srcset="./img/landing3-package.png,
+                                ./img/landing3-package@2x.png 2x">
+                <source media="(max-width: 499px)" srcset="./img/landing3-package-sm.png,
+                                ./img/landing3-package-sm@2x.png 2x">
+                <img src="./img/landing3-package@2x.png" alt="бумажная упаковка">
+            </picture>
+            <div class="landing-lottery__prizes-bottle-wrapper">
+                <picture class="landing-lottery__bottle-img">
+                    <source media="(min-width: 500px)" srcset="./img/landing-lottery__bottle-ambass.png,
+                                ./img/landing-lottery__bottle-ambass@2x.png 2x">
+                    <source media="(max-width: 499px)" srcset="./img/landing-lottery__bottle-ambass-sm.png,
+                                ./img/landing-lottery__bottle-ambass-sm@2x.png 2x">
+                    <img src="./img/landing-lottery__bottle-ambass@2x.png" alt="эссенция ambassador">
+                </picture>
+                <picture class="landing-lottery__bottle-img">
+                    <source media="(min-width: 500px)" srcset="./img/landing-lottery__bottle-bubble.png,
+                                ./img/landing-lottery__bottle-bubble@2x.png 2x">
+                    <source media="(max-width: 499px)" srcset="./img/landing-lottery__bottle-bubble-sm.png,
+                                ./img/landing-lottery__bottle-bubble-sm@2x.png 2x">
+                    <img src="./img/landing-lottery__bottle-bubble@2x.png" alt="эссенция bubble gum">
+                </picture>
+                <picture class="landing-lottery__bottle-img">
+                    <source media="(min-width: 500px)" srcset="./img/landing-lottery__bottle-tomorrow.png,
+                                ./img/landing-lottery__bottle-tomorrow@2x.png 2x">
+                    <source media="(max-width: 499px)" srcset="./img/landing-lottery__bottle-tomorrow-sm.png,
+                                ./img/landing-lottery__bottle-tomorrow-sm@2x.png 2x">
+                    <img src="./img/landing-lottery__bottle-tomorrow@2x.png" alt="эссенция tomorrow">
+                </picture>
+            </div>
+        </div>
+    </section>
+    <section class="landing-lottery__participate">
+        <h2 class="landing-lottery__section-title landing-lottery__section-title--two-line">instagram.com/arobomb.ru</h2>
+        <a type="button" class="landing-lottery__participate-btn btn" href="https://www.instagram.com/arobomb.ru/" data-androidlink="intent://www.instagram.com/arobomb.ru/#Intent;package=com.instagram.android;scheme=https;end" data-ioslink="instagram://user?username=arobomb.ru">
+            <span>участвовать</span>
+            <svg width="37" height="8" viewBox="0 0 37 8" class="btn-arrow">
+                <use xlink:href="#big-btn-arrow"></use>
+            </svg>
+        </a>
+    </section>
 
 </main>
 
 <!--<script src="./js/thankyou-modal.js"></script>-->
+<script src="./js/clipboard.min.js"></script>
 <script src="./js/landing-lottery.js"></script>
 
 

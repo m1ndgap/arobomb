@@ -813,7 +813,17 @@ body {
       padding-top: 120px; } }
   @media (max-width: 767px) {
     .main--landing-lottery {
-      padding-top: 70px; } }
+      padding-top: 70px;
+      background-image: url("../img/landing-lottery__bg.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 700px; } }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .main--landing-lottery {
+      background-image: url("../img/landing-lottery__bg@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 1440px; } }
 
 .main--constructor {
   overflow: hidden;
@@ -6485,25 +6495,101 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       line-height: 3rem; } }
   @media screen and (max-width: 614px) {
     .landing-lottery__section-title {
+      padding: 3px 5px;
       font-size: 2rem;
       line-height: 2.3rem; } }
   @media screen and (max-width: 500px) {
     .landing-lottery__section-title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       line-height: 3.2rem; } }
   @media (max-width: 400px) {
     .landing-lottery__section-title {
       font-size: 2rem;
       line-height: 2.7rem; } }
 
+@media screen and (max-width: 500px) {
+  .landing-lottery__section-title--two-line {
+    padding: 1px 5px;
+    font-size: 1.6rem;
+    line-height: 3.2rem; } }
+
+.landing-lottery__segmented-title {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 10px 0; }
+  @media (max-width: 1023px) {
+    .landing-lottery__segmented-title {
+      font-size: 1.4rem;
+      line-height: 1.6rem; } }
+  @media screen and (max-width: 768px) {
+    .landing-lottery__segmented-title span {
+      background-size: 350px 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); }
+      .landing-lottery__segmented-title span span::after {
+        white-space: break-spaces;
+        content: "\A"; } }
+  @media (max-width: 399px) {
+    .landing-lottery__segmented-title span {
+      background-size: 350px 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); } }
+  .landing-lottery__segmented-title > span:first-child {
+    padding-top: 5px;
+    padding-bottom: 0;
+    z-index: 2; }
+  .landing-lottery__segmented-title > span:last-child {
+    padding-bottom: 5px;
+    padding-top: 0;
+    z-index: 2; }
+  .landing-lottery__segmented-title > span:first-child, .landing-lottery__segmented-title > span:nth-child(2), .landing-lottery__segmented-title > span:last-child {
+    position: relative; }
+    @media (max-width: 767px) {
+      .landing-lottery__segmented-title > span:first-child, .landing-lottery__segmented-title > span:nth-child(2), .landing-lottery__segmented-title > span:last-child {
+        padding: 0; }
+        .landing-lottery__segmented-title > span:first-child span, .landing-lottery__segmented-title > span:nth-child(2) span, .landing-lottery__segmented-title > span:last-child span {
+          padding: 1px 3px; } }
+
+.landing-lottery__segmented-title-line {
+  background-size: 630px 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+  padding: 0 7px; }
+  .landing-lottery__segmented-title-line::after {
+    white-space: break-spaces;
+    content: "\A"; }
+    @media screen and (max-width: 768px) {
+      .landing-lottery__segmented-title-line::after {
+        display: none; } }
+  @media (max-width: 767px) {
+    .landing-lottery__segmented-title-line {
+      background-size: 630px 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
+      padding: 5px; } }
+  @media screen and (max-width: 614px) {
+    .landing-lottery__segmented-title-line {
+      background-size: 500px 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); } }
+  @media screen and (max-width: 500px) {
+    .landing-lottery__segmented-title-line {
+      padding: 0; }
+      .landing-lottery__segmented-title-line span {
+        padding: 5px; } }
+
 .landing-lottery__section-subtitle {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   font-family: "Montserrat", sans-serif;
   font-size: 3.6rem;
   color: #444444;
   text-transform: uppercase;
-  letter-spacing: 3.3px; }
+  letter-spacing: 3.3px;
+  text-shadow: 0 0 3px #F5F8FF, 0 0 3px #F5F8FF; }
   @media (max-width: 1279px) {
     .landing-lottery__section-subtitle {
       font-size: 3rem;
@@ -6525,31 +6611,56 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       font-size: 2rem; } }
 
 .landing-lottery__steps {
+  position: relative;
   box-sizing: border-box;
   width: 1440px;
   margin: 0 auto 0;
-  padding: 0 151px 0; }
+  padding: 0 151px 0;
+  z-index: 1; }
   @media (max-width: 1439px) {
     .landing-lottery__steps {
       width: 1280px;
-      margin: 0 auto 0;
       padding: 0 15px; } }
   @media (max-width: 1279px) {
     .landing-lottery__steps {
       width: 1024px;
-      margin: 0 auto 0;
       padding: 0 15px; } }
   @media (max-width: 1023px) {
     .landing-lottery__steps {
       width: 100%; } }
+  .landing-lottery__steps:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1015px;
+    left: -433px;
+    z-index: 1;
+    transform: rotate(204deg);
+    background-image: url("../img/landing-lottery_steps-repeating-bg.jpg");
+    width: 800px;
+    height: 966px;
+    background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .landing-lottery__steps::after {
+      background-size: cover;
+      background-image: url("../img/landing-lottery_steps-repeating-bg@2x.jpg"); } }
+
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px), (min-resolution: 2dppx) and (max-width: 767px) {
+  .landing-lottery__steps::after {
+    background-size: cover;
+    width: 600px;
+    height: 724px;
+    bottom: -1020px;
+    left: -383px;
+    background-image: url("../img/landing-lottery_steps-repeating-bg-sm@2x.jpg"); } }
 
 .landing-lottery__steps-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding-left: 0;
   margin: 0;
   list-style: none;
-  height: 1083px; }
+  height: 1066px; }
   @media (max-width: 1023px) {
     .landing-lottery__steps-wrapper {
       height: unset; } }
@@ -6635,12 +6746,20 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   left: -28px;
   flex-flow: column nowrap; }
   .landing-lottery__step--3 .landing-lottery__step-text {
-    max-width: 300px; }
+    max-width: 300px;
+    margin-bottom: 0; }
+  .landing-lottery__step--3 .landing-lottery__step-text-gradient {
+    margin-left: 37px; }
   @media (max-width: 1023px) {
     .landing-lottery__step--3 {
       flex-flow: column nowrap; }
       .landing-lottery__step--3 .landing-lottery__step-text {
-        max-width: 210px; } }
+        max-width: 210px; }
+      .landing-lottery__step--3 .landing-lottery__step-text-gradient {
+        margin-left: unset; } }
+  @media (max-width: 767px) {
+    .landing-lottery__step--3 .landing-lottery__step-text-gradient {
+      max-width: 290px; } }
 
 .landing-lottery__step {
   position: absolute;
@@ -6662,6 +6781,11 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
 .landing-lottery__step-img {
   position: relative;
   z-index: 2; }
+  @media (max-width: 1023px) {
+    .landing-lottery__step-img .landing-lottery__step-img {
+      display: block; }
+      .landing-lottery__step-img .landing-lottery__step-img img {
+        max-width: 100%; } }
 
 .landing-lottery__step-bg-img {
   position: absolute;
@@ -6714,7 +6838,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%);
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  text-shadow: none; }
   @media (max-width: 1023px) {
     .landing-lottery__text-highlight {
       padding: 1px 2px; } }
@@ -6737,7 +6862,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     background-image: linear-gradient(90deg, #FF8BDE 0%, #669FFF 100%); }
     .landing-lottery__step-text-gradient span:nth-child(1) {
       padding-top: 5px; }
-    .landing-lottery__step-text-gradient span:nth-child(6) {
+    .landing-lottery__step-text-gradient span:nth-child(8) {
       padding-bottom: 5px; }
   @media (max-width: 767px) {
     .landing-lottery__step-text-gradient {
@@ -6747,16 +6872,20 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       .landing-lottery__step-text-gradient br {
         display: inline; }
       .landing-lottery__step-text-gradient span {
+        padding: 2px;
         font-size: 1.4rem;
         display: inline;
         background: none; } }
 
 .landing-lottery__btn {
+  position: relative;
+  z-index: 2;
   width: 396px;
   height: 45px;
   display: flex;
   padding: 29px;
   margin-left: 9px;
+  margin-top: 15px;
   align-items: center;
   justify-content: space-between; }
   .landing-lottery__btn span {
@@ -6770,7 +6899,287 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     .landing-lottery__btn {
       width: 100%;
       margin: 0 auto;
-      max-width: 500px; } }
+      max-width: 500px;
+      padding: 15px; }
+      .landing-lottery__btn span {
+        font-size: 1.4rem; } }
+
+.landing-lottery__info {
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0;
+  padding: 0 151px 0;
+  margin-top: 111px; }
+  @media (max-width: 1439px) {
+    .landing-lottery__info {
+      width: 1280px;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__info {
+      width: 1024px;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__info {
+      width: 100%; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__info {
+      margin-top: 70px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__info {
+      margin-top: 60px; } }
+  .landing-lottery__info .landing-lottery__section-subtitle {
+    margin-top: 48px; }
+
+@media (max-width: 1023px) {
+  .landing-lottery__info-img {
+    display: block; }
+    .landing-lottery__info-img img {
+      max-width: 100%; } }
+
+.landing-lottery__info-wrapper {
+  display: flex; }
+  @media (max-width: 1023px) {
+    .landing-lottery__info-wrapper {
+      flex-flow: column nowrap; }
+      .landing-lottery__info-wrapper .landing-lottery__info-img {
+        display: block;
+        align-self: center;
+        order: 0; }
+      .landing-lottery__info-wrapper .landing-lottery__section-subtitle {
+        order: 1; } }
+
+.landing-lottery__winner {
+  position: relative;
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0;
+  padding: 0 151px 0;
+  margin-top: 91px;
+  z-index: 3; }
+  @media (max-width: 1439px) {
+    .landing-lottery__winner {
+      width: 1280px;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__winner {
+      width: 1024px;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner {
+      width: 100%; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__winner {
+      margin-top: 70px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner {
+      margin-top: 60px; } }
+
+.landing-lottery__winner-wrapper {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 34px;
+  display: flex; }
+  @media (max-width: 1279px) {
+    .landing-lottery__winner-wrapper {
+      margin-top: 20px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner-wrapper {
+      flex-flow: column nowrap;
+      align-items: center; } }
+
+.landing-lottery__winner-item--2 {
+  margin-left: auto; }
+  .landing-lottery__winner-item--2 .landing-lottery__winner-number {
+    margin-top: -65px; }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner-item--2 {
+      margin-left: unset;
+      margin-top: 30px; }
+      .landing-lottery__winner-item--2 .landing-lottery__winner-number {
+        order: 1;
+        margin: -10px 0 0 15px; }
+      .landing-lottery__winner-item--2 .landing-lottery__winner-text-block {
+        order: 0; }
+      .landing-lottery__winner-item--2 .landing-lottery__winner-text {
+        text-align: right; } }
+
+.landing-lottery__winner-item {
+  display: flex; }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner-item {
+      flex-flow: column nowrap; } }
+
+.landing-lottery__winner-number {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-bottom: -64px;
+  margin-top: -58px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24rem;
+  color: #444444;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-shadow: 0 4px 45px #B195EF; }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner-number {
+      font-size: 12rem;
+      margin: -10px 10px 0 0; } }
+
+@media (max-width: 1023px) {
+  .landing-lottery__winner-img img {
+    display: block;
+    margin: 0 auto; } }
+
+.landing-lottery__winner-text-block {
+  margin-left: 15px; }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner-text-block {
+      display: flex;
+      margin-top: 15px; } }
+
+.landing-lottery__winner-text {
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: #444444;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 116%;
+  max-width: 265px; }
+  @media (max-width: 1279px) {
+    .landing-lottery__winner-text {
+      font-size: 1.6rem; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__winner-text {
+      font-size: 1.4rem; } }
+  .landing-lottery__winner-text .landing-lottery__text-highlight {
+    padding: 1px 5px; }
+
+.landing-lottery__prizes {
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0;
+  padding: 0 151px 0;
+  z-index: 3;
+  margin-top: 149px; }
+  @media (max-width: 1439px) {
+    .landing-lottery__prizes {
+      width: 1280px;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__prizes {
+      width: 1024px;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__prizes {
+      width: 100%; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__prizes {
+      margin-top: 90px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__prizes {
+      margin-top: 50px; } }
+
+.landing-lottery__prizes-subtitle {
+  margin-top: 44px; }
+  @media (max-width: 1279px) {
+    .landing-lottery__prizes-subtitle {
+      margin-top: 20px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__prizes-subtitle {
+      margin-top: 15px; } }
+
+.landing-lottery__prizes-img-wrapper {
+  display: flex; }
+  @media (max-width: 1023px) {
+    .landing-lottery__prizes-img-wrapper {
+      flex-flow: column nowrap; } }
+
+.landing-lottery__prizes-bottle-wrapper {
+  display: flex;
+  margin: 74px 0 0 0; }
+  @media (max-width: 1279px) {
+    .landing-lottery__prizes-bottle-wrapper {
+      margin-top: 50px;
+      flex-basis: 40%; }
+      .landing-lottery__prizes-bottle-wrapper img {
+        width: 140px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__prizes-bottle-wrapper {
+      margin: 30px auto 0; }
+      .landing-lottery__prizes-bottle-wrapper img {
+        width: unset; } }
+
+.landing-lottery__bottle-img + .landing-lottery__bottle-img {
+  margin-left: 15px; }
+
+.landing-lottery__package-img {
+  margin: 43px -79px 0 -137px; }
+  @media (max-width: 1279px) {
+    .landing-lottery__package-img {
+      flex-basis: 70%; }
+      .landing-lottery__package-img img {
+        width: 100%; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__package-img {
+      margin: 30px auto 0;
+      max-width: 600px; } }
+
+.landing-lottery__participate {
+  box-sizing: border-box;
+  width: 1440px;
+  margin: 0 auto 0;
+  padding: 0 151px 0;
+  z-index: 3;
+  margin-top: 107px; }
+  @media (max-width: 1439px) {
+    .landing-lottery__participate {
+      width: 1280px;
+      padding: 0 15px; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__participate {
+      width: 1024px;
+      padding: 0 15px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__participate {
+      width: 100%; } }
+  @media (max-width: 1279px) {
+    .landing-lottery__participate {
+      margin-top: 70px; } }
+  @media (max-width: 1023px) {
+    .landing-lottery__participate {
+      margin-top: 60px; } }
+
+.landing-lottery__participate-btn {
+  position: relative;
+  z-index: 2;
+  width: 396px;
+  height: 45px;
+  display: flex;
+  padding: 29px;
+  margin-top: 22px;
+  align-items: center;
+  justify-content: space-around; }
+  .landing-lottery__participate-btn span {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-left: 20px; }
+  .landing-lottery__participate-btn:active, .landing-lottery__participate-btn:focus {
+    outline: none; }
+  @media (max-width: 1023px) {
+    .landing-lottery__participate-btn {
+      width: 100%;
+      margin: 0;
+      max-width: 500px;
+      padding: 15px; }
+      .landing-lottery__participate-btn span {
+        font-size: 1.4rem; } }
 
 .landing-1 section {
   box-sizing: border-box;
