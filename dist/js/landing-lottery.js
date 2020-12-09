@@ -3,10 +3,12 @@
 const btnCls = `landing-lottery__btn`;
 const textCls = `js-clipboard-text`;
 const participateBtnCls = `landing-lottery__participate-btn`;
+const btnToastCls = `landing-lottery__btn-toast`
 
 let clipboardBtn = document.querySelector(`.${btnCls}`);
 let clipboardTextBlock = document.querySelector(`.${textCls}`);
 let instaBtn = document.querySelector(`.${participateBtnCls}`);
+let toastBtn = document.querySelector(`.${btnToastCls}`);
 
 function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -28,10 +30,12 @@ function getMobileOperatingSystem() {
 }
 
 
-// clipboardBtn.addEventListener(`click`, function (){
-//     let text = clipboardTextBlock.innerText
-//     navigator.clipboard.writeText(text).then(function(){}, function(){});
-// })
+clipboardBtn.addEventListener(`click`, function (){
+    toastBtn.classList.add(`${btnToastCls}--active`)
+    let timeout = window.setTimeout(function(){
+        toastBtn.classList.remove(`${btnToastCls}--active`);
+    }, 1000)
+})
 
 document.addEventListener("DOMContentLoaded", function(event) {
     switch (getMobileOperatingSystem()) {

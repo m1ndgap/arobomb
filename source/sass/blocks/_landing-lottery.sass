@@ -376,6 +376,19 @@
       span
         font-size: 1.4rem
 
+  &__btn-toast
+    position: absolute
+    left: 50%
+    width: 100%
+    transform: translateX(-50%)
+    color: $btn
+    top: 120%
+    opacity: 0
+    pointer-events: none
+    transition: opacity $transition
+    &--active
+      opacity: 1
+
 
 
   &__info

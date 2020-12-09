@@ -6904,6 +6904,19 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       .landing-lottery__btn span {
         font-size: 1.4rem; } }
 
+.landing-lottery__btn-toast {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  color: #82AD24;
+  top: 120%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms; }
+  .landing-lottery__btn-toast--active {
+    opacity: 1; }
+
 .landing-lottery__info {
   position: relative;
   z-index: 3;
