@@ -3261,7 +3261,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(12deg);
+      transform: translate(-50%, -50%) rotate(-10deg);
       display: block;
       height: 2px;
       width: 105%;
@@ -3477,7 +3477,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) rotate(12deg);
+      transform: translate(-50%, -50%) rotate(-10deg);
       display: block;
       height: 2px;
       width: 105%;
@@ -6881,9 +6881,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   position: relative;
   z-index: 2;
   width: 396px;
-  height: 45px;
   display: flex;
-  padding: 29px;
+  padding: 18px 29px;
   margin-left: 9px;
   margin-top: 15px;
   align-items: center;
@@ -7173,9 +7172,8 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   position: relative;
   z-index: 2;
   width: 396px;
-  height: 45px;
   display: flex;
-  padding: 29px;
+  padding: 18px 29px;
   margin-top: 22px;
   align-items: center;
   justify-content: space-around; }
@@ -7190,7 +7188,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       width: 100%;
       margin: 0;
       max-width: 500px;
-      padding: 15px; }
+      padding: 12px; }
       .landing-lottery__participate-btn span {
         font-size: 1.4rem; } }
 
