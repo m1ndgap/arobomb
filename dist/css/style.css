@@ -2561,6 +2561,9 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   .submenu__section--active .submenu__title-main {
     line-height: 100%;
     margin-right: 15px; }
+    @media (max-width: 767px) {
+      .submenu__section--active .submenu__title-main {
+        margin-right: 0; } }
   .submenu__section--active .submenu__subsections {
     margin: 16px 0 0 auto;
     display: flex;
@@ -5500,6 +5503,10 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
   @media (min-width: 768px) {
     .constructor-landing .constructor-landing__landing-mob-slider {
       display: none; } }
+  @media (max-width: 767px) {
+    .constructor-landing .constructor-landing__landing-mob-slider {
+      width: 100vw;
+      margin: 0 -15px 0; } }
   .constructor-landing .constructor-landing__landing-mob-slider .swiper-container {
     width: 100%;
     margin-top: 60px; }

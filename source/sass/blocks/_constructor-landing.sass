@@ -226,11 +226,16 @@
   .constructor-landing__landing-mob-slider
     @include media (">=tablet")
       display: none
+    @include media ("<tablet")
+      width: 100vw
+      margin: 0 -15px 0
     .swiper-container
       width: 100%
       margin-top: 60px
       @include media (">=tablet")
         display: none
+
+
     .swiper-wrapper
       display: flex
       align-items: center
@@ -370,6 +375,7 @@
     @include media ("<desktop")
       margin: 0
       padding: 0
+
 
     .constructor-landing__swiper-img
       display: block
