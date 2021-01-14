@@ -1772,9 +1772,13 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     @media (max-width: 767px) {
       .index__name-block {
         position: static; } }
-    @media screen and (max-height: 820px) and (max-width: 1440px) {
+    @media screen and (max-height: 820px) and (max-width: 1439px) {
       .index__name-block {
         left: 350px;
+        top: 55vh; } }
+    @media screen and (max-height: 820px) and (min-width: 1440px) {
+      .index__name-block {
+        left: 450px;
         top: 55vh; } }
   .index__product-type {
     display: flex;
@@ -1839,7 +1843,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
     height: 100%;
     width: 966px;
     z-index: 1; }
-    @media (max-width: 1023px) {
+    @media (max-width: 767px) {
       .index__slider {
         width: 100%;
         height: 90vh; } }
