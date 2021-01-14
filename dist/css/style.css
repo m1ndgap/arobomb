@@ -1594,7 +1594,7 @@ input[type='checkbox']:active, input[type='checkbox']:focus {
       .index__video-wrap {
         height: 180px;
         width: 200px; } }
-    @media screen and (max-height: 800px) and (min-width: 1440px) {
+    @media screen and (max-height: 820px) and (min-width: 1440px) {
       .index__video-wrap {
         height: 240px;
         width: 260px; } }
